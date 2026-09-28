@@ -215,7 +215,13 @@ export function ProblemDetail({ problem }: { problem: Problem }) {
         <StatusControl status={status} onChange={updateStatus} />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-8 items-start">
+      {/* Prose column caps at a comfortable reading width (42rem, ~672px)
+          instead of taking a fraction of the row -- on a wide viewport
+          (the outer layout no longer caps total width, see layout.tsx),
+          a proportional column would stretch statement text uncomfortably
+          wide. The editor column takes 1fr -- all remaining space -- so
+          it's the one that actually benefits from a bigger window. */}
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,42rem)_1fr] gap-8 items-start">
         <div>
           {statementSection && (
             <>

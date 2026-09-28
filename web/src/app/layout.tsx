@@ -67,12 +67,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <ThemeToggle />
           </div>
         </header>
-        {/* Left-aligned (not mx-auto centered) and same px-4 as the header
-            above, so the sidebar's left edge lines up with the logo's --
-            on a viewport wider than 1600px, centering this independently of
-            the header would leave the sidebar visibly offset to the right
-            of where the logo sits. */}
-        <div className="max-w-[1600px] w-full px-4 py-4 flex-1 flex items-start gap-6">
+        {/* No max-width -- fills the viewport (left-aligned, same px-4 as
+            the header above so the sidebar's left edge lines up with the
+            logo's). Individual pages cap their own prose width where
+            reading comfort matters (e.g. ProblemDetail's statement column);
+            this row itself should just use whatever space is there. */}
+        <div className="w-full px-4 py-4 flex-1 flex items-start gap-6">
           <Sidebar patterns={patterns} problemsByPattern={problemsByPattern} />
           <main className="flex-1 min-w-0">{children}</main>
         </div>
