@@ -1,0 +1,116 @@
+{
+  "id": "top-k-elements/problem-challenge-2",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "Scheduling Tasks",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/15. Problem Challenge 2",
+    "14. Pattern Top _K_ Elements/16. Solution Review Problem Challenge 2"
+  ],
+  "problemStatementSectionId": "scheduling-tasks-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass TaskScheduler {\n\n  public static int scheduleTasks(char[] tasks, int k) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    char[] tasks = new char[] { 'a', 'a', 'a', 'b', 'c', 'c' };\n    System.out.println(\"Minimum intervals needed to execute all tasks: \" + TaskScheduler.scheduleTasks(tasks, 2));\n\n    tasks = new char[] { 'a', 'b', 'a' };\n    System.out.println(\"Minimum intervals needed to execute all tasks: \" + TaskScheduler.scheduleTasks(tasks, 3));\n  }\n}\n",
+    "python3": "def schedule_tasks(tasks, k):\n  intervalCount = 0\n  # TODO: Write your code here\n  return intervalCount\n\n\ndef main():\n  print(\"Minimum intervals needed to execute all tasks: \" +\n        str(schedule_tasks(['a', 'a', 'a', 'b', 'c', 'c'], 2)))\n  print(\"Minimum intervals needed to execute all tasks: \" +\n        str(schedule_tasks(['a', 'b', 'a'], 3)))\n\n\nmain()\n\n",
+    "javascript": "const schedule_tasks = function(tasks, k) {\n  intervalCount = 0;\n  // TODO: Write your code here\n  return intervalCount;\n};\n\n\nconsole.log(`Minimum intervals needed to execute all tasks: ${schedule_tasks(['a', 'a', 'a', 'b', 'c', 'c'], 2)}`)\nconsole.log(`Minimum intervals needed to execute all tasks: ${schedule_tasks(['a', 'b', 'a'], 3)}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskScheduler {\n public:\n  static int scheduleTasks(vector<char> &tasks, int k) {\n    int intervalCount = 0;\n    // TODO: Write your code here\n    return intervalCount;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<char> tasks = {'a', 'a', 'a', 'b', 'c', 'c'};\n  cout << \"Minimum intervals needed to execute all tasks: \"\n       << TaskScheduler::scheduleTasks(tasks, 2) << endl;\n\n  tasks = vector<char>{'a', 'b', 'a'};\n  cout << \"Minimum intervals needed to execute all tasks: \"\n       << TaskScheduler::scheduleTasks(tasks, 3) << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [a, a, a, b, c, c], K=2\nOutput: 7\nExplanation: a -> c -> b -> a -> c -> idle -> a",
+      "input": "[a, a, a, b, c, c], K=2",
+      "output": "7",
+      "explanation": "a -> c -> b -> a -> c -> idle -> a"
+    },
+    {
+      "raw": "Input: [a, b, a], K=3\nOutput: 5\nExplanation: a -> b -> idle -> idle -> a",
+      "input": "[a, b, a], K=3",
+      "output": "5",
+      "explanation": "a -> b -> idle -> idle -> a"
+    }
+  ],
+  "sections": [
+    {
+      "id": "scheduling-tasks-hard",
+      "title": "Scheduling Tasks (hard)",
+      "html": "<p data-id=\"49aeb2119828e97bdf0a4eb127e835b2\">You are given a list of tasks that need to be run, in any order, on a server. Each task will take one CPU interval to execute but once a task has finished, it has a cooling period during which it can’t be run again. If the cooling period for all tasks is ‘K’ intervals, find the minimum number of CPU intervals that the server needs to finish all tasks.</p>\n<p data-id=\"af63b66eadf1a97c11cd2a21200e91a4\">If at any time the server can’t execute any task then it must stay idle.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Minimum intervals needed to execute all tasks: -1\nMinimum intervals needed to execute all tasks: -1\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TaskScheduler {\n\n  public static int scheduleTasks(char[] tasks, int k) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    char[] tasks = new char[] { 'a', 'a', 'a', 'b', 'c', 'c' };\n    System.out.println(\"Minimum intervals needed to execute all tasks: \" + TaskScheduler.scheduleTasks(tasks, 2));\n\n    tasks = new char[] { 'a', 'b', 'a' };\n    System.out.println(\"Minimum intervals needed to execute all tasks: \" + TaskScheduler.scheduleTasks(tasks, 3));\n  }\n}\n",
+        "python3": "def schedule_tasks(tasks, k):\n  intervalCount = 0\n  # TODO: Write your code here\n  return intervalCount\n\n\ndef main():\n  print(\"Minimum intervals needed to execute all tasks: \" +\n        str(schedule_tasks(['a', 'a', 'a', 'b', 'c', 'c'], 2)))\n  print(\"Minimum intervals needed to execute all tasks: \" +\n        str(schedule_tasks(['a', 'b', 'a'], 3)))\n\n\nmain()\n\n",
+        "javascript": "const schedule_tasks = function(tasks, k) {\n  intervalCount = 0;\n  // TODO: Write your code here\n  return intervalCount;\n};\n\n\nconsole.log(`Minimum intervals needed to execute all tasks: ${schedule_tasks(['a', 'a', 'a', 'b', 'c', 'c'], 2)}`)\nconsole.log(`Minimum intervals needed to execute all tasks: ${schedule_tasks(['a', 'b', 'a'], 3)}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskScheduler {\n public:\n  static int scheduleTasks(vector<char> &tasks, int k) {\n    int intervalCount = 0;\n    // TODO: Write your code here\n    return intervalCount;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<char> tasks = {'a', 'a', 'a', 'b', 'c', 'c'};\n  cout << \"Minimum intervals needed to execute all tasks: \"\n       << TaskScheduler::scheduleTasks(tasks, 2) << endl;\n\n  tasks = vector<char>{'a', 'b', 'a'};\n  cout << \"Minimum intervals needed to execute all tasks: \"\n       << TaskScheduler::scheduleTasks(tasks, 3) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"30a27f9db7f79ba879e8639ff387fb64\">This problem follows the <a href=\"https://www.educative.io/pageeditor/5671464854355968/5728885882748928\" target=\"_blank\">Top ‘K’ Elements</a> pattern and is quite similar to <a href=\"https://www.educative.io/pageeditor/5671464854355968/5684793748488192\" target=\"_blank\">Rearrange String K Distance Apart</a>. We need to rearrange tasks such that same tasks are ‘K’ distance apart.</p>\n<p data-id=\"e8b9aec8fc8de943d03ebc69726cb2ce\">Following a similar approach, we will use a <strong>Max Heap</strong> to execute the highest frequency task first. After executing a task we decrease its frequency and put it in a waiting list. In each iteration, we will try to execute as many as <code>k+1</code> tasks. For the next iteration, we will put all the waiting tasks back in the <strong>Max Heap</strong>. If, for any iteration, we are not able to execute <code>k+1</code> tasks, the CPU has to remain idle for the remaining time in the next iteration.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Minimum intervals needed to execute all tasks: 7\nMinimum intervals needed to execute all tasks: 5\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TaskScheduler {\n\n  public static int scheduleTasks(char[] tasks, int k) {\n    int intervalCount = 0;\n    Map<Character, Integer> taskFrequencyMap = new HashMap<>();\n    for (char chr : tasks)\n      taskFrequencyMap.put(chr, taskFrequencyMap.getOrDefault(chr, 0) + 1);\n\n    PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<Map.Entry<Character, Integer>>(\n        (e1, e2) -> e2.getValue() - e1.getValue());\n\n    // add all tasks to the max heap\n    maxHeap.addAll(taskFrequencyMap.entrySet());\n\n    while (!maxHeap.isEmpty()) {\n      List<Map.Entry<Character, Integer>> waitList = new ArrayList<>();\n      int n = k + 1; // try to execute as many as 'k+1' tasks from the max-heap\n      for (; n > 0 && !maxHeap.isEmpty(); n--) {\n        intervalCount++;\n        Map.Entry<Character, Integer> currentEntry = maxHeap.poll();\n        if (currentEntry.getValue() > 1) {\n          currentEntry.setValue(currentEntry.getValue() - 1);\n          waitList.add(currentEntry);\n        }\n      }\n      maxHeap.addAll(waitList); // put all the waiting list back on the heap\n      if (!maxHeap.isEmpty())\n        intervalCount += n; // we'll be having 'n' idle intervals for the next iteration\n    }\n\n    return intervalCount;\n  }\n\n  public static void main(String[] args) {\n    char[] tasks = new char[] { 'a', 'a', 'a', 'b', 'c', 'c' };\n    System.out.println(\"Minimum intervals needed to execute all tasks: \" + TaskScheduler.scheduleTasks(tasks, 2));\n\n    tasks = new char[] { 'a', 'b', 'a' };\n    System.out.println(\"Minimum intervals needed to execute all tasks: \" + TaskScheduler.scheduleTasks(tasks, 3));\n  }\n}\n",
+        "python3": "from heapq import *\n\n\ndef schedule_tasks(tasks, k):\n  intervalCount = 0\n  taskFrequencyMap = {}\n  for char in tasks:\n    taskFrequencyMap[char] = taskFrequencyMap.get(char, 0) + 1\n\n  maxHeap = []\n  # add all tasks to the max heap\n  for char, frequency in taskFrequencyMap.items():\n    heappush(maxHeap, (-frequency, char))\n\n  while maxHeap:\n    waitList = []\n    n = k + 1  # try to execute as many as 'k+1' tasks from the max-heap\n    while n > 0 and maxHeap:\n      intervalCount += 1\n      frequency, char = heappop(maxHeap)\n      if -frequency > 1:\n        # decrement the frequency and add to the waitList\n        waitList.append((frequency+1, char))\n      n -= 1\n\n    # put all the waiting list back on the heap\n    for frequency, char in waitList:\n      heappush(maxHeap, (frequency, char))\n\n    if maxHeap:\n      intervalCount += n  # we'll be having 'n' idle intervals for the next iteration\n\n  return intervalCount\n\n\ndef main():\n  print(\"Minimum intervals needed to execute all tasks: \" +\n        str(schedule_tasks(['a', 'a', 'a', 'b', 'c', 'c'], 2)))\n  print(\"Minimum intervals needed to execute all tasks: \" +\n        str(schedule_tasks(['a', 'b', 'a'], 3)))\n\n\nmain()\n\n\n\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskScheduler {\n public:\n  struct valueCompare {\n    char operator()(const pair<int, int> &x, const pair<int, int> &y) {\n      return y.second > x.second;\n    }\n  };\n\n  static int scheduleTasks(vector<char> &tasks, int k) {\n    int intervalCount = 0;\n    unordered_map<char, int> taskFrequencyMap;\n    for (char chr : tasks) {\n      taskFrequencyMap[chr]++;\n    }\n\n    priority_queue<pair<char, int>, vector<pair<char, int>>, valueCompare> maxHeap;\n\n    // add all tasks to the max heap\n    for (auto entry : taskFrequencyMap) {\n      maxHeap.push(entry);\n    }\n\n    while (!maxHeap.empty()) {\n      vector<pair<char, int>> waitList;\n      int n = k + 1;  // try to execute as many as 'k+1' tasks from the max-heap\n      for (; n > 0 && !maxHeap.empty(); n--) {\n        intervalCount++;\n        auto currentEntry = maxHeap.top();\n        maxHeap.pop();\n        if (currentEntry.second > 1) {\n          currentEntry.second--;\n          waitList.push_back(currentEntry);\n        }\n      }\n      // put all the waiting list back on the heap\n      for (auto it = waitList.begin(); it != waitList.end(); it++) {\n        maxHeap.push(*it);\n      }\n      if (!maxHeap.empty()) {\n        intervalCount += n;  // we'll be having 'n' idle intervals for the next iteration\n      }\n    }\n\n    return intervalCount;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<char> tasks = {'a', 'a', 'a', 'b', 'c', 'c'};\n  cout << \"Minimum intervals needed to execute all tasks: \"\n       << TaskScheduler::scheduleTasks(tasks, 2) << endl;\n\n  tasks = vector<char>{'a', 'b', 'a'};\n  cout << \"Minimum intervals needed to execute all tasks: \"\n       << TaskScheduler::scheduleTasks(tasks, 3) << endl;\n}\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nfunction schedule_tasks(tasks, k) {\n  let intervalCount = 0,\n    taskFrequencyMap = {};\n  tasks.forEach((chr) => {\n    if (!(chr in taskFrequencyMap)) {\n      taskFrequencyMap[chr] = 1;\n    } else {\n      taskFrequencyMap[chr]++;\n    }\n  });\n\n\n  const maxHeap = new Heap([], null, ((a, b) => a[0] - b[0]));\n\n  // add all tasks to the max heap\n  Object.keys(taskFrequencyMap).forEach((char) => {\n    maxHeap.push([taskFrequencyMap[char], char]);\n  });\n\n  while (maxHeap.length > 0) {\n    const waitList = [];\n    let n = k + 1; // try to execute as many as 'k+1' tasks from the max-heap\n    while (n > 0 && maxHeap.length > 0) {\n      intervalCount++;\n      const [frequency, char] = maxHeap.pop();\n      if (frequency > 1) {\n        // decrement the frequency and add to the waitList\n        waitList.push([frequency - 1, char]);\n      }\n      n -= 1;\n    }\n\n    // put all the waiting list back on the heap\n    waitList.forEach(task => maxHeap.push(task));\n\n\n    if (maxHeap.length > 0) {\n      intervalCount += n; // we'll be having 'n' idle intervals for the next iteration\n    }\n  }\n\n  return intervalCount;\n}\n\n\nconsole.log(`Minimum intervals needed to execute all tasks: ${\n  schedule_tasks(['a', 'a', 'a', 'b', 'c', 'c'], 2)}`);\nconsole.log(`Minimum intervals needed to execute all tasks: ${\n  schedule_tasks(['a', 'b', 'a'], 3)}`);"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"75840ba2810386444e922b1f78291f71\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of tasks. Our <code>while loop</code> will iterate once for each occurrence of the task in the input (i.e. ‘N’) and in each iteration we will remove a task from the heap which will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> time. Hence the overall time complexity of our algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"25db5409ca0f8c73d2e624aa28b21d55\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>, as in the worst case, we need to store all the ‘N’ tasks in the <strong>HashMap</strong>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 2.html",
+      "1.2Problem Challenge 2.html",
+      "1.3Problem Challenge 2.html",
+      "1.4Problem Challenge 2.html",
+      "1.1Solution Review_ Problem Challenge 2 -.html",
+      "1.2Solution Review_ Problem Challenge 2 -.html",
+      "1.3Solution Review_ Problem Challenge 2.html",
+      "1.4Solution Review_ Problem Challenge 2 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

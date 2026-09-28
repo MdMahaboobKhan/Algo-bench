@@ -1,0 +1,123 @@
+{
+  "id": "modified-binary-search/minimum-difference-element",
+  "pattern": {
+    "index": 12,
+    "name": "Modified Binary Search",
+    "slug": "modified-binary-search"
+  },
+  "title": "Minimum Difference Element",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "12. Pattern Modified Binary Search/7. Minimum Difference Element (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class MinimumDifference {\n\n  public static int searchMinDiffElement(int[] arr, int key) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 7));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 4));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 1, 3, 8, 10, 15 }, 12));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 17));\n  }\n}",
+    "python3": "\ndef search_min_diff_element(arr, key):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n  print(search_min_diff_element([4, 6, 10], 7))\n  print(search_min_diff_element([4, 6, 10], 4))\n  print(search_min_diff_element([1, 3, 8, 10, 15], 12))\n  print(search_min_diff_element([4, 6, 10], 17))\n\n\nmain()\n",
+    "javascript": "const search_min_diff_element = function(arr, key) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(search_min_diff_element([4, 6, 10], 7))\nconsole.log(search_min_diff_element([4, 6, 10], 4))\nconsole.log(search_min_diff_element([1, 3, 8, 10, 15], 12))\nconsole.log(search_min_diff_element([4, 6, 10], 17))\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MinimumDifference {\n public:\n  static int searchMinDiffElement(const vector<int>& arr, int key) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 7) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 4) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{1, 3, 8, 10, 15}, 12) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 17) << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [4, 6, 10], key = 7\nOutput: 6\nExplanation: The difference between the key '7' and '6' is minimum than any other number in the array",
+      "input": "[4, 6, 10], key = 7",
+      "output": "6",
+      "explanation": "The difference between the key '7' and '6' is minimum than any other number in the array"
+    },
+    {
+      "raw": "Input: [4, 6, 10], key = 4\nOutput: 4",
+      "input": "[4, 6, 10], key = 4",
+      "output": "4",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [1, 3, 8, 10, 15], key = 12\nOutput: 10",
+      "input": "[1, 3, 8, 10, 15], key = 12",
+      "output": "10",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [4, 6, 10], key = 17\nOutput: 10",
+      "input": "[4, 6, 10], key = 17",
+      "output": "10",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"075e190fdc0a6e748f60bddc54dda69f\">Given an array of numbers sorted in ascending order, find the element in the array that has the minimum difference with the given ‘key’.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>\n<p data-id=\"041ec4ff6ad5f804da8976d697659842\"><strong>Example 4:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">-1\n-1\n-1\n-1\n</p>",
+      "code": {
+        "java": "class MinimumDifference {\n\n  public static int searchMinDiffElement(int[] arr, int key) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 7));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 4));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 1, 3, 8, 10, 15 }, 12));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 17));\n  }\n}",
+        "python3": "\ndef search_min_diff_element(arr, key):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n  print(search_min_diff_element([4, 6, 10], 7))\n  print(search_min_diff_element([4, 6, 10], 4))\n  print(search_min_diff_element([1, 3, 8, 10, 15], 12))\n  print(search_min_diff_element([4, 6, 10], 17))\n\n\nmain()\n",
+        "javascript": "const search_min_diff_element = function(arr, key) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(search_min_diff_element([4, 6, 10], 7))\nconsole.log(search_min_diff_element([4, 6, 10], 4))\nconsole.log(search_min_diff_element([1, 3, 8, 10, 15], 12))\nconsole.log(search_min_diff_element([4, 6, 10], 17))\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MinimumDifference {\n public:\n  static int searchMinDiffElement(const vector<int>& arr, int key) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 7) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 4) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{1, 3, 8, 10, 15}, 12) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 17) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"69abff0d07e0399a412c4bee88b536f3\">The problem follows the <strong>Binary Search</strong> pattern. Since Binary Search helps us find a number in a sorted array efficiently, we can use a modified version of the Binary Search to find the number that has the minimum difference with the given ‘key’.</p>\n<p data-id=\"6cd495630c01d73c85ccc2c5b7b661d1\">We can use a similar approach as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6304110192099328/\" target=\"_blank\">Order-agnostic Binary Search</a>. We will try to search for the ‘key’ in the given array. If we find the ‘key’ we will return it as the minimum difference number. If we can’t find the ‘key’, (at the end of the loop) we can find the differences between the ‘key’ and the numbers pointed out by indices <code>start</code> and <code>end</code>, as these two numbers will be closest to the ‘key’. The number that gives minimum difference will be our required number.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">6\n4\n10\n10\n</p>",
+      "code": {
+        "java": "class MinimumDifference {\n\n  public static int searchMinDiffElement(int[] arr, int key) {\n    if (key < arr[0])\n      return arr[0];\n    if (key > arr[arr.length - 1])\n      return arr[arr.length - 1];\n\n    int start = 0, end = arr.length - 1;\n    while (start <= end) {\n      int mid = start + (end - start) / 2;\n      if (key < arr[mid]) {\n        end = mid - 1;\n      } else if (key > arr[mid]) {\n        start = mid + 1;\n      } else {\n        return arr[mid];\n      }\n    }\n\n    // at the end of the while loop, 'start == end+1'\n    // we are not able to find the element in the given array\n    // return the element which is closest to the 'key'\n    if ((arr[start] - key) < (key - arr[end]))\n      return arr[start];\n    return arr[end];\n  }\n\n  public static void main(String[] args) {\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 7));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 4));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 1, 3, 8, 10, 15 }, 12));\n    System.out.println(MinimumDifference.searchMinDiffElement(new int[] { 4, 6, 10 }, 17));\n  }\n}",
+        "python3": "def search_min_diff_element(arr, key):\n  if key < arr[0]:\n    return arr[0]\n  n = len(arr)\n  if key > arr[n - 1]:\n    return arr[n - 1]\n\n  start, end = 0, n - 1\n  while start <= end:\n    mid = start + (end - start) // 2\n    if key < arr[mid]:\n      end = mid - 1\n    elif key > arr[mid]:\n      start = mid + 1\n    else:\n      return arr[mid]\n\n  # at the end of the while loop, 'start == end+1'\n  # we are not able to find the element in the given array\n  # return the element which is closest to the 'key'\n  if (arr[start] - key) < (key - arr[end]):\n    return arr[start]\n  return arr[end]\n\n\ndef main():\n  print(search_min_diff_element([4, 6, 10], 7))\n  print(search_min_diff_element([4, 6, 10], 4))\n  print(search_min_diff_element([1, 3, 8, 10, 15], 12))\n  print(search_min_diff_element([4, 6, 10], 17))\n\n\nmain()\n",
+        "javascript": "function search_min_diff_element(arr, key) {\n  if (key < arr[0]) {\n    return arr[0];\n  }\n  const n = arr.length;\n  if (key > arr[n - 1]) {\n    return arr[n - 1];\n  }\n\n  let start = 0;\n  let end = n - 1;\n  while (start <= end) {\n    mid = Math.floor(start + (end - start) / 2);\n    if (key < arr[mid]) {\n      end = mid - 1;\n    } else if (key > arr[mid]) {\n      start = mid + 1;\n    } else {\n      return arr[mid];\n    }\n  }\n\n  // at the end of the while loop, 'start === end+1'\n  // we are not able to find the element in the given array\n  // return the element which is closest to the 'key'\n  if ((arr[start] - key) < (key - arr[end])) {\n    return arr[start];\n  }\n\n  return arr[end];\n}\n\n\nconsole.log(search_min_diff_element([4, 6, 10], 7));\nconsole.log(search_min_diff_element([4, 6, 10], 4));\nconsole.log(search_min_diff_element([1, 3, 8, 10, 15], 12));\nconsole.log(search_min_diff_element([4, 6, 10], 17));",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MinimumDifference {\n public:\n  static int searchMinDiffElement(const vector<int>& arr, int key) {\n    if (key < arr[0]) {\n      return arr[0];\n    }\n    if (key > arr[arr.size() - 1]) {\n      return arr[arr.size() - 1];\n    }\n\n    int start = 0, end = arr.size() - 1;\n    while (start <= end) {\n      int mid = start + (end - start) / 2;\n      if (key < arr[mid]) {\n        end = mid - 1;\n      } else if (key > arr[mid]) {\n        start = mid + 1;\n      } else {\n        return arr[mid];\n      }\n    }\n\n    // at the end of the while loop, 'start == end+1'\n    // we are not able to find the element in the given array\n    // return the element which is closest to the 'key'\n    if ((arr[start] - key) < (key - arr[end])) {\n      return arr[start];\n    }\n    return arr[end];\n  }\n};\n\nint main(int argc, char* argv[]) {\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 7) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 4) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{1, 3, 8, 10, 15}, 12) << endl;\n  cout << MinimumDifference::searchMinDiffElement(vector<int>{4, 6, 10}, 17) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"913f85948aedc1f750e3fdf50efe8199\">Since, we are reducing the search range by half at every step, this means the time complexity of our algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the total elements in the given array.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Minimum Difference Element (medium).html",
+      "1.2Minimum Difference Element (medium) -.html",
+      "1.3Minimum Difference Element (medium) -.html",
+      "1.4Minimum Difference Element (medium) -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

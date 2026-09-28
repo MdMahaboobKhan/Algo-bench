@@ -1,0 +1,123 @@
+{
+  "id": "modified-binary-search/bitonic-array-maximum",
+  "pattern": {
+    "index": 12,
+    "name": "Modified Binary Search",
+    "slug": "modified-binary-search"
+  },
+  "title": "Bitonic Array Maximum",
+  "difficulty": "easy",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "12. Pattern Modified Binary Search/8. Bitonic Array Maximum (easy)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class MaxInBitonicArray {\n\n  public static int findMax(int[] arr) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 1, 3, 8, 12, 4, 2 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 3, 8, 3, 1 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 1, 3, 8, 12 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 10, 9, 8 }));\n  }\n}",
+    "python3": "def find_max_in_bitonic_array(arr):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n  print(find_max_in_bitonic_array([1, 3, 8, 12, 4, 2]))\n  print(find_max_in_bitonic_array([3, 8, 3, 1]))\n  print(find_max_in_bitonic_array([1, 3, 8, 12]))\n  print(find_max_in_bitonic_array([10, 9, 8]))\n\n\nmain()\n",
+    "javascript": "const find_max_in_bitonic_array = function(arr) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(find_max_in_bitonic_array([1, 3, 8, 12, 4, 2]))\nconsole.log(find_max_in_bitonic_array([3, 8, 3, 1]))\nconsole.log(find_max_in_bitonic_array([1, 3, 8, 12]))\nconsole.log(find_max_in_bitonic_array([10, 9, 8]))\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MaxInBitonicArray {\n public:\n  static int findMax(const vector<int>& arr) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n};\n\nint main(int argc, char* argv[]) {\n  cout << MaxInBitonicArray::findMax(vector<int>{1, 3, 8, 12, 4, 2}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{3, 8, 3, 1}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{1, 3, 8, 12}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{10, 9, 8}) << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 3, 8, 12, 4, 2]\nOutput: 12\nExplanation: The maximum number in the input bitonic array is '12'.",
+      "input": "[1, 3, 8, 12, 4, 2]",
+      "output": "12",
+      "explanation": "The maximum number in the input bitonic array is '12'."
+    },
+    {
+      "raw": "Input: [3, 8, 3, 1]\nOutput: 8",
+      "input": "[3, 8, 3, 1]",
+      "output": "8",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [1, 3, 8, 12]\nOutput: 12",
+      "input": "[1, 3, 8, 12]",
+      "output": "12",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [10, 9, 8]\nOutput: 10",
+      "input": "[10, 9, 8]",
+      "output": "10",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"6cb64021c2ca43eac12b72c99df93297\">Find the maximum value in a given Bitonic array. An array is considered bitonic if it is monotonically increasing and then monotonically decreasing. Monotonically increasing or decreasing means that for any index <code>i</code> in the array <code>arr[i] != arr[i+1]</code>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>\n<p data-id=\"041ec4ff6ad5f804da8976d697659842\"><strong>Example 4:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">-1\n-1\n-1\n-1\n</p>",
+      "code": {
+        "java": "class MaxInBitonicArray {\n\n  public static int findMax(int[] arr) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 1, 3, 8, 12, 4, 2 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 3, 8, 3, 1 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 1, 3, 8, 12 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 10, 9, 8 }));\n  }\n}",
+        "python3": "def find_max_in_bitonic_array(arr):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n  print(find_max_in_bitonic_array([1, 3, 8, 12, 4, 2]))\n  print(find_max_in_bitonic_array([3, 8, 3, 1]))\n  print(find_max_in_bitonic_array([1, 3, 8, 12]))\n  print(find_max_in_bitonic_array([10, 9, 8]))\n\n\nmain()\n",
+        "javascript": "const find_max_in_bitonic_array = function(arr) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(find_max_in_bitonic_array([1, 3, 8, 12, 4, 2]))\nconsole.log(find_max_in_bitonic_array([3, 8, 3, 1]))\nconsole.log(find_max_in_bitonic_array([1, 3, 8, 12]))\nconsole.log(find_max_in_bitonic_array([10, 9, 8]))\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MaxInBitonicArray {\n public:\n  static int findMax(const vector<int>& arr) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n};\n\nint main(int argc, char* argv[]) {\n  cout << MaxInBitonicArray::findMax(vector<int>{1, 3, 8, 12, 4, 2}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{3, 8, 3, 1}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{1, 3, 8, 12}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{10, 9, 8}) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"4d4a63707d6a5fb8df32d817db718460\">A bitonic array is a sorted array; the only difference is that its first part is sorted in ascending order and the second part is sorted in descending order. We can use a similar approach as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6304110192099328/\" target=\"_blank\">Order-agnostic Binary Search</a>. Since no two consecutive numbers are same (as the array is monotonically increasing or decreasing), whenever we calculate the <code>middle</code>, we can compare the numbers pointed out by the index <code>middle</code> and <code>middle+1</code> to find if we are in the ascending or the descending part. So:</p>\n<ol data-id=\"3d4e1d640762d8b80aa8f0f8cc1b8b91\">\n<li>If <code>arr[middle] &gt; arr[middle + 1]</code>, we are in the second (descending) part of the bitonic array. Therefore, our required number could either be pointed out by <code>middle</code> or will be before <code>middle</code>. This means we will be doing: <code>end = middle</code>.</li>\n<li>If <code>arr[middle] &lt;= arr[middle + 1]</code>, we are in the first (ascending) part of the bitonic array. Therefore, the required number will be after <code>middle</code>. This means we will be doing: <code>start = middle + 1</code>.</li>\n</ol>\n<p data-id=\"dcacd397b6c96769eec7be29d32c7d05\">We can break when <code>start == end</code>. Due to the two points mentioned above, both <code>start</code> and <code>end</code> will be pointing at the maximum number of the bitonic array.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">12\n8\n12\n10\n</p>",
+      "code": {
+        "java": "class MaxInBitonicArray {\n\n  public static int findMax(int[] arr) {\n    int start = 0, end = arr.length - 1;\n    while (start < end) {\n      int mid = start + (end - start) / 2;\n      if (arr[mid] > arr[mid + 1]) {\n        end = mid;\n      } else {\n        start = mid + 1;\n      }\n    }\n\n    // at the end of the while loop, 'start == end'\n    return arr[start];\n  }\n\n  public static void main(String[] args) {\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 1, 3, 8, 12, 4, 2 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 3, 8, 3, 1 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 1, 3, 8, 12 }));\n    System.out.println(MaxInBitonicArray.findMax(new int[] { 10, 9, 8 }));\n  }\n}",
+        "python3": "def find_max_in_bitonic_array(arr):\n  start, end = 0, len(arr) - 1\n  while start < end:\n    mid = start + (end - start) // 2\n    if arr[mid] > arr[mid + 1]:\n      end = mid\n    else:\n      start = mid + 1\n\n  # at the end of the while loop, 'start == end'\n  return arr[start]\n\n\ndef main():\n  print(find_max_in_bitonic_array([1, 3, 8, 12, 4, 2]))\n  print(find_max_in_bitonic_array([3, 8, 3, 1]))\n  print(find_max_in_bitonic_array([1, 3, 8, 12]))\n  print(find_max_in_bitonic_array([10, 9, 8]))\n\n\nmain()\n",
+        "javascript": "function find_max_in_bitonic_array(arr) {\n  let start = 0;\n  let end = arr.length - 1;\n  while (start < end) {\n    mid = Math.floor(start + (end - start) / 2);\n    if (arr[mid] > arr[mid + 1]) {\n      end = mid;\n    } else {\n      start = mid + 1;\n    }\n  }\n\n  // at the end of the while loop, 'start === end'\n  return arr[start];\n}\n\n\nconsole.log(find_max_in_bitonic_array([1, 3, 8, 12, 4, 2]));\nconsole.log(find_max_in_bitonic_array([3, 8, 3, 1]));\nconsole.log(find_max_in_bitonic_array([1, 3, 8, 12]));\nconsole.log(find_max_in_bitonic_array([10, 9, 8]));\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MaxInBitonicArray {\n public:\n  static int findMax(const vector<int>& arr) {\n    int start = 0, end = arr.size() - 1;\n    while (start < end) {\n      int mid = start + (end - start) / 2;\n      if (arr[mid] > arr[mid + 1]) {\n        end = mid;\n      } else {\n        start = mid + 1;\n      }\n    }\n\n    // at the end of the while loop, 'start == end'\n    return arr[start];\n  }\n};\n\nint main(int argc, char* argv[]) {\n  cout << MaxInBitonicArray::findMax(vector<int>{1, 3, 8, 12, 4, 2}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{3, 8, 3, 1}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{1, 3, 8, 12}) << endl;\n  cout << MaxInBitonicArray::findMax(vector<int>{10, 9, 8}) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"4d386fe17059be47e167b214fed58db4\">Since we are reducing the search range by half at every step, this means that the time complexity of our algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the total elements in the given array.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Bitonic Array Maximum (easy).html",
+      "1.2Bitonic Array Maximum (easy).html",
+      "1.3Bitonic Array Maximum (easy).html",
+      "1.4Bitonic Array Maximum (easy).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

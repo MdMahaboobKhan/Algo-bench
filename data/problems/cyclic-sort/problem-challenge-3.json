@@ -1,0 +1,122 @@
+{
+  "id": "cyclic-sort/problem-challenge-3",
+  "pattern": {
+    "index": 6,
+    "name": "Cyclic Sort",
+    "slug": "cyclic-sort"
+  },
+  "title": "Find the First K Missing Positive Numbers",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "6. Pattern Cyclic Sort/11. Problem Challenge 3",
+    "6. Pattern Cyclic Sort/12. Solution Review Problem Challenge 3"
+  ],
+  "problemStatementSectionId": "find-the-first-k-missing-positive-numbers-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass FirstKMissingPositive {\n\n  public static List<Integer> findNumbers(int[] nums, int k) {\n    List<Integer> missingNumbers = new ArrayList<>();\n    // TODO: Write your code here\n    return missingNumbers;\n  }\n}",
+    "python3": "def find_first_k_missing_positive(nums, k):\n  missingNumbers = []\n  # TODO: Write your code here\n  return missingNumbers\n",
+    "javascript": "const find_first_k_missing_positive = function(nums, k) {\n  missingNumbers = [];\n  // TODO: Write your code here\n  return missingNumbers;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <unordered_set>\n#include <vector>\n\nclass FirstKMissingPositive {\n public:\n  static vector<int> findNumbers(vector<int> &nums, int k) {\n    vector<int> missingNumbers;\n    // TODO: Write your code here\n    return missingNumbers;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [3, -1, 4, 5, 5], k=3\nOutput: [1, 2, 6]\nExplanation: The smallest missing positive numbers are 1, 2 and 6.",
+      "input": "[3, -1, 4, 5, 5], k=3",
+      "output": "[1, 2, 6]",
+      "explanation": "The smallest missing positive numbers are 1, 2 and 6."
+    },
+    {
+      "raw": "Input: [2, 3, 4], k=3\nOutput: [1, 5, 6]\nExplanation: The smallest missing positive numbers are 1, 5 and 6.",
+      "input": "[2, 3, 4], k=3",
+      "output": "[1, 5, 6]",
+      "explanation": "The smallest missing positive numbers are 1, 5 and 6."
+    },
+    {
+      "raw": "Input: [-2, -3, 4], k=2\nOutput: [1, 2]\nExplanation: The smallest missing positive numbers are 1 and 2.",
+      "input": "[-2, -3, 4], k=2",
+      "output": "[1, 2]",
+      "explanation": "The smallest missing positive numbers are 1 and 2."
+    }
+  ],
+  "sections": [
+    {
+      "id": "find-the-first-k-missing-positive-numbers-hard",
+      "title": "Find the First K Missing Positive Numbers (hard)",
+      "html": "<p data-id=\"8e5b746cbfb7d919d1382cecb444f3b1\">Given an unsorted array containing numbers and a number ‘k’, find the first ‘k’ missing positive numbers in the array.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass FirstKMissingPositive {\n\n  public static List<Integer> findNumbers(int[] nums, int k) {\n    List<Integer> missingNumbers = new ArrayList<>();\n    // TODO: Write your code here\n    return missingNumbers;\n  }\n}",
+        "python3": "def find_first_k_missing_positive(nums, k):\n  missingNumbers = []\n  # TODO: Write your code here\n  return missingNumbers\n",
+        "javascript": "const find_first_k_missing_positive = function(nums, k) {\n  missingNumbers = [];\n  // TODO: Write your code here\n  return missingNumbers;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <unordered_set>\n#include <vector>\n\nclass FirstKMissingPositive {\n public:\n  static vector<int> findNumbers(vector<int> &nums, int k) {\n    vector<int> missingNumbers;\n    // TODO: Write your code here\n    return missingNumbers;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"d3e42990b92c1aaf1be5e808c539839d\">This problem follows the <strong>Cyclic Sort</strong> pattern and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5753318183796736/\" target=\"_blank\">Find the Smallest Missing Positive Number</a>. The only difference is that, in this problem, we need to find the first ‘k’ missing numbers compared to only the first missing number.</p>\n<p data-id=\"d0dec3378c535f9bfa774b2908b75ab3\">We will follow a similar approach as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5753318183796736/\" target=\"_blank\">Find the Smallest Missing Positive Number</a> to place the numbers on their correct indices and ignore all numbers that are out of the range of the array. Once we are done with the cyclic sort we will iterate through the array to find indices that do not have the correct numbers.</p>\n<p data-id=\"ea79cf6aeb499dd21dd3d73dc6478814\">If we are not able to find ‘k’ missing numbers from the array, we need to add additional numbers to the output array. To find these additional numbers we will use the length of the array. For example, if the length of the array is 4, the next missing numbers will be 4, 5, 6 and so on. One tricky aspect is that any of these additional numbers could be part of the array. Remember, while sorting, we ignored all numbers that are greater than or equal to the length of the array. So all indices that have the missing numbers could possibly have these additional numbers. To handle this, we must keep track of all numbers from those indices that have missing numbers. Let’s understand this with an example:</p>\n<p data-id=\"d6c98aca99fd3750b6f8a9a56eb868d8\">After the cyclic sort our array will look like:</p>\n<p data-id=\"1d25565afd65652a6556b7da07543a39\">From the sorted array we can see that the first missing number is ‘4’ (as we have ‘6’ on the fourth index) but to find the second missing number we need to remember that the array does contain ‘6’. Hence, the next missing number is ‘7’.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Missing numbers: [1, 2, 6]\nMissing numbers: [1, 5, 6]\nMissing numbers: [1, 2]\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass FirstKMissingPositive {\n\n  public static List<Integer> findNumbers(int[] nums, int k) {\n    int i = 0;\n    while (i < nums.length) {\n      if (nums[i] > 0 && nums[i] <= nums.length && nums[i] != nums[nums[i] - 1])\n        swap(nums, i, nums[i] - 1);\n      else\n        i++;\n    }\n\n    List<Integer> missingNumbers = new ArrayList<>();\n    Set<Integer> extraNumbers = new HashSet<>();\n    for (i = 0; i < nums.length && missingNumbers.size() < k; i++)\n      if (nums[i] != i + 1) {\n        missingNumbers.add(i + 1);\n        extraNumbers.add(nums[i]);\n      }\n\n    // add the remaining missing numbers\n    for (i = 1; missingNumbers.size() < k; i++) {\n      int candidateNumber = i + nums.length;\n      // ignore if the array contains the candidate number\n      if (!extraNumbers.contains(candidateNumber))\n        missingNumbers.add(candidateNumber);\n    }\n\n    return missingNumbers;\n  }\n\n  private static void swap(int[] arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> missingNumbers = FirstKMissingPositive.findNumbers(new int[] { 3, -1, 4, 5, 5 }, 3);\n    System.out.println(\"Missing numbers: \" + missingNumbers);\n\n    missingNumbers = FirstKMissingPositive.findNumbers(new int[] { 2, 3, 4 }, 3);\n    System.out.println(\"Missing numbers: \" + missingNumbers);\n\n    missingNumbers = FirstKMissingPositive.findNumbers(new int[] { -2, -3, 4 }, 2);\n    System.out.println(\"Missing numbers: \" + missingNumbers);\n  }\n}\n",
+        "python3": "\ndef find_first_k_missing_positive(nums, k):\n  n = len(nums)\n  i = 0\n  while i < len(nums):\n    j = nums[i] - 1\n    if nums[i] > 0 and nums[i] <= n and nums[i] != nums[j]:\n      nums[i], nums[j] = nums[j], nums[i]  # swap\n    else:\n      i += 1\n\n  missingNumbers = []\n  extraNumbers = set()\n  for i in range(n):\n    if len(missingNumbers) < k:\n      if nums[i] != i + 1:\n        missingNumbers.append(i + 1)\n        extraNumbers.add(nums[i])\n\n  # add the remaining missing numbers\n  i = 1\n  while len(missingNumbers) < k:\n    candidateNumber = i + n\n    # ignore if the array contains the candidate number\n    if candidateNumber not in extraNumbers:\n      missingNumbers.append(candidateNumber)\n    i += 1\n\n  return missingNumbers\n\n\ndef main():\n  print(find_first_k_missing_positive([3, -1, 4, 5, 5], 3))\n  print(find_first_k_missing_positive([2, 3, 4], 3))\n  print(find_first_k_missing_positive([-2, -3, 4], 2))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <unordered_set>\n#include <vector>\n\nclass FirstKMissingPositive {\n public:\n  static vector<int> findNumbers(vector<int> &nums, int k) {\n    int i = 0;\n    while (i < nums.size()) {\n      if (nums[i] > 0 && nums[i] <= nums.size() && nums[i] != nums[nums[i] - 1]) {\n        swap(nums, i, nums[i] - 1);\n      } else {\n        i++;\n      }\n    }\n\n    vector<int> missingNumbers;\n    unordered_set<int> extraNumbers;\n    for (i = 0; i < nums.size() && missingNumbers.size() < k; i++) {\n      if (nums[i] != i + 1) {\n        missingNumbers.push_back(i + 1);\n        extraNumbers.insert(nums[i]);\n      }\n    }\n\n    // add the remaining missing numbers\n    for (i = 1; missingNumbers.size() < k; i++) {\n      int candidateNumber = i + nums.size();\n      // ignore if the array contains the candidate number\n      if (extraNumbers.find(candidateNumber) == extraNumbers.end()) {\n        missingNumbers.push_back(candidateNumber);\n      }\n    }\n\n    return missingNumbers;\n  }\n\n private:\n  static void swap(vector<int> &arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> v1 = {3, -1, 4, 5, 5};\n  vector<int> missingNumbers = FirstKMissingPositive::findNumbers(v1, 3);\n  cout << \"Missing numbers: \";\n  for (auto num : missingNumbers) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  v1 = {2, 3, 4};\n  missingNumbers = FirstKMissingPositive::findNumbers(v1, 3);\n  cout << \"Missing numbers: \";\n  for (auto num : missingNumbers) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  v1 = {-2, -3, 4};\n  missingNumbers = FirstKMissingPositive::findNumbers(v1, 2);\n  cout << \"Missing numbers: \";\n  for (auto num : missingNumbers) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n",
+        "javascript": "function find_first_k_missing_positive(nums, k) {\n  const n = nums.length;\n  let i = 0;\n  while (i < n) {\n    const j = nums[i] - 1;\n    if (nums[i] > 0 && nums[i] <= n && nums[i] !== nums[j]) {\n      [nums[i], nums[j]] = [nums[j], nums[i]]; // swap\n    } else {\n      i += 1;\n    }\n  }\n  missingNumbers = [];\n  const extraNumbers = new Set();\n  for (i = 0; i < n; i++) {\n    if (missingNumbers.length < k) {\n      if (nums[i] !== i + 1) {\n        missingNumbers.push(i + 1);\n        extraNumbers.add(nums[i]);\n      }\n    }\n  }\n\n  // add the remaining missing numbers\n  i = 1;\n  while (missingNumbers.length < k) {\n    const candidateNumber = i + n;\n    // ignore if the array contains the candidate number\n    if (!extraNumbers.has(candidateNumber)) {\n      missingNumbers.push(candidateNumber);\n    }\n    i += 1;\n  }\n  return missingNumbers;\n}\n\n\nconsole.log(find_first_k_missing_positive([3, -1, 4, 5, 5], 3));\nconsole.log(find_first_k_missing_positive([2, 3, 4], 3));\nconsole.log(find_first_k_missing_positive([-2, -3, 4], 2));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"58d0d1a994e5c6bbb02514068645afda\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>+</mo><mi>k</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n + k)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.03148em\">k</span><span class=\"mclose\">)</span></span></span></span>, as the last two <code>for</code> loops will run for <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span> and <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(k)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.03148em\">k</span><span class=\"mclose\">)</span></span></span></span> times respectively.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"60da5186f94c7bea0c6a52992e9fe819\">The algorithm needs <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(k)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.03148em\">k</span><span class=\"mclose\">)</span></span></span></span> space to store the <code>extraNumbers</code>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 3.html",
+      "1.2Problem Challenge 3.html",
+      "1.3Problem Challenge 3.html",
+      "1.4Problem Challenge 3.html",
+      "1.1Solution Review_ Problem Challenge 3.html",
+      "1.2Solution Review_ Problem Challenge 3.html",
+      "1.3Solution Review_ Problem Challenge 3.html",
+      "1.4Solution Review_ Problem Challenge 3.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

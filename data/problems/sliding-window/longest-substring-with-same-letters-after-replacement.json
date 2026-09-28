@@ -1,0 +1,117 @@
+{
+  "id": "sliding-window/longest-substring-with-same-letters-after-replacement",
+  "pattern": {
+    "index": 2,
+    "name": "Sliding Window",
+    "slug": "sliding-window"
+  },
+  "title": "Longest Substring with Same Letters after Replacement",
+  "difficulty": "hard",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "2. Pattern Sliding Window/7. Longest Substring with Same Letters after Replacement (hard)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class CharacterReplacement {\n  public static int findLength(String str, int k) {\n    // TODO: Write your code here\n    return -1;\n  }\n}\n",
+    "python3": "def length_of_longest_substring(str, k):\n  # TODO: Write your code here\n  return -1\n",
+    "javascript": "const length_of_longest_substring = function(str, k) {\n  // TODO: Write your code here\n  return -1;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass CharacterReplacement {\n public:\n  static int findLength(const string& str, int k) {\n    int maxLength = 0;\n    // TODO: Write your code here\n    return maxLength;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: String=\"aabccbb\", k=2\nOutput: 5\nExplanation: Replace the two 'c' with 'b' to have a longest repeating substring \"bbbbb\".",
+      "input": "String=\"aabccbb\", k=2",
+      "output": "5",
+      "explanation": "Replace the two 'c' with 'b' to have a longest repeating substring \"bbbbb\"."
+    },
+    {
+      "raw": "Input: String=\"abbcb\", k=1\nOutput: 4\nExplanation: Replace the 'c' with 'b' to have a longest repeating substring \"bbbb\".",
+      "input": "String=\"abbcb\", k=1",
+      "output": "4",
+      "explanation": "Replace the 'c' with 'b' to have a longest repeating substring \"bbbb\"."
+    },
+    {
+      "raw": "Input: String=\"abccde\", k=1\nOutput: 3\nExplanation: Replace the 'b' or 'd' with 'c' to have the longest repeating substring \"ccc\".",
+      "input": "String=\"abccde\", k=1",
+      "output": "3",
+      "explanation": "Replace the 'b' or 'd' with 'c' to have the longest repeating substring \"ccc\"."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"fea78170c2c9601c826beead9b784952\">Given a string with lowercase letters only, if you are allowed to <strong>replace no more than ‘k’ letters</strong> with any letter, find the <strong>length of the longest substring having the same letters</strong> after replacement.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "class CharacterReplacement {\n  public static int findLength(String str, int k) {\n    // TODO: Write your code here\n    return -1;\n  }\n}\n",
+        "python3": "def length_of_longest_substring(str, k):\n  # TODO: Write your code here\n  return -1\n",
+        "javascript": "const length_of_longest_substring = function(str, k) {\n  // TODO: Write your code here\n  return -1;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass CharacterReplacement {\n public:\n  static int findLength(const string& str, int k) {\n    int maxLength = 0;\n    // TODO: Write your code here\n    return maxLength;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"502caf510dde6179648a945ed6d15f5a\">This problem follows the <strong>Sliding Window</strong> pattern and we can use a similar dynamic sliding window strategy as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5485010335301632/\" target=\"_blank\">No-repeat Substring</a>. We can use a HashMap to count the frequency of each letter.</p>\n<p data-id=\"18c45230de39bd57b1f4a4214406cf31\">We’ll iterate through the string to add one letter at a time in the window. We’ll also keep track of the count of the maximum repeating letter in any window (let’s call it <code>maxRepeatLetterCount</code>). So at any time, we know that we can have a window which has one letter repeating <code>maxRepeatLetterCount</code> times, this means we should try to replace the remaining letters. If we have more than ‘k’ remaining letters, we should shrink the window as we are not allowed to replace more than ‘k’ letters.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">5\n4\n3\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass CharacterReplacement {\n  public static int findLength(String str, int k) {\n    int windowStart = 0, maxLength = 0, maxRepeatLetterCount = 0;\n    Map<Character, Integer> letterFrequencyMap = new HashMap<>();\n    // try to extend the range [windowStart, windowEnd]\n    for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {\n      char rightChar = str.charAt(windowEnd);\n      letterFrequencyMap.put(rightChar, letterFrequencyMap.getOrDefault(rightChar, 0) + 1);\n      maxRepeatLetterCount = Math.max(maxRepeatLetterCount, letterFrequencyMap.get(rightChar));\n\n      // current window size is from windowStart to windowEnd, overall we have a letter which is\n      // repeating 'maxRepeatLetterCount' times, this means we can have a window which has one letter\n      // repeating 'maxRepeatLetterCount' times and the remaining letters we should replace.\n      // if the remaining letters are more than 'k', it is the time to shrink the window as we\n      // are not allowed to replace more than 'k' letters\n      if (windowEnd - windowStart + 1 - maxRepeatLetterCount > k) {\n        char leftChar = str.charAt(windowStart);\n        letterFrequencyMap.put(leftChar, letterFrequencyMap.get(leftChar) - 1);\n        windowStart++;\n      }\n\n      maxLength = Math.max(maxLength, windowEnd - windowStart + 1);\n    }\n\n    return maxLength;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(CharacterReplacement.findLength(\"aabccbb\", 2));\n    System.out.println(CharacterReplacement.findLength(\"abbcb\", 1));\n    System.out.println(CharacterReplacement.findLength(\"abccde\", 1));\n  }\n}\n",
+        "python3": "def length_of_longest_substring(str, k):\n  window_start, max_length, max_repeat_letter_count = 0, 0, 0\n  frequency_map = {}\n\n  # Try to extend the range [window_start, window_end]\n  for window_end in range(len(str)):\n    right_char = str[window_end]\n    if right_char not in frequency_map:\n      frequency_map[right_char] = 0\n    frequency_map[right_char] += 1\n    max_repeat_letter_count = max(\n      max_repeat_letter_count, frequency_map[right_char])\n\n    # Current window size is from window_start to window_end, overall we have a letter which is\n    # repeating 'max_repeat_letter_count' times, this means we can have a window which has one letter\n    # repeating 'max_repeat_letter_count' times and the remaining letters we should replace.\n    # if the remaining letters are more than 'k', it is the time to shrink the window as we\n    # are not allowed to replace more than 'k' letters\n    if (window_end - window_start + 1 - max_repeat_letter_count) > k:\n      left_char = str[window_start]\n      frequency_map[left_char] -= 1\n      window_start += 1\n\n    max_length = max(max_length, window_end - window_start + 1)\n  return max_length\n\n\ndef main():\n  print(length_of_longest_substring(\"aabccbb\", 2))\n  print(length_of_longest_substring(\"abbcb\", 1))\n  print(length_of_longest_substring(\"abccde\", 1))\n\n\nmain()\n",
+        "javascript": "function length_of_longest_substring(str, k) {\n  let windowStart = 0,\n    maxLength = 0,\n    maxRepeatLetterCount = 0,\n    frequencyMap = {};\n\n  // Try to extend the range [windowStart, windowEnd]\n  for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {\n    const rightChar = str[windowEnd];\n    if (!(rightChar in frequencyMap)) {\n      frequencyMap[rightChar] = 0;\n    }\n    frequencyMap[rightChar] += 1;\n    maxRepeatLetterCount = Math.max(maxRepeatLetterCount, frequencyMap[rightChar]);\n\n    // Current window size is from windowStart to windowEnd, overall we have a letter which is\n    // repeating 'maxRepeatLetterCount' times, this means we can have a window which has one letter\n    // repeating 'maxRepeatLetterCount' times and the remaining letters we should replace.\n    // if the remaining letters are more than 'k', it is the time to shrink the window as we\n    // are not allowed to replace more than 'k' letters\n    if ((windowEnd - windowStart + 1 - maxRepeatLetterCount) > k) {\n      leftChar = str[windowStart];\n      frequencyMap[leftChar] -= 1;\n      windowStart += 1;\n    }\n\n    maxLength = Math.max(maxLength, windowEnd - windowStart + 1);\n  }\n  return maxLength;\n}\n\n\nconsole.log(length_of_longest_substring('aabccbb', 2));\nconsole.log(length_of_longest_substring('abbcb', 1));\nconsole.log(length_of_longest_substring('abccde', 1));",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass CharacterReplacement {\npublic:\n  static int findLength(const string &str, int k) {\n    int windowStart = 0, maxLength = 0, maxRepeatLetterCount = 0;\n    unordered_map<char, int> letterFrequencyMap;\n    // try to extend the range [windowStart, windowEnd]\n    for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {\n      char rightChar = str[windowEnd];\n      letterFrequencyMap[rightChar]++;\n      maxRepeatLetterCount = max(maxRepeatLetterCount, letterFrequencyMap[rightChar]);\n\n      // current window size is from windowStart to windowEnd, overall we have a letter which is\n      // repeating 'maxRepeatLetterCount' times, this means we can have a window which has one\n      // letter repeating 'maxRepeatLetterCount' times and the remaining letters we should replace.\n      // if the remaining letters are more than 'k', it is the time to shrink the window as we\n      // are not allowed to replace more than 'k' letters\n      if (windowEnd - windowStart + 1 - maxRepeatLetterCount > k) {\n        char leftChar = str[windowStart];\n        letterFrequencyMap[leftChar]--;\n        windowStart++;\n      }\n\n      maxLength = max(maxLength, windowEnd - windowStart + 1);\n    }\n\n    return maxLength;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << CharacterReplacement::findLength(\"aabccbb\", 2) << endl;\n  cout << CharacterReplacement::findLength(\"abbcb\", 1) << endl;\n  cout << CharacterReplacement::findLength(\"abccde\", 1) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"72a45619d7fa5e8cfdc61ce2f0cf1bbe\">The time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of letters in the input string.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"01186a17b57612d1c30933593a85caa9\">As we are expecting only the lower case letters in the input string, we can conclude that the space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>2</mn><mn>6</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(26)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">2</span><span class=\"mord mathrm\">6</span><span class=\"mclose\">)</span></span></span></span>, to store each letter’s frequency in the <strong>HashMap</strong>, which is asymptotically equal to <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Longest Substring with Letters after Replacement (hard) -.html",
+      "1.2 Longest Substring with Same Letters after Replacement (hard).html",
+      "1.3 Longest Substring with Same Letters after Replacement (hard) -.html",
+      "1.4 Longest Substring with Same Letters after Replacement (hard) -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 4,
+    "name": "Fast & Slow pointers",
+    "slug": "fast-slow-pointers"
+  },
+  "summary": "The Fast & Slow pointer approach, also known as the Hare & Tortoise algorithm, is a pointer algorithm that uses two pointers which move through the array (or sequence/LinkedList) at different speeds.…",
+  "sourceFolder": "4. Pattern Fast _ Slow pointers/1.Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"9c900c9f4f59197271e2fa7d9956deb7\">The <strong>Fast &amp; Slow</strong> pointer approach, also known as the <strong>Hare &amp; Tortoise algorithm</strong>, is a pointer algorithm that uses two pointers which move through the array (or sequence/LinkedList) at different speeds. This approach is quite useful when dealing with cyclic LinkedLists or arrays.</p>\n<p data-id=\"4b1b6ce6b8840c526c79a31b0ea68581\">By moving at different speeds (say, in a cyclic LinkedList), the algorithm proves that the two pointers are bound to meet. The fast pointer should catch the slow pointer once both the pointers are in a cyclic loop.</p>\n<p data-id=\"47074f06ad26839e0393c15e19b8a4e5\">One of the famous problems solved using this technique was <strong>Finding a cycle in a LinkedList</strong>. Let’s jump onto this problem to understand the <strong>Fast &amp; Slow</strong> pattern.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

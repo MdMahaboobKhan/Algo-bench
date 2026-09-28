@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 7,
+    "name": "In-place Reversal of a LinkedList",
+    "slug": "in-place-reversal-of-a-linkedlist"
+  },
+  "summary": "In a lot of problems, we are asked to reverse the links between a set of nodes of a LinkedList. Often, the constraint is that we need to do this in-place, i.e., using the existing node objects and…",
+  "sourceFolder": "7. Pattern In-place Reversal of a LinkedList/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"377f4107f5494c90e46f75399ad5d601\">In a lot of problems, we are asked to reverse the links between a set of nodes of a <strong>LinkedList</strong>. Often, the constraint is that we need to do this in-place, i.e., using the existing node objects and without using extra memory.</p>\n<p data-id=\"f8f73ed624cc3f7d62c651bfdb0d0543\"><strong>In-place Reversal of a LinkedList</strong> pattern describes an efficient way to solve the above problem. In the following chapters, we will solve a bunch of problems using this pattern.</p>\n<p data-id=\"46b4af34f7798859a5a2fe33f41696fb\">Let’s jump on to our first problem to understand this pattern.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

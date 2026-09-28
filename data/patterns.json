@@ -1,0 +1,136 @@
+[
+  {
+    "index": 2,
+    "name": "Sliding Window",
+    "slug": "sliding-window",
+    "problemCount": 11,
+    "hasIntro": true,
+    "description": "In many problems dealing with an array (or a LinkedList), we are asked to find or calculate something among all the contiguous subarrays (or sublists) of a given size. For example, take a look at…"
+  },
+  {
+    "index": 3,
+    "name": "Two Pointers",
+    "slug": "two-pointers",
+    "problemCount": 10,
+    "hasIntro": true,
+    "description": "In problems where we deal with sorted arrays (or LinkedLists) and need to find a set of elements that fulfill certain constraints, the Two Pointers approach becomes quite useful. The set of elements…"
+  },
+  {
+    "index": 4,
+    "name": "Fast & Slow pointers",
+    "slug": "fast-slow-pointers",
+    "problemCount": 7,
+    "hasIntro": true,
+    "description": "The Fast & Slow pointer approach, also known as the Hare & Tortoise algorithm, is a pointer algorithm that uses two pointers which move through the array (or sequence/LinkedList) at different speeds.…"
+  },
+  {
+    "index": 5,
+    "name": "Merge Intervals",
+    "slug": "merge-intervals",
+    "problemCount": 7,
+    "hasIntro": true,
+    "description": "This pattern describes an efficient technique to deal with overlapping intervals. In a lot of problems involving intervals, we either need to find overlapping intervals or merge intervals if they…"
+  },
+  {
+    "index": 6,
+    "name": "Cyclic Sort",
+    "slug": "cyclic-sort",
+    "problemCount": 8,
+    "hasIntro": true,
+    "description": "This pattern describes an interesting approach to deal with problems involving arrays containing numbers in a given range. For example, take the following problem: You are given an unsorted array…"
+  },
+  {
+    "index": 7,
+    "name": "In-place Reversal of a LinkedList",
+    "slug": "in-place-reversal-of-a-linkedlist",
+    "problemCount": 5,
+    "hasIntro": true,
+    "description": "In a lot of problems, we are asked to reverse the links between a set of nodes of a LinkedList. Often, the constraint is that we need to do this in-place, i.e., using the existing node objects and…"
+  },
+  {
+    "index": 8,
+    "name": "Tree Breadth First Search",
+    "slug": "tree-breadth-first-search",
+    "problemCount": 9,
+    "hasIntro": true,
+    "description": "This pattern is based on the Breadth First Search (BFS) technique to traverse a tree. Any problem involving the traversal of a tree in a level-by-level order can be efficiently solved using this…"
+  },
+  {
+    "index": 9,
+    "name": "Tree Depth First Search",
+    "slug": "tree-depth-first-search",
+    "problemCount": 7,
+    "hasIntro": true,
+    "description": "This pattern is based on the Depth First Search (DFS) technique to traverse a tree. We will be using recursion (or we can also use a stack for the iterative approach) to keep track of all the…"
+  },
+  {
+    "index": 10,
+    "name": "Two Heaps",
+    "slug": "two-heaps",
+    "problemCount": 1,
+    "hasIntro": false
+  },
+  {
+    "index": 11,
+    "name": "Subsets",
+    "slug": "subsets",
+    "problemCount": 9,
+    "hasIntro": true,
+    "description": "A huge number of coding interview problems involve dealing with Permutations and Combinations of a given set of elements. This pattern describes an efficient Breadth First Search (BFS) approach to…"
+  },
+  {
+    "index": 12,
+    "name": "Modified Binary Search",
+    "slug": "modified-binary-search",
+    "problemCount": 10,
+    "hasIntro": true,
+    "description": "As we know, whenever we are given a sorted Array or LinkedList or Matrix, and we are asked to find a certain element, the best algorithm we can use is the Binary Search. This pattern describes an…"
+  },
+  {
+    "index": 13,
+    "name": "Bitwise XOR",
+    "slug": "bitwise-xor",
+    "problemCount": 4,
+    "hasIntro": true,
+    "description": "XOR is a logical bitwise operator that returns 0 (false) if both bits are the same and returns 1 (true) otherwise. In other words, it only returns 1 if exactly one bit is set to 1 out of the two bits…"
+  },
+  {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements",
+    "problemCount": 14,
+    "hasIntro": true,
+    "description": "Any problem that asks us to find the top/smallest/frequent ‘K’ elements among a given set falls under this pattern. The best data structure that comes to mind to keep track of ‘K’ elements is Heap.…"
+  },
+  {
+    "index": 15,
+    "name": "K-way merge",
+    "slug": "k-way-merge",
+    "problemCount": 5,
+    "hasIntro": true,
+    "description": "This pattern helps us solve problems that involve a list of sorted arrays. Whenever we are given ‘K’ sorted arrays, we can use a Heap to efficiently perform a sorted traversal of all the elements of…"
+  },
+  {
+    "index": 16,
+    "name": "Dynamic Programming",
+    "slug": "0-or-1-knapsack",
+    "problemCount": 6,
+    "hasIntro": true,
+    "description": "0/1 Knapsack pattern is based on the famous problem with the same name which is efficiently solved using Dynamic Programming (DP). In this pattern, we will go through a set of problems to develop an…"
+  },
+  {
+    "index": 17,
+    "name": "Graph",
+    "slug": "topological-sort",
+    "problemCount": 7,
+    "hasIntro": true,
+    "description": "Topological Sort is used to find a linear ordering of elements that have dependencies on each other. For example, if event ‘B’ is dependent on event ‘A’, ‘A’ comes before ‘B’ in topological ordering.…"
+  },
+  {
+    "index": 18,
+    "name": "Miscellaneous",
+    "slug": "miscellaneous",
+    "problemCount": 1,
+    "hasIntro": false
+  }
+]

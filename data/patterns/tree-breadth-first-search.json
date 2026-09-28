@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 8,
+    "name": "Tree Breadth First Search",
+    "slug": "tree-breadth-first-search"
+  },
+  "summary": "This pattern is based on the Breadth First Search (BFS) technique to traverse a tree. Any problem involving the traversal of a tree in a level-by-level order can be efficiently solved using this…",
+  "sourceFolder": "8. Pattern Tree Breadth First Search/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"ca09f298a1add8bb9fc975d6e043c7c4\">This pattern is based on the <strong>Breadth First Search (BFS)</strong> technique to traverse a tree.</p>\n<p data-id=\"bedcdd16778cd1dc95c0eb58a775cd29\">Any problem involving the traversal of a tree in a level-by-level order can be efficiently solved using this approach. We will use a <strong>Queue</strong> to keep track of all the nodes of a level before we jump onto the next level. This also means that the space complexity of the algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>W</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(W)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.13889em\">W</span><span class=\"mclose\">)</span></span></span></span>, where ‘W’ is the maximum number of nodes on any level.</p>\n<p data-id=\"2d8746ba5aed60da795f75a396568879\">Let’s jump onto our first problem to understand this pattern.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "two-pointers/triplet-sum-to-zero",
+  "pattern": {
+    "index": 3,
+    "name": "Two Pointers",
+    "slug": "two-pointers"
+  },
+  "title": "Triplet Sum to Zero",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "3. Pattern Two Pointers/5. Triplet Sum to Zero (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass TripletSumToZero {\n\n  public static List<List<Integer>> searchTriplets(int[] arr) {\n    List<List<Integer>> triplets = new ArrayList<>();\n    // TODO: Write your code here\n    return triplets;\n  }\n}",
+    "python3": "def search_triplets(arr):\n  triplets = []\n  # TODO: Write your code here\n  return triplets\n\n",
+    "javascript": "const search_triplets = function(arr) {\n  triplets = [];\n  // TODO: Write your code here\n  return triplets;\n};\n",
+    "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass TripletSumToZero {\n public:\n  static vector<vector<int>> searchTriplets(vector<int> &arr) {\n    vector<vector<int>> triplets;\n    // TODO: Write your code here\n    return triplets;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [-3, 0, 1, 2, -1, 1, -2]\nOutput: [-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]\nExplanation: There are four unique triplets whose sum is equal to zero.",
+      "input": "[-3, 0, 1, 2, -1, 1, -2]",
+      "output": "[-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]",
+      "explanation": "There are four unique triplets whose sum is equal to zero."
+    },
+    {
+      "raw": "Input: [-5, 2, -1, -2, 3]\nOutput: [[-5, 2, 3], [-2, -1, 3]]\nExplanation: There are two unique triplets whose sum is equal to zero.",
+      "input": "[-5, 2, -1, -2, 3]",
+      "output": "[[-5, 2, 3], [-2, -1, 3]]",
+      "explanation": "There are two unique triplets whose sum is equal to zero."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"fad3cecad47099becc13e2a8a183d1ae\">Given an array of unsorted numbers, find all <strong>unique triplets in it that add up to zero</strong>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TripletSumToZero {\n\n  public static List<List<Integer>> searchTriplets(int[] arr) {\n    List<List<Integer>> triplets = new ArrayList<>();\n    // TODO: Write your code here\n    return triplets;\n  }\n}",
+        "python3": "def search_triplets(arr):\n  triplets = []\n  # TODO: Write your code here\n  return triplets\n\n",
+        "javascript": "const search_triplets = function(arr) {\n  triplets = [];\n  // TODO: Write your code here\n  return triplets;\n};\n",
+        "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass TripletSumToZero {\n public:\n  static vector<vector<int>> searchTriplets(vector<int> &arr) {\n    vector<vector<int>> triplets;\n    // TODO: Write your code here\n    return triplets;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"17c2613a959945aff251ed9d8b6db7f4\">This problem follows the <strong>Two Pointers</strong> pattern and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6618310940557312/\" target=\"_blank\">Pair with Target Sum</a>. A couple of differences are that the input array is not sorted and instead of a pair we need to find triplets with a target sum of zero.</p>\n<p data-id=\"0bf0158444be6ffaf65b2be9d315d4f3\">To follow a similar approach, first, we will sort the array and then iterate through it taking one number at a time. Let’s say during our iteration we are at number ‘X’, so we need to find ‘Y’ and ‘Z’ such that <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>X</mi><mo>+</mo><mi>Y</mi><mo>+</mo><mi>Z</mi><mo>=</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding=\"application/x-tex\">X + Y + Z == 0</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.68333em\"></span><span class=\"strut bottom\" style=\"height:0.76666em;vertical-align:-0.08333em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.07847em\">X</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.22222em\">Y</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">Z</span><span class=\"mrel\">=</span><span class=\"mrel\">=</span><span class=\"mord mathrm\">0</span></span></span></span>. At this stage, our problem translates into finding a pair whose sum is equal to “<span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mo>−</mo><mi>X</mi></mrow><annotation encoding=\"application/x-tex\">-X</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.68333em\"></span><span class=\"strut bottom\" style=\"height:0.76666em;vertical-align:-0.08333em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord\">−</span><span class=\"mord mathit\" style=\"margin-right:0.07847em\">X</span></span></span></span>” (as from the above equation <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>Y</mi><mo>+</mo><mi>Z</mi><mo>=</mo><mo>=</mo><mo>−</mo><mi>X</mi></mrow><annotation encoding=\"application/x-tex\">Y + Z == -X</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.68333em\"></span><span class=\"strut bottom\" style=\"height:0.76666em;vertical-align:-0.08333em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.22222em\">Y</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">Z</span><span class=\"mrel\">=</span><span class=\"mrel\">=</span><span class=\"mord\">−</span><span class=\"mord mathit\" style=\"margin-right:0.07847em\">X</span></span></span></span>).</p>\n<p data-id=\"cea54800fc12ae02b9929e1edd089d35\">Another difference from <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6618310940557312/\" target=\"_blank\">Pair with Target Sum</a> is that we need to find all the unique triplets. To handle this, we have to skip any duplicate number. Since we will be sorting the array, so all the duplicate numbers will be next to each other and are easier to skip.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">[[-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]]\n[[-5, 2, 3], [-2, -1, 3]]\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TripletSumToZero {\n\n  public static List<List<Integer>> searchTriplets(int[] arr) {\n    Arrays.sort(arr);\n    List<List<Integer>> triplets = new ArrayList<>();\n    for (int i = 0; i < arr.length - 2; i++) {\n      if (i > 0 && arr[i] == arr[i - 1]) // skip same element to avoid duplicate triplets\n        continue;\n      searchPair(arr, -arr[i], i + 1, triplets);\n    }\n\n    return triplets;\n  }\n\n  private static void searchPair(int[] arr, int targetSum, int left, List<List<Integer>> triplets) {\n    int right = arr.length - 1;\n    while (left < right) {\n      int currentSum = arr[left] + arr[right];\n      if (currentSum == targetSum) { // found the triplet\n        triplets.add(Arrays.asList(-targetSum, arr[left], arr[right]));\n        left++;\n        right--;\n        while (left < right && arr[left] == arr[left - 1])\n          left++; // skip same element to avoid duplicate triplets\n        while (left < right && arr[right] == arr[right + 1])\n          right--; // skip same element to avoid duplicate triplets\n      } else if (targetSum > currentSum)\n        left++; // we need a pair with a bigger sum\n      else\n        right--; // we need a pair with a smaller sum\n    }\n  }\n\n  public static void main(String[] args) {\n    System.out.println(TripletSumToZero.searchTriplets(new int[] { -3, 0, 1, 2, -1, 1, -2 }));\n    System.out.println(TripletSumToZero.searchTriplets(new int[] { -5, 2, -1, -2, 3 }));\n  }\n}",
+        "python3": "def search_triplets(arr):\n  arr.sort()\n  triplets = []\n  for i in range(len(arr)):\n    if i > 0 and arr[i] == arr[i-1]:  # skip same element to avoid duplicate triplets\n      continue\n    search_pair(arr, -arr[i], i+1, triplets)\n\n  return triplets\n\n\ndef search_pair(arr, target_sum, left, triplets):\n  right = len(arr) - 1\n  while(left < right):\n    current_sum = arr[left] + arr[right]\n    if current_sum == target_sum:  # found the triplet\n      triplets.append([-target_sum, arr[left], arr[right]])\n      left += 1\n      right -= 1\n      while left < right and arr[left] == arr[left - 1]:\n        left += 1  # skip same element to avoid duplicate triplets\n      while left < right and arr[right] == arr[right + 1]:\n        right -= 1  # skip same element to avoid duplicate triplets\n    elif target_sum > current_sum:\n      left += 1  # we need a pair with a bigger sum\n    else:\n      right -= 1  # we need a pair with a smaller sum\n\n\ndef main():\n  print(search_triplets([-3, 0, 1, 2, -1, 1, -2]))\n  print(search_triplets([-5, 2, -1, -2, 3]))\n\n\nmain()\n",
+        "javascript": "function search_triplets(arr) {\n  arr.sort((a, b) => a - b);\n  const triplets = [];\n  for (i = 0; i < arr.length; i++) {\n    if (i > 0 && arr[i] === arr[i - 1]) { // skip same element to avoid duplicate triplets\n      continue;\n    }\n    search_pair(arr, -arr[i], i + 1, triplets);\n  }\n\n  return triplets;\n}\n\n\nfunction search_pair(arr, target_sum, left, triplets) {\n  let right = arr.length - 1;\n  while (left < right) {\n    const current_sum = arr[left] + arr[right];\n    if (current_sum === target_sum) { // found the triplet\n      triplets.push([-target_sum, arr[left], arr[right]]);\n      left += 1;\n      right -= 1;\n      while (left < right && arr[left] === arr[left - 1]) {\n        left += 1; // skip same element to avoid duplicate triplets\n      }\n      while (left < right && arr[right] === arr[right + 1]) {\n        right -= 1; // skip same element to avoid duplicate triplets\n      }\n    } else if (target_sum > current_sum) {\n      left += 1; // we need a pair with a bigger sum\n    } else {\n      right -= 1; // we need a pair with a smaller sum\n    }\n  }\n}\n\n\nconsole.log(search_triplets([-3, 0, 1, 2, -1, 1, -2]));\nconsole.log(search_triplets([-5, 2, -1, -2, 3]));",
+        "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass TripletSumToZero {\npublic:\n  static vector<vector<int>> searchTriplets(vector<int> &arr) {\n    sort(arr.begin(), arr.end());\n    vector<vector<int>> triplets;\n    for (int i = 0; i < arr.size() - 2; i++) {\n      if (i > 0 && arr[i] == arr[i - 1]) { // skip same element to avoid duplicate triplets\n        continue;\n      }\n      searchPair(arr, -arr[i], i + 1, triplets);\n    }\n\n    return triplets;\n  }\n\nprivate:\n  static void searchPair(const vector<int> &arr, int targetSum, int left,\n                         vector<vector<int>> &triplets) {\n    int right = arr.size() - 1;\n    while (left < right) {\n      int currentSum = arr[left] + arr[right];\n      if (currentSum == targetSum) { // found the pair\n        triplets.push_back({-targetSum, arr[left], arr[right]});\n        left++;\n        right--;\n        while (left < right && arr[left] == arr[left - 1]) {\n          left++; // skip same element to avoid duplicate triplets\n        }\n        while (left < right && arr[right] == arr[right + 1]) {\n          right--; // skip same element to avoid duplicate triplets\n        }\n      } else if (targetSum > currentSum) {\n        left++; // we need a pair with a bigger sum\n      } else {\n        right--; // we need a pair with a smaller sum\n      }\n    }\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> vec = {-3, 0, 1, 2, -1, 1, -2};\n  auto result = TripletSumToZero::searchTriplets(vec);\n  for (auto vec : result) {\n    cout << \"[\";\n    for (auto num : vec) {\n      cout << num << \" \";\n    }\n    cout << \"]\";\n  }\n  cout << endl;\n\n  vec = {-5, 2, -1, -2, 3};\n  result = TripletSumToZero::searchTriplets(vec);\n  for (auto vec : result) {\n    cout << \"[\";\n    for (auto num : vec) {\n      cout << num << \" \";\n    }\n    cout << \"]\";\n  }\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"3d99ec3bcad2f60ed5e7468f90e03690\">Sorting the array will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N * logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>. The <code>searchPair()</code> function will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>. As we are calling <code>searchPair()</code> for every number in the input array, this means that overall <code>searchTriplets()</code> will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>+</mo><msup><mi>N</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N * logN + N^2)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8141079999999999em\"></span><span class=\"strut bottom\" style=\"height:1.064108em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">+</span><span class=\"mord\"><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathrm\">2</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span>, which is asymptotically equivalent to <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>N</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N^2)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8141079999999999em\"></span><span class=\"strut bottom\" style=\"height:1.064108em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathrm\">2</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"6fb0f888778d2f34e064029c0a94bcbb\">Ignoring the space required for the output array, the space complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> which is required for sorting.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Triplet Sum to Zero (medium).html",
+      "1.2 Triplet Sum to Zero (medium).html",
+      "1.3 Triplet Sum to Zero (medium).html",
+      "1.4 Triplet Sum to Zero (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

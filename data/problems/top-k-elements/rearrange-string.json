@@ -1,0 +1,117 @@
+{
+  "id": "top-k-elements/rearrange-string",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "Rearrange String",
+  "difficulty": "hard",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/12. Rearrange String (hard)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass RearrangeString {\n\n  public static String rearrangeString(String str) {\n    // TODO: Write your code here\n    return \"\";\n  }\n\n  public static void main(String[] args) {\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"aappp\"));\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"Programming\"));\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"aapa\"));\n  }\n}\n",
+    "python3": "from heapq import *\n\n\ndef rearrange_string(str):\n  # TODO: Write your code here\n  return \"\"\n\n\ndef main():\n  print(\"Rearranged string:  \" + rearrange_string(\"aappp\"))\n  print(\"Rearranged string:  \" + rearrange_string(\"Programming\"))\n  print(\"Rearranged string:  \" + rearrange_string(\"aapa\"))\n\n\nmain()\n\n",
+    "javascript": "const rearrange_string = function(str) {\n  // TODO: Write your code here\n  return \"\";\n};\n\n\nconsole.log(`Rearranged string: ${rearrange_string(\"aappp\")}`)\nconsole.log(`Rearranged string: ${rearrange_string(\"Programming\")}`)\nconsole.log(`Rearranged string: ${rearrange_string(\"aapa\")}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\nclass RearrangeString {\n public:\n  static string rearrangeString(const string &str) {\n    // TODO: Write your code here\n    return \"\";\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"aappp\") << endl;\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"Programming\") << endl;\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"aapa\") << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: \"aappp\"\nOutput: \"papap\"\nExplanation: In \"papap\", none of the repeating characters come next to each other.",
+      "input": "\"aappp\"",
+      "output": "\"papap\"",
+      "explanation": "In \"papap\", none of the repeating characters come next to each other."
+    },
+    {
+      "raw": "Input: \"Programming\"\nOutput: \"rgmrgmPiano\" or \"gmringmrPoa\" or \"gmrPagimnor\", etc.\nExplanation: None of the repeating characters come next to each other.",
+      "input": "\"Programming\"",
+      "output": "\"rgmrgmPiano\" or \"gmringmrPoa\" or \"gmrPagimnor\", etc.",
+      "explanation": "None of the repeating characters come next to each other."
+    },
+    {
+      "raw": "Input: \"aapa\"\nOutput: \"\"\nExplanation: In all arrangements of \"aapa\", atleast two 'a' will come together e.g., \"apaa\", \"paaa\".",
+      "input": "\"aapa\"",
+      "output": "\"\"",
+      "explanation": "In all arrangements of \"aapa\", atleast two 'a' will come together e.g., \"apaa\", \"paaa\"."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"070c624e8896c8348b0d30cc07a9586f\">Given a string, find if its letters can be rearranged in such a way that no two same characters come next to each other.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Rearranged string: \nRearranged string: \nRearranged string: \n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass RearrangeString {\n\n  public static String rearrangeString(String str) {\n    // TODO: Write your code here\n    return \"\";\n  }\n\n  public static void main(String[] args) {\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"aappp\"));\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"Programming\"));\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"aapa\"));\n  }\n}\n",
+        "python3": "from heapq import *\n\n\ndef rearrange_string(str):\n  # TODO: Write your code here\n  return \"\"\n\n\ndef main():\n  print(\"Rearranged string:  \" + rearrange_string(\"aappp\"))\n  print(\"Rearranged string:  \" + rearrange_string(\"Programming\"))\n  print(\"Rearranged string:  \" + rearrange_string(\"aapa\"))\n\n\nmain()\n\n",
+        "javascript": "const rearrange_string = function(str) {\n  // TODO: Write your code here\n  return \"\";\n};\n\n\nconsole.log(`Rearranged string: ${rearrange_string(\"aappp\")}`)\nconsole.log(`Rearranged string: ${rearrange_string(\"Programming\")}`)\nconsole.log(`Rearranged string: ${rearrange_string(\"aapa\")}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\nclass RearrangeString {\n public:\n  static string rearrangeString(const string &str) {\n    // TODO: Write your code here\n    return \"\";\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"aappp\") << endl;\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"Programming\") << endl;\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"aapa\") << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"8f35e2a142fb130e9c6bdc688855f8f1\">This problem follows the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5728885882748928/\" target=\"_blank\">Top ‘K’ Numbers</a> pattern. We can follow a greedy approach to find an arrangement of the given string where no two same characters come next to each other.</p>\n<p data-id=\"8f6a1c4426e6fcf2d6061537785f331b\">We can work in a stepwise fashion to create a string with all characters from the input string. Following a greedy approach, we should first append the most frequent characters to the output strings, for which we can use a <strong>Max Heap</strong>. By appending the most frequent character first, we have the best chance to find a string where no two same characters come next to each other.</p>\n<p data-id=\"c7caca002e6d0f7b020f7da92c4bca76\">So in each step, we should append one occurrence of the highest frequency character to the output string. We will not put this character back in the heap to ensure that no two same characters are adjacent to each other. In the next step, we should process the next most frequent character from the heap in the same way and then, at the end of this step, insert the character from the previous step back to the heap after decrementing its frequency.</p>\n<p data-id=\"25cefed6bae07bd699c6d4695982d3b4\">Following this algorithm, if we can append all the characters from the input string to the output string, we would have successfully found an arrangement of the given string where no two same characters appeared adjacent to each other.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Rearranged string: papap\nRearranged string: rgmrgmPiano\nRearranged string: \n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass RearrangeString {\n\n  public static String rearrangeString(String str) {\n    Map<Character, Integer> charFrequencyMap = new HashMap<>();\n    for (char chr : str.toCharArray())\n      charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);\n\n    PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<Map.Entry<Character, Integer>>(\n        (e1, e2) -> e2.getValue() - e1.getValue());\n\n    // add all characters to the max heap\n    maxHeap.addAll(charFrequencyMap.entrySet());\n\n    Map.Entry<Character, Integer> previousEntry = null;\n    StringBuilder resultString = new StringBuilder(str.length());\n    while (!maxHeap.isEmpty()) {\n      Map.Entry<Character, Integer> currentEntry = maxHeap.poll();\n      // add the previous entry back in the heap if its frequency is greater than zero\n      if (previousEntry != null && previousEntry.getValue() > 0)\n        maxHeap.offer(previousEntry);\n      // append the current character to the result string and decrement its count\n      resultString.append(currentEntry.getKey());\n      currentEntry.setValue(currentEntry.getValue() - 1);\n      previousEntry = currentEntry;\n    }\n\n    // if we were successful in appending all the characters to the result string, return it\n    return resultString.length() == str.length() ? resultString.toString() : \"\";\n  }\n\n  public static void main(String[] args) {\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"aappp\"));\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"Programming\"));\n    System.out.println(\"Rearranged string: \" + RearrangeString.rearrangeString(\"aapa\"));\n  }\n}\n",
+        "python3": "from heapq import *\n\n\ndef rearrange_string(str):\n  charFrequencyMap = {}\n  for char in str:\n    charFrequencyMap[char] = charFrequencyMap.get(char, 0) + 1\n\n  maxHeap = []\n  # add all characters to the max heap\n  for char, frequency in charFrequencyMap.items():\n    heappush(maxHeap, (-frequency, char))\n\n  previousChar, previousFrequency = None, 0\n  resultString = []\n  while maxHeap:\n    frequency, char = heappop(maxHeap)\n    # add the previous entry back in the heap if its frequency is greater than zero\n    if previousChar and -previousFrequency > 0:\n      heappush(maxHeap, (previousFrequency, previousChar))\n    # append the current character to the result string and decrement its count\n    resultString.append(char)\n    previousChar = char\n    previousFrequency = frequency+1  # decrement the frequency\n\n  # if we were successful in appending all the characters to the result string, return it\n  return ''.join(resultString) if len(resultString) == len(str) else \"\"\n\n\ndef main():\n  print(\"Rearranged string:  \" + rearrange_string(\"aappp\"))\n  print(\"Rearranged string:  \" + rearrange_string(\"Programming\"))\n  print(\"Rearranged string:  \" + rearrange_string(\"aapa\"))\n\n\nmain()\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nfunction rearrange_string(str) {\n  charFrequencyMap = {};\n  for (i = 0; i < str.length; i++) {\n    const chr = str[i];\n    if (!(chr in charFrequencyMap)) {\n      charFrequencyMap[chr] = 1;\n    } else {\n      charFrequencyMap[chr]++;\n    }\n  }\n\n\n  const maxHeap = new Heap([], null, ((a, b) => a[0] - b[0]));\n  // add all characters to the max heap\n  Object.keys(charFrequencyMap).forEach((char) => {\n    maxHeap.push([charFrequencyMap[char], char]);\n  });\n\n  let previousChar = null,\n    previousFrequency = 0,\n    resultString = [];\n  while (maxHeap.length > 0) {\n    const [frequency, char] = maxHeap.pop();\n    // add the previous entry back in the heap if its frequency is greater than zero\n    if (previousChar !== null && previousFrequency > 0) {\n      maxHeap.push([previousFrequency, previousChar]);\n    }\n    // append the current character to the result string and decrement its count\n    resultString.push(char);\n    previousChar = char;\n    previousFrequency = frequency - 1; // decrement the frequency\n  }\n\n  // if we were successful in appending all the characters to the result string, return it\n  if (resultString.length === str.length) {\n    return resultString.join('');\n  }\n  return '';\n}\n\n\nconsole.log(`Rearranged string:  ${rearrange_string('aappp')}`);\nconsole.log(`Rearranged string:  ${rearrange_string('Programming')}`);\nconsole.log(`Rearranged string:  ${rearrange_string('aapa')}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\nclass RearrangeString {\n public:\n  struct valueCompare {\n    char operator()(const pair<int, int> &x, const pair<int, int> &y) {\n      return y.second > x.second;\n    }\n  };\n\n  static string rearrangeString(const string &str) {\n    unordered_map<char, int> charFrequencyMap;\n    for (char chr : str) {\n      charFrequencyMap[chr]++;\n    }\n\n    priority_queue<pair<char, int>, vector<pair<char, int>>, valueCompare> maxHeap;\n\n    // add all characters to the max heap\n    for (auto entry : charFrequencyMap) {\n      maxHeap.push(entry);\n    }\n\n    pair<char, int> previousEntry(-1, -1);\n    string resultString = \"\";\n    while (!maxHeap.empty()) {\n      pair<char, int> currentEntry = maxHeap.top();\n      maxHeap.pop();\n      // add the previous entry back in the heap if its frequency is greater than zero\n      if (previousEntry.second > 0) {\n        maxHeap.push(previousEntry);\n      }\n      // append the current character to the result string and decrement its count\n      resultString += currentEntry.first;\n      currentEntry.second--;\n      previousEntry = currentEntry;\n    }\n\n    // if we were successful in appending all the characters to the result string, return it\n    return resultString.length() == str.length() ? resultString : \"\";\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"aappp\") << endl;\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"Programming\") << endl;\n  cout << \"Rearranged string: \" << RearrangeString::rearrangeString(\"aapa\") << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"fcc18c04065664a5d3b8fd2413b8dbf0\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of characters in the input string.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"a836968f0a015a87017104cf689bd08b\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>, as in the worst case, we need to store all the ‘N’ characters in the <strong>HashMap</strong>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Rearrange String (hard).html",
+      "1.2Rearrange String (hard).html",
+      "1.3Rearrange String (hard).html",
+      "1.4Rearrange String (hard).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

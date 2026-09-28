@@ -1,0 +1,116 @@
+{
+  "id": "sliding-window/problem-challenge-4",
+  "pattern": {
+    "index": 2,
+    "name": "Sliding Window",
+    "slug": "sliding-window"
+  },
+  "title": "Words Concatenation",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "2. Pattern Sliding Window/15. Problem Challenge 4",
+    "2. Pattern Sliding Window/16. Solution Review Problem Challenge 4"
+  ],
+  "problemStatementSectionId": "words-concatenation-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass WordConcatenation {\n  public static List<Integer> findWordConcatenation(String str, String[] words) {\n    List<Integer> resultIndices = new ArrayList<Integer>();\n    // TODO: Write your code here\n    return resultIndices;\n  }\n}\n",
+    "python3": "def find_word_concatenation(str, words):\n  result_indices = []\n  # TODO: Write your code here\n  return result_indices\n",
+    "javascript": "const find_word_concatenation = function(str, words) {\n  result_indices = [];\n  // TODO: Write your code here\n  return result_indices;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\nclass WordConcatenation {\n public:\n  static vector<int> findWordConcatenation(const string &str, const vector<string> &words) {\n    vector<int> resultIndices;\n    // TODO: Write your code here\n    return resultIndices;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: String=\"catfoxcat\", Words=[\"cat\", \"fox\"]\nOutput: [0, 3]\nExplanation: The two substring containing both the words are \"catfox\" & \"foxcat\".",
+      "input": "String=\"catfoxcat\", Words=[\"cat\", \"fox\"]",
+      "output": "[0, 3]",
+      "explanation": "The two substring containing both the words are \"catfox\" & \"foxcat\"."
+    },
+    {
+      "raw": "Input: String=\"catcatfoxfox\", Words=[\"cat\", \"fox\"]\nOutput: [3]\nExplanation: The only substring containing both the words is \"catfox\".",
+      "input": "String=\"catcatfoxfox\", Words=[\"cat\", \"fox\"]",
+      "output": "[3]",
+      "explanation": "The only substring containing both the words is \"catfox\"."
+    }
+  ],
+  "sections": [
+    {
+      "id": "words-concatenation-hard",
+      "title": "Words Concatenation (hard)",
+      "html": "<p data-id=\"7cdd5ac590d1ddabb80e8080e5c794fe\">Given a string and a list of words, find all the starting indices of substrings in the given string that are a <strong>concatenation of all the given words</strong> exactly once <strong>without any overlapping</strong> of words. It is given that all words are of the same length.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass WordConcatenation {\n  public static List<Integer> findWordConcatenation(String str, String[] words) {\n    List<Integer> resultIndices = new ArrayList<Integer>();\n    // TODO: Write your code here\n    return resultIndices;\n  }\n}\n",
+        "python3": "def find_word_concatenation(str, words):\n  result_indices = []\n  # TODO: Write your code here\n  return result_indices\n",
+        "javascript": "const find_word_concatenation = function(str, words) {\n  result_indices = [];\n  // TODO: Write your code here\n  return result_indices;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\nclass WordConcatenation {\n public:\n  static vector<int> findWordConcatenation(const string &str, const vector<string> &words) {\n    vector<int> resultIndices;\n    // TODO: Write your code here\n    return resultIndices;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"7969507beb53fb1bed6aef6a1457ec0c\">This problem follows the <strong>Sliding Window</strong> pattern and has a lot of similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5177043027230720/\" target=\"_blank\">Maximum Sum Subarray of Size K</a>. We will keep track of all the words in a <strong>HashMap</strong> and try to match them in the given string. Here are the set of steps for our algorithm:</p>\n<ol data-id=\"f070d59476b227a16e39cc4d74ac0c59\">\n<li>Keep the frequency of every word in a <strong>HashMap</strong>.</li>\n<li>Starting from every index in the string, try to match all the words.</li>\n<li>In each iteration, keep track of all the words that we have already seen in another <strong>HashMap</strong>.</li>\n<li>If a word is not found or has a higher frequency than required, we can move on to the next character in the string.</li>\n<li>Store the index if we have found all the words.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">[0, 3]\n[3]\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass WordConcatenation {\n  public static List<Integer> findWordConcatenation(String str, String[] words) {\n    Map<String, Integer> wordFrequencyMap = new HashMap<>();\n    for (String word : words)\n      wordFrequencyMap.put(word, wordFrequencyMap.getOrDefault(word, 0) + 1);\n\n    List<Integer> resultIndices = new ArrayList<Integer>();\n    int wordsCount = words.length, wordLength = words[0].length();\n\n    for (int i = 0; i <= str.length() - wordsCount * wordLength; i++) {\n      Map<String, Integer> wordsSeen = new HashMap<>();\n      for (int j = 0; j < wordsCount; j++) {\n        int nextWordIndex = i + j * wordLength;\n        // get the next word from the string\n        String word = str.substring(nextWordIndex, nextWordIndex + wordLength);\n        if (!wordFrequencyMap.containsKey(word)) // break if we don't need this word\n          break;\n\n        wordsSeen.put(word, wordsSeen.getOrDefault(word, 0) + 1); // add the word to the 'wordsSeen' map\n\n        // no need to process further if the word has higher frequency than required\n        if (wordsSeen.get(word) > wordFrequencyMap.getOrDefault(word, 0))\n          break;\n\n        if (j + 1 == wordsCount) // store index if we have found all the words\n          resultIndices.add(i);\n      }\n    }\n\n    return resultIndices;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> result = WordConcatenation.findWordConcatenation(\"catfoxcat\", new String[] { \"cat\", \"fox\" });\n    System.out.println(result);\n    result = WordConcatenation.findWordConcatenation(\"catcatfoxfox\", new String[] { \"cat\", \"fox\" });\n    System.out.println(result);\n  }\n}\n",
+        "python3": "def find_word_concatenation(str, words):\n  if len(words) == 0 or len(words[0]) == 0:\n    return []\n\n  word_frequency = {}\n\n  for word in words:\n    if word not in word_frequency:\n      word_frequency[word] = 0\n    word_frequency[word] += 1\n\n  result_indices = []\n  words_count = len(words)\n  word_length = len(words[0])\n\n  for i in range((len(str) - words_count * word_length)+1):\n    words_seen = {}\n    for j in range(0, words_count):\n      next_word_index = i + j * word_length\n      # Get the next word from the string\n      word = str[next_word_index: next_word_index + word_length]\n      if word not in word_frequency:  # Break if we don't need this word\n        break\n\n      # Add the word to the 'words_seen' map\n      if word not in words_seen:\n        words_seen[word] = 0\n      words_seen[word] += 1\n\n      # No need to process further if the word has higher frequency than required\n      if words_seen[word] > word_frequency.get(word, 0):\n        break\n\n      if j + 1 == words_count:  # Store index if we have found all the words\n        result_indices.append(i)\n\n  return result_indices\n\n\ndef main():\n  print(find_word_concatenation(\"catfoxcat\", [\"cat\", \"fox\"]))\n  print(find_word_concatenation(\"catcatfoxfox\", [\"cat\", \"fox\"]))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\nclass WordConcatenation {\n public:\n  static vector<int> findWordConcatenation(const string &str, const vector<string> &words) {\n    unordered_map<string, int> wordFrequencyMap;\n    for (auto word : words) {\n      wordFrequencyMap[word]++;\n    }\n\n    vector<int> resultIndices;\n    int wordsCount = words.size(), wordLength = words[0].length();\n\n    for (int i = 0; i <= str.length() - wordsCount * wordLength; i++) {\n      unordered_map<string, int> wordsSeen;\n      for (int j = 0; j < wordsCount; j++) {\n        int nextWordIndex = i + j * wordLength;\n        // get the next word from the string\n        string word = str.substr(nextWordIndex, wordLength);\n        if (wordFrequencyMap.find(word) ==\n            wordFrequencyMap.end()) {  // break if we don't need this word\n          break;\n        }\n\n        wordsSeen[word]++;  // add the word to the 'wordsSeen' map\n\n        // no need to process further if the word has higher frequency than required\n        if (wordsSeen[word] > wordFrequencyMap[word]) {\n          break;\n        }\n\n        if (j + 1 == wordsCount) {  // store index if we have found all the words\n          resultIndices.push_back(i);\n        }\n      }\n    }\n\n    return resultIndices;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> result =\n      WordConcatenation::findWordConcatenation(\"catfoxcat\", vector<string>{\"cat\", \"fox\"});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = WordConcatenation::findWordConcatenation(\"catcatfoxfox\", vector<string>{\"cat\", \"fox\"});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n",
+        "javascript": "function find_word_concatenation(str, words) {\n  if (words.length === 0 || words[0].length === 0) {\n    return [];\n  }\n\n  wordFrequency = {};\n\n  words.forEach((word) => {\n    if (!(word in wordFrequency)) {\n      wordFrequency[word] = 0;\n    }\n    wordFrequency[word] += 1;\n  });\n\n  const resultIndices = [],\n    wordsCount = words.length;\n  wordLength = words[0].length;\n\n  for (i = 0; i < (str.length - wordsCount * wordLength) + 1; i++) {\n    const wordsSeen = {};\n    for (j = 0; j < wordsCount; j++) {\n      next_word_index = i + j * wordLength;\n      // Get the next word from the string\n      word = str.substring(next_word_index, next_word_index + wordLength);\n      if (!(word in wordFrequency)) { // Break if we don't need this word\n        break;\n      }\n\n      // Add the word to the 'wordsSeen' map\n      if (!(word in wordsSeen)) {\n        wordsSeen[word] = 0;\n      }\n      wordsSeen[word] += 1;\n\n\n      // no need to process further if the word has higher frequency than required\n      if (wordsSeen[word] > (wordFrequency[word] || 0)) {\n        break;\n      }\n\n      if (j + 1 === wordsCount) { // Store index if we have found all the words\n        resultIndices.push(i);\n      }\n    }\n  }\n\n  return resultIndices;\n}\n\n\nconsole.log(find_word_concatenation('catfoxcat', ['cat', 'fox']));\nconsole.log(find_word_concatenation('catcatfoxfox', ['cat', 'fox']));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"dde18a4ac10026556b60373c7efb2d0e\">The time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>M</mi><mo>∗</mo><mi>L</mi><mi>e</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N * M * Len)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mbin\">∗</span><span class=\"mord mathit\">L</span><span class=\"mord mathit\">e</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of characters in the given string, ‘M’ is the total number of words, and ‘Len’ is the length of a word.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"b3c06b8fa5d3c12c15fa34221e885743\">The space complexity of the algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(M)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mclose\">)</span></span></span></span> since at most, we will be storing all the words in the two <strong>HashMaps</strong>. In the worst case, we also need <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> space for the resulting list. So, the overall space complexity of the algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>M</mi><mo>+</mo><mi>N</mi><mo>)</mo><mi mathvariant=\"normal\">.</mi></mrow><annotation encoding=\"application/x-tex\">O(M+N).</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span><span class=\"mord mathrm\">.</span></span></span></span></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Problem Challenge 4.html",
+      "1.2 Problem Challenge 4.html",
+      "1.3 Problem Challenge 4.html",
+      "1.4 Problem Challenge 4.html",
+      "1.1 Solution Review_ Problem Challenge 4 -.html",
+      "1.2 Solution Review_ Problem Challenge 4 -.html",
+      "1.3 Solution Review_ Problem Challenge 4 -.html",
+      "1.4 Solution Review_ Problem Challenge 4 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

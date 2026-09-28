@@ -1,0 +1,119 @@
+{
+  "id": "two-pointers/problem-challenge-1",
+  "pattern": {
+    "index": 3,
+    "name": "Two Pointers",
+    "slug": "two-pointers"
+  },
+  "title": "Quadruple Sum to Target",
+  "difficulty": "medium",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "3. Pattern Two Pointers/10. Problem Challenge 1",
+    "3. Pattern Two Pointers/11. Solution Review Problem Challenge 1"
+  ],
+  "problemStatementSectionId": "quadruple-sum-to-target-medium",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass QuadrupleSumToTarget {\n\n  public static List<List<Integer>> searchQuadruplets(int[] arr, int target) {\n    List<List<Integer>> quadruplets = new ArrayList<>();\n    // TODO: Write your code here\n    return quadruplets;\n  }\n}",
+    "python3": "def search_quadruplets(arr, target):\n  quadruplets = []\n  # TODO: Write your code here\n  return quadruplets\n",
+    "javascript": "const search_quadruplets = function(arr, target) {\n  quadruplets = [];\n  // TODO: Write your code here\n  return quadruplets;\n};\n",
+    "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass QuadrupleSumToTarget {\n public:\n  static vector<vector<int>> searchQuadruplets(vector<int> &arr, int target) {\n    vector<vector<int>> quadruplets;\n    // TODO: Write your code here\n    return quadruplets;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [4, 1, 2, -1, 1, -3], target=1\nOutput: [-3, -1, 1, 4], [-3, 1, 1, 2]\nExplanation: Both the quadruplets add up to the target.",
+      "input": "[4, 1, 2, -1, 1, -3], target=1",
+      "output": "[-3, -1, 1, 4], [-3, 1, 1, 2]",
+      "explanation": "Both the quadruplets add up to the target."
+    },
+    {
+      "raw": "Input: [2, 0, -1, 1, -2, 2], target=2\nOutput: [-2, 0, 2, 2], [-1, 0, 1, 2]\nExplanation: Both the quadruplets add up to the target.",
+      "input": "[2, 0, -1, 1, -2, 2], target=2",
+      "output": "[-2, 0, 2, 2], [-1, 0, 1, 2]",
+      "explanation": "Both the quadruplets add up to the target."
+    }
+  ],
+  "sections": [
+    {
+      "id": "quadruple-sum-to-target-medium",
+      "title": "Quadruple Sum to Target (medium)",
+      "html": "<p data-id=\"2b8fe1f4ffa58f847e2a3c3a54e22b90\">Given an array of unsorted numbers and a target number, find all <strong>unique quadruplets</strong> in it, whose <strong>sum is equal to the target number</strong>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass QuadrupleSumToTarget {\n\n  public static List<List<Integer>> searchQuadruplets(int[] arr, int target) {\n    List<List<Integer>> quadruplets = new ArrayList<>();\n    // TODO: Write your code here\n    return quadruplets;\n  }\n}",
+        "python3": "def search_quadruplets(arr, target):\n  quadruplets = []\n  # TODO: Write your code here\n  return quadruplets\n",
+        "javascript": "const search_quadruplets = function(arr, target) {\n  quadruplets = [];\n  // TODO: Write your code here\n  return quadruplets;\n};\n",
+        "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass QuadrupleSumToTarget {\n public:\n  static vector<vector<int>> searchQuadruplets(vector<int> &arr, int target) {\n    vector<vector<int>> quadruplets;\n    // TODO: Write your code here\n    return quadruplets;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"344301dc2bc11252c2511bde83988b7b\">This problem follows the <strong>Two Pointers</strong> pattern and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5679549973004288/\" target=\"_blank\">Triplet Sum to Zero</a>.</p>\n<p data-id=\"65cd0b5409032870844346bde14a264d\">We can follow a similar approach to iterate through the array, taking one number at a time. At every step during the iteration, we will search for the quadruplets similar to <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5679549973004288/\" target=\"_blank\">Triplet Sum to Zero</a> whose sum is equal to the given target.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">[[-3, -1, 1, 4], [-3, 1, 1, 2]]\n[[-2, 0, 2, 2], [-1, 0, 1, 2]]\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass QuadrupleSumToTarget {\n\n  public static List<List<Integer>> searchQuadruplets(int[] arr, int target) {\n    Arrays.sort(arr);\n    List<List<Integer>> quadruplets = new ArrayList<>();\n    for (int i = 0; i < arr.length - 3; i++) {\n      if (i > 0 && arr[i] == arr[i - 1]) // skip same element to avoid duplicate quadruplets\n        continue;\n      for (int j = i + 1; j < arr.length - 2; j++) {\n        if (j > i + 1 && arr[j] == arr[j - 1]) // skip same element to avoid duplicate quadruplets\n          continue;\n        searchPairs(arr, target, i, j, quadruplets);\n      }\n    }\n    return quadruplets;\n  }\n\n  private static void searchPairs(int[] arr, int targetSum, int first, int second, List<List<Integer>> quadruplets) {\n    int left = second + 1;\n    int right = arr.length - 1;\n    while (left < right) {\n      int sum = arr[first] + arr[second] + arr[left] + arr[right];\n      if (sum == targetSum) { // found the quadruplet\n        quadruplets.add(Arrays.asList(arr[first], arr[second], arr[left], arr[right]));\n        left++;\n        right--;\n        while (left < right && arr[left] == arr[left - 1])\n          left++; // skip same element to avoid duplicate quadruplets\n        while (left < right && arr[right] == arr[right + 1])\n          right--; // skip same element to avoid duplicate quadruplets\n      } else if (sum < targetSum)\n        left++; // we need a pair with a bigger sum\n      else\n        right--; // we need a pair with a smaller sum\n    }\n  }\n\n  public static void main(String[] args) {\n    System.out.println(QuadrupleSumToTarget.searchQuadruplets(new int[] { 4, 1, 2, -1, 1, -3 }, 1));\n    System.out.println(QuadrupleSumToTarget.searchQuadruplets(new int[] { 2, 0, -1, 1, -2, 2 }, 2));\n  }\n}",
+        "python3": "def search_quadruplets(arr, target):\n  arr.sort()\n  quadruplets = []\n  for i in range(0, len(arr)-3):\n    # skip same element to avoid duplicate quadruplets\n    if i > 0 and arr[i] == arr[i - 1]:\n      continue\n    for j in range(i + 1, len(arr)-2):\n      # skip same element to avoid duplicate quadruplets\n      if j > i + 1 and arr[j] == arr[j - 1]:\n        continue\n      search_pairs(arr, target, i, j, quadruplets)\n  return quadruplets\n\n\ndef search_pairs(arr, target_sum, first, second, quadruplets):\n  left = second + 1\n  right = len(arr) - 1\n  while (left < right):\n    sum = arr[first] + arr[second] + arr[left] + arr[right]\n    if sum == target_sum:  # found the quadruplet\n      quadruplets.append(\n        [arr[first], arr[second], arr[left], arr[right]])\n      left += 1\n      right -= 1\n      while (left < right and arr[left] == arr[left - 1]):\n        left += 1  # skip same element to avoid duplicate quadruplets\n      while (left < right and arr[right] == arr[right + 1]):\n        right -= 1  # skip same element to avoid duplicate quadruplets\n    elif sum < target_sum:\n      left += 1  # we need a pair with a bigger sum\n    else:\n      right -= 1  # we need a pair with a smaller sum\n\n\ndef main():\n  print(search_quadruplets([4, 1, 2, -1, 1, -3], 1))\n  print(search_quadruplets([2, 0, -1, 1, -2, 2], 2))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass QuadrupleSumToTarget {\n public:\n  static vector<vector<int>> searchQuadruplets(vector<int> &arr, int target) {\n    sort(arr.begin(), arr.end());\n    vector<vector<int>> quadruplets;\n    for (int i = 0; i < arr.size() - 3; i++) {\n      if (i > 0 && arr[i] == arr[i - 1]) {  // skip same element to avoid duplicate quadruplets\n        continue;\n      }\n      for (int j = i + 1; j < arr.size() - 2; j++) {\n        if (j > i + 1 &&\n            arr[j] == arr[j - 1]) {  // skip same element to avoid duplicate quadruplets\n          continue;\n        }\n        searchPairs(arr, target, i, j, quadruplets);\n      }\n    }\n    return quadruplets;\n  }\n\n private:\n  static void searchPairs(const vector<int> &arr, int targetSum, int first, int second,\n                          vector<vector<int>> &quadruplets) {\n    int left = second + 1;\n    int right = arr.size() - 1;\n    while (left < right) {\n      int sum = arr[first] + arr[second] + arr[left] + arr[right];\n      if (sum == targetSum) {  // found the quadruplet\n        quadruplets.push_back({arr[first], arr[second], arr[left], arr[right]});\n        left++;\n        right--;\n        while (left < right && arr[left] == arr[left - 1]) {\n          left++;  // skip same element to avoid duplicate quadruplets\n        }\n        while (left < right && arr[right] == arr[right + 1]) {\n          right--;  // skip same element to avoid duplicate quadruplets\n        }\n      } else if (sum < targetSum) {\n        left++;  // we need a pair with a bigger sum\n      } else {\n        right--;  // we need a pair with a smaller sum\n      }\n    }\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> vec = {4, 1, 2, -1, 1, -3};\n  auto result = QuadrupleSumToTarget::searchQuadruplets(vec, 1);\n  for (auto vec : result) {\n    cout << \"[\";\n    for (auto num : vec) {\n      cout << num << \" \";\n    }\n    cout << \"]\";\n  }\n  cout << endl;\n\n  vec = {2, 0, -1, 1, -2, 2};\n  result = QuadrupleSumToTarget::searchQuadruplets(vec, 2);\n  for (auto vec : result) {\n    cout << \"[\";\n    for (auto num : vec) {\n      cout << num << \" \";\n    }\n    cout << \"]\";\n  }\n}\n",
+        "javascript": "function search_quadruplets(arr, target) {\n  arr.sort((a, b) => a - b)\n  const quadruplets = [];\n  for (let i = 0; i < arr.length - 3; i++) {\n    // skip same element to avoid duplicate quadruplets\n    if (i > 0 && arr[i] === arr[i - 1]) {\n      continue;\n    }\n    for (let j = i + 1; j < arr.length - 2; j++) {\n      // skip same element to avoid duplicate quadruplets\n      if (j > i + 1 && arr[j] === arr[j - 1]) {\n        continue;\n      }\n      search_pairs(arr, target, i, j, quadruplets);\n    }\n  }\n  return quadruplets;\n}\n\n\nfunction search_pairs(arr, targetSum, first, second, quadruplets) {\n  let left = second + 1,\n    right = arr.length - 1;\n  while ((left < right)) {\n    sum = arr[first] + arr[second] + arr[left] + arr[right];\n    if (sum === targetSum) { // found the quadruplet\n      quadruplets.push([arr[first], arr[second], arr[left], arr[right]]);\n      left += 1;\n      right -= 1;\n      while ((left < right && arr[left] === arr[left - 1])) {\n        left += 1; // skip same element to avoid duplicate quadruplets\n      }\n      while ((left < right && arr[right] === arr[right + 1])) {\n        right -= 1; // skip same element to avoid duplicate quadruplets\n      }\n    } else if (sum < targetSum) {\n      left += 1; // we need a pair with a bigger sum\n    } else {\n      right -= 1; // we need a pair with a smaller sum\n    }\n  }\n}\n\n\nconsole.log(search_quadruplets([4, 1, 2, -1, 1, -3], 1));\nconsole.log(search_quadruplets([2, 0, -1, 1, -2, 2], 2));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"7fd122157081821aa47deb0aa6249e10\">Sorting the array will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>. Overall <code>searchQuadruplets()</code> will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>+</mo><msup><mi>N</mi><mn>3</mn></msup><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N * logN + N^3)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8141079999999999em\"></span><span class=\"strut bottom\" style=\"height:1.064108em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">+</span><span class=\"mord\"><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathrm\">3</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span>, which is asymptotically equivalent to <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>N</mi><mn>3</mn></msup><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N^3)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8141079999999999em\"></span><span class=\"strut bottom\" style=\"height:1.064108em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathrm\">3</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"c8fb3dbb7482a10246950b9a03e006ba\">The space complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> which is required for sorting.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Problem Challenge 1.html",
+      "1.2 Problem Challenge 1.html",
+      "1.3 Problem Challenge 1.html",
+      "1.4 Problem Challenge 1.html",
+      "1.1 Solution Review_ Problem Challenge 1 -.html",
+      "1.1.2 Solution Review_ Problem Challenge 1 -.html",
+      "1.2 Solution Review_ Problem Challenge 1 -.html",
+      "1.3 Solution Review_ Problem Challenge 1 -.html",
+      "1.4 Solution Review_ Problem Challenge 1.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": [
+      "3 source files detected as 'java' (expected 2): ['1.1 Problem Challenge 1.html', '1.1 Solution Review_ Problem Challenge 1 -.html', '1.1.2 Solution Review_ Problem Challenge 1 -.html']"
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "id": "sliding-window/problem-challenge-3",
+  "pattern": {
+    "index": 2,
+    "name": "Sliding Window",
+    "slug": "sliding-window"
+  },
+  "title": "Smallest Window containing Substring",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "2. Pattern Sliding Window/13. Problem Challenge 3",
+    "2. Pattern Sliding Window/14. Solution Review Problem Challenge 3"
+  ],
+  "problemStatementSectionId": "smallest-window-containing-substring-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass MinimumWindowSubstring {\n  public static String findSubstring(String str, String pattern) {\n    // TODO: Write your code here\n    return \"\";\n  }\n}\n",
+    "python3": "def find_substring(str, pattern):\n  # TODO: Write your code here\n  return \"\"\n",
+    "javascript": "const find_substring = function(str, pattern) {\n  // TODO: Write your code here\n  return \"\";\n}\n\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass MinimumWindowSubstring {\n public:\n  static string findSubstring(const string &str, const string &pattern) {\n    // TODO: Write your code here\n    return \"\";\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: String=\"aabdec\", Pattern=\"abc\"\nOutput: \"abdec\"\nExplanation: The smallest substring having all characters of the pattern is \"abdec\"",
+      "input": "String=\"aabdec\", Pattern=\"abc\"",
+      "output": "\"abdec\"",
+      "explanation": "The smallest substring having all characters of the pattern is \"abdec\""
+    },
+    {
+      "raw": "Input: String=\"abdabca\", Pattern=\"abc\"\nOutput: \"abc\"\nExplanation: The smallest substring having all characters of the pattern is \"abc\".",
+      "input": "String=\"abdabca\", Pattern=\"abc\"",
+      "output": "\"abc\"",
+      "explanation": "The smallest substring having all characters of the pattern is \"abc\"."
+    },
+    {
+      "raw": "Input: String=\"adcad\", Pattern=\"abc\"\nOutput: \"\"\nExplanation: No substring in the given string has all characters of the pattern.",
+      "input": "String=\"adcad\", Pattern=\"abc\"",
+      "output": "\"\"",
+      "explanation": "No substring in the given string has all characters of the pattern."
+    }
+  ],
+  "sections": [
+    {
+      "id": "smallest-window-containing-substring-hard",
+      "title": "Smallest Window containing Substring (hard)",
+      "html": "<p data-id=\"7a2c4fd8848e54cdda36d24191b2cf1c\">Given a string and a pattern, find the <strong>smallest substring</strong> in the given string which has <strong>all the characters of the given pattern</strong>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass MinimumWindowSubstring {\n  public static String findSubstring(String str, String pattern) {\n    // TODO: Write your code here\n    return \"\";\n  }\n}\n",
+        "python3": "def find_substring(str, pattern):\n  # TODO: Write your code here\n  return \"\"\n",
+        "javascript": "const find_substring = function(str, pattern) {\n  // TODO: Write your code here\n  return \"\";\n}\n\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass MinimumWindowSubstring {\n public:\n  static string findSubstring(const string &str, const string &pattern) {\n    // TODO: Write your code here\n    return \"\";\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"87165878a7d8ca0b601293753c0de7d2\">This problem follows the <strong>Sliding Window</strong> pattern and has a lot of similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5401934796161024/\" target=\"_blank\">Permutation in a String</a> with one difference. In this problem, we need to find a substring having all characters of the pattern which means that the required substring can have some additional characters and doesn’t need to be a permutation of the pattern. Here is how we will manage these differences:</p>\n<ol data-id=\"9265752beb09050408443791b9d8b81c\">\n<li>We will keep a running count of every matching instance of a character.</li>\n<li>Whenever we have matched all the characters, we will try to shrink the window from the beginning, keeping track of the smallest substring that has all the matching characters.</li>\n<li>We will stop the shrinking process as soon as we remove a matched character from the sliding window. One thing to note here is that we could have redundant matching characters, e.g., we might have two ‘a’ in the sliding window when we only need one ‘a’. In that case, when we encounter the first ‘a’, we will simply shrink the window without decrementing the matched count. We will decrement the matched count when the second ‘a’ goes out of the window.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"285bac64c3a275f347b7afdf00225988\">Here is how our algorithm will look; only the highlighted lines have changed from <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5401934796161024/\" target=\"_blank\">Permutation in a String</a>:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">abdec\nabc\n\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass MinimumWindowSubstring {\n  public static String findSubstring(String str, String pattern) {\n    int windowStart = 0, matched = 0, minLength = str.length() + 1, subStrStart = 0;\n    Map<Character, Integer> charFrequencyMap = new HashMap<>();\n    for (char chr : pattern.toCharArray())\n      charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);\n\n    // try to extend the range [windowStart, windowEnd]\n    for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {\n      char rightChar = str.charAt(windowEnd);\n      if (charFrequencyMap.containsKey(rightChar)) {\n        charFrequencyMap.put(rightChar, charFrequencyMap.get(rightChar) - 1);\n        if (charFrequencyMap.get(rightChar) >= 0) // count every matching of a character\n          matched++;\n      }\n\n      // shrink the window if we can, finish as soon as we remove a matched character\n      while (matched == pattern.length()) {\n        if (minLength > windowEnd - windowStart + 1) {\n          minLength = windowEnd - windowStart + 1;\n          subStrStart = windowStart;\n        }\n\n        char leftChar = str.charAt(windowStart++);\n        if (charFrequencyMap.containsKey(leftChar)) {\n          // note that we could have redundant matching characters, therefore we'll decrement the\n          // matched count only when a useful occurrence of a matched character is going out of the window\n          if (charFrequencyMap.get(leftChar) == 0)\n            matched--;\n          charFrequencyMap.put(leftChar, charFrequencyMap.get(leftChar) + 1);\n        }\n      }\n    }\n\n    return minLength > str.length() ? \"\" : str.substring(subStrStart, subStrStart + minLength);\n  }\n\n  public static void main(String[] args) {\n    System.out.println(MinimumWindowSubstring.findSubstring(\"aabdec\", \"abc\"));\n    System.out.println(MinimumWindowSubstring.findSubstring(\"abdabca\", \"abc\"));\n    System.out.println(MinimumWindowSubstring.findSubstring(\"adcad\", \"abc\"));\n  }\n}\n",
+        "python3": "def find_substring(str, pattern):\n  window_start, matched, substr_start = 0, 0, 0\n  min_length = len(str) + 1\n  char_frequency = {}\n\n  for chr in pattern:\n    if chr not in char_frequency:\n      char_frequency[chr] = 0\n    char_frequency[chr] += 1\n\n  # try to extend the range [window_start, window_end]\n  for window_end in range(len(str)):\n    right_char = str[window_end]\n    if right_char in char_frequency:\n      char_frequency[right_char] -= 1\n      if char_frequency[right_char] >= 0:  # Count every matching of a character\n        matched += 1\n\n    # Shrink the window if we can, finish as soon as we remove a matched character\n    while matched == len(pattern):\n      if min_length > window_end - window_start + 1:\n        min_length = window_end - window_start + 1\n        substr_start = window_start\n\n      left_char = str[window_start]\n      window_start += 1\n      if left_char in char_frequency:\n        # Note that we could have redundant matching characters, therefore we'll decrement the\n        # matched count only when a useful occurrence of a matched character is going out of the window\n        if char_frequency[left_char] == 0:\n          matched -= 1\n        char_frequency[left_char] += 1\n\n  if min_length > len(str):\n    return \"\"\n  return str[substr_start:substr_start + min_length]\n\n\ndef main():\n  print(find_substring(\"aabdec\", \"abc\"))\n  print(find_substring(\"abdabca\", \"abc\"))\n  print(find_substring(\"adcad\", \"abc\"))\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass MinimumWindowSubstring {\n public:\n  static string findSubstring(const string &str, const string &pattern) {\n    int windowStart = 0, matched = 0, minLength = str.length() + 1, subStrStart = 0;\n    unordered_map<char, int> charFrequencyMap;\n    for (auto chr : pattern) {\n      charFrequencyMap[chr]++;\n    }\n\n    // try to extend the range [windowStart, windowEnd]\n    for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {\n      char rightChar = str[windowEnd];\n      if (charFrequencyMap.find(rightChar) != charFrequencyMap.end()) {\n        charFrequencyMap[rightChar]--;\n        if (charFrequencyMap[rightChar] >= 0) {  // count every matching of a character\n          matched++;\n        }\n      }\n\n      // shrink the window if we can, finish as soon as we remove a matched character\n      while (matched == pattern.length()) {\n        if (minLength > windowEnd - windowStart + 1) {\n          minLength = windowEnd - windowStart + 1;\n          subStrStart = windowStart;\n        }\n\n        char leftChar = str[windowStart++];\n        if (charFrequencyMap.find(leftChar) != charFrequencyMap.end()) {\n          // note that we could have redundant matching characters, therefore we'll decrement the\n          // matched count only when a useful occurrence of a matched character is going out of the\n          // window\n          if (charFrequencyMap[leftChar] == 0) {\n            matched--;\n          }\n          charFrequencyMap[leftChar]++;\n        }\n      }\n    }\n\n    return minLength > str.length() ? \"\" : str.substr(subStrStart, minLength);\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << MinimumWindowSubstring::findSubstring(\"aabdec\", \"abc\") << endl;\n  cout << MinimumWindowSubstring::findSubstring(\"abdabca\", \"abc\") << endl;\n  cout << MinimumWindowSubstring::findSubstring(\"adcad\", \"abc\") << endl;\n}\n",
+        "javascript": "function find_substring(str, pattern) {\n  let windowStart = 0,\n    matched = 0,\n    substrStart = 0,\n    minLength = str.length + 1,\n    charFrequency = {};\n\n  for (i = 0; i < pattern.length; i++) {\n    const chr = pattern[i];\n    if (!(chr in charFrequency)) {\n      charFrequency[chr] = 0;\n    }\n    charFrequency[chr] += 1;\n  }\n\n  // try to extend the range [windowStart, windowEnd]\n  for (windowEnd = 0; windowEnd < str.length; windowEnd++) {\n    const rightChar = str[windowEnd];\n    if (rightChar in charFrequency) {\n      charFrequency[rightChar] -= 1;\n      if (charFrequency[rightChar] >= 0) { // Count every matching of a character\n        matched += 1;\n      }\n    }\n\n    // Shrink the window if we can, finish as soon as we remove a matched character\n    while (matched === pattern.length) {\n      if (minLength > windowEnd - windowStart + 1) {\n        minLength = windowEnd - windowStart + 1;\n        substrStart = windowStart;\n      }\n\n      const leftChar = str[windowStart];\n      windowStart += 1;\n      if (leftChar in charFrequency) {\n        // Note that we could have redundant matching characters, therefore we'll decrement the\n        // matched count only when a useful occurrence of a matched character is going out of the window\n        if (charFrequency[leftChar] === 0) {\n          matched -= 1;\n        }\n        charFrequency[leftChar] += 1;\n      }\n    }\n  }\n\n  if (minLength > str.length) {\n    return '';\n  }\n  return str.substring(substrStart, substrStart + minLength);\n}\n\n\nconsole.log(find_substring('aabdec', 'abc'));\nconsole.log(find_substring('abdabca', 'abc'));\nconsole.log(find_substring('adcad', 'abc'));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"03e463eda0eef9905581b9ad8d6d3942\">The time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>+</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N + M)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ and ‘M’ are the number of characters in the input string and the pattern respectively.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"555daf53ff216d44301a134f64c54eda\">The space complexity of the algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(M)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mclose\">)</span></span></span></span> since in the worst case, the whole pattern can have distinct characters which will go into the <strong>HashMap</strong>. In the worst case, we also need <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> space for the resulting substring, which will happen when the input string is a permutation of the pattern.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Problem Challenge 3.html",
+      "1.2 Problem Challenge 3.html",
+      "1.3 Problem Challenge 3.html",
+      "1.4 Problem Challenge 3.html",
+      "1.1 Solution Review_ Problem Challenge 3 -.html",
+      "1.2 Solution Review_ Problem Challenge 3 -.html",
+      "1.3 Solution Review_ Problem Challenge 3 -.html",
+      "1.4 Solution Review_ Problem Challenge 3 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

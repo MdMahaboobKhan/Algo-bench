@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 11,
+    "name": "Subsets",
+    "slug": "subsets"
+  },
+  "summary": "A huge number of coding interview problems involve dealing with Permutations and Combinations of a given set of elements. This pattern describes an efficient Breadth First Search (BFS) approach to…",
+  "sourceFolder": "11. Pattern Subsets/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"b0c239b60017cc1a02fc397b511366fb\">A huge number of coding interview problems involve dealing with <a href=\"https://en.wikipedia.org/wiki/Permutation\" target=\"_blank\">Permutations</a> and <a href=\"https://en.wikipedia.org/wiki/Combination\" target=\"_blank\">Combinations</a> of a given set of elements. This pattern describes an efficient <strong>Breadth First Search (BFS)</strong> approach to handle all these problems.</p>\n<p data-id=\"c465cf3e7eac3ed0426a3d562665d9de\">Let’s jump onto our first problem to develop an understanding of this pattern.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

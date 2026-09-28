@@ -1,0 +1,128 @@
+{
+  "id": "two-pointers/problem-challenge-2",
+  "pattern": {
+    "index": 3,
+    "name": "Two Pointers",
+    "slug": "two-pointers"
+  },
+  "title": "Comparing Strings containing Backspaces",
+  "difficulty": "medium",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "3. Pattern Two Pointers/12. Problem Challenge 2",
+    "3. Pattern Two Pointers/13. Solution Review Problem Challenge 2"
+  ],
+  "problemStatementSectionId": "comparing-strings-containing-backspaces-medium",
+  "starterCode": {
+    "java": "\nclass BackspaceCompare {\n\n  public static boolean compare(String str1, String str2) {\n    // TODO: Write your code here\n    return false;\n  }\n}\n",
+    "python3": "def backspace_compare(str1, str2):\n  # TODO: Write your code here\n  return False\n",
+    "javascript": "const backspace_compare = function(str1, str2) {\n  // TODO: Write your code here\n  return false;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n\nclass BackspaceCompare {\n public:\n  static bool compare(const string &str1, const string &str2) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: str1=\"xy#z\", str2=\"xzz#\"\nOutput: true\nExplanation: After applying backspaces the strings become \"xz\" and \"xz\" respectively.",
+      "input": "str1=\"xy#z\", str2=\"xzz#\"",
+      "output": "true",
+      "explanation": "After applying backspaces the strings become \"xz\" and \"xz\" respectively."
+    },
+    {
+      "raw": "Input: str1=\"xy#z\", str2=\"xyz#\"\nOutput: false\nExplanation: After applying backspaces the strings become \"xz\" and \"xy\" respectively.",
+      "input": "str1=\"xy#z\", str2=\"xyz#\"",
+      "output": "false",
+      "explanation": "After applying backspaces the strings become \"xz\" and \"xy\" respectively."
+    },
+    {
+      "raw": "Input: str1=\"xp#\", str2=\"xyz##\"\nOutput: true\nExplanation: After applying backspaces the strings become \"x\" and \"x\" respectively.\nIn \"xyz##\", the first '#' removes the character 'z' and the second '#' removes the character 'y'.",
+      "input": "str1=\"xp#\", str2=\"xyz##\"",
+      "output": "true",
+      "explanation": "After applying backspaces the strings become \"x\" and \"x\" respectively.\nIn \"xyz##\", the first '#' removes the character 'z' and the second '#' removes the character 'y'."
+    },
+    {
+      "raw": "Input: str1=\"xywrrmp\", str2=\"xywrrmu#p\"\nOutput: true\nExplanation: After applying backspaces the strings become \"xywrrmp\" and \"xywrrmp\" respectively.",
+      "input": "str1=\"xywrrmp\", str2=\"xywrrmu#p\"",
+      "output": "true",
+      "explanation": "After applying backspaces the strings become \"xywrrmp\" and \"xywrrmp\" respectively."
+    }
+  ],
+  "sections": [
+    {
+      "id": "comparing-strings-containing-backspaces-medium",
+      "title": "Comparing Strings containing Backspaces (medium)",
+      "html": "<p data-id=\"22c36494bb953528b89213bd4da45507\">Given two strings containing backspaces (identified by the character ‘#’), check if the two strings are equal.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>\n<p data-id=\"041ec4ff6ad5f804da8976d697659842\"><strong>Example 4:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "\nclass BackspaceCompare {\n\n  public static boolean compare(String str1, String str2) {\n    // TODO: Write your code here\n    return false;\n  }\n}\n",
+        "python3": "def backspace_compare(str1, str2):\n  # TODO: Write your code here\n  return False\n",
+        "javascript": "const backspace_compare = function(str1, str2) {\n  // TODO: Write your code here\n  return false;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n\nclass BackspaceCompare {\n public:\n  static bool compare(const string &str1, const string &str2) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"4b9f0799077a1ac37bb0ab27f741c16d\">To compare the given strings, first, we need to apply the backspaces. An efficient way to do this would be from the end of both the strings. We can have separate pointers, pointing to the last element of the given strings. We can start comparing the characters pointed out by both the pointers to see if the strings are equal. If, at any stage, the character pointed out by any of the pointers is a backspace (’#’), we will skip and apply the backspace until we have a valid character available for comparison.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">true\nfalse\ntrue\ntrue\n</p>",
+      "code": {
+        "java": "\nclass BackspaceCompare {\n\n  public static boolean compare(String str1, String str2) {\n    // use two pointer approach to compare the strings\n    int index1 = str1.length() - 1, index2 = str2.length() - 1;\n    while (index1 >= 0 || index2 >= 0) {\n\n      int i1 = getNextValidCharIndex(str1, index1);\n      int i2 = getNextValidCharIndex(str2, index2);\n\n      if (i1 < 0 && i2 < 0) // reached the end of both the strings\n        return true;\n\n      if (i1 < 0 || i2 < 0) // reached the end of one of the strings\n        return false;\n\n      if (str1.charAt(i1) != str2.charAt(i2)) // check if the characters are equal\n        return false;\n\n      index1 = i1 - 1;\n      index2 = i2 - 1;\n    }\n\n    return true;\n  }\n\n  private static int getNextValidCharIndex(String str, int index) {\n    int backspaceCount = 0;\n    while (index >= 0) {\n      if (str.charAt(index) == '#') // found a backspace character\n        backspaceCount++;\n      else if (backspaceCount > 0) // a non-backspace character\n        backspaceCount--;\n      else\n        break;\n\n      index--; // skip a backspace or a valid character\n    }\n    return index;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(BackspaceCompare.compare(\"xy#z\", \"xzz#\"));\n    System.out.println(BackspaceCompare.compare(\"xy#z\", \"xyz#\"));\n    System.out.println(BackspaceCompare.compare(\"xp#\", \"xyz##\"));\n    System.out.println(BackspaceCompare.compare(\"xywrrmp\", \"xywrrmu#p\"));\n  }\n}\n",
+        "python3": "def backspace_compare(str1, str2):\n  # use two pointer approach to compare the strings\n  index1 = len(str1) - 1\n  index2 = len(str2) - 1\n  while (index1 >= 0 or index2 >= 0):\n    i1 = get_next_valid_char_index(str1, index1)\n    i2 = get_next_valid_char_index(str2, index2)\n    if i1 < 0 and i2 < 0:  # reached the end of both the strings\n      return True\n    if i1 < 0 or i2 < 0:  # reached the end of one of the strings\n      return False\n    if str1[i1] != str2[i2]:  # check if the characters are equal\n      return False\n\n    index1 = i1 - 1\n    index2 = i2 - 1\n\n  return True\n\n\ndef get_next_valid_char_index(str, index):\n  backspace_count = 0\n  while (index >= 0):\n    if str[index] == '#':  # found a backspace character\n      backspace_count += 1\n    elif backspace_count > 0:  # a non-backspace character\n      backspace_count -= 1\n    else:\n      break\n\n    index -= 1  # skip a backspace or a valid character\n\n  return index\n\n\ndef main():\n  print(backspace_compare(\"xy#z\", \"xzz#\"))\n  print(backspace_compare(\"xy#z\", \"xyz#\"))\n  print(backspace_compare(\"xp#\", \"xyz##\"))\n  print(backspace_compare(\"xywrrmp\", \"xywrrmu#p\"))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n\nclass BackspaceCompare {\n public:\n  static bool compare(const string &str1, const string &str2) {\n    // use two pointer approach to compare the strings\n    int index1 = str1.length() - 1, index2 = str2.length() - 1;\n    while (index1 >= 0 || index2 >= 0) {\n      int i1 = getNextValidCharIndex(str1, index1);\n      int i2 = getNextValidCharIndex(str2, index2);\n\n      if (i1 < 0 && i2 < 0) {  // reached the end of both the strings\n        return true;\n      }\n\n      if (i1 < 0 || i2 < 0) {  // reached the end of one of the strings\n        return false;\n      }\n\n      if (str1[i1] != str2[i2]) {  // check if the characters are equal\n        return false;\n      }\n\n      index1 = i1 - 1;\n      index2 = i2 - 1;\n    }\n\n    return true;\n  }\n\n private:\n  static int getNextValidCharIndex(const string &str, int index) {\n    int backspaceCount = 0;\n    while (index >= 0) {\n      if (str[index] == '#') {  // found a backspace character\n        backspaceCount++;\n      } else if (backspaceCount > 0) {  // a non-backspace character\n        backspaceCount--;\n      } else {\n        break;\n      }\n\n      index--;  // skip a backspace or a valid character\n    }\n    return index;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << BackspaceCompare::compare(\"xy#z\", \"xzz#\") << endl;\n  cout << BackspaceCompare::compare(\"xy#z\", \"xyz#\") << endl;\n  cout << BackspaceCompare::compare(\"xp#\", \"xyz##\") << endl;\n  cout << BackspaceCompare::compare(\"xywrrmp\", \"xywrrmu#p\") << endl;\n}\n",
+        "javascript": "function backspace_compare(str1, str2) {\n  // use two pointer approach to compare the strings\n  let index1 = str1.length - 1,\n    index2 = str2.length - 1;\n  while (index1 >= 0 || index2 >= 0) {\n    let i1 = get_next_valid_char_index(str1, index1),\n      i2 = get_next_valid_char_index(str2, index2);\n    if (i1 < 0 && i2 < 0) { // reached the end of both the strings\n      return true;\n    }\n    if (i1 < 0 || i2 < 0) { // reached the end of one of the strings\n      return false;\n    }\n    if (str1[i1] !== str2[i2]) { // check if the characters are equal\n      return false;\n    }\n\n    index1 = i1 - 1;\n    index2 = i2 - 1;\n\n    return true;\n  }\n}\n\n\nfunction get_next_valid_char_index(str, index) {\n  let backspaceCount = 0;\n  while (index >= 0) {\n    if (str[index] === '#') { // found a backspace character\n      backspaceCount += 1;\n    } else if (backspaceCount > 0) { // a non-backspace character\n      backspaceCount -= 1;\n    } else {\n      break;\n    }\n\n    index -= 1; // skip a backspace or a valid character\n  }\n\n  return index;\n}\n\n\nconsole.log(backspace_compare('xy#z', 'xzz#'));\nconsole.log(backspace_compare('xy#z', 'xyz#'));\nconsole.log(backspace_compare('xp#', 'xyz##'));\nconsole.log(backspace_compare('xywrrmp', 'xywrrmu#p'));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"232980c0d9d5f1fcadbdb5df667f9a20\">The time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>M</mi><mo>+</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(M+N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘M’ and ‘N’ are the lengths of the two input strings respectively.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Problem Challenge 2.html",
+      "1.2 Problem Challenge 2.html",
+      "1.3 Problem Challenge 2.html",
+      "1.4 Problem Challenge 2.html",
+      "1.1 Solution Review_ Problem Challenge 2 -.html",
+      "1.2 Solution Review_ Problem Challenge 2 -.html",
+      "1.3 Solution Review_ Problem Challenge 2 -.html",
+      "1.4 Solution Review_ Problem Challenge 2 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "fast-slow-pointers/problem-challenge-3",
+  "pattern": {
+    "index": 4,
+    "name": "Fast & Slow pointers",
+    "slug": "fast-slow-pointers"
+  },
+  "title": "Cycle in a Circular Array",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "4. Pattern Fast _ Slow pointers/10. Problem Challenge 3",
+    "4. Pattern Fast _ Slow pointers/11. Solution Review Problem Challenge 3"
+  ],
+  "problemStatementSectionId": "cycle-in-a-circular-array-hard",
+  "starterCode": {
+    "java": "class CircularArrayLoop {\n\n  public static boolean loopExists(int[] arr) {\n    // TODO: Write your code here\n    return false;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 1, 2, -1, 2, 2 }));\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 2, 2, -1, 2 }));\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 2, 1, -1, -2 }));\n  }\n}",
+    "python3": "def circular_array_loop_exists(arr):\n  # TODO: Write your code here\n  return False\n\n\ndef main():\n  print(circular_array_loop_exists([1, 2, -1, 2, 2]))\n  print(circular_array_loop_exists([2, 2, -1, 2]))\n  print(circular_array_loop_exists([2, 1, -1, -2]))\n\n\nmain()\n",
+    "javascript": "const circular_array_loop_exists = function(arr) {\n  // TODO: Write your code here\n  return false;\n};\n\n\n\nconsole.log(`${circular_array_loop_exists([1, 2, -1, 2, 2])}`)\nconsole.log(`${circular_array_loop_exists([2, 2, -1, 2])}`)\nconsole.log(`${circular_array_loop_exists([2, 1, -1, -2])}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass CircularArrayLoop {\n public:\n  static bool loopExists(const vector<int> &arr) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << CircularArrayLoop::loopExists(vector<int>{1, 2, -1, 2, 2}) << endl;\n  cout << CircularArrayLoop::loopExists(vector<int>{2, 2, -1, 2}) << endl;\n  cout << CircularArrayLoop::loopExists(vector<int>{2, 1, -1, -2}) << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 2, -1, 2, 2]\nOutput: true\nExplanation: The array has a cycle among indices: 0 -> 1 -> 3 -> 0",
+      "input": "[1, 2, -1, 2, 2]",
+      "output": "true",
+      "explanation": "The array has a cycle among indices: 0 -> 1 -> 3 -> 0"
+    },
+    {
+      "raw": "Input: [2, 2, -1, 2]\nOutput: true\nExplanation: The array has a cycle among indices: 1 -> 3 -> 1",
+      "input": "[2, 2, -1, 2]",
+      "output": "true",
+      "explanation": "The array has a cycle among indices: 1 -> 3 -> 1"
+    },
+    {
+      "raw": "Input: [2, 1, -1, -2]\nOutput: false\nExplanation: The array does not have any cycle.",
+      "input": "[2, 1, -1, -2]",
+      "output": "false",
+      "explanation": "The array does not have any cycle."
+    }
+  ],
+  "sections": [
+    {
+      "id": "cycle-in-a-circular-array-hard",
+      "title": "Cycle in a Circular Array (hard)",
+      "html": "<p data-id=\"8e7a6852bef4a3789a004aebbdae185c\">We are given an array containing positive and negative numbers. Suppose the array contains a number ‘M’ at a particular index. Now, if ‘M’ is positive we will move forward ‘M’ indices and if ‘M’ is negative move backwards ‘M’ indices. You should assume that the <strong>array is circular</strong> which means two things:</p>\n<ol data-id=\"fcdb226db6e2836cae3997e74d05d4b1\">\n<li>If, while moving forward, we reach the end of the array, we will jump to the first element to continue the movement.</li>\n<li>If, while moving backward, we reach the beginning of the array, we will jump to the last element to continue the movement.</li>\n</ol>\n<p data-id=\"b15738fe11523f62fbe1a70958254e2b\">Write a method to determine <strong>if the array has a cycle</strong>. The cycle should have more than one element and should follow one direction which means the cycle should not contain both forward and backward movements.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">false\nfalse\nfalse\n</p>",
+      "code": {
+        "java": "class CircularArrayLoop {\n\n  public static boolean loopExists(int[] arr) {\n    // TODO: Write your code here\n    return false;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 1, 2, -1, 2, 2 }));\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 2, 2, -1, 2 }));\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 2, 1, -1, -2 }));\n  }\n}",
+        "python3": "def circular_array_loop_exists(arr):\n  # TODO: Write your code here\n  return False\n\n\ndef main():\n  print(circular_array_loop_exists([1, 2, -1, 2, 2]))\n  print(circular_array_loop_exists([2, 2, -1, 2]))\n  print(circular_array_loop_exists([2, 1, -1, -2]))\n\n\nmain()\n",
+        "javascript": "const circular_array_loop_exists = function(arr) {\n  // TODO: Write your code here\n  return false;\n};\n\n\n\nconsole.log(`${circular_array_loop_exists([1, 2, -1, 2, 2])}`)\nconsole.log(`${circular_array_loop_exists([2, 2, -1, 2])}`)\nconsole.log(`${circular_array_loop_exists([2, 1, -1, -2])}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass CircularArrayLoop {\n public:\n  static bool loopExists(const vector<int> &arr) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << CircularArrayLoop::loopExists(vector<int>{1, 2, -1, 2, 2}) << endl;\n  cout << CircularArrayLoop::loopExists(vector<int>{2, 2, -1, 2}) << endl;\n  cout << CircularArrayLoop::loopExists(vector<int>{2, 1, -1, -2}) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"8b275570e184f7302454273721e5a3ac\">This problem involves finding a cycle in the array and, as we know, the <strong>Fast &amp; Slow pointer</strong> method is an efficient way to do that. We can start from each index of the array to find the cycle. If a number does not have a cycle we will move forward to the next element. There are a couple of additional things we need to take care of:</p>\n<ol data-id=\"f1b64477f2823b57a6f3808ad083d1a8\">\n<li>\n<p>As mentioned in the problem, the cycle should have more than one element. This means that when we move a pointer forward, if the pointer points to the same element after the move, we have a one-element cycle. Therefore, we can finish our cycle search for the current element.</p>\n</li>\n<li>\n<p>The other requirement mentioned in the problem is that the cycle should not contain both forward and backward movements. We will handle this by remembering the direction of each element while searching for the cycle. If the number is positive, the direction will be forward and if the number is negative, the direction will be backward. So whenever we move a pointer forward, if there is a change in the direction, we will finish our cycle search right there for the current element.</p>\n</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">true\ntrue\nfalse\n</p>",
+      "code": {
+        "java": "class CircularArrayLoop {\n\n  public static boolean loopExists(int[] arr) {\n    for (int i = 0; i < arr.length; i++) {\n      boolean isForward = arr[i] >= 0; // if we are moving forward or not\n      int slow = i, fast = i;\n\n      // if slow or fast becomes '-1' this means we can't find cycle for this number\n      do {\n        slow = findNextIndex(arr, isForward, slow); // move one step for slow pointer\n        fast = findNextIndex(arr, isForward, fast); // move one step for fast pointer\n        if (fast != -1)\n          fast = findNextIndex(arr, isForward, fast); // move another step for fast pointer\n      } while (slow != -1 && fast != -1 && slow != fast);\n\n      if (slow != -1 && slow == fast)\n        return true;\n    }\n\n    return false;\n  }\n\n  private static int findNextIndex(int[] arr, boolean isForward, int currentIndex) {\n    boolean direction = arr[currentIndex] >= 0;\n    if (isForward != direction)\n      return -1; // change in direction, return -1\n\n    int nextIndex = (currentIndex + arr[currentIndex]) % arr.length;\n    if (nextIndex < 0)\n      nextIndex += arr.length; // wrap around for negative numbers\n\n    // one element cycle, return -1\n    if (nextIndex == currentIndex)\n      nextIndex = -1;\n\n    return nextIndex;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 1, 2, -1, 2, 2 }));\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 2, 2, -1, 2 }));\n    System.out.println(CircularArrayLoop.loopExists(new int[] { 2, 1, -1, -2 }));\n  }\n}",
+        "python3": "def circular_array_loop_exists(arr):\n  for i in range(len(arr)):\n    is_forward = arr[i] >= 0  # if we are moving forward or not\n    slow, fast = i, i\n\n    # if slow or fast becomes '-1' this means we can't find cycle for this number\n    while True:\n      # move one step for slow pointer\n      slow = find_next_index(arr, is_forward, slow)\n      # move one step for fast pointer\n      fast = find_next_index(arr, is_forward, fast)\n      if (fast != -1):\n        # move another step for fast pointer\n        fast = find_next_index(arr, is_forward, fast)\n      if slow == -1 or fast == -1 or slow == fast:\n        break\n\n    if slow != -1 and slow == fast:\n      return True\n\n  return False\n\n\ndef find_next_index(arr, is_forward, current_index):\n  direction = arr[current_index] >= 0\n\n  if is_forward != direction:\n    return -1  # change in direction, return -1\n\n  next_index = (current_index + arr[current_index]) % len(arr)\n\n  # one element cycle, return -1\n  if next_index == current_index:\n    next_index = -1\n\n  return next_index\n\n\ndef main():\n  print(circular_array_loop_exists([1, 2, -1, 2, 2]))\n  print(circular_array_loop_exists([2, 2, -1, 2]))\n  print(circular_array_loop_exists([2, 1, -1, -2]))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass CircularArrayLoop {\n public:\n  static bool loopExists(const vector<int> &arr) {\n    for (int i = 0; i < arr.size(); i++) {\n      bool isForward = arr[i] >= 0;  // if we are moving forward or not\n      int slow = i, fast = i;\n\n      // if slow or fast becomes '-1' this means we can't find cycle for this number\n      do {\n        slow = findNextIndex(arr, isForward, slow);  // move one step for slow pointer\n        fast = findNextIndex(arr, isForward, fast);  // move one step for fast pointer\n        if (fast != -1) {\n          fast = findNextIndex(arr, isForward, fast);  // move another step for fast pointer\n        }\n      } while (slow != -1 && fast != -1 && slow != fast);\n\n      if (slow != -1 && slow == fast) {\n        return true;\n      }\n    }\n\n    return false;\n  }\n\n private:\n  static int findNextIndex(const vector<int> &arr, bool isForward, int currentIndex) {\n    bool direction = arr[currentIndex] >= 0;\n    if (isForward != direction) {\n      return -1;  // change in direction, return -1\n    }\n\n    // wrap around for negative numbers\n    int nextIndex = (currentIndex + arr[currentIndex] + arr.size()) % arr.size();\n\n    // one element cycle, return -1\n    if (nextIndex == currentIndex) {\n      nextIndex = -1;\n    }\n\n    return nextIndex;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << CircularArrayLoop::loopExists(vector<int>{1, 2, -1, 2, 2}) << endl;\n  cout << CircularArrayLoop::loopExists(vector<int>{2, 2, -1, 2}) << endl;\n  cout << CircularArrayLoop::loopExists(vector<int>{2, 1, -1, -2}) << endl;\n}\n",
+        "javascript": "function circular_array_loop_exists(arr) {\n  for (i = 0; i < arr.length; i++) {\n    isForward = arr[i] >= 0; // if we are moving forward or not\n    let slow = i,\n      fast = i;\n\n    // if slow or fast becomes '-1' this means we can't find cycle for this number\n    while (true) {\n      // move one step for slow pointer\n      slow = find_next_index(arr, isForward, slow);\n      // move one step for fast pointer\n      fast = find_next_index(arr, isForward, fast);\n      if (fast !== -1) {\n        // move another step for the fast pointer\n        fast = find_next_index(arr, isForward, fast);\n      }\n      if (slow === -1 || fast === -1 || slow === fast) {\n        break;\n      }\n    }\n\n    if (slow !== -1 && slow === fast) {\n      return true;\n    }\n  }\n\n  return false;\n}\n\n\nfunction find_next_index(arr, isForward, currentIndex) {\n  direction = arr[currentIndex] >= 0;\n\n  if (isForward !== direction) {\n    return -1; // change in direction, return -1\n  }\n\n  nextIndex = (currentIndex + arr[currentIndex]) % arr.length;\n  if (nextIndex < 0) {\n    nextIndex += arr.length; // wrap around for negative numbers\n  }\n\n  // one element cycle, return -1\n  if (nextIndex === currentIndex) {\n    nextIndex = -1;\n  }\n\n  return nextIndex;\n}\n\n\nconsole.log(circular_array_loop_exists([1, 2, -1, 2, 2]));\nconsole.log(circular_array_loop_exists([2, 2, -1, 2]));\nconsole.log(circular_array_loop_exists([2, 1, -1, -2]));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"0d13b1c89e33e8d2927537ee93691c9a\">The above algorithm will have a time complexity of <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>N</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N^2)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8141079999999999em\"></span><span class=\"strut bottom\" style=\"height:1.064108em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathrm\">2</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of elements in the array. This complexity is due to the fact that we are iterating all elements of the array and trying to find a cycle for each element.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "an-alternate-approach",
+      "title": "An Alternate Approach",
+      "html": "<p data-id=\"345f981cb9033f9896b360c2057e189b\">In our algorithm, we don’t keep a record of all the numbers that have been evaluated for cycles. We know that all such numbers will not produce a cycle for any other instance as well. If we can remember all the numbers that have been visited, our algorithm will improve to <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> as, then, each number will be evaluated for cycles only once. We can keep track of this by creating a separate array however the space complexity of our algorithm will increase to <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo><mi mathvariant=\"normal\">.</mi></mrow><annotation encoding=\"application/x-tex\">O(N).</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span><span class=\"mord mathrm\">.</span></span></span></span></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Problem Challenge 3.html",
+      "1.2Problem Challenge 3.html",
+      "1.3Problem Challenge 3.html",
+      "1.4Problem Challenge 3.html",
+      "1.1Solution Review_ Problem Challenge 3 -.html",
+      "1.2Solution Review_ Problem Challenge 3 -.html",
+      "1.3Solution Review_ Problem Challenge 3 -.html",
+      "1.4Solution Review_ Problem Challenge 3 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

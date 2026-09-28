@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 17,
+    "name": "Graph",
+    "slug": "topological-sort"
+  },
+  "summary": "Topological Sort is used to find a linear ordering of elements that have dependencies on each other. For example, if event ‘B’ is dependent on event ‘A’, ‘A’ comes before ‘B’ in topological ordering.…",
+  "sourceFolder": "17. Pattern Topological Sort (Graph)/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"81f58c1fe540d2d3a62fa4e21d95fb8d\"><a href=\"https://en.wikipedia.org/wiki/Topological_sorting\" target=\"_blank\">Topological Sort</a> is used to find a linear ordering of elements that have dependencies on each other. For example, if event ‘B’ is dependent on event ‘A’, ‘A’ comes before ‘B’ in topological ordering.</p>\n<p data-id=\"c5c3ec18928ca2678daa6be2d4e94be1\">This pattern defines an easy way to understand the technique for performing topological sorting of a set of elements and then solves a few problems using it.</p>\n<p data-id=\"d9ba568e0ae3d74a2b4efabbb248bfae\">Let’s see this pattern in action.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

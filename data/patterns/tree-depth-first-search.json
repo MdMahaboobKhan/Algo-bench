@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 9,
+    "name": "Tree Depth First Search",
+    "slug": "tree-depth-first-search"
+  },
+  "summary": "This pattern is based on the Depth First Search (DFS) technique to traverse a tree. We will be using recursion (or we can also use a stack for the iterative approach) to keep track of all the…",
+  "sourceFolder": "9. Pattern Tree Depth First Search/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"3fbca8419ff2049dfb7351e354ccbd09\">This pattern is based on the <strong>Depth First Search (DFS)</strong> technique to traverse a tree.</p>\n<p data-id=\"e52db4226f91e8a87f8451e313831696\">We will be using recursion (or we can also use a stack for the iterative approach) to keep track of all the previous (parent) nodes while traversing. This also means that the space complexity of the algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>H</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(H)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.08125em\">H</span><span class=\"mclose\">)</span></span></span></span>, where ‘H’ is the maximum height of the tree.</p>\n<p data-id=\"2d8746ba5aed60da795f75a396568879\">Let’s jump onto our first problem to understand this pattern.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

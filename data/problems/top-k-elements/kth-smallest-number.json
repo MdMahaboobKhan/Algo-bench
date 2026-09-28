@@ -1,0 +1,125 @@
+{
+  "id": "top-k-elements/kth-smallest-number",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "Kth Smallest Number",
+  "difficulty": "easy",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/3. Kth Smallest Number (easy)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass KthSmallestNumber {\n\n  public static int findKthSmallestNumber(int[] nums, int k) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int result = KthSmallestNumber.findKthSmallestNumber(new int[] { 1, 5, 12, 2, 11, 5 }, 3);\n    System.out.println(\"Kth smallest number is: \" + result);\n\n    // since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n    result = KthSmallestNumber.findKthSmallestNumber(new int[] { 1, 5, 12, 2, 11, 5 }, 4);\n    System.out.println(\"Kth smallest number is: \" + result);\n\n    result = KthSmallestNumber.findKthSmallestNumber(new int[] { 5, 12, 11, -1, 12 }, 3);\n    System.out.println(\"Kth smallest number is: \" + result);\n  }\n}\n",
+    "python3": "def find_Kth_smallest_number(nums, k):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 3)))\n\n  # since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 4)))\n\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([5, 12, 11, -1, 12], 3)))\n\n\nmain()\n",
+    "javascript": "const find_Kth_smallest_number = function(nums, k) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 3)}`)\n// since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 4)}`)\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([5, 12, 11, -1, 12], 3)}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass KthSmallestNumber {\n public:\n  static int findKthSmallestNumber(const vector<int> &nums, int k) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = KthSmallestNumber::findKthSmallestNumber(vector<int>{1, 5, 12, 2, 11, 5}, 3);\n  cout << \"Kth smallest number is: \" << result << endl;\n\n  // since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n  result = KthSmallestNumber::findKthSmallestNumber(vector<int>{1, 5, 12, 2, 11, 5}, 4);\n  cout << \"Kth smallest number is: \" << result << endl;\n\n  result = KthSmallestNumber::findKthSmallestNumber(vector<int>{5, 12, 11, -1, 12}, 3);\n  cout << \"Kth smallest number is: \" << result << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 5, 12, 2, 11, 5], K = 3\nOutput: 5\nExplanation: The 3rd smallest number is '5', as the first two smaller numbers are [1, 2].",
+      "input": "[1, 5, 12, 2, 11, 5], K = 3",
+      "output": "5",
+      "explanation": "The 3rd smallest number is '5', as the first two smaller numbers are [1, 2]."
+    },
+    {
+      "raw": "Input: [1, 5, 12, 2, 11, 5], K = 4\nOutput: 5\nExplanation: The 4th smallest number is '5', as the first three small numbers are [1, 2, 5].",
+      "input": "[1, 5, 12, 2, 11, 5], K = 4",
+      "output": "5",
+      "explanation": "The 4th smallest number is '5', as the first three small numbers are [1, 2, 5]."
+    },
+    {
+      "raw": "Input: [5, 12, 11, -1, 12], K = 3\nOutput: 11\nExplanation: The 3rd smallest number is '11', as the first two small numbers are [5, -1].",
+      "input": "[5, 12, 11, -1, 12], K = 3",
+      "output": "11",
+      "explanation": "The 3rd smallest number is '11', as the first two small numbers are [5, -1]."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"386f29ac3fd8ba2309af3c81dea5880f\">Given an unsorted array of numbers, find Kth smallest number in it.</p>\n<p data-id=\"474a0c0d1df77e96b75526fb86758b97\">Please note that it is the Kth smallest number in the sorted order, not the Kth distinct element.</p>\n<p data-id=\"9ed216eef13f9f7f911290f64e143511\">Note: For a detailed discussion about different approaches to solve this problem, take a look at <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/4817079184130048\" target=\"_blank\">Kth Smallest Number</a>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Kth smallest number is: -1\nKth smallest number is: -1\nKth smallest number is: -1\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass KthSmallestNumber {\n\n  public static int findKthSmallestNumber(int[] nums, int k) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int result = KthSmallestNumber.findKthSmallestNumber(new int[] { 1, 5, 12, 2, 11, 5 }, 3);\n    System.out.println(\"Kth smallest number is: \" + result);\n\n    // since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n    result = KthSmallestNumber.findKthSmallestNumber(new int[] { 1, 5, 12, 2, 11, 5 }, 4);\n    System.out.println(\"Kth smallest number is: \" + result);\n\n    result = KthSmallestNumber.findKthSmallestNumber(new int[] { 5, 12, 11, -1, 12 }, 3);\n    System.out.println(\"Kth smallest number is: \" + result);\n  }\n}\n",
+        "python3": "def find_Kth_smallest_number(nums, k):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 3)))\n\n  # since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 4)))\n\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([5, 12, 11, -1, 12], 3)))\n\n\nmain()\n",
+        "javascript": "const find_Kth_smallest_number = function(nums, k) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 3)}`)\n// since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 4)}`)\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([5, 12, 11, -1, 12], 3)}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass KthSmallestNumber {\n public:\n  static int findKthSmallestNumber(const vector<int> &nums, int k) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = KthSmallestNumber::findKthSmallestNumber(vector<int>{1, 5, 12, 2, 11, 5}, 3);\n  cout << \"Kth smallest number is: \" << result << endl;\n\n  // since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n  result = KthSmallestNumber::findKthSmallestNumber(vector<int>{1, 5, 12, 2, 11, 5}, 4);\n  cout << \"Kth smallest number is: \" << result << endl;\n\n  result = KthSmallestNumber::findKthSmallestNumber(vector<int>{5, 12, 11, -1, 12}, 3);\n  cout << \"Kth smallest number is: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"a0b59400251b557eeffb943f950d2702\">This problem follows the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5728885882748928/\" target=\"_blank\">Top ‘K’ Numbers</a> pattern but has two differences:</p>\n<ol data-id=\"c9fe185d6cd82060a5207372f034a815\">\n<li>Here we need to find the Kth <code>smallest</code> number, whereas in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5728885882748928/\" target=\"_blank\">Top ‘K’ Numbers</a> we were dealing with ‘K’ <code>largest</code> numbers.</li>\n<li>In this problem, we need to find only one number (Kth smallest) compared to finding all ‘K’ largest numbers.</li>\n</ol>\n<p data-id=\"942d29699142e1dcc42a50a94d00cc12\">We can follow the same approach as discussed in the ‘Top K Elements’ problem. To handle the first difference mentioned above, we can use a max-heap instead of a min-heap. As we know, the root is the biggest element in the max heap. So, since we want to keep track of the ‘K’ smallest numbers, we can compare every number with the root while iterating through all numbers, and if it is smaller than the root, we’ll take the root out and insert the smaller number.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Kth smallest number is: 5\nKth smallest number is: 5\nKth smallest number is: 11\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass KthSmallestNumber {\n\n  public static int findKthSmallestNumber(int[] nums, int k) {\n    PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((n1, n2) -> n2 - n1);\n    // put first k numbers in the max heap\n    for (int i = 0; i < k; i++)\n      maxHeap.add(nums[i]);\n\n    // go through the remaining numbers of the array, if the number from the array is smaller than the\n    // top (biggest) number of the heap, remove the top number from heap and add the number from array\n    for (int i = k; i < nums.length; i++) {\n      if (nums[i] < maxHeap.peek()) {\n        maxHeap.poll();\n        maxHeap.add(nums[i]);\n      }\n    }\n\n    // the root of the heap has the Kth smallest number\n    return maxHeap.peek();\n  }\n\n  public static void main(String[] args) {\n    int result = KthSmallestNumber.findKthSmallestNumber(new int[] { 1, 5, 12, 2, 11, 5 }, 3);\n    System.out.println(\"Kth smallest number is: \" + result);\n\n    // since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n    result = KthSmallestNumber.findKthSmallestNumber(new int[] { 1, 5, 12, 2, 11, 5 }, 4);\n    System.out.println(\"Kth smallest number is: \" + result);\n\n    result = KthSmallestNumber.findKthSmallestNumber(new int[] { 5, 12, 11, -1, 12 }, 3);\n    System.out.println(\"Kth smallest number is: \" + result);  }\n}\n",
+        "python3": "from heapq import *\n\n\ndef find_Kth_smallest_number(nums, k):\n  maxHeap = []\n  # put first k numbers in the max heap\n  for i in range(k):\n    heappush(maxHeap, -nums[i])\n\n  # go through the remaining numbers of the array, if the number from the array is smaller than the\n  # top(biggest) number of the heap, remove the top number from heap and add the number from array\n  for i in range(k, len(nums)):\n    if -nums[i] > maxHeap[0]:\n      heappop(maxHeap)\n      heappush(maxHeap, -nums[i])\n\n  # the root of the heap has the Kth smallest number\n  return -maxHeap[0]\n\n\ndef main():\n\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 3)))\n\n  # since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 4)))\n\n  print(\"Kth smallest number is: \" +\n        str(find_Kth_smallest_number([5, 12, 11, -1, 12], 3)))\n\n\nmain()\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nfunction find_Kth_smallest_number(nums, k) {\n  maxHeap = new Heap();\n  // put first k numbers in the max heap\n  for (i = 0; i < k; i++) {\n    maxHeap.push(nums[i]);\n  }\n\n  // go through the remaining numbers of the array, if the number from the array is smaller than the\n  // top(biggest) number of the heap, remove the top number from heap and add the number from array\n  for (i = k; i < nums.length; i++) {\n    if (nums[i] < maxHeap.peek()) {\n      maxHeap.pop();\n      maxHeap.push(nums[i]);\n    }\n  }\n\n  // the root of the heap has the Kth smallest number\n  return maxHeap.peek();\n}\n\n\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 3)}`);\n\n// since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([1, 5, 12, 2, 11, 5], 4)}`);\n\nconsole.log(`Kth smallest number is: ${find_Kth_smallest_number([5, 12, 11, -1, 12], 3)}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass KthSmallestNumber {\n public:\n  static int findKthSmallestNumber(const vector<int> &nums, int k) {\n    priority_queue<int> maxHeap;\n\n    // put first k numbers in the max heap\n    for (int i = 0; i < k; i++) {\n      maxHeap.push(nums[i]);\n    }\n\n    // go through the remaining numbers of the array, if the number from the array is smaller than\n    // the top (biggest) number of the heap, remove the top number from heap and add the number from\n    // array\n    for (int i = k; i < nums.size(); i++) {\n      if (nums[i] < maxHeap.top()) {\n        maxHeap.pop();\n        maxHeap.push(nums[i]);\n      }\n    }\n\n    // the root of the heap has the Kth smallest number\n    return maxHeap.top();\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = KthSmallestNumber::findKthSmallestNumber(vector<int>{1, 5, 12, 2, 11, 5}, 3);\n  cout << \"Kth smallest number is: \" << result << endl;\n\n  // since there are two 5s in the input array, our 3rd and 4th smallest numbers should be a '5'\n  result = KthSmallestNumber::findKthSmallestNumber(vector<int>{1, 5, 12, 2, 11, 5}, 4);\n  cout << \"Kth smallest number is: \" << result << endl;\n\n  result = KthSmallestNumber::findKthSmallestNumber(vector<int>{5, 12, 11, -1, 12}, 3);\n  cout << \"Kth smallest number is: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"bd2e754afecb3e8f57cb3cbb869f6b16\">The time complexity of this algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>K</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mo>+</mo><mo>(</mo><mi>N</mi><mo>−</mo><mi>K</mi><mo>)</mo><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(K*logK+(N-K)*logK)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mbin\">+</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">−</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span>, which is asymptotically equal to <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logK)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"c0483f550c684eb268154161467f5263\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(K)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span> because we need to store ‘K’ smallest numbers in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "an-alternate-approach",
+      "title": "An Alternate Approach",
+      "html": "<p data-id=\"de25c7d6091a774b88457713055f9c69\">Alternatively, we can use a <strong>Min Heap</strong> to find the Kth smallest number. We can insert all the numbers in the min-heap and then extract the top ‘K’ numbers from the heap to find the Kth smallest number. Initializing the min-heap with all numbers will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> and extracting ‘K’ numbers will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>K</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(KlogN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>. Overall, the time complexity of this algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>+</mo><mi>K</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N+KlogN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> and the space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Kth Smallest Number (easy).html",
+      "1.2Kth Smallest Number (easy).html",
+      "1.3Kth Smallest Number (easy).html",
+      "1.4Kth Smallest Number (easy).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

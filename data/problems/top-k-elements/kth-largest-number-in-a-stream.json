@@ -1,0 +1,105 @@
+{
+  "id": "top-k-elements/kth-largest-number-in-a-stream",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "Kth Largest Number in a Stream",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/8. Kth Largest Number in a Stream (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass KthLargestNumberInStream {\n\n  public KthLargestNumberInStream(int[] nums, int k) {\n    // TODO: Write your code here\n  }\n\n  public int add(int num) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int[] input = new int[] { 3, 1, 5, 12, 2, 11 };\n    KthLargestNumberInStream kthLargestNumber = new KthLargestNumberInStream(input, 4);\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(6));\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(13));\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(4));\n  }\n}",
+    "python3": "class KthLargestNumberInStream:\n  def __init__(self, nums, k):\n    # TODO: Write your code here\n    self.k = k\n\n  def add(self, num):\n    # TODO: Write your code here\n    return -1\n\n\ndef main():\n\n  kthLargestNumber = KthLargestNumberInStream([3, 1, 5, 12, 2, 11], 4)\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(6)))\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(13)))\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(4)))\n\n\nmain()\n\n",
+    "javascript": "class KthLargestNumberInStream {\n  constructor(nums, k) {\n    // TODO: Write your code here\n    this.k = k;\n  }\n\n  add(num) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\n\nkthLargestNumber = new KthLargestNumberInStream([3, 1, 5, 12, 2, 11], 4);\nconsole.log(`4th largest number is: ${kthLargestNumber.add(6)}`)\nconsole.log(`4th largest number is: ${kthLargestNumber.add(13)}`)\nconsole.log(`4th largest number is: ${kthLargestNumber.add(4)}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass KthLargestNumberInStream {\n public:\n  KthLargestNumberInStream(const vector<int> &nums, int k) {\n  // TODO: Write your code here\n  }\n\n  virtual int add(int num) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  KthLargestNumberInStream kthLargestNumber({3, 1, 5, 12, 2, 11}, 4);\n  cout << \"4th largest number is: \" << kthLargestNumber.add(6) << endl;\n  cout << \"4th largest number is: \" << kthLargestNumber.add(13) << endl;\n  cout << \"4th largest number is: \" << kthLargestNumber.add(4) << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [3, 1, 5, 12, 2, 11], K = 4\n1. Calling add(6) should return '5'.\n2. Calling add(13) should return '6'.\n2. Calling add(4) should still return '6'.",
+      "input": "[3, 1, 5, 12, 2, 11], K = 4\n1. Calling add(6) should return '5'.\n2. Calling add(13) should return '6'.\n2. Calling add(4) should still return '6'.",
+      "output": null,
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"4b179156423f3dc1155286f7a33ca1d5\">Design a class to efficiently find the Kth largest element in a stream of numbers.</p>\n<p data-id=\"9766dcb5ea59a0e6c3f839da57cb1534\">The class should have the following two things:</p>\n<ol data-id=\"ede2e46d917dc78ba347626a138112d4\">\n<li>The constructor of the class should accept an integer array containing initial numbers from the stream and an integer ‘K’.</li>\n<li>The class should expose a function <code>add(int num)</code> which will store the given number and return the Kth largest number.</li>\n</ol>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">4th largest number is: -1\n4th largest number is: -1\n4th largest number is: -1\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass KthLargestNumberInStream {\n\n  public KthLargestNumberInStream(int[] nums, int k) {\n    // TODO: Write your code here\n  }\n\n  public int add(int num) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int[] input = new int[] { 3, 1, 5, 12, 2, 11 };\n    KthLargestNumberInStream kthLargestNumber = new KthLargestNumberInStream(input, 4);\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(6));\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(13));\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(4));\n  }\n}",
+        "python3": "class KthLargestNumberInStream:\n  def __init__(self, nums, k):\n    # TODO: Write your code here\n    self.k = k\n\n  def add(self, num):\n    # TODO: Write your code here\n    return -1\n\n\ndef main():\n\n  kthLargestNumber = KthLargestNumberInStream([3, 1, 5, 12, 2, 11], 4)\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(6)))\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(13)))\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(4)))\n\n\nmain()\n\n",
+        "javascript": "class KthLargestNumberInStream {\n  constructor(nums, k) {\n    // TODO: Write your code here\n    this.k = k;\n  }\n\n  add(num) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\n\nkthLargestNumber = new KthLargestNumberInStream([3, 1, 5, 12, 2, 11], 4);\nconsole.log(`4th largest number is: ${kthLargestNumber.add(6)}`)\nconsole.log(`4th largest number is: ${kthLargestNumber.add(13)}`)\nconsole.log(`4th largest number is: ${kthLargestNumber.add(4)}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass KthLargestNumberInStream {\n public:\n  KthLargestNumberInStream(const vector<int> &nums, int k) {\n  // TODO: Write your code here\n  }\n\n  virtual int add(int num) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  KthLargestNumberInStream kthLargestNumber({3, 1, 5, 12, 2, 11}, 4);\n  cout << \"4th largest number is: \" << kthLargestNumber.add(6) << endl;\n  cout << \"4th largest number is: \" << kthLargestNumber.add(13) << endl;\n  cout << \"4th largest number is: \" << kthLargestNumber.add(4) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"378861dc9c5001f61a245f9896095f3d\">This problem follows the <strong>Top ‘K’ Elements</strong> pattern and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5696381570252800/\" target=\"_blank\">Kth Smallest number</a>.</p>\n<p data-id=\"0a7271897c02bb1c4c72765628fdea18\">We can follow the same approach as discussed in the ‘Kth Smallest number’ problem. However, we will use a <strong>Min Heap</strong> (instead of a <strong>Max Heap</strong>) as we need to find the Kth largest number.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">4th largest number is: 5\n4th largest number is: 6\n4th largest number is: 6\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass KthLargestNumberInStream {\n  PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);\n  final int k;\n\n  public KthLargestNumberInStream(int[] nums, int k) {\n    this.k = k;\n    // add the numbers in the min heap\n    for (int i = 0; i < nums.length; i++)\n      add(nums[i]);\n  }\n\n  public int add(int num) {\n    // add the new number in the min heap\n    minHeap.add(num);\n\n    // if heap has more than 'k' numbers, remove one number\n    if (minHeap.size() > this.k)\n      minHeap.poll();\n\n    // return the 'Kth largest number\n    return minHeap.peek();\n  }\n\n  public static void main(String[] args) {\n    int[] input = new int[] { 3, 1, 5, 12, 2, 11 };\n    KthLargestNumberInStream kthLargestNumber = new KthLargestNumberInStream(input, 4);\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(6));\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(13));\n    System.out.println(\"4th largest number is: \" + kthLargestNumber.add(4));\n  }\n}",
+        "python3": "from heapq import *\n\n\nclass KthLargestNumberInStream:\n  minHeap = []\n\n  def __init__(self, nums, k):\n    self.k = k\n    # add the numbers in the min heap\n    for num in nums:\n      self.add(num)\n\n  def add(self, num):\n    # add the new number in the min heap\n    heappush(self.minHeap, num)\n\n    # if heap has more than 'k' numbers, remove one number\n    if len(self.minHeap) > self.k:\n      heappop(self.minHeap)\n\n    # return the 'Kth largest number\n    return self.minHeap[0]\n\n\ndef main():\n\n  kthLargestNumber = KthLargestNumberInStream([3, 1, 5, 12, 2, 11], 4)\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(6)))\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(13)))\n  print(\"4th largest number is: \" + str(kthLargestNumber.add(4)))\n\n\nmain()\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nclass KthLargestNumberInStream {\n  constructor(nums, k) {\n    this.minHeap = new Heap([], null, ((a, b) => b - a));\n    this.k = k;\n\n    // add the numbers in the min heap\n    nums.forEach((num) => {\n      this.add(num);\n    });\n  }\n\n  add(num) {\n    // add the new number in the min heap\n    this.minHeap.push(num);\n\n    // if heap has more than 'k' numbers, remove one number\n    if (this.minHeap.length > this.k) {\n      this.minHeap.pop();\n    }\n\n    // return the 'Kth largest number\n    return this.minHeap.peek();\n  }\n}\n\n\nconst kthLargestNumber = new KthLargestNumberInStream([3, 1, 5, 12, 2, 11], 4);\nconsole.log(`4th largest number is: ${kthLargestNumber.add(6)}`);\nconsole.log(`4th largest number is: ${kthLargestNumber.add(13)}`);\nconsole.log(`4th largest number is: ${kthLargestNumber.add(4)}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass KthLargestNumberInStream {\n public:\n  struct numCompare {\n    bool operator()(const int &x, const int &y) { return x > y; }\n  };\n\n  priority_queue<int, vector<int>, numCompare> minHeap;\n  const int k;\n\n  KthLargestNumberInStream(const vector<int> &nums, int k) : k(k) {\n    // add the numbers in the min heap\n    for (int i = 0; i < nums.size(); i++) {\n      add(nums[i]);\n    }\n  }\n\n  virtual int add(int num) {\n    // add the new number in the min heap\n    minHeap.push(num);\n\n    // if heap has more than 'k' numbers, remove one number\n    if ((int)minHeap.size() > this->k) {\n      minHeap.pop();\n    }\n\n    // return the 'Kth largest number\n    return minHeap.top();\n  }\n};\n\nint main(int argc, char *argv[]) {\n  KthLargestNumberInStream kthLargestNumber({3, 1, 5, 12, 2, 11}, 4);\n  cout << \"4th largest number is: \" << kthLargestNumber.add(6) << endl;\n  cout << \"4th largest number is: \" << kthLargestNumber.add(13) << endl;\n  cout << \"4th largest number is: \" << kthLargestNumber.add(4) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"4a64747bdc62c174e4d54ba45dcfd79b\">The time complexity of the <code>add()</code> function will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logK)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span> since we are inserting the new number in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"4511b8e320c583535d261065048093fb\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(K)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span> for storing numbers in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Kth Largest Number in a Stream (medium) -.html",
+      "1.2Kth Largest Number in a Stream (medium) -.html",
+      "1.3Kth Largest Number in a Stream (medium) -.html",
+      "1.4Kth Largest Number in a Stream (medium) -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

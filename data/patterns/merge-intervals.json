@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 5,
+    "name": "Merge Intervals",
+    "slug": "merge-intervals"
+  },
+  "summary": "This pattern describes an efficient technique to deal with overlapping intervals. In a lot of problems involving intervals, we either need to find overlapping intervals or merge intervals if they…",
+  "sourceFolder": "5. Pattern Merge Intervals/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"82f203de29b275eaecab2b9bff0d9bf7\">This pattern describes an efficient technique to deal with overlapping intervals. In a lot of problems involving intervals, we either need to find overlapping intervals or merge intervals if they overlap.</p>\n<p data-id=\"4694e863870312defe40558f592756c7\">Given two intervals (‘a’ and ‘b’), there will be six different ways the two intervals can relate to each other:</p>\n<p data-id=\"b39528b254064a2c68f2ff41e86a5b00\">Understanding the above six cases will help us in solving all intervals related problems. Let’s jump onto our first problem to understand the <strong>Merge Interval</strong> pattern.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

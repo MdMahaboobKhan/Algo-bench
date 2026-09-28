@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 16,
+    "name": "Dynamic Programming",
+    "slug": "0-or-1-knapsack"
+  },
+  "summary": "0/1 Knapsack pattern is based on the famous problem with the same name which is efficiently solved using Dynamic Programming (DP). In this pattern, we will go through a set of problems to develop an…",
+  "sourceFolder": "16. Pattern  0 or 1 Knapsack (Dynamic Programming)/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"d7cf9527eb0485bb485d3c7b7ff95558\"><strong>0/1 Knapsack</strong> pattern is based on the famous problem with the same name which is efficiently solved using <strong>Dynamic Programming (DP)</strong>.</p>\n<p data-id=\"6b2d019400612fa663c9a394da5b72b2\">In this pattern, we will go through a set of problems to develop an understanding of DP. We will always start with a brute-force recursive solution to see the overlapping subproblems, i.e., realizing that we are solving the same problems repeatedly.</p>\n<p data-id=\"d8fad95ab66207347949231d4583b07c\">After the recursive solution, we will modify our algorithm to apply advanced techniques of <strong>Memoization</strong> and <strong>Bottom-Up Dynamic Programming</strong> to develop a complete understanding of this pattern.</p>\n<p data-id=\"d3a30e2918b25e2c2dbfff7e1b73d6e6\">Let’s jump onto our first problem.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

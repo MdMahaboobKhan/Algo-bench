@@ -1,0 +1,128 @@
+{
+  "id": "modified-binary-search/problem-challenge-1",
+  "pattern": {
+    "index": 12,
+    "name": "Modified Binary Search",
+    "slug": "modified-binary-search"
+  },
+  "title": "Search Bitonic Array",
+  "difficulty": "medium",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "12. Pattern Modified Binary Search/9. Problem Challenge 1",
+    "12. Pattern Modified Binary Search/10. Solution Review Problem Challenge 1"
+  ],
+  "problemStatementSectionId": "search-bitonic-array-medium",
+  "starterCode": {
+    "java": "class SearchBitonicArray {\n\n  public static int search(int[] arr, int key) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(SearchBitonicArray.search(new int[] { 1, 3, 8, 4, 3 }, 4));\n    System.out.println(SearchBitonicArray.search(new int[] { 3, 8, 3, 1 }, 8));\n    System.out.println(SearchBitonicArray.search(new int[] { 1, 3, 8, 12 }, 12));\n    System.out.println(SearchBitonicArray.search(new int[] { 10, 9, 8 }, 10));\n  }\n}",
+    "python3": "def search_bitonic_array(arr, key):\n  # TODO: Write your code here\n  return -1\n\ndef main():\n  print(search_bitonic_array([1, 3, 8, 4, 3], 4))\n  print(search_bitonic_array([3, 8, 3, 1], 8))\n  print(search_bitonic_array([1, 3, 8, 12], 12))\n  print(search_bitonic_array([10, 9, 8], 10))\n\n\nmain()\n",
+    "javascript": "const search_bitonic_array = function(arr, key) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(search_bitonic_array([1, 3, 8, 4, 3], 4))\nconsole.log(search_bitonic_array([3, 8, 3, 1], 8))\nconsole.log(search_bitonic_array([1, 3, 8, 12], 12))\nconsole.log(search_bitonic_array([10, 9, 8], 10))\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass SearchBitonicArray {\n public:\n  static int search(const vector<int> &arr, int key) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << SearchBitonicArray::search(vector<int>{1, 3, 8, 4, 3}, 4) << endl;\n  cout << SearchBitonicArray::search(vector<int>{3, 8, 3, 1}, 8) << endl;\n  cout << SearchBitonicArray::search(vector<int>{1, 3, 8, 12}, 12) << endl;\n  cout << SearchBitonicArray::search(vector<int>{10, 9, 8}, 10) << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 3, 8, 4, 3], key=4\nOutput: 3",
+      "input": "[1, 3, 8, 4, 3], key=4",
+      "output": "3",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [3, 8, 3, 1], key=8\nOutput: 1",
+      "input": "[3, 8, 3, 1], key=8",
+      "output": "1",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [1, 3, 8, 12], key=12\nOutput: 3",
+      "input": "[1, 3, 8, 12], key=12",
+      "output": "3",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [10, 9, 8], key=10\nOutput: 0",
+      "input": "[10, 9, 8], key=10",
+      "output": "0",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "search-bitonic-array-medium",
+      "title": "Search Bitonic Array (medium)",
+      "html": "<p data-id=\"112815eb6db9a87bdbfb0b2bbf310bfe\">Given a Bitonic array, find if a given ‘key’ is present in it. An array is considered bitonic if it is monotonically increasing and then monotonically decreasing. Monotonically increasing or decreasing means that for any index <code>i</code> in the array <code>arr[i] != arr[i+1]</code>.</p>\n<p data-id=\"7800ba9b297beb41c78d7c08d39a8748\">Write a function to return the index of the ‘key’. If the ‘key’ is not present, return -1.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>\n<p data-id=\"041ec4ff6ad5f804da8976d697659842\"><strong>Example 4:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">-1\n-1\n-1\n-1\n</p>",
+      "code": {
+        "java": "class SearchBitonicArray {\n\n  public static int search(int[] arr, int key) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(SearchBitonicArray.search(new int[] { 1, 3, 8, 4, 3 }, 4));\n    System.out.println(SearchBitonicArray.search(new int[] { 3, 8, 3, 1 }, 8));\n    System.out.println(SearchBitonicArray.search(new int[] { 1, 3, 8, 12 }, 12));\n    System.out.println(SearchBitonicArray.search(new int[] { 10, 9, 8 }, 10));\n  }\n}",
+        "python3": "def search_bitonic_array(arr, key):\n  # TODO: Write your code here\n  return -1\n\ndef main():\n  print(search_bitonic_array([1, 3, 8, 4, 3], 4))\n  print(search_bitonic_array([3, 8, 3, 1], 8))\n  print(search_bitonic_array([1, 3, 8, 12], 12))\n  print(search_bitonic_array([10, 9, 8], 10))\n\n\nmain()\n",
+        "javascript": "const search_bitonic_array = function(arr, key) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(search_bitonic_array([1, 3, 8, 4, 3], 4))\nconsole.log(search_bitonic_array([3, 8, 3, 1], 8))\nconsole.log(search_bitonic_array([1, 3, 8, 12], 12))\nconsole.log(search_bitonic_array([10, 9, 8], 10))\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass SearchBitonicArray {\n public:\n  static int search(const vector<int> &arr, int key) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << SearchBitonicArray::search(vector<int>{1, 3, 8, 4, 3}, 4) << endl;\n  cout << SearchBitonicArray::search(vector<int>{3, 8, 3, 1}, 8) << endl;\n  cout << SearchBitonicArray::search(vector<int>{1, 3, 8, 12}, 12) << endl;\n  cout << SearchBitonicArray::search(vector<int>{10, 9, 8}, 10) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"befb695b17e1519787f91c821ac7b2d7\">The problem follows the <strong>Binary Search</strong> pattern. Since Binary Search helps us efficiently find a number in a sorted array we can use a modified version of the Binary Search to find the ‘key’ in the bitonic array.</p>\n<p data-id=\"51021bc4399e7e96e49208f5a23a7099\">Here is how we can search in a bitonic array:</p>\n<ol data-id=\"17487f32a7805d75b3d97444707134b4\">\n<li>First, we can find the index of the maximum value of the bitonic array, similar to <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5941411948003328/\" target=\"_blank\">Bitonic Array Maximum</a>. Let’s call the index of the maximum number <code>maxIndex</code>.</li>\n<li>Now, we can break the array into two sub-arrays:\n<ul>\n<li>Array from index ‘0’ to <code>maxIndex</code>, sorted in ascending order.</li>\n<li>Array from index <code>maxIndex+1</code> to <code>array_length-1</code>, sorted in descending order.</li>\n</ul>\n</li>\n<li>We can then call <strong>Binary Search</strong> separately in these two arrays to search the ‘key’. We can use the same <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6304110192099328/\" target=\"_blank\">Order-agnostic Binary Search</a> for searching.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">3\n1\n3\n0\n</p>",
+      "code": {
+        "java": "class SearchBitonicArray {\n\n  public static int search(int[] arr, int key) {\n    int maxIndex = findMax(arr);\n    int keyIndex = binarySearch(arr, key, 0, maxIndex);\n    if (keyIndex != -1)\n      return keyIndex;\n    return binarySearch(arr, key, maxIndex + 1, arr.length - 1);\n  }\n\n  // find index of the maximum value in a bitonic array\n  public static int findMax(int[] arr) {\n    int start = 0, end = arr.length - 1;\n    while (start < end) {\n      int mid = start + (end - start) / 2;\n      if (arr[mid] > arr[mid + 1]) {\n        end = mid;\n      } else {\n        start = mid + 1;\n      }\n    }\n\n    // at the end of the while loop, 'start == end'\n    return start;\n  }\n\n  // order-agnostic binary search\n  private static int binarySearch(int[] arr, int key, int start, int end) {\n    while (start <= end) {\n      int mid = start + (end - start) / 2;\n\n      if (key == arr[mid])\n        return mid;\n\n      if (arr[start] < arr[end]) { // ascending order\n        if (key < arr[mid]) {\n          end = mid - 1;\n        } else { // key > arr[mid]\n          start = mid + 1;\n        }\n      } else { // descending order\n        if (key > arr[mid]) {\n          end = mid - 1;\n        } else { // key < arr[mid]\n          start = mid + 1;\n        }\n      }\n    }\n    return -1; // element is not found\n  }\n\n  public static void main(String[] args) {\n    System.out.println(SearchBitonicArray.search(new int[] { 1, 3, 8, 4, 3 }, 4));\n    System.out.println(SearchBitonicArray.search(new int[] { 3, 8, 3, 1 }, 8));\n    System.out.println(SearchBitonicArray.search(new int[] { 1, 3, 8, 12 }, 12));\n    System.out.println(SearchBitonicArray.search(new int[] { 10, 9, 8 }, 10));\n  }\n}",
+        "python3": "def search_bitonic_array(arr, key):\n  maxIndex = find_max(arr)\n  keyIndex = binary_search(arr, key, 0, maxIndex)\n  if keyIndex != -1:\n    return keyIndex\n  return binary_search(arr, key, maxIndex + 1, len(arr) - 1)\n\n\n# find index of the maximum value in a bitonic array\ndef find_max(arr):\n  start, end = 0, len(arr) - 1\n  while start < end:\n    mid = start + (end - start) // 2\n    if arr[mid] > arr[mid + 1]:\n      end = mid\n    else:\n      start = mid + 1\n\n  # at the end of the while loop, 'start == end'\n  return start\n\n\n# order-agnostic binary search\ndef binary_search(arr, key, start, end):\n  while start <= end:\n    mid = int(start + (end - start) / 2)\n\n    if key == arr[mid]:\n      return mid\n\n    if arr[start] < arr[end]:  # ascending order\n      if key < arr[mid]:\n        end = mid - 1\n      else:  # key > arr[mid]\n        start = mid + 1\n    else:  # descending order\n      if key > arr[mid]:\n        end = mid - 1\n      else:  # key < arr[mid]\n        start = mid + 1\n\n  return -1  # element is not found\n\n\ndef main():\n  print(search_bitonic_array([1, 3, 8, 4, 3], 4))\n  print(search_bitonic_array([3, 8, 3, 1], 8))\n  print(search_bitonic_array([1, 3, 8, 12], 12))\n  print(search_bitonic_array([10, 9, 8], 10))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass SearchBitonicArray {\n public:\n  static int search(const vector<int> &arr, int key) {\n    int maxIndex = findMax(arr);\n    int keyIndex = binarySearch(arr, key, 0, maxIndex);\n    if (keyIndex != -1) {\n      return keyIndex;\n    }\n    return binarySearch(arr, key, maxIndex + 1, arr.size() - 1);\n  }\n\n  // find index of the maximum value in a bitonic array\n  static int findMax(const vector<int> &arr) {\n    int start = 0, end = arr.size() - 1;\n    while (start < end) {\n      int mid = start + (end - start) / 2;\n      if (arr[mid] > arr[mid + 1]) {\n        end = mid;\n      } else {\n        start = mid + 1;\n      }\n    }\n\n    // at the end of the while loop, 'start == end'\n    return start;\n  }\n\n private:\n  // order-agnostic binary search\n  static int binarySearch(const vector<int> &arr, int key, int start, int end) {\n    while (start <= end) {\n      int mid = start + (end - start) / 2;\n\n      if (key == arr[mid]) {\n        return mid;\n      }\n\n      if (arr[start] < arr[end]) {  // ascending order\n        if (key < arr[mid]) {\n          end = mid - 1;\n        } else {  // key > arr[mid]\n          start = mid + 1;\n        }\n      } else {  // descending order\n        if (key > arr[mid]) {\n          end = mid - 1;\n        } else {  // key < arr[mid]\n          start = mid + 1;\n        }\n      }\n    }\n    return -1;  // element is not found\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << SearchBitonicArray::search(vector<int>{1, 3, 8, 4, 3}, 4) << endl;\n  cout << SearchBitonicArray::search(vector<int>{3, 8, 3, 1}, 8) << endl;\n  cout << SearchBitonicArray::search(vector<int>{1, 3, 8, 12}, 12) << endl;\n  cout << SearchBitonicArray::search(vector<int>{10, 9, 8}, 10) << endl;\n}\n",
+        "javascript": "function search_bitonic_array(arr, key) {\n  const maxIndex = find_max(arr);\n  const keyIndex = binary_search(arr, key, 0, maxIndex);\n  if (keyIndex !== -1) {\n    return keyIndex;\n  }\n  return binary_search(arr, key, maxIndex + 1, arr.length - 1);\n}\n\n// find index of the maximum value in a bitonic array\nfunction find_max(arr) {\n  let start = 0,\n    end = arr.length - 1;\n  while (start < end) {\n    const mid = Math.floor(start + (end - start) / 2);\n    if (arr[mid] > arr[mid + 1]) {\n      end = mid;\n    } else {\n      start = mid + 1;\n    }\n  }\n  // at the end of the while loop, 'start === end'\n  return start;\n}\n\n\n// order-agnostic binary search\nfunction binary_search(arr, key, start, end) {\n  while (start <= end) {\n    const mid = Math.floor(start + (end - start) / 2);\n\n    if (key === arr[mid]) {\n      return mid;\n    }\n\n    if (arr[start] < arr[end]) { // ascending order\n      if (key < arr[mid]) {\n        end = mid - 1;\n      } else { // key > arr[mid]\n        start = mid + 1;\n      }\n    } else { // descending order\n      if (key > arr[mid]) {\n        end = mid - 1;\n      } else { // key < arr[mid]\n        start = mid + 1;\n      }\n    }\n  }\n  return -1; // element is not found\n}\n\nconsole.log(search_bitonic_array([1, 3, 8, 4, 3], 4));\nconsole.log(search_bitonic_array([3, 8, 3, 1], 8));\nconsole.log(search_bitonic_array([1, 3, 8, 12], 12));\nconsole.log(search_bitonic_array([10, 9, 8], 10));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"4d386fe17059be47e167b214fed58db4\">Since we are reducing the search range by half at every step, this means that the time complexity of our algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the total elements in the given array.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 1.html",
+      "1.2Problem Challenge 1.html",
+      "1.3Problem Challenge 1.html",
+      "1.4Problem Challenge 1.html",
+      "1.1Solution Review_ Problem Challenge 1 -.html",
+      "1.2Solution Review_ Problem Challenge 1 -.html",
+      "1.3Solution Review_ Problem Challenge 1.html",
+      "1.4Solution Review_ Problem Challenge 1 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

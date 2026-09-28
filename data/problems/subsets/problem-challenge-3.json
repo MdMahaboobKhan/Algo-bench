@@ -1,0 +1,129 @@
+{
+  "id": "subsets/problem-challenge-3",
+  "pattern": {
+    "index": 11,
+    "name": "Subsets",
+    "slug": "subsets"
+  },
+  "title": "Count of Structurally Unique Binary Search Trees",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "11. Pattern Subsets/12. Problem Challenge 3",
+    "11. Pattern Subsets/13. Solution Review Problem Challenge 3"
+  ],
+  "problemStatementSectionId": "count-of-structurally-unique-binary-search-trees-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass TreeNode {\n  int val;\n  TreeNode left;\n  TreeNode right;\n\n  TreeNode(int x) {\n    val = x;\n  }\n};\n\nclass CountUniqueTrees {\n  public int countTrees(int n) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n   CountUniqueTrees ct = new CountUniqueTrees();\n    int count = ct.countTrees(3);\n    System.out.print(\"Total trees: \" + count);\n  }\n}\n",
+    "python3": "class TreeNode:\n  def __init__(self, val):\n    self.val = val\n    self.left = None\n    self.right = None\n\n\ndef count_trees(n):\n  count = -1\n  # TODO: Write your code here\n  return count\n\n\ndef main():\n  print(\"Total trees: \" + str(count_trees(2)))\n  print(\"Total trees: \" + str(count_trees(3)))\n\n\nmain()\n",
+    "javascript": "class TreeNode {\n\n  constructor(value) {\n    this.value = value;\n    this.left = null;\n    this.right = null;\n  }\n};\n\n\nconst count_trees = function(n) {\n  count = -1;\n  // TODO: Write your code here\n  return count;\n};\n\n\nconsole.log(`Total trees: ${count_trees(2)}`)\nconsole.log(`Total trees: ${count_trees(3)}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n\nclass TreeNode {\n public:\n  int val = 0;\n  TreeNode *left;\n  TreeNode *right;\n\n  TreeNode(int x) { val = x; }\n};\n\nclass CountUniqueTrees {\n public:\n  int countTrees(int n) {\n    int count = 0;\n    // TODO: Write your code here\n    return count;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  CountUniqueTrees ct;\n  int count = ct.countTrees(3);\n  cout << \"Total trees: \" << count;\n}"
+  },
+  "examples": [
+    {
+      "raw": "Input: 2\nOutput: 2\nExplanation: As we saw in the previous problem, there are 2 unique BSTs storing numbers from 1-2.",
+      "input": "2",
+      "output": "2",
+      "explanation": "As we saw in the previous problem, there are 2 unique BSTs storing numbers from 1-2."
+    },
+    {
+      "raw": "Input: 3\nOutput: 5\nExplanation: There will be 5 unique BSTs that can store numbers from 1 to 5.",
+      "input": "3",
+      "output": "5",
+      "explanation": "There will be 5 unique BSTs that can store numbers from 1 to 5."
+    }
+  ],
+  "sections": [
+    {
+      "id": "count-of-structurally-unique-binary-search-trees-hard",
+      "title": "Count of Structurally Unique Binary Search Trees (hard)",
+      "html": "<p data-id=\"1e9271c8eabb6ca7bba2c7cfcd7dbc66\">Given a number ‘n’, write a function to return the count of structurally unique Binary Search Trees (BST) that can store values 1 to ‘n’.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Total trees: -1</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TreeNode {\n  int val;\n  TreeNode left;\n  TreeNode right;\n\n  TreeNode(int x) {\n    val = x;\n  }\n};\n\nclass CountUniqueTrees {\n  public int countTrees(int n) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n   CountUniqueTrees ct = new CountUniqueTrees();\n    int count = ct.countTrees(3);\n    System.out.print(\"Total trees: \" + count);\n  }\n}\n",
+        "python3": "class TreeNode:\n  def __init__(self, val):\n    self.val = val\n    self.left = None\n    self.right = None\n\n\ndef count_trees(n):\n  count = -1\n  # TODO: Write your code here\n  return count\n\n\ndef main():\n  print(\"Total trees: \" + str(count_trees(2)))\n  print(\"Total trees: \" + str(count_trees(3)))\n\n\nmain()\n",
+        "javascript": "class TreeNode {\n\n  constructor(value) {\n    this.value = value;\n    this.left = null;\n    this.right = null;\n  }\n};\n\n\nconst count_trees = function(n) {\n  count = -1;\n  // TODO: Write your code here\n  return count;\n};\n\n\nconsole.log(`Total trees: ${count_trees(2)}`)\nconsole.log(`Total trees: ${count_trees(3)}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n\nclass TreeNode {\n public:\n  int val = 0;\n  TreeNode *left;\n  TreeNode *right;\n\n  TreeNode(int x) { val = x; }\n};\n\nclass CountUniqueTrees {\n public:\n  int countTrees(int n) {\n    int count = 0;\n    // TODO: Write your code here\n    return count;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  CountUniqueTrees ct;\n  int count = ct.countTrees(3);\n  cout << \"Total trees: \" << count;\n}"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"11607ae1fb8cde0e697705d4f082e190\">This problem is similar to <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5679974795182080/\" target=\"_blank\">Structurally Unique Binary Search Trees</a>. Following a similar approach, we can iterate from 1 to ‘n’ and consider each number as the root of a tree and make two recursive calls to count the number of left and right sub-trees.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Total trees: 5</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TreeNode {\n  int val;\n  TreeNode left;\n  TreeNode right;\n\n  TreeNode(int x) {\n    val = x;\n  }\n};\n\nclass CountUniqueTrees {\n  public int countTrees(int n) {\n    if (n <= 1)\n      return 1;\n    int count = 0;\n    for (int i = 1; i <= n; i++) {\n      // making 'i' root of the tree\n      int countOfLeftSubtrees = countTrees(i - 1);\n      int countOfRightSubtrees = countTrees(n - i);\n      count += (countOfLeftSubtrees * countOfRightSubtrees);\n    }\n    return count;\n  }\n\n  public static void main(String[] args) {\n    CountUniqueTrees ct = new CountUniqueTrees();\n    int count = ct.countTrees(3);\n    System.out.print(\"Total trees: \" + count);\n  }\n}",
+        "python3": "\nclass TreeNode:\n  def __init__(self, val):\n    self.val = val\n    self.left = None\n    self.right = None\n\n\ndef count_trees(n):\n  if n <= 1:\n    return 1\n  count = 0\n  for i in range(1, n+1):\n    # making 'i' root of the tree\n    countOfLeftSubtrees = count_trees(i - 1)\n    countOfRightSubtrees = count_trees(n - i)\n    count += (countOfLeftSubtrees * countOfRightSubtrees)\n\n  return count\n\n\ndef main():\n  print(\"Total trees: \" + str(count_trees(2)))\n  print(\"Total trees: \" + str(count_trees(3)))\n\n\nmain()\n\n\n\n\n\n\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n\nclass TreeNode {\n public:\n  int val = 0;\n  TreeNode *left;\n  TreeNode *right;\n\n  TreeNode(int x) { val = x; }\n};\n\nclass CountUniqueTrees {\n public:\n  int countTrees(int n) {\n    if (n <= 1) return 1;\n    int count = 0;\n    for (int i = 1; i <= n; i++) {\n      // making 'i' root of the tree\n      int countOfLeftSubtrees = countTrees(i - 1);\n      int countOfRightSubtrees = countTrees(n - i);\n      count += (countOfLeftSubtrees * countOfRightSubtrees);\n    }\n    return count;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  CountUniqueTrees ct;\n  int count = ct.countTrees(3);\n  cout << \"Total trees: \" << count;\n}",
+        "javascript": "function count_trees(n) {\n  if (n <= 1) {\n    return 1;\n  }\n  let count = 0;\n  for (let i = 1; i < n + 1; i++) {\n    // making 'i' the root of the tree\n    const countOfLeftSubtrees = count_trees(i - 1);\n    const countOfRightSubtrees = count_trees(n - i);\n    count += (countOfLeftSubtrees * countOfRightSubtrees);\n  }\n  return count;\n}\n\nconsole.log(`Total trees: ${count_trees(2)}`);\nconsole.log(`Total trees: ${count_trees(3)}`);"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"eb0373391908fadb3265cc557357f25e\">The time complexity of this algorithm will be exponential and will be similar to <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5753264117121024/\" target=\"_blank\">Balanced Parentheses</a>. Estimated time complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>∗</mo><msup><mn>2</mn><mi>n</mi></msup><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n*2^n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mbin\">∗</span><span class=\"mord\"><span class=\"mord mathrm\">2</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathit\">n</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span> but the actual time complexity ( <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mn>4</mn><mi>n</mi></msup><mi mathvariant=\"normal\">/</mi><msqrt><mrow><mi>n</mi></mrow></msqrt><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(4^n/\\sqrt{n})</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8002800000000001em\"></span><span class=\"strut bottom\" style=\"height:1.05028em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathrm\">4</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathit\">n</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mord mathrm\">/</span><span class=\"sqrt mord\"><span class=\"sqrt-sign\" style=\"top:0.03971999999999998em\"><span class=\"style-wrap reset-textstyle textstyle uncramped\">√</span></span><span class=\"vlist\"><span style=\"top:0em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\">n</span></span></span><span style=\"top:-0.72028em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span><span class=\"reset-textstyle textstyle uncramped sqrt-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span> ) is bounded by the <a href=\"https://en.wikipedia.org/wiki/Catalan_number\" target=\"_blank\">Catalan number</a> and is beyond the scope of a coding interview. See more details <a href=\"https://en.wikipedia.org/wiki/Central_binomial_coefficient\" target=\"_blank\">here</a>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"1b517e5c2ecbe43a7bcd1ea38d838b37\">The space complexity of this algorithm will be exponential too, estimated <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mn>2</mn><mi>n</mi></msup><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(2^n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathrm\">2</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathit\">n</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span> but the actual will be ( <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mn>4</mn><mi>n</mi></msup><mi mathvariant=\"normal\">/</mi><msqrt><mrow><mi>n</mi></mrow></msqrt><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(4^n/\\sqrt{n})</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8002800000000001em\"></span><span class=\"strut bottom\" style=\"height:1.05028em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathrm\">4</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathit\">n</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mord mathrm\">/</span><span class=\"sqrt mord\"><span class=\"sqrt-sign\" style=\"top:0.03971999999999998em\"><span class=\"style-wrap reset-textstyle textstyle uncramped\">√</span></span><span class=\"vlist\"><span style=\"top:0em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\">n</span></span></span><span style=\"top:-0.72028em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span><span class=\"reset-textstyle textstyle uncramped sqrt-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "memoized-version",
+      "title": "Memoized version",
+      "html": "<p data-id=\"588979606354e59f0ca87affef3453e9\">Our algorithm has overlapping subproblems as our recursive call will be evaluating the same sub-expression multiple times. To resolve this, we can use memoization and store the intermediate results in a <strong>HashMap</strong>. In each function call, we can check our map to see if we have already evaluated this sub-expression before. Here is the memoized version of our algorithm, please see highlighted changes:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Total trees: 5</p>\n<p data-id=\"8bb999a29c04126268bfdad6b01ecd30\">The time complexity of the memoized algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n^2)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8141079999999999em\"></span><span class=\"strut bottom\" style=\"height:1.064108em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathit\">n</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathrm\">2</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mclose\">)</span></span></span></span>, since we are iterating from ‘1’ to ‘n’ and ensuring that each sub-problem is evaluated only once. The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span> for the memoization map.</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TreeNode {\n  int val;\n  TreeNode left;\n  TreeNode right;\n\n  TreeNode(int x) {\n    val = x;\n  }\n};\n\nclass CountUniqueTrees {\n  Map<Integer, Integer> map = new HashMap<>();\n\n  public int countTrees(int n) {\n    if (map.containsKey(n))\n      return map.get(n);\n\n    if (n <= 1)\n      return 1;\n    int count = 0;\n    for (int i = 1; i <= n; i++) {\n      // making 'i' root of the tree\n      int countOfLeftSubtrees = countTrees(i - 1);\n      int countOfRightSubtrees = countTrees(n - i);\n      count += (countOfLeftSubtrees * countOfRightSubtrees);\n    }\n    map.put(n, count);\n    return count;\n  }\n\n  public static void main(String[] args) {\n    CountUniqueTrees ct = new CountUniqueTrees();\n    int count = ct.countTrees(3);\n    System.out.print(\"Total trees: \" + count);\n  }\n}\n",
+        "python3": "class TreeNode:\n  def __init__(self, val):\n    self.val = val\n    self.left = None\n    self.right = None\n\n\ndef count_trees(n):\n  return count_trees_rec({}, n)\n\n\ndef count_trees_rec(map, n):\n  if n in map:\n    return map[n]\n\n  if n <= 1:\n    return 1\n  count = 0\n  for i in range(1, n+1):\n    # making 'i' the root of the tree\n    countOfLeftSubtrees = count_trees_rec(map, i - 1)\n    countOfRightSubtrees = count_trees_rec(map, n - i)\n    count += (countOfLeftSubtrees * countOfRightSubtrees)\n\n  map[n] = count\n  return count\n\n\ndef main():\n  print(\"Total trees: \" + str(count_trees(2)))\n  print(\"Total trees: \" + str(count_trees(3)))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <unordered_map>\n\nclass TreeNode {\n public:\n  int val = 0;\n  TreeNode *left;\n  TreeNode *right;\n\n  TreeNode(int x) { val = x; }\n};\n\nclass CountUniqueTrees {\n public:\n  unordered_map<int, int> map = unordered_map<int, int>();\n\n  virtual int countTrees(int n) {\n    if (map.find(n) != map.end()) {\n      return map[n];\n    }\n\n    if (n <= 1) {\n      return 1;\n    }\n\n    int count = 0;\n    for (int i = 1; i <= n; i++) {\n      // making 'i' root of the tree\n      int countOfLeftSubtrees = countTrees(i - 1);\n      int countOfRightSubtrees = countTrees(n - i);\n      count += (countOfLeftSubtrees * countOfRightSubtrees);\n    }\n    map[n] = count;\n    return count;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  CountUniqueTrees ct;\n  int count = ct.countTrees(3);\n  cout << \"Total trees: \" << count;\n}\n",
+        "javascript": "class TreeNode {\n  constructor(val) {\n    this.val = val;\n    this.left = null;\n    this.right = null;\n  }\n}\n\n\nfunction count_trees(n) {\n  return count_trees_rec({}, n);\n}\n\n\nfunction count_trees_rec(map, n) {\n  if (n in map) {\n    return map[n];\n  }\n\n  if (n <= 1) {\n    return 1;\n  }\n  let count = 0;\n  for (let i = 1; i < n + 1; i++) {\n    // making 'i' the root of the tree\n    countOfLeftSubtrees = count_trees_rec(map, i - 1);\n    countOfRightSubtrees = count_trees_rec(map, n - i);\n    count += (countOfLeftSubtrees * countOfRightSubtrees);\n  }\n\n  map[n] = count;\n  return count;\n}\n\n\nconsole.log(`Total trees: ${count_trees(2)}`);\nconsole.log(`Total trees: ${count_trees(3)}`);"
+      },
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 3.html",
+      "1.2Problem Challenge 3.html",
+      "1.3Problem Challenge 3.html",
+      "1.4Problem Challenge 3.html",
+      "1.1Solution Review_ Problem Challenge 3 -.html",
+      "1.2Solution Review_ Problem Challenge 3 -.html",
+      "1.3Solution Review_ Problem Challenge 3 -.html",
+      "1.4Solution Review_ Problem Challenge 3 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

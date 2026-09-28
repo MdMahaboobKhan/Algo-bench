@@ -1,0 +1,114 @@
+{
+  "id": "merge-intervals/intervals-intersection",
+  "pattern": {
+    "index": 5,
+    "name": "Merge Intervals",
+    "slug": "merge-intervals"
+  },
+  "title": "Intervals Intersection",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "5. Pattern Merge Intervals/4. Intervals Intersection (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass Interval {\n  int start;\n  int end;\n\n  public Interval(int start, int end) {\n    this.start = start;\n    this.end = end;\n  }\n};\n\nclass IntervalsIntersection {\n\n  public static Interval[] merge(Interval[] arr1, Interval[] arr2) {\n    List<Interval> intervalsIntersection = new ArrayList<Interval>();\n    // TODO: Write your code here\n    return intervalsIntersection.toArray(new Interval[intervalsIntersection.size()]);\n  }\n\n  public static void main(String[] args) {\n    Interval[] input1 = new Interval[] { new Interval(1, 3), new Interval(5, 6), new Interval(7, 9) };\n    Interval[] input2 = new Interval[] { new Interval(2, 3), new Interval(5, 7) };\n    Interval[] result = IntervalsIntersection.merge(input1, input2);\n    System.out.print(\"Intervals Intersection: \");\n    for (Interval interval : result)\n      System.out.print(\"[\" + interval.start + \",\" + interval.end + \"] \");\n    System.out.println();\n\n    input1 = new Interval[] { new Interval(1, 3), new Interval(5, 7), new Interval(9, 12) };\n    input2 = new Interval[] { new Interval(5, 10) };\n    result = IntervalsIntersection.merge(input1, input2);\n    System.out.print(\"Intervals Intersection: \");\n    for (Interval interval : result)\n      System.out.print(\"[\" + interval.start + \",\" + interval.end + \"] \");\n  }\n}\n",
+    "python3": "def merge(intervals_a, intervals_b):\n  result = []\n  # TODO: Write your code here\n  return result\n\n\ndef main():\n  print(\"Intervals Intersection: \" + str(merge([[1, 3], [5, 6], [7, 9]], [[2, 3], [5, 7]])))\n  print(\"Intervals Intersection: \" + str(merge([[1, 3], [5, 7], [9, 12]], [[5, 10]])))\n\n\nmain()\n",
+    "javascript": "class Interval {\n  constructor(start, end) {\n    this.start = start;\n    this.end = end;\n  }\n\n  print_interval() {\n    process.stdout.write(`[${this.start}, ${this.end}]`);\n  }\n}\n\nconst merge = function(intervals_a, intervals_b) {\n  let result = [];\n  // TODO: Write your code here\n  return result;\n};\n\nprocess.stdout.write('Intervals Intersection: ');\nlet result = merge([new Interval(1, 3), new Interval(5, 6), new Interval(7, 9)], [new Interval(2, 3), new Interval(5, 7)]);\nfor (i = 0; i < result.length; i++) {\n  result[i].print_interval();\n}\nconsole.log();\n\nprocess.stdout.write('Intervals Intersection: ');\nresult = merge([new Interval(1, 3), new Interval(5, 7), new Interval(9, 12)], [new Interval(5, 10)]);\nfor (i = 0; i < result.length; i++) {\n  result[i].print_interval();\n}\nconsole.log();",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass Interval {\n public:\n  int start = 0;\n  int end = 0;\n\n  Interval(int start, int end) {\n    this->start = start;\n    this->end = end;\n  }\n};\n\nclass IntervalsIntersection {\n public:\n  static vector<Interval> merge(const vector<Interval> &arr1, const vector<Interval> &arr2) {\n    vector<Interval> result;\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<Interval> input1 = {{1, 3}, {5, 6}, {7, 9}};\n  vector<Interval> input2 = {{2, 3}, {5, 7}};\n  vector<Interval> result = IntervalsIntersection::merge(input1, input2);\n  cout << \"Intervals Intersection: \";\n  for (auto interval : result) {\n    cout << \"[\" << interval.start << \",\" << interval.end << \"] \";\n  }\n  cout << endl;\n\n  input1 = {{1, 3}, {5, 7}, {9, 12}};\n  input2 = {{5, 10}};\n  result = IntervalsIntersection::merge(input1, input2);\n  cout << \"Intervals Intersection: \";\n  for (auto interval : result) {\n    cout << \"[\" << interval.start << \",\" << interval.end << \"] \";\n  }\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: arr1=[[1, 3], [5, 6], [7, 9]], arr2=[[2, 3], [5, 7]]\nOutput: [2, 3], [5, 6], [7, 7]\nExplanation: The output list contains the common intervals between the two lists.",
+      "input": "arr1=[[1, 3], [5, 6], [7, 9]], arr2=[[2, 3], [5, 7]]",
+      "output": "[2, 3], [5, 6], [7, 7]",
+      "explanation": "The output list contains the common intervals between the two lists."
+    },
+    {
+      "raw": "Input: arr1=[[1, 3], [5, 7], [9, 12]], arr2=[[5, 10]]\nOutput: [5, 7], [9, 10]\nExplanation: The output list contains the common intervals between the two lists.",
+      "input": "arr1=[[1, 3], [5, 7], [9, 12]], arr2=[[5, 10]]",
+      "output": "[5, 7], [9, 10]",
+      "explanation": "The output list contains the common intervals between the two lists."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"dcc4d276d763f111fbf5c2f79bba4441\">Given two lists of intervals, find the <strong>intersection of these two lists</strong>. Each list consists of <strong>disjoint intervals sorted on their start time</strong>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Intervals Intersection: \nIntervals Intersection: </p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Interval {\n  int start;\n  int end;\n\n  public Interval(int start, int end) {\n    this.start = start;\n    this.end = end;\n  }\n};\n\nclass IntervalsIntersection {\n\n  public static Interval[] merge(Interval[] arr1, Interval[] arr2) {\n    List<Interval> intervalsIntersection = new ArrayList<Interval>();\n    // TODO: Write your code here\n    return intervalsIntersection.toArray(new Interval[intervalsIntersection.size()]);\n  }\n\n  public static void main(String[] args) {\n    Interval[] input1 = new Interval[] { new Interval(1, 3), new Interval(5, 6), new Interval(7, 9) };\n    Interval[] input2 = new Interval[] { new Interval(2, 3), new Interval(5, 7) };\n    Interval[] result = IntervalsIntersection.merge(input1, input2);\n    System.out.print(\"Intervals Intersection: \");\n    for (Interval interval : result)\n      System.out.print(\"[\" + interval.start + \",\" + interval.end + \"] \");\n    System.out.println();\n\n    input1 = new Interval[] { new Interval(1, 3), new Interval(5, 7), new Interval(9, 12) };\n    input2 = new Interval[] { new Interval(5, 10) };\n    result = IntervalsIntersection.merge(input1, input2);\n    System.out.print(\"Intervals Intersection: \");\n    for (Interval interval : result)\n      System.out.print(\"[\" + interval.start + \",\" + interval.end + \"] \");\n  }\n}\n",
+        "python3": "def merge(intervals_a, intervals_b):\n  result = []\n  # TODO: Write your code here\n  return result\n\n\ndef main():\n  print(\"Intervals Intersection: \" + str(merge([[1, 3], [5, 6], [7, 9]], [[2, 3], [5, 7]])))\n  print(\"Intervals Intersection: \" + str(merge([[1, 3], [5, 7], [9, 12]], [[5, 10]])))\n\n\nmain()\n",
+        "javascript": "class Interval {\n  constructor(start, end) {\n    this.start = start;\n    this.end = end;\n  }\n\n  print_interval() {\n    process.stdout.write(`[${this.start}, ${this.end}]`);\n  }\n}\n\nconst merge = function(intervals_a, intervals_b) {\n  let result = [];\n  // TODO: Write your code here\n  return result;\n};\n\nprocess.stdout.write('Intervals Intersection: ');\nlet result = merge([new Interval(1, 3), new Interval(5, 6), new Interval(7, 9)], [new Interval(2, 3), new Interval(5, 7)]);\nfor (i = 0; i < result.length; i++) {\n  result[i].print_interval();\n}\nconsole.log();\n\nprocess.stdout.write('Intervals Intersection: ');\nresult = merge([new Interval(1, 3), new Interval(5, 7), new Interval(9, 12)], [new Interval(5, 10)]);\nfor (i = 0; i < result.length; i++) {\n  result[i].print_interval();\n}\nconsole.log();",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass Interval {\n public:\n  int start = 0;\n  int end = 0;\n\n  Interval(int start, int end) {\n    this->start = start;\n    this->end = end;\n  }\n};\n\nclass IntervalsIntersection {\n public:\n  static vector<Interval> merge(const vector<Interval> &arr1, const vector<Interval> &arr2) {\n    vector<Interval> result;\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<Interval> input1 = {{1, 3}, {5, 6}, {7, 9}};\n  vector<Interval> input2 = {{2, 3}, {5, 7}};\n  vector<Interval> result = IntervalsIntersection::merge(input1, input2);\n  cout << \"Intervals Intersection: \";\n  for (auto interval : result) {\n    cout << \"[\" << interval.start << \",\" << interval.end << \"] \";\n  }\n  cout << endl;\n\n  input1 = {{1, 3}, {5, 7}, {9, 12}};\n  input2 = {{5, 10}};\n  result = IntervalsIntersection::merge(input1, input2);\n  cout << \"Intervals Intersection: \";\n  for (auto interval : result) {\n    cout << \"[\" << interval.start << \",\" << interval.end << \"] \";\n  }\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"fc4ec821cd443335b641edf55cfad253\">This problem follows the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5652017242439680/\" target=\"_blank\">Merge Intervals</a> pattern. As we have discussed under <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5718314357620736/\" target=\"_blank\">Insert Interval</a>, there are five overlapping possibilities between two intervals ‘a’ and ‘b’. A close observation will tell us that whenever the two intervals overlap, one of the interval’s start time lies within the other interval. This rule can help us identify if any two intervals overlap or not.</p>\n<p data-id=\"0c4204f600b6cea42038e5c3667e1817\">Now, if we have found that the two intervals overlap, how can we find the overlapped part?</p>\n<p data-id=\"d63e63f290332005a7bc94a693084f4b\">Again from the above diagram, the overlapping interval will be equal to:</p>\n<p data-id=\"9a023a45befbe1691a2f263fd71fc3e9\">That is, the highest start time and the lowest end time will be the overlapping interval.</p>\n<p data-id=\"afc51516ec7facf82c2d8ea706dd7063\">So our algorithm will be to iterate through both the lists together to see if any two intervals overlap. If two intervals overlap, we will insert the overlapped part into a result list and move on to the next interval which is finishing early.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Intervals Intersection: [2,3] [5,6] [7,7] \nIntervals Intersection: [5,7] [9,10] </p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Interval {\n  int start;\n  int end;\n\n  public Interval(int start, int end) {\n    this.start = start;\n    this.end = end;\n  }\n};\n\nclass IntervalsIntersection {\n\n  public static Interval[] merge(Interval[] arr1, Interval[] arr2) {\n    List<Interval> result = new ArrayList<Interval>();\n    int i = 0, j = 0;\n    while (i < arr1.length && j < arr2.length) {\n      // check if the interval arr[i] intersects with arr2[j]\n      // check if one of the interval's start time lies within the other interval\n      if ((arr1[i].start >= arr2[j].start && arr1[i].start <= arr2[j].end)\n          || (arr2[j].start >= arr1[i].start && arr2[j].start <= arr1[i].end)) {\n        // store the intersection part\n        result.add(new Interval(Math.max(arr1[i].start, arr2[j].start), Math.min(arr1[i].end, arr2[j].end)));\n      }\n\n      // move next from the interval which is finishing first\n      if (arr1[i].end < arr2[j].end)\n        i++;\n      else\n        j++;\n    }\n\n    return result.toArray(new Interval[result.size()]);\n  }\n\n  public static void main(String[] args) {\n    Interval[] input1 = new Interval[] { new Interval(1, 3), new Interval(5, 6), new Interval(7, 9) };\n    Interval[] input2 = new Interval[] { new Interval(2, 3), new Interval(5, 7) };\n    Interval[] result = IntervalsIntersection.merge(input1, input2);\n    System.out.print(\"Intervals Intersection: \");\n    for (Interval interval : result)\n      System.out.print(\"[\" + interval.start + \",\" + interval.end + \"] \");\n    System.out.println();\n\n    input1 = new Interval[] { new Interval(1, 3), new Interval(5, 7), new Interval(9, 12) };\n    input2 = new Interval[] { new Interval(5, 10) };\n    result = IntervalsIntersection.merge(input1, input2);\n    System.out.print(\"Intervals Intersection: \");\n    for (Interval interval : result)\n      System.out.print(\"[\" + interval.start + \",\" + interval.end + \"] \");\n  }\n}\n",
+        "python3": "def merge(intervals_a, intervals_b):\n  result = []\n  i, j, start, end = 0, 0, 0, 1\n\n  while i < len(intervals_a) and j < len(intervals_b):\n    # check if intervals overlap and intervals_a[i]'s start time lies within the other intervals_b[j]\n    a_overlaps_b = intervals_a[i][start] >= intervals_b[j][start] and \\\n                   intervals_a[i][start] <= intervals_b[j][end]\n\n    # check if intervals overlap and intervals_a[j]'s start time lies within the other intervals_b[i]\n    b_overlaps_a = intervals_b[j][start] >= intervals_a[i][start] and \\\n                   intervals_b[j][start] <= intervals_a[i][end]\n\n    # store the the intersection part\n    if (a_overlaps_b or b_overlaps_a):\n      result.append([max(intervals_a[i][start], intervals_b[j][start]), min(\n        intervals_a[i][end], intervals_b[j][end])])\n\n    # move next from the interval which is finishing first\n    if intervals_a[i][end] < intervals_b[j][end]:\n      i += 1\n    else:\n      j += 1\n\n  return result\n\n\ndef main():\n  print(\"Intervals Intersection: \" + str(merge([[1, 3], [5, 6], [7, 9]], [[2, 3], [5, 7]])))\n  print(\"Intervals Intersection: \" + str(merge([[1, 3], [5, 7], [9, 12]], [[5, 10]])))\n\n\nmain()\n",
+        "javascript": "class Interval {\n  constructor(start, end) {\n    this.start = start;\n    this.end = end;\n  }\n\n  print_interval() {\n    process.stdout.write(`[${this.start}, ${this.end}]`);\n  }\n}\n\nfunction merge(intervals_a, intervals_b) {\n  let result = [],\n    i = 0,\n    j = 0;\n\n  while (i < intervals_a.length && j < intervals_b.length) {\n    // check if intervals overlap and intervals_a[i]'s start time lies within the other intervals_b[j]\n    a_overlaps_b = intervals_a[i].start >= intervals_b[j].start && intervals_a[i].start <= intervals_b[j].end;\n\n    // check if intervals overlap and intervals_a[j]'s start time lies within the other intervals_b[i]\n    b_overlaps_a = intervals_b[j].start >= intervals_a[i].start && intervals_b[j].start <= intervals_a[i].end;\n\n    // store the the intersection part\n    if (a_overlaps_b || b_overlaps_a) {\n      result.push(new Interval(Math.max(intervals_a[i].start, intervals_b[j].start),\n        Math.min(intervals_a[i].end, intervals_b[j].end)));\n    }\n    // move next from the interval which is finishing first\n    if (intervals_a[i].end < intervals_b[j].end) {\n      i += 1;\n    } else {\n      j += 1;\n    }\n  }\n\n  return result;\n}\n\nprocess.stdout.write('Intervals Intersection: ');\nlet result = merge([new Interval(1, 3), new Interval(5, 6), new Interval(7, 9)], [new Interval(2, 3), new Interval(5, 7)]);\nfor (i = 0; i < result.length; i++) {\n  result[i].print_interval();\n}\nconsole.log();\n\nprocess.stdout.write('Intervals Intersection: ');\nresult = merge([new Interval(1, 3), new Interval(5, 7), new Interval(9, 12)], [new Interval(5, 10)]);\nfor (i = 0; i < result.length; i++) {\n  result[i].print_interval();\n}\nconsole.log();",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass Interval {\n public:\n  int start = 0;\n  int end = 0;\n\n  Interval(int start, int end) {\n    this->start = start;\n    this->end = end;\n  }\n};\n\nclass IntervalsIntersection {\n public:\n  static vector<Interval> merge(const vector<Interval> &arr1, const vector<Interval> &arr2) {\n    vector<Interval> result;\n    int i = 0, j = 0;\n    while (i < arr1.size() && j < arr2.size()) {\n      // check if the interval arr[i] intersects with arr2[j]\n      // check if one of the interval's start time lies within the other interval\n      if ((arr1[i].start >= arr2[j].start && arr1[i].start <= arr2[j].end) ||\n          (arr2[j].start >= arr1[i].start && arr2[j].start <= arr1[i].end)) {\n        // store the intersection part\n        result.push_back({max(arr1[i].start, arr2[j].start), min(arr1[i].end, arr2[j].end)});\n      }\n\n      // move next from the interval which is finishing first\n      if (arr1[i].end < arr2[j].end) {\n        i++;\n      } else {\n        j++;\n      }\n    }\n\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<Interval> input1 = {{1, 3}, {5, 6}, {7, 9}};\n  vector<Interval> input2 = {{2, 3}, {5, 7}};\n  vector<Interval> result = IntervalsIntersection::merge(input1, input2);\n  cout << \"Intervals Intersection: \";\n  for (auto interval : result) {\n    cout << \"[\" << interval.start << \",\" << interval.end << \"] \";\n  }\n  cout << endl;\n\n  input1 = {{1, 3}, {5, 7}, {9, 12}};\n  input2 = {{5, 10}};\n  result = IntervalsIntersection::merge(input1, input2);\n  cout << \"Intervals Intersection: \";\n  for (auto interval : result) {\n    cout << \"[\" << interval.start << \",\" << interval.end << \"] \";\n  }\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"e9d5ad0e13aba5b75d89bd3a8c467d8b\">As we are iterating through both the lists once, the time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>+</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N + M)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mclose\">)</span></span></span></span>, where ‘N’ and ‘M’ are the total number of intervals in the input arrays respectively.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"3fe3110d6293edf4ea2396cdb0a2d677\">Ignoring the space needed for the result list, the algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Intervals Intersection (medium).html",
+      "1.2Intervals Intersection (medium).html",
+      "1.3.1 Intervals Intersection (medium).html",
+      "1.3.2 Intervals Intersection (medium).html",
+      "1.4Intervals Intersection (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": [
+      "2 source files detected as 'javascript' (expected 1): ['1.3.1 Intervals Intersection (medium).html', '1.3.2 Intervals Intersection (medium).html']"
+    ]
+  }
+}

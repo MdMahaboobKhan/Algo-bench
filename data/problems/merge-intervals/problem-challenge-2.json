@@ -1,0 +1,122 @@
+{
+  "id": "merge-intervals/problem-challenge-2",
+  "pattern": {
+    "index": 5,
+    "name": "Merge Intervals",
+    "slug": "merge-intervals"
+  },
+  "title": "Maximum CPU Load",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "5. Pattern Merge Intervals/8. Problem Challenge 2",
+    "5. Pattern Merge Intervals/9. Solution Review Problem Challenge 2"
+  ],
+  "problemStatementSectionId": "maximum-cpu-load-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass Job {\n  int start;\n  int end;\n  int cpuLoad;\n\n  public Job(int start, int end, int cpuLoad) {\n    this.start = start;\n    this.end = end;\n    this.cpuLoad = cpuLoad;\n  }\n};\n\nclass MaximumCPULoad {\n\n  public static int findMaxCPULoad(List<Job> jobs) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    List<Job> input = new ArrayList<Job>(Arrays.asList(new Job(1, 4, 3), new Job(2, 5, 4), new Job(7, 9, 6)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n\n    input = new ArrayList<Job>(Arrays.asList(new Job(6, 7, 10), new Job(2, 4, 11), new Job(8, 12, 15)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n\n    input = new ArrayList<Job>(Arrays.asList(new Job(1, 4, 2), new Job(2, 4, 1), new Job(3, 6, 5)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n  }\n}\n",
+    "python3": "from heapq import *\n\n\nclass job:\n  def __init__(self, start, end, cpu_load):\n    self.start = start\n    self.end = end\n    self.cpu_load = cpu_load\n\ndef find_max_cpu_load(jobs):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(1, 4, 3), job(2, 5, 4), job(7, 9, 6)])))\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(6, 7, 10), job(2, 4, 11), job(8, 12, 15)])))\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(1, 4, 2), job(2, 4, 1), job(3, 6, 5)])))\n\n\nmain()\n",
+    "javascript": "class Job {\n  constructor(start, end, cpu_load) {\n    this.start = start;\n    this.end = end;\n    this.cpu_load = cpu_load;\n  }\n};\n\nconst find_max_cpu_load = function(jobs) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(`Maximum CPU load at any time: ${find_max_cpu_load(\n      [new Job(1, 4, 3), new Job(2, 5, 4), new Job(7, 9, 6)])}`)\nconsole.log(`Maximum CPU load at any time: ${find_max_cpu_load(\n      [new Job(6, 7, 10), new Job(2, 4, 11), new Job(8, 12, 15)])}`)\nconsole.log(`\"Maximum CPU load at any time: ${find_max_cpu_load(\n      [new Job(1, 4, 2), new Job(2, 4, 1), new Job(3, 6, 5)])}`)\n",
+    "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass Job {\n public:\n  int start = 0;\n  int end = 0;\n  int cpuLoad = 0;\n\n  Job(int start, int end, int cpuLoad) {\n    this->start = start;\n    this->end = end;\n    this->cpuLoad = cpuLoad;\n  }\n};\n\nclass MaximumCPULoad {\n public:\n  static int findMaxCPULoad(vector<Job> &jobs) {\n    int maxCPULoad = 0;\n    // TODO: Write your code here\n    return maxCPULoad;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<Job> input = {{1, 4, 3}, {7, 9, 6}, {2, 5, 4}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n\n  input = {{6, 7, 10}, {8, 12, 15}, {2, 4, 11}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n\n  input = {{1, 4, 2}, {3, 6, 5}, {2, 4, 1}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Jobs: [[1,4,3], [2,5,4], [7,9,6]]\nOutput: 7\nExplanation: Since [1,4,3] and [2,5,4] overlap, their maximum CPU load (3+4=7) will be when both the \njobs are running at the same time i.e., during the time interval (2,4).",
+      "input": null,
+      "output": "7",
+      "explanation": "Since [1,4,3] and [2,5,4] overlap, their maximum CPU load (3+4=7) will be when both the \njobs are running at the same time i.e., during the time interval (2,4)."
+    },
+    {
+      "raw": "Jobs: [[6,7,10], [2,4,11], [8,12,15]]\nOutput: 15\nExplanation: None of the jobs overlap, therefore we will take the maximum load of any job which is 15.",
+      "input": null,
+      "output": "15",
+      "explanation": "None of the jobs overlap, therefore we will take the maximum load of any job which is 15."
+    },
+    {
+      "raw": "Jobs: [[1,4,2], [2,4,1], [3,6,5]]\nOutput: 8\nExplanation: Maximum CPU load will be 8 as all jobs overlap during the time interval [3,4].",
+      "input": null,
+      "output": "8",
+      "explanation": "Maximum CPU load will be 8 as all jobs overlap during the time interval [3,4]."
+    }
+  ],
+  "sections": [
+    {
+      "id": "maximum-cpu-load-hard",
+      "title": "Maximum CPU Load (hard)",
+      "html": "<p data-id=\"1fdeb268d20ec45bbe935a0a324aa947\">We are given a list of Jobs. Each job has a Start time, an End time, and a CPU load when it is running. Our goal is to find the <strong>maximum CPU load</strong> at any time if all the <strong>jobs are running on the same machine</strong>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Maximum CPU load at any time: -1\nMaximum CPU load at any time: -1\nMaximum CPU load at any time: -1\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Job {\n  int start;\n  int end;\n  int cpuLoad;\n\n  public Job(int start, int end, int cpuLoad) {\n    this.start = start;\n    this.end = end;\n    this.cpuLoad = cpuLoad;\n  }\n};\n\nclass MaximumCPULoad {\n\n  public static int findMaxCPULoad(List<Job> jobs) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    List<Job> input = new ArrayList<Job>(Arrays.asList(new Job(1, 4, 3), new Job(2, 5, 4), new Job(7, 9, 6)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n\n    input = new ArrayList<Job>(Arrays.asList(new Job(6, 7, 10), new Job(2, 4, 11), new Job(8, 12, 15)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n\n    input = new ArrayList<Job>(Arrays.asList(new Job(1, 4, 2), new Job(2, 4, 1), new Job(3, 6, 5)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n  }\n}\n",
+        "python3": "from heapq import *\n\n\nclass job:\n  def __init__(self, start, end, cpu_load):\n    self.start = start\n    self.end = end\n    self.cpu_load = cpu_load\n\ndef find_max_cpu_load(jobs):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(1, 4, 3), job(2, 5, 4), job(7, 9, 6)])))\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(6, 7, 10), job(2, 4, 11), job(8, 12, 15)])))\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(1, 4, 2), job(2, 4, 1), job(3, 6, 5)])))\n\n\nmain()\n",
+        "javascript": "class Job {\n  constructor(start, end, cpu_load) {\n    this.start = start;\n    this.end = end;\n    this.cpu_load = cpu_load;\n  }\n};\n\nconst find_max_cpu_load = function(jobs) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(`Maximum CPU load at any time: ${find_max_cpu_load(\n      [new Job(1, 4, 3), new Job(2, 5, 4), new Job(7, 9, 6)])}`)\nconsole.log(`Maximum CPU load at any time: ${find_max_cpu_load(\n      [new Job(6, 7, 10), new Job(2, 4, 11), new Job(8, 12, 15)])}`)\nconsole.log(`\"Maximum CPU load at any time: ${find_max_cpu_load(\n      [new Job(1, 4, 2), new Job(2, 4, 1), new Job(3, 6, 5)])}`)\n",
+        "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass Job {\n public:\n  int start = 0;\n  int end = 0;\n  int cpuLoad = 0;\n\n  Job(int start, int end, int cpuLoad) {\n    this->start = start;\n    this->end = end;\n    this->cpuLoad = cpuLoad;\n  }\n};\n\nclass MaximumCPULoad {\n public:\n  static int findMaxCPULoad(vector<Job> &jobs) {\n    int maxCPULoad = 0;\n    // TODO: Write your code here\n    return maxCPULoad;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<Job> input = {{1, 4, 3}, {7, 9, 6}, {2, 5, 4}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n\n  input = {{6, 7, 10}, {8, 12, 15}, {2, 4, 11}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n\n  input = {{1, 4, 2}, {3, 6, 5}, {2, 4, 1}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"de681a58fa83f33ceef30d71b115bec1\">The problem follows the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5652017242439680/\" target=\"_blank\">Merge Intervals</a> pattern and can easily be converted to <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5710239819104256/\" target=\"_blank\">Minimum Meeting Rooms</a>. Similar to ‘Minimum Meeting Rooms’ where we were trying to find the maximum number of meetings happening at any time, for ‘Maximum CPU Load’ we need to find the maximum number of jobs running at any time. We will need to keep a running count of the maximum CPU load at any time to find the overall maximum load.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Maximum CPU load at any time: 7\nMaximum CPU load at any time: 15\nMaximum CPU load at any time: 8\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Job {\n  int start;\n  int end;\n  int cpuLoad;\n\n  public Job(int start, int end, int cpuLoad) {\n    this.start = start;\n    this.end = end;\n    this.cpuLoad = cpuLoad;\n  }\n};\n\nclass MaximumCPULoad {\n\n  public static int findMaxCPULoad(List<Job> jobs) {\n    // sort the jobs by start time\n    Collections.sort(jobs, (a, b) -> Integer.compare(a.start, b.start));\n\n    int maxCPULoad = 0;\n    int currentCPULoad = 0;\n    PriorityQueue<Job> minHeap = new PriorityQueue<>(jobs.size(), (a, b) -> Integer.compare(a.end, b.end));\n    for (Job job : jobs) {\n      // remove all jobs that have ended\n      while (!minHeap.isEmpty() && job.start > minHeap.peek().end)\n        currentCPULoad -= minHeap.poll().cpuLoad;\n\n      // add the current job into the minHeap\n      minHeap.offer(job);\n      currentCPULoad += job.cpuLoad;\n      maxCPULoad = Math.max(maxCPULoad, currentCPULoad);\n    }\n    return maxCPULoad;\n  }\n\n  public static void main(String[] args) {\n    List<Job> input = new ArrayList<Job>(Arrays.asList(new Job(1, 4, 3), new Job(2, 5, 4), new Job(7, 9, 6)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n\n    input = new ArrayList<Job>(Arrays.asList(new Job(6, 7, 10), new Job(2, 4, 11), new Job(8, 12, 15)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n\n    input = new ArrayList<Job>(Arrays.asList(new Job(1, 4, 2), new Job(2, 4, 1), new Job(3, 6, 5)));\n    System.out.println(\"Maximum CPU load at any time: \" + MaximumCPULoad.findMaxCPULoad(input));\n  }\n}\n",
+        "python3": "from heapq import *\n\n\nclass job:\n  def __init__(self, start, end, cpu_load):\n    self.start = start\n    self.end = end\n    self.cpu_load = cpu_load\n\n  def __lt__(self, other):\n    # min heap based on job.end\n    return self.end < other.end\n\n\ndef find_max_cpu_load(jobs):\n  # sort the jobs by start time\n  jobs.sort(key=lambda x: x.start)\n  max_cpu_load, current_cpu_load = 0, 0\n  min_heap = []\n\n  for j in jobs:\n    # remove all the jobs that have ended\n    while(len(min_heap) > 0 and j.start >= min_heap[0].end):\n      current_cpu_load -= min_heap[0].cpu_load\n      heappop(min_heap)\n    # add the current job into min_heap\n    heappush(min_heap, j)\n    current_cpu_load += j.cpu_load\n    max_cpu_load = max(max_cpu_load, current_cpu_load)\n  return max_cpu_load\n\n\ndef main():\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(1, 4, 3), job(2, 5, 4), job(7, 9, 6)])))\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(6, 7, 10), job(2, 4, 11), job(8, 12, 15)])))\n  print(\"Maximum CPU load at any time: \" + str(find_max_cpu_load([job(1, 4, 2), job(2, 4, 1), job(3, 6, 5)])))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass Job {\n public:\n  int start = 0;\n  int end = 0;\n  int cpuLoad = 0;\n\n  Job(int start, int end, int cpuLoad) {\n    this->start = start;\n    this->end = end;\n    this->cpuLoad = cpuLoad;\n  }\n};\n\nclass MaximumCPULoad {\n public:\n  struct endCompare {\n    bool operator()(const Job &x, const Job &y) { return x.end > y.end; }\n  };\n\n  static int findMaxCPULoad(vector<Job> &jobs) {\n    if (jobs.empty()) {\n      return 0;\n    }\n\n    // sort the jobs by start time\n    sort(jobs.begin(), jobs.end(), [](const Job &a, const Job &b) { return a.start < b.start; });\n\n    int maxCPULoad = 0;\n    int currentCPULoad = 0;\n    priority_queue<Job, vector<Job>, endCompare> minHeap;\n    for (auto job : jobs) {\n      // remove all jobs that have ended\n      while (!minHeap.empty() && job.start > minHeap.top().end) {\n        currentCPULoad -= minHeap.top().cpuLoad;\n        minHeap.pop();\n      }\n\n      // add the current job into the minHeap\n      minHeap.push(job);\n      currentCPULoad += job.cpuLoad;\n      maxCPULoad = max(maxCPULoad, currentCPULoad);\n    }\n\n    return maxCPULoad;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<Job> input = {{1, 4, 3}, {7, 9, 6}, {2, 5, 4}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n\n  input = {{6, 7, 10}, {8, 12, 15}, {2, 4, 11}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n\n  input = {{1, 4, 2}, {3, 6, 5}, {2, 4, 1}};\n  cout << \"Maximum CPU load at any time: \" << MaximumCPULoad::findMaxCPULoad(input) << endl;\n}\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\nclass Job {\n  constructor(start, end, cpuLoad) {\n    this.start = start;\n    this.end = end;\n    this.cpuLoad = cpuLoad;\n  }\n}\n\nfunction find_max_cpu_load(jobs) {\n  // sort the jobs by start time\n  jobs.sort((a, b) => a.start - b.start);\n\n  let maxCPULoad = 0,\n    currentCPULoad = 0;\n  const minHeap = new Heap([], null, ((a, b) => b.end - a.end));\n\n  for (j = 0; j < jobs.length; j++) {\n    // remove all the jobs that have ended\n    while (minHeap.length > 0 && jobs[j].start >= minHeap.peek().end) {\n      currentCPULoad -= minHeap.pop().cpuLoad;\n    }\n    // add the current job into min_heap\n    minHeap.push(jobs[j]);\n    currentCPULoad += jobs[j].cpuLoad;\n    maxCPULoad = Math.max(maxCPULoad, currentCPULoad);\n  }\n  return maxCPULoad;\n}\n\n\nconsole.log(`Maximum CPU load at any time: ` +\n  `${find_max_cpu_load([new Job(1, 4, 3), new Job(2, 5, 4), new Job(7, 9, 6)])}`);\nconsole.log(`Maximum CPU load at any time: ` +\n  `${find_max_cpu_load([new Job(6, 7, 10), new Job(2, 4, 11), new Job(8, 12, 15)])}`);\nconsole.log(`Maximum CPU load at any time: ` +\n  `${find_max_cpu_load([new Job(1, 4, 2), new Job(2, 4, 1), new Job(3, 6, 5)])}`);"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"d661dcfb091aec7c9bc495c42ce1af55\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>, where ‘N’ is the total number of jobs. This is due to the sorting that we did in the beginning. Also, while iterating the jobs, we might need to poll/offer jobs to the priority queue. Each of these operations can take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>. Overall our algorithm will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(NlogN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"457574f4fe21ff86e4dd9d889775d5f7\">The space complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>, which is required for sorting. Also, in the worst case, we have to insert all the jobs into the priority queue (when all jobs overlap) which will also take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> space. The overall space complexity of our algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 2.html",
+      "1.2Problem Challenge 2.html",
+      "1.3Problem Challenge 2.html",
+      "1.4Problem Challenge 2.html",
+      "1.1Solution Review_ Problem Challenge 2 -.html",
+      "1.2Solution Review_ Problem Challenge 2.html",
+      "1.3Solution Review_ Problem Challenge 2 -.html",
+      "1.4Solution Review_ Problem Challenge 2.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

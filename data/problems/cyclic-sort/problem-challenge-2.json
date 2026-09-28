@@ -1,0 +1,122 @@
+{
+  "id": "cyclic-sort/problem-challenge-2",
+  "pattern": {
+    "index": 6,
+    "name": "Cyclic Sort",
+    "slug": "cyclic-sort"
+  },
+  "title": "Find the Smallest Missing Positive Number",
+  "difficulty": "medium",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "6. Pattern Cyclic Sort/9. Problem Challenge 2",
+    "6. Pattern Cyclic Sort/10. Solution Review Problem Challenge 2"
+  ],
+  "problemStatementSectionId": "find-the-smallest-missing-positive-number-medium",
+  "starterCode": {
+    "java": "class FirstMissingPositive {\n\n  public static int findNumber(int[] nums) {\n    // TODO: Write your code here\n    return -1;\n  }\n}\n",
+    "python3": "def find_first_missing_positive(nums):\n  # TODO: Write your code here\n  return -1\n",
+    "javascript": "const find_first_missing_positive = function(nums) {\n  // TODO: Write your code here\n  return -1;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FirstMissingPositive {\n public:\n  static int findNumber(vector<int> &nums) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [-3, 1, 5, 4, 2]\nOutput: 3\nExplanation: The smallest missing positive number is '3'",
+      "input": "[-3, 1, 5, 4, 2]",
+      "output": "3",
+      "explanation": "The smallest missing positive number is '3'"
+    },
+    {
+      "raw": "Input: [3, -2, 0, 1, 2]\nOutput: 4",
+      "input": "[3, -2, 0, 1, 2]",
+      "output": "4",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [3, 2, 5, 1]\nOutput: 4",
+      "input": "[3, 2, 5, 1]",
+      "output": "4",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "find-the-smallest-missing-positive-number-medium",
+      "title": "Find the Smallest Missing Positive Number (medium)",
+      "html": "<p data-id=\"edfdf3ee35a3382b9db472a238135f10\">Given an unsorted array containing numbers, find the <strong>smallest missing positive number</strong> in it.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "class FirstMissingPositive {\n\n  public static int findNumber(int[] nums) {\n    // TODO: Write your code here\n    return -1;\n  }\n}\n",
+        "python3": "def find_first_missing_positive(nums):\n  # TODO: Write your code here\n  return -1\n",
+        "javascript": "const find_first_missing_positive = function(nums) {\n  // TODO: Write your code here\n  return -1;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FirstMissingPositive {\n public:\n  static int findNumber(vector<int> &nums) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"1e3d1ebcae8d58372672d3ca416d1a4c\">This problem follows the <strong>Cyclic Sort</strong> pattern and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5319932059320320/\" target=\"_blank\">Find the Missing Number</a> with one big difference. In this problem, the numbers are not bound by any range so we can have any number in the input array.</p>\n<p data-id=\"8ed3f1438d188b83cc0e16342644e22c\">However, we will follow a similar approach though as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5319932059320320/\" target=\"_blank\">Find the Missing Number</a> to place the numbers on their correct indices and ignore all numbers that are out of the range of the array (i.e., all negative numbers and all numbers greater than or equal to the length of the array). Once we are done with the cyclic sort we will iterate the array and the first index that does not have the correct number will be the smallest missing positive number!</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">3\n4\n4\n</p>",
+      "code": {
+        "java": "class FirstMissingPositive {\n\n  public static int findNumber(int[] nums) {\n    int i = 0;\n    while (i < nums.length) {\n      if (nums[i] > 0 && nums[i] <= nums.length && nums[i] != nums[nums[i] - 1])\n        swap(nums, i, nums[i] - 1);\n      else\n        i++;\n    }\n\n    for (i = 0; i < nums.length; i++)\n      if (nums[i] != i + 1)\n        return i + 1;\n\n    return nums.length + 1;\n  }\n\n  private static void swap(int[] arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(FirstMissingPositive.findNumber(new int[] { -3, 1, 5, 4, 2 }));\n    System.out.println(FirstMissingPositive.findNumber(new int[] { 3, -2, 0, 1, 2 }));\n    System.out.println(FirstMissingPositive.findNumber(new int[] { 3, 2, 5, 1 }));\n  }\n}\n",
+        "python3": "def find_first_missing_positive(nums):\n  i, n = 0, len(nums)\n  while i < n:\n    j = nums[i] - 1\n    if nums[i] > 0 and nums[i] <= n and nums[i] != nums[j]:\n      nums[i], nums[j] = nums[j], nums[i]  # swap\n    else:\n      i += 1\n\n  for i in range(n):\n    if nums[i] != i + 1:\n      return i + 1\n\n  return nums.length + 1\n\n\ndef main():\n  print(find_first_missing_positive([-3, 1, 5, 4, 2]))\n  print(find_first_missing_positive([3, -2, 0, 1, 2]))\n  print(find_first_missing_positive([3, 2, 5, 1]))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FirstMissingPositive {\n public:\n  static int findNumber(vector<int> &nums) {\n    int i = 0;\n    while (i < nums.size()) {\n      if (nums[i] > 0 && nums[i] <= nums.size() && nums[i] != nums[nums[i] - 1]) {\n        swap(nums, i, nums[i] - 1);\n      } else {\n        i++;\n      }\n    }\n\n    for (i = 0; i < nums.size(); i++) {\n      if (nums[i] != i + 1) {\n        return i + 1;\n      }\n    }\n\n    return nums.size() + 1;\n  }\n\n private:\n  static void swap(vector<int> &arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> v1 = {-3, 1, 5, 4, 2};\n  cout << FirstMissingPositive::findNumber(v1) << endl;\n\n  v1 = {3, -2, 0, 1, 2};\n  cout << FirstMissingPositive::findNumber(v1) << endl;\n\n  v1 = {3, 2, 5, 1};\n  cout << FirstMissingPositive::findNumber(v1) << endl;\n}\n",
+        "javascript": "function find_first_missing_positive(nums) {\n  let i = 0;\n  n = nums.length;\n  while (i < n) {\n    j = nums[i] - 1;\n    if (nums[i] > 0 && nums[i] <= n && nums[i] !== nums[j]) {\n      [nums[i], nums[j]] = [nums[j], nums[i]]; // swap\n    } else {\n      i += 1;\n    }\n  }\n  for (i = 0; i < n; i++) {\n    if (nums[i] !== i + 1) {\n      return i + 1;\n    }\n  }\n\n  return nums.length + 1;\n}\n\n\nconsole.log(find_first_missing_positive([-3, 1, 5, 4, 2]));\nconsole.log(find_first_missing_positive([3, -2, 0, 1, 2]));\nconsole.log(find_first_missing_positive([3, 2, 5, 1]));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"486efb82ba0e245a62a0678e3d68148a\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 2.html",
+      "1.2Problem Challenge 2.html",
+      "1.3Problem Challenge 2.html",
+      "1.4Problem Challenge 2.html",
+      "1.1Solution Review_ Problem Challenge 2.html",
+      "1.2Solution Review_ Problem Challenge 2.html",
+      "1.3Solution Review_ Problem Challenge 2.html",
+      "1.4Solution Review_ Problem Challenge 2.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

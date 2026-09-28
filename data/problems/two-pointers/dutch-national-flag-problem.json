@@ -1,0 +1,111 @@
+{
+  "id": "two-pointers/dutch-national-flag-problem",
+  "pattern": {
+    "index": 3,
+    "name": "Two Pointers",
+    "slug": "two-pointers"
+  },
+  "title": "Dutch National Flag Problem",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "3. Pattern Two Pointers/9. Dutch National Flag Problem (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class DutchFlag {\n\n  public static void sort(int[] arr) {\n    // TODO: Write your code here\n  }\n}\n",
+    "python3": "def dutch_flag_sort(arr):\n  # TODO: Write your code here\n  return\n",
+    "javascript": "const dutch_flag_sort = function(arr) {\n  // TODO: Write your code here\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass DutchFlag {\n public:\n  static void sort(vector<int> &arr) {\n    // TODO: Write your code here\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 0, 2, 1, 0]\nOutput: [0 0 1 1 2]",
+      "input": "[1, 0, 2, 1, 0]",
+      "output": "[0 0 1 1 2]",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [2, 2, 0, 1, 2, 0]\nOutput: [0 0 1 2 2 2 ]",
+      "input": "[2, 2, 0, 1, 2, 0]",
+      "output": "[0 0 1 2 2 2 ]",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"14938ef5cd27e0a2dce4525ff0011b90\">Given an array containing 0s, 1s and 2s, sort the array in-place. You should treat numbers of the array as objects, hence, we can’t count 0s, 1s, and 2s to recreate the array.</p>\n<p data-id=\"7ce2f00d1d02e4527ff0666db8654c49\">The flag of the Netherlands consists of three colors: red, white and blue; and since our input array also consists of three different numbers that is why it is called <a href=\"https://en.wikipedia.org/wiki/Dutch_national_flag_problem\" target=\"_blank\">Dutch National Flag problem</a>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "class DutchFlag {\n\n  public static void sort(int[] arr) {\n    // TODO: Write your code here\n  }\n}\n",
+        "python3": "def dutch_flag_sort(arr):\n  # TODO: Write your code here\n  return\n",
+        "javascript": "const dutch_flag_sort = function(arr) {\n  // TODO: Write your code here\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass DutchFlag {\n public:\n  static void sort(vector<int> &arr) {\n    // TODO: Write your code here\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"d17be263ba3849a1aa4d53567c467647\">The brute force solution will be to use an in-place sorting algorithm like <a href=\"https://en.wikipedia.org/wiki/Heapsort\" target=\"_blank\">Heapsort</a> which will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>. Can we do better than this? Is it possible to sort the array in one iteration?</p>\n<p data-id=\"6657ccb8d66f44f1551002eb4471dd7a\">We can use a <strong>Two Pointers</strong> approach while iterating through the array. Let’s say the two pointers are called <code>low</code> and <code>high</code> which are pointing to the first and the last element of the array respectively. So while iterating, we will move all 0s before <code>low</code> and all 2s after <code>high</code> so that in the end, all 1s will be between <code>low</code> and <code>high</code>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">0 0 1 1 2 \n0 0 1 2 2 2 </p>",
+      "code": {
+        "java": "class DutchFlag {\n\n  public static void sort(int[] arr) {\n    // all elements < low are 0 and all elements > high are 2\n    // all elements from >= low < i are 1\n    int low = 0, high = arr.length - 1;\n    for (int i = 0; i <= high;) {\n      if (arr[i] == 0) {\n        swap(arr, i, low);\n        // increment 'i' and 'low'\n        i++;\n        low++;\n      } else if (arr[i] == 1) {\n        i++;\n      } else { // the case for arr[i] == 2\n        swap(arr, i, high);\n        // decrement 'high' only, after the swap the number at index 'i' could be 0, 1 or 2\n        high--;\n      }\n    }\n  }\n\n  private static void swap(int[] arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n\n  public static void main(String[] args) {\n    int[] arr = new int[] { 1, 0, 2, 1, 0 };\n    DutchFlag.sort(arr);\n    for (int num : arr)\n      System.out.print(num + \" \");\n    System.out.println();\n\n    arr = new int[] { 2, 2, 0, 1, 2, 0 };\n    DutchFlag.sort(arr);\n    for (int num : arr)\n      System.out.print(num + \" \");\n  }\n}\n",
+        "python3": "def dutch_flag_sort(arr):\n  # all elements < low are 0, and all elements > high are 2\n  # all elements from >= low < i are 1\n  low, high = 0, len(arr) - 1\n  i = 0\n  while(i <= high):\n    if arr[i] == 0:\n      arr[i], arr[low] = arr[low], arr[i]\n      # increment 'i' and 'low'\n      i += 1\n      low += 1\n    elif arr[i] == 1:\n      i += 1\n    else:  # the case for arr[i] == 2\n      arr[i], arr[high] = arr[high], arr[i]\n      # decrement 'high' only, after the swap the number at index 'i' could be 0, 1 or 2\n      high -= 1\n\n\ndef main():\n  arr = [1, 0, 2, 1, 0]\n  dutch_flag_sort(arr)\n  print(arr)\n\n  arr = [2, 2, 0, 1, 2, 0]\n  dutch_flag_sort(arr)\n  print(arr)\n\n\nmain()\n",
+        "javascript": "function dutch_flag_sort(arr) {\n  // all elements < low are 0, and all elements > high are 2\n  // all elements from >= low < i are 1\n  let low = 0,\n    high = arr.length - 1,\n    i = 0;\n  while (i <= high) {\n    if (arr[i] === 0) {\n      [arr[i], arr[low]] = [arr[low], arr[i]]; // swap\n      // increment 'i' and 'low'\n      i += 1;\n      low += 1;\n    } else if (arr[i] === 1) {\n      i += 1;\n    } else { // the case for arr[i] === 2\n      [arr[i], arr[high]] = [arr[high], arr[i]]; // swap\n      // decrement 'high' only, after the swap the number at index 'i' could be 0, 1, or 2\n      high -= 1;\n    }\n  }\n}\n\n\nlet arr = [1, 0, 2, 1, 0];\ndutch_flag_sort(arr);\nconsole.log(arr);\n\narr = [2, 2, 0, 1, 2, 0];\ndutch_flag_sort(arr);\nconsole.log(arr);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass DutchFlag {\n public:\n  static void sort(vector<int> &arr) {\n    // all elements < low are 0 and all elements > high are 2\n    // all elements from >= low < i are 1\n    int low = 0, high = arr.size() - 1;\n    for (int i = 0; i <= high;) {\n      if (arr[i] == 0) {\n        swap(arr, i, low);\n        i++;\n        low++;\n      } else if (arr[i] == 1) {\n        i++;\n      } else {  // the case for arr[i] == 2\n        swap(arr, i, high);\n        // decrement 'high' only, after the swap the number at index 'i' could be 0, 1 or 2\n        high--;\n      }\n    }\n  }\n\n private:\n  static void swap(vector<int> &arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> arr = {1, 0, 2, 1, 0};\n  DutchFlag::sort(arr);\n  for (auto num : arr) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  arr = vector<int>{2, 2, 0, 1, 2, 0};\n  DutchFlag::sort(arr);\n  for (auto num : arr) {\n    cout << num << \" \";\n  }\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"54674fba300d91e5c3ddc88fb58084c2\">The time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> as we are iterating the input array only once.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Dutch National Flag Problem (medium) -.html",
+      "1.2 Dutch National Flag Problem (medium) -.html",
+      "1.3 Dutch National Flag Problem (medium) -.html",
+      "1.4 Dutch National Flag Problem (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "summary": "Any problem that asks us to find the top/smallest/frequent ‘K’ elements among a given set falls under this pattern. The best data structure that comes to mind to keep track of ‘K’ elements is Heap.…",
+  "sourceFolder": "14. Pattern Top _K_ Elements/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"cbc2237a400bf972962e95e7146725c5\">Any problem that asks us to find the top/smallest/frequent ‘K’ elements among a given set falls under this pattern.</p>\n<p data-id=\"8b8d9b01e234b47f634dfe23e81fd840\">The best data structure that comes to mind to keep track of ‘K’ elements is <strong><a href=\"https://en.wikipedia.org/wiki/Heap_(data_structure)\" target=\"_blank\">Heap</a></strong>. This pattern will make use of the Heap to solve multiple problems dealing with ‘K’ elements at a time from a set of given elements.</p>\n<p data-id=\"c465cf3e7eac3ed0426a3d562665d9de\">Let’s jump onto our first problem to develop an understanding of this pattern.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,1579 @@
+[
+  {
+    "id": "sliding-window/maximum-sum-subarray-of-size-k",
+    "title": "Maximum Sum Subarray of Size K",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/smallest-subarray-with-a-given-sum",
+    "title": "Smallest Subarray with a given sum",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/longest-substring-with-k-distinct-characters",
+    "title": "Longest Substring with K Distinct Characters",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/fruits-into-baskets",
+    "title": "Fruits into Baskets",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/no-repeat-substring",
+    "title": "No-repeat Substring",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/longest-substring-with-same-letters-after-replacement",
+    "title": "Longest Substring with Same Letters after Replacement",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/longest-subarray-with-ones-after-replacement",
+    "title": "Longest Subarray with Ones after Replacement",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/problem-challenge-1",
+    "title": "Permutation in a String",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/problem-challenge-2",
+    "title": "String Anagrams",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/problem-challenge-3",
+    "title": "Smallest Window containing Substring",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "sliding-window/problem-challenge-4",
+    "title": "Words Concatenation",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 2,
+      "name": "Sliding Window",
+      "slug": "sliding-window"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/pair-with-target-sum",
+    "title": "Pair with Target Sum",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/remove-duplicates",
+    "title": "Remove Duplicates",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/squaring-a-sorted-array",
+    "title": "Squaring a Sorted Array",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/triplet-sum-to-zero",
+    "title": "Triplet Sum to Zero",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/triplet-sum-close-to-target",
+    "title": "Triplet Sum Close to Target",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [
+      "java",
+      "python3",
+      "javascript"
+    ],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/triplets-with-smaller-sum",
+    "title": "Triplets with Smaller Sum",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/dutch-national-flag-problem",
+    "title": "Dutch National Flag Problem",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/problem-challenge-1",
+    "title": "Quadruple Sum to Target",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "two-pointers/problem-challenge-2",
+    "title": "Comparing Strings containing Backspaces",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-pointers/problem-challenge-3",
+    "title": "Minimum Window Sort",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 3,
+      "name": "Two Pointers",
+      "slug": "two-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "fast-slow-pointers/linkedlist-cycle",
+    "title": "LinkedList Cycle",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 4,
+      "name": "Fast & Slow pointers",
+      "slug": "fast-slow-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "fast-slow-pointers/start-of-linkedlist-cycle",
+    "title": "Start of LinkedList Cycle",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 4,
+      "name": "Fast & Slow pointers",
+      "slug": "fast-slow-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "fast-slow-pointers/happy-number",
+    "title": "Happy Number",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 4,
+      "name": "Fast & Slow pointers",
+      "slug": "fast-slow-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "fast-slow-pointers/middle-of-the-linkedlist",
+    "title": "Middle of the LinkedList",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 4,
+      "name": "Fast & Slow pointers",
+      "slug": "fast-slow-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "fast-slow-pointers/problem-challenge-1",
+    "title": "Palindrome LinkedList",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 4,
+      "name": "Fast & Slow pointers",
+      "slug": "fast-slow-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "fast-slow-pointers/problem-challenge-2",
+    "title": "Rearrange a LinkedList",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 4,
+      "name": "Fast & Slow pointers",
+      "slug": "fast-slow-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "fast-slow-pointers/problem-challenge-3",
+    "title": "Cycle in a Circular Array",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 4,
+      "name": "Fast & Slow pointers",
+      "slug": "fast-slow-pointers"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "merge-intervals/merge-intervals",
+    "title": "Merge Intervals",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 5,
+      "name": "Merge Intervals",
+      "slug": "merge-intervals"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "merge-intervals/insert-interval",
+    "title": "Insert Interval",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 5,
+      "name": "Merge Intervals",
+      "slug": "merge-intervals"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "merge-intervals/intervals-intersection",
+    "title": "Intervals Intersection",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 5,
+      "name": "Merge Intervals",
+      "slug": "merge-intervals"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "merge-intervals/conflicting-appointments",
+    "title": "Conflicting Appointments",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 5,
+      "name": "Merge Intervals",
+      "slug": "merge-intervals"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "merge-intervals/problem-challenge-1",
+    "title": "Minimum Meeting Rooms",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 5,
+      "name": "Merge Intervals",
+      "slug": "merge-intervals"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "merge-intervals/problem-challenge-2",
+    "title": "Maximum CPU Load",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 5,
+      "name": "Merge Intervals",
+      "slug": "merge-intervals"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "merge-intervals/problem-challenge-3",
+    "title": "Employee Free Time",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 5,
+      "name": "Merge Intervals",
+      "slug": "merge-intervals"
+    },
+    "languagesMissing": [],
+    "warningCount": 2
+  },
+  {
+    "id": "cyclic-sort/cyclic-sort",
+    "title": "Cyclic Sort",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 6,
+      "name": "Cyclic Sort",
+      "slug": "cyclic-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "cyclic-sort/find-the-missing-number",
+    "title": "Find the Missing Number",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 6,
+      "name": "Cyclic Sort",
+      "slug": "cyclic-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "cyclic-sort/find-all-missing-numbers",
+    "title": "Find all Missing Numbers",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 6,
+      "name": "Cyclic Sort",
+      "slug": "cyclic-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "cyclic-sort/find-the-duplicate-number",
+    "title": "Find the Duplicate Number",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 6,
+      "name": "Cyclic Sort",
+      "slug": "cyclic-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "cyclic-sort/find-all-duplicate-numbers",
+    "title": "Find all Duplicate Numbers",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 6,
+      "name": "Cyclic Sort",
+      "slug": "cyclic-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "cyclic-sort/problem-challenge-1",
+    "title": "Find the Corrupt Pair",
+    "difficulty": "easy",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 6,
+      "name": "Cyclic Sort",
+      "slug": "cyclic-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "cyclic-sort/problem-challenge-2",
+    "title": "Find the Smallest Missing Positive Number",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 6,
+      "name": "Cyclic Sort",
+      "slug": "cyclic-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "cyclic-sort/problem-challenge-3",
+    "title": "Find the First K Missing Positive Numbers",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 6,
+      "name": "Cyclic Sort",
+      "slug": "cyclic-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "in-place-reversal-of-a-linkedlist/reverse-a-linkedlist",
+    "title": "Reverse a LinkedList",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 7,
+      "name": "In-place Reversal of a LinkedList",
+      "slug": "in-place-reversal-of-a-linkedlist"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "in-place-reversal-of-a-linkedlist/reverse-a-sub-list",
+    "title": "Reverse a Sub-list",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 7,
+      "name": "In-place Reversal of a LinkedList",
+      "slug": "in-place-reversal-of-a-linkedlist"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "in-place-reversal-of-a-linkedlist/reverse-every-k-element-sub-list",
+    "title": "Reverse every K-element Sub-list",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 7,
+      "name": "In-place Reversal of a LinkedList",
+      "slug": "in-place-reversal-of-a-linkedlist"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "in-place-reversal-of-a-linkedlist/problem-challenge-1",
+    "title": "Reverse alternating K-element Sub-list",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 7,
+      "name": "In-place Reversal of a LinkedList",
+      "slug": "in-place-reversal-of-a-linkedlist"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "in-place-reversal-of-a-linkedlist/problem-challenge-2",
+    "title": "Rotate a LinkedList",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 7,
+      "name": "In-place Reversal of a LinkedList",
+      "slug": "in-place-reversal-of-a-linkedlist"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/binary-tree-level-order-traversal",
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/reverse-level-order-traversal",
+    "title": "Reverse Level Order Traversal",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/zigzag-traversal",
+    "title": "Zigzag Traversal",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/level-averages-in-a-binary-tree",
+    "title": "Level Averages in a Binary Tree",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/minimum-depth-of-a-binary-tree",
+    "title": "Minimum Depth of a Binary Tree",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/level-order-successor",
+    "title": "Level Order Successor",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/connect-level-order-siblings",
+    "title": "Connect Level Order Siblings",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/problem-challenge-1",
+    "title": "Connect All Level Order Siblings",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-breadth-first-search/problem-challenge-2",
+    "title": "Right View of a Binary Tree",
+    "difficulty": "easy",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 8,
+      "name": "Tree Breadth First Search",
+      "slug": "tree-breadth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-depth-first-search/binary-tree-path-sum",
+    "title": "Binary Tree Path Sum",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 9,
+      "name": "Tree Depth First Search",
+      "slug": "tree-depth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-depth-first-search/all-paths-for-a-sum",
+    "title": "All Paths for a Sum",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 9,
+      "name": "Tree Depth First Search",
+      "slug": "tree-depth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-depth-first-search/sum-of-path-numbers",
+    "title": "Sum of Path Numbers",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 9,
+      "name": "Tree Depth First Search",
+      "slug": "tree-depth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "tree-depth-first-search/path-with-given-sequence",
+    "title": "Path With Given Sequence",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 9,
+      "name": "Tree Depth First Search",
+      "slug": "tree-depth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-depth-first-search/count-paths-for-a-sum",
+    "title": "Count Paths for a Sum",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 9,
+      "name": "Tree Depth First Search",
+      "slug": "tree-depth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-depth-first-search/problem-challenge-1",
+    "title": "Tree Diameter",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 9,
+      "name": "Tree Depth First Search",
+      "slug": "tree-depth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "tree-depth-first-search/problem-challenge-2",
+    "title": "Path with Maximum Sum",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 9,
+      "name": "Tree Depth First Search",
+      "slug": "tree-depth-first-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "two-heaps/find-the-median-of-a-number-stream",
+    "title": "Find the Median of a Number Stream",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 10,
+      "name": "Two Heaps",
+      "slug": "two-heaps"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "subsets/subsets",
+    "title": "Subsets",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "subsets/subsets-with-duplicates",
+    "title": "Subsets With Duplicates",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "subsets/permutations",
+    "title": "Permutations",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "subsets/string-permutations-by-changing-case",
+    "title": "String Permutations by changing case",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "subsets/balanced-parentheses",
+    "title": "Balanced Parentheses",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "subsets/unique-generalized-abbreviations",
+    "title": "Unique Generalized Abbreviations",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "subsets/problem-challenge-1",
+    "title": "Evaluate Expression",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "subsets/problem-challenge-2",
+    "title": "Structurally Unique Binary Search Trees",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "subsets/problem-challenge-3",
+    "title": "Count of Structurally Unique Binary Search Trees",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 11,
+      "name": "Subsets",
+      "slug": "subsets"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/order-agnostic-binary-search",
+    "title": "Order-agnostic Binary Search",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/ceiling-of-a-number",
+    "title": "Ceiling of a Number",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/next-letter",
+    "title": "Next Letter",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/number-range",
+    "title": "Number Range",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/search-in-a-sorted-infinite-array",
+    "title": "Search in a Sorted Infinite Array",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/minimum-difference-element",
+    "title": "Minimum Difference Element",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/bitonic-array-maximum",
+    "title": "Bitonic Array Maximum",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/problem-challenge-1",
+    "title": "Search Bitonic Array",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/problem-challenge-2",
+    "title": "Search in Rotated Array",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "modified-binary-search/problem-challenge-3",
+    "title": "Rotation Count",
+    "difficulty": "medium",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 12,
+      "name": "Modified Binary Search",
+      "slug": "modified-binary-search"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "bitwise-xor/single-number",
+    "title": "Single Number",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 13,
+      "name": "Bitwise XOR",
+      "slug": "bitwise-xor"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "bitwise-xor/two-single-numbers",
+    "title": "Two Single Numbers",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 13,
+      "name": "Bitwise XOR",
+      "slug": "bitwise-xor"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "bitwise-xor/complement-of-base-10-number",
+    "title": "Complement of Base 10 Number",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 13,
+      "name": "Bitwise XOR",
+      "slug": "bitwise-xor"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "bitwise-xor/problem-challenge-1",
+    "title": "Problem Challenge 1",
+    "difficulty": null,
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 13,
+      "name": "Bitwise XOR",
+      "slug": "bitwise-xor"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "top-k-elements/top-k-numbers",
+    "title": "Top _K_ Numbers",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/kth-smallest-number",
+    "title": "Kth Smallest Number",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/k-closest-points-to-the-origin",
+    "title": "_K_ Closest Points to the Origin",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/connect-ropes",
+    "title": "Connect Ropes",
+    "difficulty": "easy",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/top-k-frequent-numbers",
+    "title": "Top _K_ Frequent Numbers",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/frequency-sort",
+    "title": "Frequency Sort",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/kth-largest-number-in-a-stream",
+    "title": "Kth Largest Number in a Stream",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/k-closest-numbers",
+    "title": "_K_ Closest Numbers",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/maximum-distinct-elements",
+    "title": "Maximum Distinct Elements",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "top-k-elements/sum-of-elements",
+    "title": "Sum of Elements",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/rearrange-string",
+    "title": "Rearrange String",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/problem-challenge-1",
+    "title": "Rearrange String K Distance Apart",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/problem-challenge-2",
+    "title": "Scheduling Tasks",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "top-k-elements/problem-challenge-3",
+    "title": "Frequency Stack",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 14,
+      "name": "Top K Elements",
+      "slug": "top-k-elements"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "k-way-merge/merge-k-sorted-lists",
+    "title": "Merge K Sorted Lists",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 15,
+      "name": "K-way merge",
+      "slug": "k-way-merge"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "k-way-merge/kth-smallest-number-in-m-sorted-lists",
+    "title": "Kth Smallest Number in M Sorted Lists",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 15,
+      "name": "K-way merge",
+      "slug": "k-way-merge"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "k-way-merge/kth-smallest-number-in-a-sorted-matrix",
+    "title": "Kth Smallest Number in a Sorted Matrix",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 15,
+      "name": "K-way merge",
+      "slug": "k-way-merge"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "k-way-merge/smallest-number-range",
+    "title": "Smallest Number Range",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 15,
+      "name": "K-way merge",
+      "slug": "k-way-merge"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "k-way-merge/problem-challenge-1",
+    "title": "K Pairs with Largest Sums",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 15,
+      "name": "K-way merge",
+      "slug": "k-way-merge"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "0-or-1-knapsack/01-knapsack",
+    "title": "01 Knapsack",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 16,
+      "name": "Dynamic Programming",
+      "slug": "0-or-1-knapsack"
+    },
+    "languagesMissing": [],
+    "warningCount": 3
+  },
+  {
+    "id": "0-or-1-knapsack/equal-subset-sum-partition",
+    "title": "Equal Subset Sum Partition",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 16,
+      "name": "Dynamic Programming",
+      "slug": "0-or-1-knapsack"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "0-or-1-knapsack/subset-sum",
+    "title": "Subset Sum",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 16,
+      "name": "Dynamic Programming",
+      "slug": "0-or-1-knapsack"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "0-or-1-knapsack/minimum-subset-sum-difference",
+    "title": "Minimum Subset Sum Difference",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 16,
+      "name": "Dynamic Programming",
+      "slug": "0-or-1-knapsack"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "0-or-1-knapsack/problem-challenge-1",
+    "title": "Count of Subset Sum",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 16,
+      "name": "Dynamic Programming",
+      "slug": "0-or-1-knapsack"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "0-or-1-knapsack/problem-challenge-2",
+    "title": "Target Sum",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 16,
+      "name": "Dynamic Programming",
+      "slug": "0-or-1-knapsack"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "topological-sort/topological-sort",
+    "title": "Topological Sort",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 17,
+      "name": "Graph",
+      "slug": "topological-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "topological-sort/tasks-scheduling",
+    "title": "Tasks Scheduling",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 17,
+      "name": "Graph",
+      "slug": "topological-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "topological-sort/tasks-scheduling-order",
+    "title": "Tasks Scheduling Order",
+    "difficulty": "medium",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 17,
+      "name": "Graph",
+      "slug": "topological-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "topological-sort/all-tasks-scheduling-orders",
+    "title": "All Tasks Scheduling Orders",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 17,
+      "name": "Graph",
+      "slug": "topological-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "topological-sort/alien-dictionary",
+    "title": "Alien Dictionary",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 17,
+      "name": "Graph",
+      "slug": "topological-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  },
+  {
+    "id": "topological-sort/problem-challenge-1",
+    "title": "Reconstructing a Sequence",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 17,
+      "name": "Graph",
+      "slug": "topological-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "topological-sort/problem-challenge-2",
+    "title": "Minimum Height Trees",
+    "difficulty": "hard",
+    "lessonType": "challenge",
+    "pattern": {
+      "index": 17,
+      "name": "Graph",
+      "slug": "topological-sort"
+    },
+    "languagesMissing": [],
+    "warningCount": 0
+  },
+  {
+    "id": "miscellaneous/kth-smallest-number",
+    "title": "Kth Smallest Number",
+    "difficulty": "hard",
+    "lessonType": "problem",
+    "pattern": {
+      "index": 18,
+      "name": "Miscellaneous",
+      "slug": "miscellaneous"
+    },
+    "languagesMissing": [],
+    "warningCount": 1
+  }
+]

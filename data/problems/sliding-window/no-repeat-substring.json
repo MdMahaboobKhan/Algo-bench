@@ -1,0 +1,117 @@
+{
+  "id": "sliding-window/no-repeat-substring",
+  "pattern": {
+    "index": 2,
+    "name": "Sliding Window",
+    "slug": "sliding-window"
+  },
+  "title": "No-repeat Substring",
+  "difficulty": "hard",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "2. Pattern Sliding Window/6. No-repeat Substring (hard)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass NoRepeatSubstring {\n  public static int findLength(String str) {\n    // TODO: Write your code here\n    return -1;\n  }\n}\n",
+    "python3": "def non_repeat_substring(str):\n  # TODO: Write your code here\n  return -1\n",
+    "javascript": "const non_repeat_substring = function(str) {\n  // TODO: Write your code here\n  return -1;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass NoRepeatSubstring {\n public:\n  static int findLength(const string& str) {\n    int maxLength = 0;\n    // TODO: Write your code here\n    return maxLength;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: String=\"aabccbb\"\nOutput: 3\nExplanation: The longest substring without any repeating characters is \"abc\".",
+      "input": "String=\"aabccbb\"",
+      "output": "3",
+      "explanation": "The longest substring without any repeating characters is \"abc\"."
+    },
+    {
+      "raw": "Input: String=\"abbbb\"\nOutput: 2\nExplanation: The longest substring without any repeating characters is \"ab\".",
+      "input": "String=\"abbbb\"",
+      "output": "2",
+      "explanation": "The longest substring without any repeating characters is \"ab\"."
+    },
+    {
+      "raw": "Input: String=\"abccde\"\nOutput: 3\nExplanation: Longest substrings without any repeating characters are \"abc\" & \"cde\".",
+      "input": "String=\"abccde\"",
+      "output": "3",
+      "explanation": "Longest substrings without any repeating characters are \"abc\" & \"cde\"."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"4ca50dacd658243007f43b35d98105e0\">Given a string, find the <strong>length of the longest substring</strong> which has <strong>no repeating characters</strong>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass NoRepeatSubstring {\n  public static int findLength(String str) {\n    // TODO: Write your code here\n    return -1;\n  }\n}\n",
+        "python3": "def non_repeat_substring(str):\n  # TODO: Write your code here\n  return -1\n",
+        "javascript": "const non_repeat_substring = function(str) {\n  // TODO: Write your code here\n  return -1;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass NoRepeatSubstring {\n public:\n  static int findLength(const string& str) {\n    int maxLength = 0;\n    // TODO: Write your code here\n    return maxLength;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"376cb67b5dd388a1bd01882ef0761faf\">This problem follows the <strong>Sliding Window</strong> pattern and we can use a similar dynamic sliding window strategy as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5698217712812032/\" target=\"_blank\">Longest Substring with K Distinct Characters</a>. We can use a <strong>HashMap</strong> to remember the last index of each character we have processed. Whenever we get a repeating character we will shrink our sliding window to ensure that we always have distinct characters in the sliding window.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Length of the longest substring: 3\nLength of the longest substring: 2\nLength of the longest substring: 3\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass NoRepeatSubstring {\n  public static int findLength(String str) {\n    int windowStart = 0, maxLength = 0;\n    Map<Character, Integer> charIndexMap = new HashMap<>();\n    // try to extend the range [windowStart, windowEnd]\n    for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {\n      char rightChar = str.charAt(windowEnd);\n      // if the map already contains the 'rightChar', shrink the window from the beginning so that\n      // we have only one occurrence of 'rightChar'\n      if (charIndexMap.containsKey(rightChar)) {\n        // this is tricky; in the current window, we will not have any 'rightChar' after its previous index\n        // and if 'windowStart' is already ahead of the last index of 'rightChar', we'll keep 'windowStart'\n        windowStart = Math.max(windowStart, charIndexMap.get(rightChar) + 1);\n      }\n      charIndexMap.put(rightChar, windowEnd); // insert the 'rightChar' into the map\n      maxLength = Math.max(maxLength, windowEnd - windowStart + 1); // remember the maximum length so far\n    }\n\n    return maxLength;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(\"Length of the longest substring: \" + NoRepeatSubstring.findLength(\"aabccbb\"));\n    System.out.println(\"Length of the longest substring: \" + NoRepeatSubstring.findLength(\"abbbb\"));\n    System.out.println(\"Length of the longest substring: \" + NoRepeatSubstring.findLength(\"abccde\"));\n  }\n}\n",
+        "python3": "def non_repeat_substring(str):\n  window_start = 0\n  max_length = 0\n  char_index_map = {}\n\n  # try to extend the range [windowStart, windowEnd]\n  for window_end in range(len(str)):\n    right_char = str[window_end]\n    # if the map already contains the 'right_char', shrink the window from the beginning so that\n    # we have only one occurrence of 'right_char'\n    if right_char in char_index_map:\n      # this is tricky; in the current window, we will not have any 'right_char' after its previous index\n      # and if 'window_start' is already ahead of the last index of 'right_char', we'll keep 'window_start'\n      window_start = max(window_start, char_index_map[right_char] + 1)\n    # insert the 'right_char' into the map\n    char_index_map[right_char] = window_end\n    # remember the maximum length so far\n    max_length = max(max_length, window_end - window_start + 1)\n  return max_length\n\n\ndef main():\n  print(\"Length of the longest substring: \" + str(non_repeat_substring(\"aabccbb\")))\n  print(\"Length of the longest substring: \" + str(non_repeat_substring(\"abbbb\")))\n  print(\"Length of the longest substring: \" + str(non_repeat_substring(\"abccde\")))\n\n\nmain()\n",
+        "javascript": "function non_repeat_substring(str) {\n  let windowStart = 0,\n    maxLength = 0,\n    charIndexMap = {};\n\n  // try to extend the range [windowStart, windowEnd]\n  for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {\n    const rightChar = str[windowEnd];\n    // if the map already contains the 'rightChar', shrink the window from the beginning so that\n    // we have only one occurrence of 'rightChar'\n    if (rightChar in charIndexMap) {\n      // this is tricky; in the current window, we will not have any 'rightChar' after its previous index\n      // and if 'windowStart' is already ahead of the last index of 'rightChar', we'll keep 'windowStart'\n      windowStart = Math.max(windowStart, charIndexMap[rightChar] + 1);\n    }\n    // insert the 'rightChar' into the map\n    charIndexMap[rightChar] = windowEnd;\n    // remember the maximum length so far\n    maxLength = Math.max(maxLength, windowEnd - windowStart + 1);\n  }\n  return maxLength;\n}\n\n\nconsole.log(`Length of the longest substring: ${non_repeat_substring('aabccbb')}`);\nconsole.log(`Length of the longest substring: ${non_repeat_substring('abbbb')}`);\nconsole.log(`Length of the longest substring: ${non_repeat_substring('abccde')}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass NoRepeatSubstring {\n public:\n  static int findLength(const string& str) {\n    int windowStart = 0, maxLength = 0;\n    unordered_map<char, int> charIndexMap;\n    // try to extend the range [windowStart, windowEnd]\n    for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {\n      char rightChar = str[windowEnd];\n      // if the map already contains the 'rightChar', shrink the window from the beginning so that\n      // we have only one occurrence of 'rightChar'\n      if (charIndexMap.find(rightChar) != charIndexMap.end()) {\n        // this is tricky; in the current window, we will not have any 'rightChar' after its\n        // previous index and if 'windowStart' is already ahead of the last index of 'rightChar',\n        // we'll keep 'windowStart'\n        windowStart = max(windowStart, charIndexMap[rightChar] + 1);\n      }\n      charIndexMap[rightChar] = windowEnd;  // insert the 'rightChar' into the map\n      maxLength =\n          max(maxLength, windowEnd - windowStart + 1);  // remember the maximum length so far\n    }\n\n    return maxLength;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  cout << \"Length of the longest substring: \" << NoRepeatSubstring::findLength(\"aabccbb\") << endl;\n  cout << \"Length of the longest substring: \" << NoRepeatSubstring::findLength(\"abbbb\") << endl;\n  cout << \"Length of the longest substring: \" << NoRepeatSubstring::findLength(\"abccde\") << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"7b27085bde2f369842a064d52dc95b19\">The time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of characters in the input string.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"011aa1826fdf673b95c4aadf9b3d84c9\">The space complexity of the algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(K)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span> where <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding=\"application/x-tex\">K</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.68333em\"></span><span class=\"strut bottom\" style=\"height:0.68333em;vertical-align:0em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span></span></span></span> is the number of distinct characters in the input string. This also means <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>K</mi><mo>&lt;</mo><mo>=</mo><mi>N</mi></mrow><annotation encoding=\"application/x-tex\">K&lt;=N</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.68333em\"></span><span class=\"strut bottom\" style=\"height:0.72243em;vertical-align:-0.0391em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mrel\">&lt;</span><span class=\"mrel\">=</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span></span></span></span>, because in the worst case, the whole string might not have any repeating character so the entire string will be added to the <strong>HashMap</strong>. Having said that, since we can expect a fixed set of characters in the input string (e.g., 26 for English letters), we can say that the algorithm runs in fixed space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>; in this case, we can use a fixed-size array instead of the <strong>HashMap</strong>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 No-repeat Substring (hard) -.html",
+      "1.2 No-repeat Substring (hard) -.html",
+      "1.3 No-repeat Substring (hard) -.html",
+      "1.4 No-repeat Substring (hard) -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

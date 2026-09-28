@@ -1,0 +1,140 @@
+{
+  "id": "top-k-elements/sum-of-elements",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "Sum of Elements",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/11. Sum of Elements (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass SumOfElements {\n\n  public static int findSumOfElements(int[] nums, int k1, int k2) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int result = SumOfElements.findSumOfElements(new int[] { 1, 3, 12, 5, 15, 11 }, 3, 6);\n    System.out.println(\"Sum of all numbers between k1 and k2 smallest numbers: \" + result);\n\n    result = SumOfElements.findSumOfElements(new int[] { 3, 5, 8, 7 }, 1, 4);\n    System.out.println(\"Sum of all numbers between k1 and k2 smallest numbers: \" + result);\n  }\n}\n",
+    "python3": "def find_sum_of_elements(nums, k1, k2):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n\n  print(\"Sum of all numbers between k1 and k2 smallest numbers: \" +\n        str(find_sum_of_elements([1, 3, 12, 5, 15, 11], 3, 6)))\n  print(\"Sum of all numbers between k1 and k2 smallest numbers: \" +\n        str(find_sum_of_elements([3, 5, 8, 7], 1, 4)))\n\n\nmain()\n",
+    "javascript": "const find_sum_of_elements = function(nums, k1, k2) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(`Sum of all numbers between k1 and k2 smallest numbers: ${find_sum_of_elements([1, 3, 12, 5, 15, 11], 3, 6)}`)\nconsole.log(`Sum of all numbers between k1 and k2 smallest numbers: ${find_sum_of_elements([3, 5, 8, 7], 1, 4)}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass SumOfElements {\n public:\n  static int findSumOfElements(const vector<int> &nums, int k1, int k2) {\n    int elementSum = 0;\n    // TODO: Write your code here\n    return elementSum;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = SumOfElements::findSumOfElements(vector<int>{1, 3, 12, 5, 15, 11}, 3, 6);\n  cout << \"Sum of all numbers between k1 and k2 smallest numbers: \" << result << endl;\n\n  result = SumOfElements::findSumOfElements(vector<int>{3, 5, 8, 7}, 1, 4);\n  cout << \"Sum of all numbers between k1 and k2 smallest numbers: \" << result << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 3, 12, 5, 15, 11], and K1=3, K2=6\nOutput: 23\nExplanation: The 3rd smallest number is 5 and 6th smallest number 15. The sum of numbers coming\nbetween 5 and 15 is 23 (11+12).",
+      "input": "[1, 3, 12, 5, 15, 11], and K1=3, K2=6",
+      "output": "23",
+      "explanation": "The 3rd smallest number is 5 and 6th smallest number 15. The sum of numbers coming\nbetween 5 and 15 is 23 (11+12)."
+    },
+    {
+      "raw": "Input: [3, 5, 8, 7], and K1=1, K2=4\nOutput: 12\nExplanation: The sum of the numbers between the 1st smallest number (3) and the 4th smallest \nnumber (8) is 12 (5+7).",
+      "input": "[3, 5, 8, 7], and K1=1, K2=4",
+      "output": "12",
+      "explanation": "The sum of the numbers between the 1st smallest number (3) and the 4th smallest \nnumber (8) is 12 (5+7)."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"3df633a8fd9e38b6c44e584f4e3000c5\">Given an array, find the sum of all numbers between the K1’th and K2’th smallest elements of that array.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Sum of all numbers between k1 and k2 smallest numbers: -1\nSum of all numbers between k1 and k2 smallest numbers: -1\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass SumOfElements {\n\n  public static int findSumOfElements(int[] nums, int k1, int k2) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int result = SumOfElements.findSumOfElements(new int[] { 1, 3, 12, 5, 15, 11 }, 3, 6);\n    System.out.println(\"Sum of all numbers between k1 and k2 smallest numbers: \" + result);\n\n    result = SumOfElements.findSumOfElements(new int[] { 3, 5, 8, 7 }, 1, 4);\n    System.out.println(\"Sum of all numbers between k1 and k2 smallest numbers: \" + result);\n  }\n}\n",
+        "python3": "def find_sum_of_elements(nums, k1, k2):\n  # TODO: Write your code here\n  return -1\n\n\ndef main():\n\n  print(\"Sum of all numbers between k1 and k2 smallest numbers: \" +\n        str(find_sum_of_elements([1, 3, 12, 5, 15, 11], 3, 6)))\n  print(\"Sum of all numbers between k1 and k2 smallest numbers: \" +\n        str(find_sum_of_elements([3, 5, 8, 7], 1, 4)))\n\n\nmain()\n",
+        "javascript": "const find_sum_of_elements = function(nums, k1, k2) {\n  // TODO: Write your code here\n  return -1;\n};\n\n\nconsole.log(`Sum of all numbers between k1 and k2 smallest numbers: ${find_sum_of_elements([1, 3, 12, 5, 15, 11], 3, 6)}`)\nconsole.log(`Sum of all numbers between k1 and k2 smallest numbers: ${find_sum_of_elements([3, 5, 8, 7], 1, 4)}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass SumOfElements {\n public:\n  static int findSumOfElements(const vector<int> &nums, int k1, int k2) {\n    int elementSum = 0;\n    // TODO: Write your code here\n    return elementSum;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = SumOfElements::findSumOfElements(vector<int>{1, 3, 12, 5, 15, 11}, 3, 6);\n  cout << \"Sum of all numbers between k1 and k2 smallest numbers: \" << result << endl;\n\n  result = SumOfElements::findSumOfElements(vector<int>{3, 5, 8, 7}, 1, 4);\n  cout << \"Sum of all numbers between k1 and k2 smallest numbers: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"21df4682f32650e2771c2e86606b4eed\">This problem follows the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5728885882748928/\" target=\"_blank\">Top ‘K’ Numbers</a> pattern, and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5696381570252800/\" target=\"_blank\">Kth Smallest Number</a>.</p>\n<p data-id=\"8224f75d368dd1f1c23a2d0e9c26d14a\">We can find the sum of all numbers coming between the K1’th and K2’th smallest numbers in the following steps:</p>\n<ol data-id=\"a0a0e20b41dc337f066abcd7ae5d9530\">\n<li>First, insert all numbers in a min-heap.</li>\n<li>Remove the first <code>K1</code> smallest numbers from the min-heap.</li>\n<li>Now take the next <code>K2-K1-1</code> numbers out of the heap and add them. This sum will be our required output.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Sum of all numbers between k1 and k2 smallest numbers: 23\nSum of all numbers between k1 and k2 smallest numbers: 12\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass SumOfElements {\n\n  public static int findSumOfElements(int[] nums, int k1, int k2) {\n    PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);\n    // insert all numbers to the min heap\n    for (int i = 0; i < nums.length; i++)\n      minHeap.add(nums[i]);\n\n    // remove k1 small numbers from the min heap\n    for (int i = 0; i < k1; i++)\n      minHeap.poll();\n\n    int elementSum = 0;\n    // sum next k2-k1-1 numbers\n    for (int i = 0; i < k2 - k1 - 1; i++)\n      elementSum += minHeap.poll();\n\n    return elementSum;\n  }\n\n  public static void main(String[] args) {\n    int result = SumOfElements.findSumOfElements(new int[] { 1, 3, 12, 5, 15, 11 }, 3, 6);\n    System.out.println(\"Sum of all numbers between k1 and k2 smallest numbers: \" + result);\n\n    result = SumOfElements.findSumOfElements(new int[] { 3, 5, 8, 7 }, 1, 4);\n    System.out.println(\"Sum of all numbers between k1 and k2 smallest numbers: \" + result);\n  }\n}\n",
+        "python3": "from heapq import *\n\n\ndef find_sum_of_elements(nums, k1, k2):\n  minHeap = []\n  # insert all numbers to the min heap\n  for num in nums:\n    heappush(minHeap, num)\n\n  # remove k1 small numbers from the min heap\n  for _ in range(k1):\n    heappop(minHeap)\n\n  elementSum = 0\n  # sum next k2-k1-1 numbers\n  for _ in range(k2 - k1 - 1):\n    elementSum += heappop(minHeap)\n\n  return elementSum\n\n\ndef main():\n\n  print(\"Sum of all numbers between k1 and k2 smallest numbers: \" +\n        str(find_sum_of_elements([1, 3, 12, 5, 15, 11], 3, 6)))\n  print(\"Sum of all numbers between k1 and k2 smallest numbers: \" +\n        str(find_sum_of_elements([3, 5, 8, 7], 1, 4)))\n\n\nmain()\n\n\n\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nfunction find_sum_of_elements(nums, k1, k2) {\n  // insert all numbers in a min heap\n  const minHeap = new Heap(nums, null, ((a, b) => b - a));\n\n  // remove k1 small numbers from the min heap\n  for (i = 0; i < k1; i++) {\n    minHeap.pop();\n  }\n\n  let elementSum = 0;\n  // sum next k2-k1-1 numbers\n  for (i = 0; i < k2 - k1 - 1; i++) {\n    elementSum += minHeap.pop();\n  }\n\n  return elementSum;\n}\n\n\nconsole.log(`Sum of all numbers between k1 and k2 smallest numbers: ${\n  find_sum_of_elements([1, 3, 12, 5, 15, 11], 3, 6)}`);\nconsole.log(`Sum of all numbers between k1 and k2 smallest numbers: ${\n  find_sum_of_elements([3, 5, 8, 7], 1, 4)}`);\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass SumOfElements {\n public:\n  struct numCompare {\n    bool operator()(const int &x, const int &y) { return x > y; }\n  };\n\n  static int findSumOfElements(const vector<int> &nums, int k1, int k2) {\n    priority_queue<int, vector<int>, numCompare> minHeap;\n\n    // insert all numbers to the min heap\n    for (int i = 0; i < nums.size(); i++) {\n      minHeap.push(nums[i]);\n    }\n\n    // remove k1 small numbers from the min heap\n    for (int i = 0; i < k1; i++) {\n      minHeap.pop();\n    }\n\n    int elementSum = 0;\n    // sum next k2-k1-1 numbers\n    for (int i = 0; i < k2 - k1 - 1; i++) {\n      elementSum += minHeap.top();\n      minHeap.pop();\n    }\n\n    return elementSum;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = SumOfElements::findSumOfElements(vector<int>{1, 3, 12, 5, 15, 11}, 3, 6);\n  cout << \"Sum of all numbers between k1 and k2 smallest numbers: \" << result << endl;\n\n  result = SumOfElements::findSumOfElements(vector<int>{3, 5, 8, 7}, 1, 4);\n  cout << \"Sum of all numbers between k1 and k2 smallest numbers: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"3bc08cc0ac529bb9b6e52871e092975f\">Since we need to put all the numbers in a min-heap, the time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the total input numbers.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"c369e449b326059072267acb113b09ef\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>, as we need to store all the ‘N’ numbers in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "alternate-solution",
+      "title": "Alternate Solution",
+      "html": "<p data-id=\"334069ae08ca869282067885b1137b53\">We can iterate the array and use a max-heap to keep track of the top K2 numbers. We can, then, add the top <code>K2-K1-1</code> numbers in the max-heap to find the sum of all numbers coming between the K1’th and K2’th smallest numbers. Here is what the algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Sum of all numbers between k1 and k2 smallest numbers: 23\nSum of all numbers between k1 and k2 smallest numbers: 12\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass SumOfElements {\n\n  public static int findSumOfElements(int[] nums, int k1, int k2) {\n    PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((n1, n2) -> n2 - n1);\n    // keep smallest k2 numbers in the max heap\n    for (int i = 0; i < nums.length; i++) {\n      if (i < k2 - 1) {\n        maxHeap.add(nums[i]);\n      } else if (nums[i] < maxHeap.peek()) {\n        maxHeap.poll(); // as we are interested only in the smallest k2 numbers\n        maxHeap.add(nums[i]);\n      }\n    }\n\n    // get the sum of numbers between k1 and k2 indices\n    // these numbers will be at the top of the max heap\n    int elementSum = 0;\n    for (int i = 0; i < k2 - k1 - 1; i++)\n      elementSum += maxHeap.poll();\n\n    return elementSum;\n  }\n\n  public static void main(String[] args) {\n    int result = SumOfElements.findSumOfElements(new int[] { 1, 3, 12, 5, 15, 11 }, 3, 6);\n    System.out.println(\"Sum of all numbers between k1 and k2 smallest numbers: \" + result);\n\n    result = SumOfElements.findSumOfElements(new int[] { 3, 5, 8, 7 }, 1, 4);\n    System.out.println(\"Sum of all numbers between k1 and k2 smallest numbers: \" + result);\n  }\n}",
+        "python3": "from heapq import *\n\n\ndef find_sum_of_elements(nums, k1, k2):\n  maxHeap = []\n  # keep smallest k2 numbers in the max heap\n  for i in range(len(nums)):\n    if i < k2 - 1:\n      heappush(maxHeap, -nums[i])\n    elif nums[i] < -maxHeap[0]:\n      heappop(maxHeap) # as we are interested only in the smallest k2 numbers\n      heappush(maxHeap, -nums[i])\n\n  # get the sum of numbers between k1 and k2 indices\n  # these numbers will be at the top of the max heap\n  elementSum = 0\n  for _ in range(k2 - k1 - 1):\n    elementSum += -heappop(maxHeap)\n\n  return elementSum\n\n\ndef main():\n\n  print(\"Sum of all numbers between k1 and k2 smallest numbers: \" +\n        str(find_sum_of_elements([1, 3, 12, 5, 15, 11], 3, 6)))\n  print(\"Sum of all numbers between k1 and k2 smallest numbers: \" +\n        str(find_sum_of_elements([3, 5, 8, 7], 1, 4)))\n\n\nmain()\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\nfunction find_sum_of_elements(nums, k1, k2) {\n  const maxHeap = new Heap();\n  // keep smallest k2 numbers in the max heap\n  for (i = 0; i < nums.length; i++) {\n    if (i < k2 - 1) {\n      maxHeap.push(nums[i]);\n    } else if (nums[i] < maxHeap.peek()) {\n      // as we are interested only in the smallest k2 numbers\n      maxHeap.pop();\n      maxHeap.push(nums[i]);\n    }\n  }\n\n  // get the sum of numbers between k1 and k2 indices\n  // these numbers will be at the top of the max heap\n  let elementSum = 0;\n  for (i = 0; i < k2 - k1 - 1; i++) {\n    elementSum += maxHeap.pop();\n  }\n\n  return elementSum;\n}\n\n\nconsole.log(`Sum of all numbers between k1 and k2 smallest numbers: ${\n  find_sum_of_elements([1, 3, 12, 5, 15, 11], 3, 6)}`);\nconsole.log(`Sum of all numbers between k1 and k2 smallest numbers: ${\n  find_sum_of_elements([3, 5, 8, 7], 1, 4)}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass SumOfElements {\n public:\n  static int findSumOfElements(const vector<int> &nums, int k1, int k2) {\n    priority_queue<int> maxHeap;\n    // keep smallest k2 numbers in the max heap\n    for (int i = 0; i < nums.size(); i++) {\n      if (i < k2 - 1) {\n        maxHeap.push(nums[i]);\n      } else if (nums[i] < maxHeap.top()) {\n        maxHeap.pop();  // as we are interested only in the smallest k2 numbers\n        maxHeap.push(nums[i]);\n      }\n    }\n\n    // get the sum of numbers between k1 and k2 indices\n    // these numbers will be at the top of the max heap\n    int elementSum = 0;\n    for (int i = 0; i < k2 - k1 - 1; i++) {\n      elementSum += maxHeap.top();\n      maxHeap.pop();\n    }\n\n    return elementSum;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = SumOfElements::findSumOfElements(vector<int>{1, 3, 12, 5, 15, 11}, 3, 6);\n  cout << \"Sum of all numbers between k1 and k2 smallest numbers: \" << result << endl;\n\n  result = SumOfElements::findSumOfElements(vector<int>{3, 5, 8, 7}, 1, 4);\n  cout << \"Sum of all numbers between k1 and k2 smallest numbers: \" << result << endl;\n}"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity-2",
+      "title": "Time complexity",
+      "html": "<p data-id=\"d5c0687c11003ead7017076fcb4986a4\">Since we need to put only the top K2 numbers in the max-heap at any time, the time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mn>2</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logK2)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mord mathrm\">2</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity-2",
+      "title": "Space complexity",
+      "html": "<p data-id=\"0d06e83eeb05d1c564a56fb1d0381d15\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>K</mi><mn>2</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(K2)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mord mathrm\">2</span><span class=\"mclose\">)</span></span></span></span>, as we need to store the smallest ‘K2’ numbers in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Sum of Elements (medium).html",
+      "1.2Sum of Elements (medium).html",
+      "1.3Sum of Elements (medium).html",
+      "1.4Sum of Elements (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

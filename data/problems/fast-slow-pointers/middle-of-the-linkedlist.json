@@ -1,0 +1,117 @@
+{
+  "id": "fast-slow-pointers/middle-of-the-linkedlist",
+  "pattern": {
+    "index": 4,
+    "name": "Fast & Slow pointers",
+    "slug": "fast-slow-pointers"
+  },
+  "title": "Middle of the LinkedList",
+  "difficulty": "easy",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "4. Pattern Fast _ Slow pointers/5. Middle of the LinkedList (easy)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass MiddleOfLinkedList {\n\n  public static ListNode findMiddle(ListNode head) {\n    // TODO: Write your code here\n    return head;\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(1);\n    head.next = new ListNode(2);\n    head.next.next = new ListNode(3);\n    head.next.next.next = new ListNode(4);\n    head.next.next.next.next = new ListNode(5);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n\n    head.next.next.next.next.next = new ListNode(6);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n\n    head.next.next.next.next.next.next = new ListNode(7);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n  }\n}",
+    "python3": "class Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n\ndef find_middle_of_linked_list(head):\n  # TODO: Write your code here\n  return head\n\n\ndef main():\n  head = Node(1)\n  head.next = Node(2)\n  head.next.next = Node(3)\n  head.next.next.next = Node(4)\n  head.next.next.next.next = Node(5)\n\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n  head.next.next.next.next.next = Node(6)\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n  head.next.next.next.next.next.next = Node(7)\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n\nmain()\n",
+    "javascript": "class Node {\n  constructor(value, next=null){\n    this.value = value;\n    this.next = next;\n  }\n}\n\nconst find_middle_of_linked_list = function(head) {\n  // TODO: Write your code here\n  return head;\n}\n\n\nhead = new Node(1)\nhead.next = new Node(2)\nhead.next.next = new Node(3)\nhead.next.next.next = new Node(4)\nhead.next.next.next.next = new Node(5)\n\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`)\n\nhead.next.next.next.next.next = new Node(6)\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`)\n\nhead.next.next.next.next.next.next = new Node(7)\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass MiddleOfLinkedList {\n public:\n  static ListNode *findMiddle(ListNode *head) {\n    // TODO: Write your code here\n    return head;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(1);\n  head->next = new ListNode(2);\n  head->next->next = new ListNode(3);\n  head->next->next->next = new ListNode(4);\n  head->next->next->next->next = new ListNode(5);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n\n  head->next->next->next->next->next = new ListNode(6);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n\n  head->next->next->next->next->next->next = new ListNode(7);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: 1 -> 2 -> 3 -> 4 -> 5 -> null\nOutput: 3",
+      "input": "1 -> 2 -> 3 -> 4 -> 5 -> null",
+      "output": "3",
+      "explanation": null
+    },
+    {
+      "raw": "Input: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> null\nOutput: 4",
+      "input": "1 -> 2 -> 3 -> 4 -> 5 -> 6 -> null",
+      "output": "4",
+      "explanation": null
+    },
+    {
+      "raw": "Input: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> null\nOutput: 4",
+      "input": "1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> null",
+      "output": "4",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"60c61258a92154d8fba024671806f7cc\">Given the head of a <strong>Singly LinkedList</strong>, write a method to return the <strong>middle node</strong> of the LinkedList.</p>\n<p data-id=\"fc41bc5d638d5c65a5ba7c2d3ba95bc2\">If the total number of nodes in the LinkedList is even, return the second middle node.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Middle Node: 1\nMiddle Node: 1\nMiddle Node: 1\n</p>",
+      "code": {
+        "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass MiddleOfLinkedList {\n\n  public static ListNode findMiddle(ListNode head) {\n    // TODO: Write your code here\n    return head;\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(1);\n    head.next = new ListNode(2);\n    head.next.next = new ListNode(3);\n    head.next.next.next = new ListNode(4);\n    head.next.next.next.next = new ListNode(5);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n\n    head.next.next.next.next.next = new ListNode(6);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n\n    head.next.next.next.next.next.next = new ListNode(7);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n  }\n}",
+        "python3": "class Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n\ndef find_middle_of_linked_list(head):\n  # TODO: Write your code here\n  return head\n\n\ndef main():\n  head = Node(1)\n  head.next = Node(2)\n  head.next.next = Node(3)\n  head.next.next.next = Node(4)\n  head.next.next.next.next = Node(5)\n\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n  head.next.next.next.next.next = Node(6)\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n  head.next.next.next.next.next.next = Node(7)\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n\nmain()\n",
+        "javascript": "class Node {\n  constructor(value, next=null){\n    this.value = value;\n    this.next = next;\n  }\n}\n\nconst find_middle_of_linked_list = function(head) {\n  // TODO: Write your code here\n  return head;\n}\n\n\nhead = new Node(1)\nhead.next = new Node(2)\nhead.next.next = new Node(3)\nhead.next.next.next = new Node(4)\nhead.next.next.next.next = new Node(5)\n\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`)\n\nhead.next.next.next.next.next = new Node(6)\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`)\n\nhead.next.next.next.next.next.next = new Node(7)\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass MiddleOfLinkedList {\n public:\n  static ListNode *findMiddle(ListNode *head) {\n    // TODO: Write your code here\n    return head;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(1);\n  head->next = new ListNode(2);\n  head->next->next = new ListNode(3);\n  head->next->next->next = new ListNode(4);\n  head->next->next->next->next = new ListNode(5);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n\n  head->next->next->next->next->next = new ListNode(6);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n\n  head->next->next->next->next->next->next = new ListNode(7);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"00f7e5e995846ea67ac58343f0734bb4\">One brute force strategy could be to first count the number of nodes in the LinkedList and then find the middle node in the second iteration. Can we do this in one iteration?</p>\n<p data-id=\"cfb3091cc5e6d2f98fb401706cf170ab\">We can use the <strong>Fast &amp; Slow pointers</strong> method such that the fast pointer is always twice the nodes ahead of the slow pointer. This way, when the fast pointer reaches the end of the LinkedList, the slow pointer will be pointing at the middle node.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Middle Node: 3\nMiddle Node: 4\nMiddle Node: 4\n</p>",
+      "code": {
+        "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass MiddleOfLinkedList {\n\n  public static ListNode findMiddle(ListNode head) {\n    ListNode slow = head;\n    ListNode fast = head;\n    while (fast != null && fast.next != null) {\n      slow = slow.next;\n      fast = fast.next.next;\n    }\n\n    return slow;\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(1);\n    head.next = new ListNode(2);\n    head.next.next = new ListNode(3);\n    head.next.next.next = new ListNode(4);\n    head.next.next.next.next = new ListNode(5);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n\n    head.next.next.next.next.next = new ListNode(6);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n\n    head.next.next.next.next.next.next = new ListNode(7);\n    System.out.println(\"Middle Node: \" + MiddleOfLinkedList.findMiddle(head).value);\n  }\n}",
+        "python3": "class Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n\ndef find_middle_of_linked_list(head):\n  slow = head\n  fast = head\n  while (fast is not None and fast.next is not None):\n    slow = slow.next\n    fast = fast.next.next\n  return slow\n\n\ndef main():\n  head = Node(1)\n  head.next = Node(2)\n  head.next.next = Node(3)\n  head.next.next.next = Node(4)\n  head.next.next.next.next = Node(5)\n\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n  head.next.next.next.next.next = Node(6)\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n  head.next.next.next.next.next.next = Node(7)\n  print(\"Middle Node: \" + str(find_middle_of_linked_list(head).value))\n\n\nmain()\n",
+        "javascript": "class Node {\n  constructor(value, next = null) {\n    this.value = value;\n    this.next = next;\n  }\n}\n\n\nfunction find_middle_of_linked_list(head) {\n  let slow = head,\n    fast = head;\n  while ((fast !== null && fast.next !== null)) {\n    slow = slow.next;\n    fast = fast.next.next;\n  }\n  return slow;\n}\n\n\nhead = new Node(1);\nhead.next = new Node(2);\nhead.next.next = new Node(3);\nhead.next.next.next = new Node(4);\nhead.next.next.next.next = new Node(5);\n\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);\n\nhead.next.next.next.next.next = new Node(6);\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);\n\nhead.next.next.next.next.next.next = new Node(7);\nconsole.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass MiddleOfLinkedList {\n public:\n  static ListNode *findMiddle(ListNode *head) {\n    ListNode *slow = head;\n    ListNode *fast = head;\n    while (fast != nullptr && fast->next != nullptr) {\n      slow = slow->next;\n      fast = fast->next->next;\n    }\n\n    return slow;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(1);\n  head->next = new ListNode(2);\n  head->next->next = new ListNode(3);\n  head->next->next->next = new ListNode(4);\n  head->next->next->next->next = new ListNode(5);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n\n  head->next->next->next->next->next = new ListNode(6);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n\n  head->next->next->next->next->next->next = new ListNode(7);\n  cout << \"Middle Node: \" << MiddleOfLinkedList::findMiddle(head)->value << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"e0ac4fcf4af7dd080eef61c578c49e79\">The above algorithm will have a time complexity of <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of nodes in the LinkedList.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Middle of the LinkedList (easy).html",
+      "1.2 Middle of the LinkedList (easy).html",
+      "1.3 Middle of the LinkedList (easy).html",
+      "1.4 Middle of the LinkedList (easy).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

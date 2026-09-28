@@ -1,0 +1,128 @@
+{
+  "id": "sliding-window/problem-challenge-1",
+  "pattern": {
+    "index": 2,
+    "name": "Sliding Window",
+    "slug": "sliding-window"
+  },
+  "title": "Permutation in a String",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "2. Pattern Sliding Window/9. Problem Challenge 1",
+    "2. Pattern Sliding Window/10. Solution Review Problem Challenge 1"
+  ],
+  "problemStatementSectionId": "permutation-in-a-string-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass StringPermutation {\n  public static boolean findPermutation(String str, String pattern) {\n    // TODO: Write your code here\n    return false;\n  }\n}\n",
+    "python3": "def find_permutation(str, pattern):\n  # TODO: Write your code here\n  return False\n",
+    "javascript": "const find_permutation = function(str, pattern) {\n  // TODO: Write your code here\n  return false;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n\nclass StringPermutation {\n public:\n  static bool findPermutation(const string &str, const string &pattern) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: String=\"oidbcaf\", Pattern=\"abc\"\nOutput: true\nExplanation: The string contains \"bca\" which is a permutation of the given pattern.",
+      "input": "String=\"oidbcaf\", Pattern=\"abc\"",
+      "output": "true",
+      "explanation": "The string contains \"bca\" which is a permutation of the given pattern."
+    },
+    {
+      "raw": "Input: String=\"odicf\", Pattern=\"dc\"\nOutput: false\nExplanation: No permutation of the pattern is present in the given string as a substring.",
+      "input": "String=\"odicf\", Pattern=\"dc\"",
+      "output": "false",
+      "explanation": "No permutation of the pattern is present in the given string as a substring."
+    },
+    {
+      "raw": "Input: String=\"bcdxabcdy\", Pattern=\"bcdyabcdx\"\nOutput: true\nExplanation: Both the string and the pattern are a permutation of each other.",
+      "input": "String=\"bcdxabcdy\", Pattern=\"bcdyabcdx\"",
+      "output": "true",
+      "explanation": "Both the string and the pattern are a permutation of each other."
+    },
+    {
+      "raw": "Input: String=\"aaacb\", Pattern=\"abc\"\nOutput: true\nExplanation: The string contains \"acb\" which is a permutation of the given pattern.",
+      "input": "String=\"aaacb\", Pattern=\"abc\"",
+      "output": "true",
+      "explanation": "The string contains \"acb\" which is a permutation of the given pattern."
+    }
+  ],
+  "sections": [
+    {
+      "id": "permutation-in-a-string-hard",
+      "title": "Permutation in a String (hard)",
+      "html": "<p data-id=\"f7cd9e97efbe014adaabb3b4c031bfd4\">Given a string and a pattern, find out if the <strong>string contains any permutation of the pattern</strong>.</p>\n<p data-id=\"f898d156637ff4403de86391ea8b23ec\"><strong>Permutation</strong> is defined as the re-arranging of the characters of the string. For example, “abc” has the following six permutations:</p>\n<ol data-id=\"6ceb58b909f3ecee7cc766809c3ac1f9\">\n<li>abc</li>\n<li>acb</li>\n<li>bac</li>\n<li>bca</li>\n<li>cab</li>\n<li>cba</li>\n</ol>\n<p data-id=\"ea43436791b7c2add8035697a31a96e2\">If a string has ‘n’ distinct characters it will have <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>n</mi><mo>!</mo></mrow><annotation encoding=\"application/x-tex\">n!</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.69444em\"></span><span class=\"strut bottom\" style=\"height:0.69444em;vertical-align:0em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\">n</span><span class=\"mclose\">!</span></span></span></span> permutations.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>\n<p data-id=\"041ec4ff6ad5f804da8976d697659842\"><strong>Example 4:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass StringPermutation {\n  public static boolean findPermutation(String str, String pattern) {\n    // TODO: Write your code here\n    return false;\n  }\n}\n",
+        "python3": "def find_permutation(str, pattern):\n  # TODO: Write your code here\n  return False\n",
+        "javascript": "const find_permutation = function(str, pattern) {\n  // TODO: Write your code here\n  return false;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n\nclass StringPermutation {\n public:\n  static bool findPermutation(const string &str, const string &pattern) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"a9cd0fda6919123996531dcb9788906b\">This problem follows the <strong>Sliding Window</strong> pattern and we can use a similar sliding window strategy as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5698217712812032/\" target=\"_blank\">Longest Substring with K Distinct Characters</a>. We can use a <strong>HashMap</strong> to remember the frequencies of all characters in the given pattern. Our goal will be to match all the characters from this <strong>HashMap</strong> with a sliding window in the given string. Here are the steps of our algorithm:</p>\n<ol data-id=\"ceeb18f97647012144969e552ad3c2a1\">\n<li>Create a <strong>HashMap</strong> to calculate the frequencies of all characters in the pattern.</li>\n<li>Iterate through the string, adding one character at a time in the sliding window.</li>\n<li>If the character being added matches a character in the <strong>HashMap</strong>, decrement its frequency in the map. If the character frequency becomes zero, we got a complete match.</li>\n<li>If at any time, the number of characters matched is equal to the number of distinct characters in the pattern (i.e., total characters in the <strong>HashMap</strong>), we have gotten our required permutation.</li>\n<li>If the window size is greater than the length of the pattern, shrink the window to make it equal to the size of the pattern. At the same time, if the character going out was part of the pattern, put it back in the frequency <strong>HashMap</strong>.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Permutation exist: true\nPermutation exist: false\nPermutation exist: true\nPermutation exist: true\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass StringPermutation {\n  public static boolean findPermutation(String str, String pattern) {\n    int windowStart = 0, matched = 0;\n    Map<Character, Integer> charFrequencyMap = new HashMap<>();\n    for (char chr : pattern.toCharArray())\n      charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);\n\n    // our goal is to match all the characters from the 'charFrequencyMap' with the current window\n    // try to extend the range [windowStart, windowEnd]\n    for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {\n      char rightChar = str.charAt(windowEnd);\n      if (charFrequencyMap.containsKey(rightChar)) {\n        // decrement the frequency of the matched character\n        charFrequencyMap.put(rightChar, charFrequencyMap.get(rightChar) - 1);\n        if (charFrequencyMap.get(rightChar) == 0) // character is completely matched\n          matched++;\n      }\n\n      if (matched == charFrequencyMap.size())\n        return true;\n\n      if (windowEnd >= pattern.length() - 1) { // shrink the window by one character\n        char leftChar = str.charAt(windowStart++);\n        if (charFrequencyMap.containsKey(leftChar)) {\n          if (charFrequencyMap.get(leftChar) == 0)\n            matched--; // before putting the character back, decrement the matched count\n          // put the character back for matching\n          charFrequencyMap.put(leftChar, charFrequencyMap.get(leftChar) + 1);\n        }\n      }\n    }\n\n    return false;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(\"Permutation exist: \" + StringPermutation.findPermutation(\"oidbcaf\", \"abc\"));\n    System.out.println(\"Permutation exist: \" + StringPermutation.findPermutation(\"odicf\", \"dc\"));\n    System.out.println(\"Permutation exist: \" + StringPermutation.findPermutation(\"bcdxabcdy\", \"bcdyabcdx\"));\n    System.out.println(\"Permutation exist: \" + StringPermutation.findPermutation(\"aaacb\", \"abc\"));\n  }\n}\n",
+        "python3": "def find_permutation(str, pattern):\n  window_start, matched = 0, 0\n  char_frequency = {}\n\n  for chr in pattern:\n    if chr not in char_frequency:\n      char_frequency[chr] = 0\n    char_frequency[chr] += 1\n\n  # our goal is to match all the characters from the 'char_frequency' with the current window\n  # try to extend the range [window_start, window_end]\n  for window_end in range(len(str)):\n    right_char = str[window_end]\n    if right_char in char_frequency:\n      # decrement the frequency of matched character\n      char_frequency[right_char] -= 1\n      if char_frequency[right_char] == 0:\n        matched += 1\n\n    if matched == len(char_frequency):\n      return True\n\n    # shrink the window by one character\n    if window_end >= len(pattern) - 1:\n      left_char = str[window_start]\n      window_start += 1\n      if left_char in char_frequency:\n        if char_frequency[left_char] == 0:\n          matched -= 1\n        char_frequency[left_char] += 1\n\n  return False\n\n\ndef main():\n  print('Permutation exist: ' + str(find_permutation(\"oidbcaf\", \"abc\")))\n  print('Permutation exist: ' + str(find_permutation(\"odicf\", \"dc\")))\n  print('Permutation exist: ' + str(find_permutation(\"bcdxabcdy\", \"bcdyabcdx\")))\n  print('Permutation exist: ' + str(find_permutation(\"aaacb\", \"abc\")))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <unordered_map>\n\nclass StringPermutation {\n public:\n  static bool findPermutation(const string &str, const string &pattern) {\n    int windowStart = 0, matched = 0;\n    unordered_map<char, int> charFrequencyMap;\n    for (auto chr : pattern) {\n      charFrequencyMap[chr]++;\n    }\n\n    // our goal is to match all the characters from the 'charFrequencyMap' with the current window\n    // try to extend the range [windowStart, windowEnd]\n    for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {\n      char rightChar = str[windowEnd];\n      if (charFrequencyMap.find(rightChar) != charFrequencyMap.end()) {\n        // decrement the frequency of the matched character\n        charFrequencyMap[rightChar]--;\n        if (charFrequencyMap[rightChar] == 0) {  // character is completely matched\n          matched++;\n        }\n      }\n\n      if (matched == (int)charFrequencyMap.size()) {\n        return true;\n      }\n\n      if (windowEnd >= pattern.length() - 1) {  // shrink the window\n        char leftChar = str[windowStart++];\n        if (charFrequencyMap.find(leftChar) != charFrequencyMap.end()) {\n          if (charFrequencyMap[leftChar] == 0) {\n            matched--;  // before putting the character back, decrement the matched count\n          }\n          // put the character back for matching\n          charFrequencyMap[leftChar]++;\n        }\n      }\n    }\n\n    return false;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  cout << \"Permutation exist: \" << StringPermutation::findPermutation(\"oidbcaf\", \"abc\") << endl;\n  cout << \"Permutation exist: \" << StringPermutation::findPermutation(\"odicf\", \"dc\") << endl;\n  cout << \"Permutation exist: \" << StringPermutation::findPermutation(\"bcdxabcdy\", \"bcdyabcdx\") << endl;\n  cout << \"Permutation exist: \" << StringPermutation::findPermutation(\"aaacb\", \"abc\") << endl;\n}\n",
+        "javascript": "function find_permutation(str, pattern) {\n  let windowStart = 0,\n    matched = 0,\n    charFrequency = {};\n\n  for (i = 0; i < pattern.length; i++) {\n    const chr = pattern[i];\n    if (!(chr in charFrequency)) {\n      charFrequency[chr] = 0;\n    }\n    charFrequency[chr] += 1;\n  }\n\n  // Our goal is to match all the characters from the 'charFrequency' with the current window\n  // try to extend the range [windowStart, windowEnd]\n  for (windowEnd = 0; windowEnd < str.length; windowEnd++) {\n    const rightChar = str[windowEnd];\n    if (rightChar in charFrequency) {\n      // Decrement the frequency of matched character\n      charFrequency[rightChar] -= 1;\n      if (charFrequency[rightChar] === 0) {\n        matched += 1;\n      }\n    }\n\n    if (matched === Object.keys(charFrequency).length) {\n      return true;\n    }\n\n    // Shrink the sliding window\n    if (windowEnd >= pattern.length - 1) {\n      leftChar = str[windowStart];\n      windowStart += 1;\n      if (leftChar in charFrequency) {\n        if (charFrequency[leftChar] === 0) {\n          matched -= 1;\n        }\n        charFrequency[leftChar] += 1;\n      }\n    }\n  }\n  return false;\n}\n\n\nconsole.log(`Permutation exist: ${find_permutation('oidbcaf', 'abc')}`);\nconsole.log(`Permutation exist: ${find_permutation('odicf', 'dc')}`);\nconsole.log(`Permutation exist: ${find_permutation('bcdxabcdy', 'bcdyabcdx')}`);\nconsole.log(`Permutation exist: ${find_permutation('aaacb', 'abc')}`);"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"03e463eda0eef9905581b9ad8d6d3942\">The time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>+</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N + M)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ and ‘M’ are the number of characters in the input string and the pattern respectively.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"9aa327644f97ffdb6f3981454bb47ba7\">The space complexity of the algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(M)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mclose\">)</span></span></span></span> since in the worst case, the whole pattern can have distinct characters which will go into the <strong>HashMap</strong>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Problem Challenge 1 -.html",
+      "1.2 Problem Challenge 1.html",
+      "1.3 Problem Challenge 1.html",
+      "1.4 Problem Challenge 1.html",
+      "1.1 Solution Review_ Problem Challenge 1 -.html",
+      "1.2 Solution Review_ Problem Challenge 1 -.html",
+      "1.3 Solution Review_ Problem Challenge 1 -.html",
+      "1.4 Solution Review_ Problem Challenge 1 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

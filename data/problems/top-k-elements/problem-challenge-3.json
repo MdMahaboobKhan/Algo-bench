@@ -1,0 +1,110 @@
+{
+  "id": "top-k-elements/problem-challenge-3",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "Frequency Stack",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/17. Problem Challenge 3",
+    "14. Pattern Top _K_ Elements/18. Solution Review Problem Challenge 3"
+  ],
+  "problemStatementSectionId": "frequency-stack-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass FrequencyStack {\n\n  public void push(int num) {\n    // TODO: Write your code here\n  }\n\n  public int pop() {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    FrequencyStack frequencyStack = new FrequencyStack();\n    frequencyStack.push(1);\n    frequencyStack.push(2);\n    frequencyStack.push(3);\n    frequencyStack.push(2);\n    frequencyStack.push(1);\n    frequencyStack.push(2);\n    frequencyStack.push(5);\n    System.out.println(frequencyStack.pop());\n    System.out.println(frequencyStack.pop());\n    System.out.println(frequencyStack.pop());\n  }\n}\n",
+    "python3": "class FrequencyStack:\n\n  def push(self, num):\n    # TODO: Write your code here\n    return 0\n\n  def pop(self):\n    return -1\n\n\ndef main():\n  frequencyStack = FrequencyStack()\n  frequencyStack.push(1)\n  frequencyStack.push(2)\n  frequencyStack.push(3)\n  frequencyStack.push(2)\n  frequencyStack.push(1)\n  frequencyStack.push(2)\n  frequencyStack.push(5)\n  print(frequencyStack.pop())\n  print(frequencyStack.pop())\n  print(frequencyStack.pop())\n\n\nmain()\n\n\n\n\n\n",
+    "javascript": "class FrequencyStack {\n\n  push(num) {\n    // TODO: Write your code here\n    return 0;\n  }\n\n  pop() {\n    return -1;\n  }\n};\n\n\nvar frequencyStack = new FrequencyStack()\nfrequencyStack.push(1)\nfrequencyStack.push(2)\nfrequencyStack.push(3)\nfrequencyStack.push(2)\nfrequencyStack.push(1)\nfrequencyStack.push(2)\nfrequencyStack.push(5)\nconsole.log(frequencyStack.pop())\nconsole.log(frequencyStack.pop())\nconsole.log(frequencyStack.pop())\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <string>\n#include <unordered_map>\n\nclass FrequencyStack {\n public:\n  virtual void push(int num) {\n    // TODO: Write your code here\n  }\n\n  virtual int pop() {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  FrequencyStack frequencyStack;\n  frequencyStack.push(1);\n  frequencyStack.push(2);\n  frequencyStack.push(3);\n  frequencyStack.push(2);\n  frequencyStack.push(1);\n  frequencyStack.push(2);\n  frequencyStack.push(5);\n  cout << frequencyStack.pop() << endl;\n  cout << frequencyStack.pop() << endl;\n  cout << frequencyStack.pop() << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "After following push operations: push(1), push(2), push(3), push(2), push(1), push(2), push(5)\n \n1. pop() should return 2, as it is the most frequent number\n2. Next pop() should return 1\n3. Next pop() should return 2",
+      "input": null,
+      "output": null,
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "frequency-stack-hard",
+      "title": "Frequency Stack (hard)",
+      "html": "<p data-id=\"d856c013dcd3bb20f7a17761bd0977bc\">Design a class that simulates a Stack data structure, implementing the following two operations:</p>\n<ol data-id=\"c1fb75e0435857099f43a82e99b1ac78\">\n<li><code>push(int num)</code>: Pushes the number ‘num’ on the stack.</li>\n<li><code>pop()</code>: Returns the most frequent number in the stack. If there is a tie, return the number which was pushed later.</li>\n</ol>\n<p data-id=\"81eeab9506186e2dca8faefa78d54067\"><strong>Example:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">-1\n-1\n-1\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass FrequencyStack {\n\n  public void push(int num) {\n    // TODO: Write your code here\n  }\n\n  public int pop() {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    FrequencyStack frequencyStack = new FrequencyStack();\n    frequencyStack.push(1);\n    frequencyStack.push(2);\n    frequencyStack.push(3);\n    frequencyStack.push(2);\n    frequencyStack.push(1);\n    frequencyStack.push(2);\n    frequencyStack.push(5);\n    System.out.println(frequencyStack.pop());\n    System.out.println(frequencyStack.pop());\n    System.out.println(frequencyStack.pop());\n  }\n}\n",
+        "python3": "class FrequencyStack:\n\n  def push(self, num):\n    # TODO: Write your code here\n    return 0\n\n  def pop(self):\n    return -1\n\n\ndef main():\n  frequencyStack = FrequencyStack()\n  frequencyStack.push(1)\n  frequencyStack.push(2)\n  frequencyStack.push(3)\n  frequencyStack.push(2)\n  frequencyStack.push(1)\n  frequencyStack.push(2)\n  frequencyStack.push(5)\n  print(frequencyStack.pop())\n  print(frequencyStack.pop())\n  print(frequencyStack.pop())\n\n\nmain()\n\n\n\n\n\n",
+        "javascript": "class FrequencyStack {\n\n  push(num) {\n    // TODO: Write your code here\n    return 0;\n  }\n\n  pop() {\n    return -1;\n  }\n};\n\n\nvar frequencyStack = new FrequencyStack()\nfrequencyStack.push(1)\nfrequencyStack.push(2)\nfrequencyStack.push(3)\nfrequencyStack.push(2)\nfrequencyStack.push(1)\nfrequencyStack.push(2)\nfrequencyStack.push(5)\nconsole.log(frequencyStack.pop())\nconsole.log(frequencyStack.pop())\nconsole.log(frequencyStack.pop())\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <string>\n#include <unordered_map>\n\nclass FrequencyStack {\n public:\n  virtual void push(int num) {\n    // TODO: Write your code here\n  }\n\n  virtual int pop() {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  FrequencyStack frequencyStack;\n  frequencyStack.push(1);\n  frequencyStack.push(2);\n  frequencyStack.push(3);\n  frequencyStack.push(2);\n  frequencyStack.push(1);\n  frequencyStack.push(2);\n  frequencyStack.push(5);\n  cout << frequencyStack.pop() << endl;\n  cout << frequencyStack.pop() << endl;\n  cout << frequencyStack.pop() << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"060c1b2f94c0374f2e99dcbf9f7decf2\">This problem follows the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5728885882748928/\" target=\"_blank\">Top ‘K’ Elements</a> pattern, and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5761493274460160/\" target=\"_blank\">Top ‘K’ Frequent Numbers</a>.</p>\n<p data-id=\"abd66906e0d45ba69a8face0f5a0f759\">We can use a <strong>Max Heap</strong> to store the numbers. Instead of comparing the numbers we will compare their frequencies so that the root of the heap is always the most frequently occurring number. There are two issues that need to be resolved though:</p>\n<ol data-id=\"2b9bb520a94200ea08e5b349bec9d86b\">\n<li>How can we keep track of the frequencies of numbers in the heap? When we are pushing a new number to the <strong>Max Heap</strong>, we don’t know how many times the number has already appeared in the <strong>Max Heap</strong>. To resolve this, we will maintain a <strong>HashMap</strong> to store the current frequency of each number. Thus whenever we push a new number in the heap, we will increment its frequency in the HashMap and when we pop, we will decrement its frequency.</li>\n<li>If two numbers have the same frequency, we will need to return the number which was pushed later while popping. To resolve this, we need to attach a sequence number to every number to know which number came first.</li>\n</ol>\n<p data-id=\"2eb938039c28c462dcc067dd62f4c6b0\">In short, we will keep three things with every number that we push to the heap:</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">2\n1\n2\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Element {\n  int number;\n  int frequency;\n  int sequenceNumber;\n\n  public Element(int number, int frequency, int sequenceNumber) {\n    this.number = number;\n    this.frequency = frequency;\n    this.sequenceNumber = sequenceNumber;\n  }\n}\n\nclass ElementComparator implements Comparator<Element> {\n  public int compare(Element e1, Element e2) {\n    if (e1.frequency != e2.frequency)\n      return e2.frequency - e1.frequency;\n    // if both elements have same frequency, return the one that was pushed later\n    return e2.sequenceNumber - e1.sequenceNumber;\n  }\n}\n\nclass FrequencyStack {\n  int sequenceNumber = 0;\n  PriorityQueue<Element> maxHeap = new PriorityQueue<Element>(new ElementComparator());\n  Map<Integer, Integer> frequencyMap = new HashMap<>();\n\n  public void push(int num) {\n    frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);\n    maxHeap.offer(new Element(num, frequencyMap.get(num), sequenceNumber++));\n  }\n\n  public int pop() {\n    int num = maxHeap.poll().number;\n\n    // decrement the frequency or remove if this is the last number\n    if (frequencyMap.get(num) > 1)\n      frequencyMap.put(num, frequencyMap.get(num) - 1);\n    else\n      frequencyMap.remove(num);\n\n    return num;\n  }\n\n  public static void main(String[] args) {\n    FrequencyStack frequencyStack = new FrequencyStack();\n    frequencyStack.push(1);\n    frequencyStack.push(2);\n    frequencyStack.push(3);\n    frequencyStack.push(2);\n    frequencyStack.push(1);\n    frequencyStack.push(2);\n    frequencyStack.push(5);\n    System.out.println(frequencyStack.pop());\n    System.out.println(frequencyStack.pop());\n    System.out.println(frequencyStack.pop());\n  }\n}\n",
+        "python3": "from heapq import *\n\n\nclass Element:\n\n  def __init__(self, number, frequency, sequenceNumber):\n    self.number = number\n    self.frequency = frequency\n    self.sequenceNumber = sequenceNumber\n\n  def __lt__(self, other):\n    # higher frequency wins\n    if self.frequency != other.frequency:\n      return self.frequency > other.frequency\n    # if both elements have same frequency, return the element that was pushed later\n    return self.sequenceNumber > other.sequenceNumber\n\n\nclass FrequencyStack:\n  sequenceNumber = 0\n  maxHeap = []\n  frequencyMap = {}\n\n  def push(self, num):\n    self.frequencyMap[num] = self.frequencyMap.get(num, 0) + 1\n    heappush(self.maxHeap, Element(\n      num, self.frequencyMap[num], self.sequenceNumber))\n    self.sequenceNumber += 1\n\n  def pop(self):\n    num = heappop(self.maxHeap).number\n    # decrement the frequency or remove if this is the last number\n    if self.frequencyMap[num] > 1:\n      self.frequencyMap[num] -= 1\n    else:\n      del self.frequencyMap[num]\n\n    return num\n\n\ndef main():\n  frequencyStack = FrequencyStack()\n  frequencyStack.push(1)\n  frequencyStack.push(2)\n  frequencyStack.push(3)\n  frequencyStack.push(2)\n  frequencyStack.push(1)\n  frequencyStack.push(2)\n  frequencyStack.push(5)\n  print(frequencyStack.pop())\n  print(frequencyStack.pop())\n  print(frequencyStack.pop())\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <string>\n#include <unordered_map>\n\nclass Element {\n public:\n  int number = 0;\n  int frequency = 0;\n  int sequenceNumber = 0;\n\n  Element(int number, int frequency, int sequenceNumber) {\n    this->number = number;\n    this->frequency = frequency;\n    this->sequenceNumber = sequenceNumber;\n  }\n};\n\nclass FrequencyStack {\n public:\n  struct frequencyCompare {\n    bool operator()(const Element &e1, const Element &e2) {\n      if (e1.frequency != e2.frequency) {\n        return e2.frequency > e1.frequency;\n      }\n      // if both elements have same frequency, return the one that was pushed later\n      return e2.sequenceNumber > e1.sequenceNumber;\n    }\n  };\n\n  int sequenceNumber = 0;\n  priority_queue<Element, vector<Element>, frequencyCompare> maxHeap;\n  unordered_map<int, int> frequencyMap;\n\n  virtual void push(int num) {\n    frequencyMap[num] += 1;\n    maxHeap.push({num, frequencyMap[num], sequenceNumber++});\n  }\n\n  virtual int pop() {\n    int num = maxHeap.top().number;\n    maxHeap.pop();\n\n    // decrement the frequency or remove if this is the last number\n    if (frequencyMap[num] > 1) {\n      frequencyMap[num] -= 1;\n    } else {\n      frequencyMap.erase(num);\n    }\n\n    return num;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  FrequencyStack frequencyStack;\n  frequencyStack.push(1);\n  frequencyStack.push(2);\n  frequencyStack.push(3);\n  frequencyStack.push(2);\n  frequencyStack.push(1);\n  frequencyStack.push(2);\n  frequencyStack.push(5);\n  cout << frequencyStack.pop() << endl;\n  cout << frequencyStack.pop() << endl;\n  cout << frequencyStack.pop() << endl;\n}\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nclass Element {\n  constructor(number, frequency, sequenceNumber) {\n    this.number = number;\n    this.frequency = frequency;\n    this.sequenceNumber = sequenceNumber;\n  }\n\n  compare(other) {\n    // higher frequency wins\n    if (this.frequency !== other.frequency) {\n      return this.frequency - other.frequency;\n    }\n    // if both elements have same frequency, return the element that was pushed later\n    return this.sequenceNumber - other.sequenceNumber;\n  }\n}\n\nclass FrequencyStack {\n  constructor() {\n    this.sequenceNumber = 0;\n    this.frequencyMap = {};\n    this.maxHeap = new Heap([], null, ((a, b) => a.compare(b)));\n  }\n\n\n  push(num) {\n    if (!(num in this.frequencyMap)) {\n      this.frequencyMap[num] = 1;\n    } else {\n      this.frequencyMap[num]++;\n    }\n    this.maxHeap.push(new Element(num, this.frequencyMap[num], this.sequenceNumber));\n    this.sequenceNumber += 1;\n  }\n\n  pop() {\n    const num = this.maxHeap.pop().number;\n    // decrement the frequency or remove if this is the last number\n    if (this.frequencyMap[num] > 1) {\n      this.frequencyMap[num] -= 1;\n    } else {\n      delete this.frequencyMap[num];\n    }\n\n    return num;\n  }\n}\n\n\nconst frequencyStack = new FrequencyStack();\nfrequencyStack.push(1);\nfrequencyStack.push(2);\nfrequencyStack.push(3);\nfrequencyStack.push(2);\nfrequencyStack.push(1);\nfrequencyStack.push(2);\nfrequencyStack.push(5);\nconsole.log(frequencyStack.pop());\nconsole.log(frequencyStack.pop());\nconsole.log(frequencyStack.pop());"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"4515560c24c7efee92ca3a254fb12bfc\">The time complexity of <code>push()</code> and <code>pop()</code> is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the current number of elements in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"314827ec3d6186c35581f3ebe22d4652\">We will need <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> space for the heap and the map, so the overall space complexity of the algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 3.html",
+      "1.2Problem Challenge 3.html",
+      "1.3Problem Challenge 3.html",
+      "1.4Problem Challenge 3.html",
+      "1.1Solution Review_ Problem Challenge 3 -.html",
+      "1.2Solution Review_ Problem Challenge 3 -.html",
+      "1.3Solution Review_ Problem Challenge 3 -.html",
+      "1.4Solution Review_ Problem Challenge 3 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

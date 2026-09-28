@@ -1,0 +1,8 @@
+# extract/ is a local content-generation tool, not part of the tracked
+# product -- kept on disk (still runnable if data/ ever needs regenerating)
+# but untracked, so this repo reads as its own product with its own data.
+extract/
+*.pyc
+
+# macOS
+.DS_Store

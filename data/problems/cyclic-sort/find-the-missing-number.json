@@ -1,0 +1,111 @@
+{
+  "id": "cyclic-sort/find-the-missing-number",
+  "pattern": {
+    "index": 6,
+    "name": "Cyclic Sort",
+    "slug": "cyclic-sort"
+  },
+  "title": "Find the Missing Number",
+  "difficulty": "easy",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "6. Pattern Cyclic Sort/3. Find the Missing Number (easy)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class MissingNumber {\n\n  public static int findMissingNumber(int[] nums) {\n    // TODO: Write your code here\n    return -1;\n  }\n}\n",
+    "python3": "def find_missing_number(nums):\n  # TODO: Write your code here\n  return -1\n",
+    "javascript": "const find_missing_number = function(nums) {\n  // TODO: Write your code here\n  return -1;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MissingNumber {\n public:\n  static int findMissingNumber(vector<int> &nums) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [4, 0, 3, 1]\nOutput: 2",
+      "input": "[4, 0, 3, 1]",
+      "output": "2",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [8, 3, 5, 2, 4, 6, 0, 1]\nOutput: 7",
+      "input": "[8, 3, 5, 2, 4, 6, 0, 1]",
+      "output": "7",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"54b126cf97fc5ef16a4b69d8a7da3fe3\">We are given an array containing ‘n’ distinct numbers taken from the range 0 to ‘n’. Since the array has only ‘n’ numbers out of the total ‘n+1’ numbers, find the missing number.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "class MissingNumber {\n\n  public static int findMissingNumber(int[] nums) {\n    // TODO: Write your code here\n    return -1;\n  }\n}\n",
+        "python3": "def find_missing_number(nums):\n  # TODO: Write your code here\n  return -1\n",
+        "javascript": "const find_missing_number = function(nums) {\n  // TODO: Write your code here\n  return -1;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MissingNumber {\n public:\n  static int findMissingNumber(vector<int> &nums) {\n    // TODO: Write your code here\n    return -1;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"92ccb8a576c242fdd0697073580073ce\">This problem follows the <strong>Cyclic Sort</strong> pattern. Since the input array contains unique numbers from the range 0 to ‘n’, we can use a similar strategy as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6003980930908160/\" target=\"_blank\">Cyclic Sort</a> to place the numbers on their correct index. Once we have every number in its correct place, we can iterate the array to find the index which does not have the correct number, and that index will be our missing number.</p>\n<p data-id=\"6e1c6fb84e221d4543d3a3108f7c1f5f\">However, there are two differences with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6003980930908160/\" target=\"_blank\">Cyclic Sort</a>:</p>\n<ol data-id=\"eee9abd2856b57ea3fb94ea9248df82c\">\n<li>In this problem, the numbers are ranged from ‘0’ to ‘n’, compared to ‘1’ to ‘n’ in the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6003980930908160/\" target=\"_blank\">Cyclic Sort</a>. This will make two changes in our algorithm:\n<ul>\n<li>In this problem, each number should be equal to its index, compared to <code>index + 1</code> in the Cyclic Sort. Therefore =&gt; <code>nums[i] == nums[nums[i]]</code></li>\n<li>Since the array will have ‘n’ numbers, which means array indices will range from 0 to ‘n-1’. Therefore, we will ignore the number ‘n’ as we can’t place it in the array, so =&gt; <code>nums[i] &lt; nums.length</code></li>\n</ul>\n</li>\n<li>Say we are at index <code>i</code>. If we swap the number at index <code>i</code> to place it at the correct index, we can still have the wrong number at index <code>i</code>. This was true in Cyclic Sort too. It didn’t cause any problems in Cyclic Sort as over there, we made sure to place one number at its correct place in each step, but that wouldn’t be enough in this problem as we have one extra number due to the larger range. Therefore, we will not move to the next number after the swap until we have a correct number at the index <code>i</code>.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">2\n7\n</p>",
+      "code": {
+        "java": "class MissingNumber {\n\n  public static int findMissingNumber(int[] nums) {\n    int i = 0;\n    while (i < nums.length) {\n      if (nums[i] < nums.length && nums[i] != nums[nums[i]])\n        swap(nums, i, nums[i]);\n      else\n        i++;\n    }\n\n    // find the first number missing from its index, that will be our required number\n    for (i = 0; i < nums.length; i++)\n      if (nums[i] != i)\n        return i;\n\n    return nums.length;\n  }\n\n  private static void swap(int[] arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n\n  public static void main(String[] args) {\n    System.out.println(MissingNumber.findMissingNumber(new int[] { 4, 0, 3, 1 }));\n    System.out.println(MissingNumber.findMissingNumber(new int[] { 8, 3, 5, 2, 4, 6, 0, 1 }));\n  }\n}\n",
+        "python3": "def find_missing_number(nums):\n  i, n = 0, len(nums)\n  while i < n:\n    j = nums[i]\n    if nums[i] < n and nums[i] != nums[j]:\n      nums[i], nums[j] = nums[j], nums[i]  # swap\n    else:\n      i += 1\n\n  # find the first number missing from its index, that will be our required number\n  for i in range(n):\n    if nums[i] != i:\n      return i\n\n  return n\n\n\ndef main():\n  print(find_missing_number([4, 0, 3, 1]))\n  print(find_missing_number([8, 3, 5, 2, 4, 6, 0, 1]))\n\n\nmain()\n",
+        "javascript": "function find_missing_number(nums) {\n  let i = 0;\n  const n = nums.length;\n  while (i < n) {\n    j = nums[i];\n    if (nums[i] < n && nums[i] !== nums[j]) {\n      [nums[i], nums[j]] = [nums[j], nums[i]]; // swap\n    } else {\n      i += 1;\n    }\n  }\n\n  // find the first number missing from its index, that will be our required number\n  for (i = 0; i < n; i++) {\n    if (nums[i] !== i) {\n      return i;\n    }\n  }\n\n  return n;\n}\n\n\nconsole.log(find_missing_number([4, 0, 3, 1]));\nconsole.log(find_missing_number([8, 3, 5, 2, 4, 6, 0, 1]));",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass MissingNumber {\n public:\n  static int findMissingNumber(vector<int> &nums) {\n    int i = 0;\n    while (i < nums.size()) {\n      if (nums[i] < nums.size() && nums[i] != nums[nums[i]]) {\n        swap(nums, i, nums[i]);\n      } else {\n        i++;\n      }\n    }\n\n    // find the first number missing from its index, that will be our required number\n    for (i = 0; i < nums.size(); i++) {\n      if (nums[i] != i) {\n        return i;\n      }\n    }\n\n    return nums.size();\n  }\n\n private:\n  static void swap(vector<int> &arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> v1 = {4, 0, 3, 1};\n  cout << MissingNumber::findMissingNumber(v1) << endl;\n  v1 = {8, 3, 5, 2, 4, 6, 0, 1};\n  cout << MissingNumber::findMissingNumber(v1) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"93c91df2967bfbcd41cdc3e0da581104\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span>. In the <code>while</code> loop, although we are not incrementing the index <code>i</code> when swapping the numbers, this will result in more than ‘n’ iterations of the loop, but in the worst-case scenario, the <code>while</code> loop will swap a total of ‘n-1’ numbers and once a number is at its correct index, we will move on to the next number by incrementing <code>i</code>. In the end, we iterate the input array again to find the first number missing from its index, so overall, our algorithm will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>+</mo><mi>O</mi><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>+</mo><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n) + O(n-1) + O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mbin\">−</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span> which is asymptotically equivalent to <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Find the Missing Number (easy).html",
+      "1.2Find the Missing Number (easy).html",
+      "1.3Find the Missing Number (easy).html",
+      "1.4Find the Missing Number (easy).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

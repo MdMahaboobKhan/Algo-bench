@@ -1,0 +1,128 @@
+{
+  "id": "topological-sort/tasks-scheduling",
+  "pattern": {
+    "index": 17,
+    "name": "Graph",
+    "slug": "topological-sort"
+  },
+  "title": "Tasks Scheduling",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "17. Pattern Topological Sort (Graph)/3. Tasks Scheduling (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass TaskScheduling {\n  public static boolean isSchedulingPossible(int tasks, int[][] prerequisites) {\n    // TODO: Write your code here\n    return false;\n  }\n\n  public static void main(String[] args) {\n\n    boolean result = TaskScheduling.isSchedulingPossible(3, new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n\n    result = TaskScheduling.isSchedulingPossible(3,\n        new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 }, new int[] { 2, 0 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n\n    result = TaskScheduling.isSchedulingPossible(6, new int[][] { new int[] { 2, 5 }, new int[] { 0, 5 },\n        new int[] { 0, 4 }, new int[] { 1, 4 }, new int[] { 3, 2 }, new int[] { 1, 3 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n  }\n}",
+    "python3": "def is_scheduling_possible(tasks, prerequisites):\n  # TODO: Write your code here\n  return False\n\n\ndef main():\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(3, [[0, 1], [1, 2]])))\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(3, [[0, 1], [1, 2], [2, 0]])))\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(6, [[0, 4], [1, 4], [3, 2], [1, 3]])))\n\nmain()\n",
+    "javascript": "const is_scheduling_possible = function(tasks, prerequisites) {\n  // TODO: Write your code here\n  return false;\n};\n\n\nconsole.log(`Is scheduling possible: ${is_scheduling_possible(3, [[0, 1], [1, 2]])}`)\nconsole.log(`Is scheduling possible: ${is_scheduling_possible(3, [[0, 1], [1, 2], [2, 0]])}`)\nconsole.log(`Is scheduling possible: ${is_scheduling_possible(6, [[0, 4], [1, 4], [3, 2], [1, 3]])}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskScheduling {\n public:\n  static bool isSchedulingPossible(int tasks, const vector<vector<int>>& prerequisites) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  bool result = TaskScheduling::isSchedulingPossible(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}});\n  cout << \"Tasks execution possible: \" << result << endl;\n\n  result = TaskScheduling::isSchedulingPossible(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}, vector<int>{2, 0}});\n  cout << \"Tasks execution possible: \" << result << endl;\n\n  result = TaskScheduling::isSchedulingPossible(\n      6, vector<vector<int>>{vector<int>{2, 5}, vector<int>{0, 5}, vector<int>{0, 4},\n                             vector<int>{1, 4}, vector<int>{3, 2}, vector<int>{1, 3}});\n  cout << \"Tasks execution possible: \" << result << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: Tasks=3, Prerequisites=[0, 1], [1, 2]\nOutput: true\nExplanation: To execute task '1', task '0' needs to finish first. Similarly, task '1' needs to finish \nbefore '2' can be scheduled. A possible sceduling of tasks is: [0, 1, 2]",
+      "input": "Tasks=3, Prerequisites=[0, 1], [1, 2]",
+      "output": "true",
+      "explanation": "To execute task '1', task '0' needs to finish first. Similarly, task '1' needs to finish \nbefore '2' can be scheduled. A possible sceduling of tasks is: [0, 1, 2]"
+    },
+    {
+      "raw": "Input: Tasks=3, Prerequisites=[0, 1], [1, 2], [2, 0]\nOutput: false\nExplanation: The tasks have cyclic dependency, therefore they cannot be sceduled.",
+      "input": "Tasks=3, Prerequisites=[0, 1], [1, 2], [2, 0]",
+      "output": "false",
+      "explanation": "The tasks have cyclic dependency, therefore they cannot be sceduled."
+    },
+    {
+      "raw": "Input: Tasks=6, Prerequisites=[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]\nOutput: true\nExplanation: A possible sceduling of tasks is: [0 1 4 3 2 5]",
+      "input": "Tasks=6, Prerequisites=[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]",
+      "output": "true",
+      "explanation": "A possible sceduling of tasks is: [0 1 4 3 2 5]"
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"20365cefd9e88d3642bdc939cde9e4a3\">There are ‘N’ tasks, labeled from ‘0’ to ‘N-1’. Each task can have some prerequisite tasks which need to be completed before it can be scheduled. Given the number of tasks and a list of prerequisite pairs, find out if it is possible to schedule all the tasks.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Tasks execution possible: false\nTasks execution possible: false\nTasks execution possible: false\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TaskScheduling {\n  public static boolean isSchedulingPossible(int tasks, int[][] prerequisites) {\n    // TODO: Write your code here\n    return false;\n  }\n\n  public static void main(String[] args) {\n\n    boolean result = TaskScheduling.isSchedulingPossible(3, new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n\n    result = TaskScheduling.isSchedulingPossible(3,\n        new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 }, new int[] { 2, 0 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n\n    result = TaskScheduling.isSchedulingPossible(6, new int[][] { new int[] { 2, 5 }, new int[] { 0, 5 },\n        new int[] { 0, 4 }, new int[] { 1, 4 }, new int[] { 3, 2 }, new int[] { 1, 3 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n  }\n}",
+        "python3": "def is_scheduling_possible(tasks, prerequisites):\n  # TODO: Write your code here\n  return False\n\n\ndef main():\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(3, [[0, 1], [1, 2]])))\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(3, [[0, 1], [1, 2], [2, 0]])))\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(6, [[0, 4], [1, 4], [3, 2], [1, 3]])))\n\nmain()\n",
+        "javascript": "const is_scheduling_possible = function(tasks, prerequisites) {\n  // TODO: Write your code here\n  return false;\n};\n\n\nconsole.log(`Is scheduling possible: ${is_scheduling_possible(3, [[0, 1], [1, 2]])}`)\nconsole.log(`Is scheduling possible: ${is_scheduling_possible(3, [[0, 1], [1, 2], [2, 0]])}`)\nconsole.log(`Is scheduling possible: ${is_scheduling_possible(6, [[0, 4], [1, 4], [3, 2], [1, 3]])}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskScheduling {\n public:\n  static bool isSchedulingPossible(int tasks, const vector<vector<int>>& prerequisites) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  bool result = TaskScheduling::isSchedulingPossible(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}});\n  cout << \"Tasks execution possible: \" << result << endl;\n\n  result = TaskScheduling::isSchedulingPossible(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}, vector<int>{2, 0}});\n  cout << \"Tasks execution possible: \" << result << endl;\n\n  result = TaskScheduling::isSchedulingPossible(\n      6, vector<vector<int>>{vector<int>{2, 5}, vector<int>{0, 5}, vector<int>{0, 4},\n                             vector<int>{1, 4}, vector<int>{3, 2}, vector<int>{1, 3}});\n  cout << \"Tasks execution possible: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"22a50bca7ae1f803d3fc44475e842e8e\">This problem is asking us to find out if it is possible to find a topological ordering of the given tasks. The tasks are equivalent to the vertices and the prerequisites are the edges.</p>\n<p data-id=\"6fed67f96f8461eb516813f685ceda6a\">We can use a similar algorithm as described in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6010387461832704/\" target=\"_blank\">Topological Sort</a> to find the topological ordering of the tasks. If the ordering does not include all the tasks, we will conclude that some tasks have cyclic dependencies.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"6344be9cbc3a50e699453c1ef8673a96\">Here is what our algorithm will look like (only the highlighted lines have changed):</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Tasks execution possible: true\nTasks execution possible: false\nTasks execution possible: true\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TaskScheduling {\n  public static boolean isSchedulingPossible(int tasks, int[][] prerequisites) {\n    List<Integer> sortedOrder = new ArrayList<>();\n    if (tasks <= 0)\n      return false;\n\n    // a. Initialize the graph\n    HashMap<Integer, Integer> inDegree = new HashMap<>(); // count of incoming edges for every vertex\n    HashMap<Integer, List<Integer>> graph = new HashMap<>(); // adjacency list graph\n    for (int i = 0; i < tasks; i++) {\n      inDegree.put(i, 0);\n      graph.put(i, new ArrayList<Integer>());\n    }\n\n    // b. Build the graph\n    for (int i = 0; i < prerequisites.length; i++) {\n      int parent = prerequisites[i][0], child = prerequisites[i][1];\n      graph.get(parent).add(child); // put the child into it's parent's list\n      inDegree.put(child, inDegree.get(child) + 1); // increment child's inDegree\n    }\n\n    // c. Find all sources i.e., all vertices with 0 in-degrees\n    Queue<Integer> sources = new LinkedList<>();\n    for (Map.Entry<Integer, Integer> entry : inDegree.entrySet()) {\n      if (entry.getValue() == 0)\n        sources.add(entry.getKey());\n    }\n\n    // d. For each source, add it to the sortedOrder and subtract one from all of its children's in-degrees\n    // if a child's in-degree becomes zero, add it to the sources queue\n    while (!sources.isEmpty()) {\n      int vertex = sources.poll();\n      sortedOrder.add(vertex);\n      List<Integer> children = graph.get(vertex); // get the node's children to decrement their in-degrees\n      for (int child : children) {\n        inDegree.put(child, inDegree.get(child) - 1);\n        if (inDegree.get(child) == 0)\n          sources.add(child);\n      }\n    }\n\n    // if sortedOrder doesn't contain all tasks, there is a cyclic dependency between tasks, therefore, we\n    // will not be able to schedule all tasks\n    return sortedOrder.size() == tasks;\n  }\n\n  public static void main(String[] args) {\n\n    boolean result = TaskScheduling.isSchedulingPossible(3, new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n\n    result = TaskScheduling.isSchedulingPossible(3,\n        new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 }, new int[] { 2, 0 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n\n    result = TaskScheduling.isSchedulingPossible(6, new int[][] { new int[] { 2, 5 }, new int[] { 0, 5 },\n        new int[] { 0, 4 }, new int[] { 1, 4 }, new int[] { 3, 2 }, new int[] { 1, 3 } });\n    System.out.println(\"Tasks execution possible: \" + result);\n  }\n}",
+        "python3": "from collections import deque\n\n\ndef is_scheduling_possible(tasks, prerequisites):\n  sortedOrder = []\n  if tasks <= 0:\n    return False\n\n  # a. Initialize the graph\n  inDegree = {i: 0 for i in range(tasks)}  # count of incoming edges\n  graph = {i: [] for i in range(tasks)}  # adjacency list graph\n\n  # b. Build the graph\n  for prerequisite in prerequisites:\n    parent, child = prerequisite[0], prerequisite[1]\n    graph[parent].append(child)  # put the child into it's parent's list\n    inDegree[child] += 1  # increment child's inDegree\n\n  # c. Find all sources i.e., all vertices with 0 in-degrees\n  sources = deque()\n  for key in inDegree:\n    if inDegree[key] == 0:\n      sources.append(key)\n\n  # d. For each source, add it to the sortedOrder and subtract one from all of its children's in-degrees\n  # if a child's in-degree becomes zero, add it to the sources queue\n  while sources:\n    vertex = sources.popleft()\n    sortedOrder.append(vertex)\n    for child in graph[vertex]:  # get the node's children to decrement their in-degrees\n      inDegree[child] -= 1\n      if inDegree[child] == 0:\n        sources.append(child)\n\n  # if sortedOrder doesn't contain all tasks, there is a cyclic dependency between tasks, therefore, we\n  # will not be able to schedule all tasks\n  return len(sortedOrder) == tasks\n\n\ndef main():\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(3, [[0, 1], [1, 2]])))\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(3, [[0, 1], [1, 2], [2, 0]])))\n  print(\"Is scheduling possible: \" +\n        str(is_scheduling_possible(6, [[0, 4], [1, 4], [3, 2], [1, 3]])))\n\nmain()\n",
+        "javascript": "const Deque = require('./collections/deque'); //http://www.collectionsjs.com\n\n\nfunction is_scheduling_possible(tasks, prerequisites) {\n  const sortedOrder = [];\n  if (tasks <= 0) {\n    return false;\n  }\n\n  // a. Initialize the graph\n  const inDegree = Array(tasks).fill(0); // count of incoming edges\n  const graph = Array(tasks).fill(0).map(() => Array()); // adjacency list graph\n\n  // b. Build the graph\n  prerequisites.forEach((prerequisite) => {\n    let parent = prerequisite[0],\n      child = prerequisite[1];\n    graph[parent].push(child); // put the child into it's parent's list\n    inDegree[child]++; // increment child's inDegree\n  });\n\n\n  // c. Find all sources i.e., all vertices with 0 in-degrees\n  const sources = new Deque();\n  for (i = 0; i < inDegree.length; i++) {\n    if (inDegree[i] === 0) {\n      sources.push(i);\n    }\n  }\n\n  // d. For each source, add it to the sortedOrder and subtract one from all of its children's in-degrees\n  // if a child's in-degree becomes zero, add it to the sources queue\n  while (sources.length > 0) {\n    const vertex = sources.shift();\n    sortedOrder.push(vertex);\n    graph[vertex].forEach((child) => { // get the node's children to decrement their in-degrees\n      inDegree[child] -= 1;\n      if (inDegree[child] === 0) {\n        sources.push(child);\n      }\n    });\n  }\n\n\n  // if sortedOrder doesn't contain all tasks, there is a cyclic dependency between tasks, therefore, we\n  // will not be able to schedule all tasks\n  return sortedOrder.length === tasks;\n}\n\nconsole.log(`Is scheduling possible: ${\n  is_scheduling_possible(3, [\n    [0, 1],\n    [1, 2],\n  ])}`);\nconsole.log(`Is scheduling possible: ${\n  is_scheduling_possible(3, [\n    [0, 1],\n    [1, 2],\n    [2, 0],\n  ])}`);\nconsole.log(`Is scheduling possible: ${\n  is_scheduling_possible(6, [\n    [0, 4],\n    [1, 4],\n    [3, 2],\n    [1, 3],\n  ])}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskScheduling {\n public:\n  static bool isSchedulingPossible(int tasks, const vector<vector<int>>& prerequisites) {\n    vector<int> sortedOrder;\n    if (tasks <= 0) {\n      return false;\n    }\n\n    // a. Initialize the graph\n    unordered_map<int, int> inDegree;       // count of incoming edges for every vertex\n    unordered_map<int, vector<int>> graph;  // adjacency list graph\n    for (int i = 0; i < tasks; i++) {\n      inDegree[i] = 0;\n      graph[i] = vector<int>();\n    }\n\n    // b. Build the graph\n    for (int i = 0; i < prerequisites.size(); i++) {\n      int parent = prerequisites[i][0], child = prerequisites[i][1];\n      graph[parent].push_back(child);  // put the child into it's parent's list\n      inDegree[child]++;               // increment child's inDegree\n    }\n\n    // c. Find all sources i.e., all vertices with 0 in-degrees\n    queue<int> sources;\n    for (auto entry : inDegree) {\n      if (entry.second == 0) {\n        sources.push(entry.first);\n      }\n    }\n\n    // d. For each source, add it to the sortedOrder and subtract one from all of its children's\n    // in-degrees if a child's in-degree becomes zero, add it to the sources queue\n    while (!sources.empty()) {\n      int vertex = sources.front();\n      sources.pop();\n      sortedOrder.push_back(vertex);\n      vector<int> children =\n          graph[vertex];  // get the node's children to decrement their in-degrees\n      for (auto child : children) {\n        inDegree[child]--;\n        if (inDegree[child] == 0) {\n          sources.push(child);\n        }\n      }\n    }\n\n    // if sortedOrder doesn't contain all tasks, there is a cyclic dependency between tasks,\n    // therefore, we will not be able to schedule all tasks\n    return sortedOrder.size() == tasks;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  bool result = TaskScheduling::isSchedulingPossible(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}});\n  cout << \"Tasks execution possible: \" << result << endl;\n\n  result = TaskScheduling::isSchedulingPossible(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}, vector<int>{2, 0}});\n  cout << \"Tasks execution possible: \" << result << endl;\n\n  result = TaskScheduling::isSchedulingPossible(\n      6, vector<vector<int>>{vector<int>{2, 5}, vector<int>{0, 5}, vector<int>{0, 4},\n                             vector<int>{1, 4}, vector<int>{3, 2}, vector<int>{1, 3}});\n  cout << \"Tasks execution possible: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"0afed99a7324b1705354fc723a1db4a5\">In step ‘d’, each task can become a source only once and each edge (prerequisite) will be accessed and removed once. Therefore, the time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>V</mi><mo>+</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(V+E)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.22222em\">V</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.05764em\">E</span><span class=\"mclose\">)</span></span></span></span>, where ‘V’ is the total number of tasks and ‘E’ is the total number of prerequisites.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"43a700485f015f307ba64a95b90d3900\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>V</mi><mo>+</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(V+E)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.22222em\">V</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.05764em\">E</span><span class=\"mclose\">)</span></span></span></span>, ), since we are storing all of the prerequisites for each task in an adjacency list.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "similar-problems",
+      "title": "Similar Problems",
+      "html": "<p data-id=\"4eff5252704ce1cc9315eb4779b9f970\"><strong>Course Schedule:</strong> There are ‘N’ courses, labeled from ‘0’ to ‘N-1’. Each course can have some prerequisite courses which need to be completed before it can be taken. Given the number of courses and a list of prerequisite pairs, find if it is possible for a student to take all the courses.</p>\n<p data-id=\"01c42ee599ac40fd5257246ea38e927b\"><strong>Solution:</strong> This problem is exactly similar to our parent problem. In this problem, we have courses instead of tasks.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1.1Tasks Scheduling (medium).html",
+      "1.1.2Tasks Scheduling (medium).html",
+      "1.2Tasks Scheduling (medium).html",
+      "1.3Tasks Scheduling (medium).html",
+      "1.4Tasks Scheduling (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": [
+      "2 source files detected as 'java' (expected 1): ['1.1.1Tasks Scheduling (medium).html', '1.1.2Tasks Scheduling (medium).html']"
+    ]
+  }
+}

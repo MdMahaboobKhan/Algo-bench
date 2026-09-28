@@ -1,0 +1,110 @@
+{
+  "id": "bitwise-xor/problem-challenge-1",
+  "pattern": {
+    "index": 13,
+    "name": "Bitwise XOR",
+    "slug": "bitwise-xor"
+  },
+  "title": "Problem Challenge 1",
+  "difficulty": null,
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "13. Pattern Bitwise XOR/5. Problem Challenge 1",
+    "13. Pattern Bitwise XOR/6. Solution Review Problem Challenge 1"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class Solution {\n  public static int[][] flipAndInvertImage(int[][] arr) {\n      //TODO: Write your code here\n      return arr;\n  }\n\n  public static void print(int[][] arr) {\n    for(int i=0; i < arr.length; i++) {\n      for (int j=0; j < arr[i].length; j++) {\n        System.out.print(arr[i][j] + \" \");\n      }\n      System.out.println();\n    }\n  }\n\n  public static void main(String[] args) {\n    int[][] arr = {{1, 0, 1}, {1, 1, 1}, {0, 1, 1}};\n    print(flipAndInvertImage(arr));\n\n    int[][]arr2 = {{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};\n    print(flipAndInvertImage(arr2));\n  }\n}",
+    "python3": "def flip_and_invert_image(matrix):\n  #TODO: Write your code here.\n  return matrix\n\ndef main():\n  print(flip_and_invert_image([[1,0,1], [1,1,1], [0,1,1]]))\n  print(flip_and_invert_image([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))\n\nmain()",
+    "javascript": "function flip_and_invert_image(matrix) {\n  //TODO: Write your code here\n  return matrix\n}\n\nconsole.log(flip_and_invert_image([[1,0,1], [1,1,1], [0,1,1]]))\nconsole.log(flip_and_invert_image([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))",
+    "cpp": "#include <iostream>\n#include <vector>\n\nusing namespace std;\n\nclass Solution {\n  public:\n    static vector<vector<int>> flipAndInvertImage(vector<vector<int>> arr) {\n      //TODO: Write your code here\n      return arr;\n    }\n\n    static void print(const vector<vector<int>> arr) {\n      for(int i=0; i < arr.size(); i++) {\n        for (int j=0; j < arr[i].size(); j++) {\n          cout << arr[i][j] << \" \";\n        }\n        cout << endl;\n      }\n    }\n};\n\nint main(int argc, char* argv[]) {\n  vector<vector<int>> arr = vector<vector<int>>{{1, 0, 1}, {1, 1, 1}, {0, 1, 1}};\n  Solution::print(Solution::flipAndInvertImage(arr));\n  cout << endl;\n\n  vector<vector<int>> arr2 = vector<vector<int>>{{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};\n  Solution::print(Solution::flipAndInvertImage(arr2));\n}"
+  },
+  "examples": [
+    {
+      "raw": "Input: [\n  [1,0,1],\n  [1,1,1],\n  [0,1,1]\n]\nOutput: [\n  [0,1,0],\n  [0,0,0],\n  [0,0,1]\n]",
+      "input": "[\n  [1,0,1],\n  [1,1,1],\n  [0,1,1]\n]",
+      "output": "[\n  [0,1,0],\n  [0,0,0],\n  [0,0,1]\n]",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [\n  [1,1,0,0],\n  [1,0,0,1],\n  [0,1,1,1], \n  [1,0,1,0]\n]\nOutput: [\n  [1,1,0,0],\n  [0,1,1,0],\n  [0,0,0,1],\n  [1,0,1,0]\n]",
+      "input": "[\n  [1,1,0,0],\n  [1,0,0,1],\n  [0,1,1,1], \n  [1,0,1,0]\n]",
+      "output": "[\n  [1,1,0,0],\n  [0,1,1,0],\n  [0,0,0,1],\n  [1,0,1,0]\n]",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"a1849309f325d01b43f37ef7ca76aeeb\">Given a binary matrix representing an image, we want to flip the image horizontally, then invert it.</p>\n<p data-id=\"14e6f810471222408917b2e8d9ea6470\">To flip an image horizontally means that each row of the image is reversed. For example, flipping [0, 1, 1] horizontally results in [1, 1, 0].</p>\n<p data-id=\"6bb59fba8f497d0cf6b5ce74be899ceb\">To invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0. For example, inverting [1, 1, 0] results in [0, 0, 1].</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><b>Example 1:</b></p>\n<p data-id=\"63157e8fc2d36ca0917f8305a0118c1b\"><b>Explanation</b>: First reverse each row: <code>[[1,0,1],[1,1,1],[1,1,0]]</code>.\nThen, invert the image: <code>[[0,1,0],[0,0,0],[0,0,1]]</code></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><b>Example 2:</b></p>\n<p data-id=\"480fed45ca604419943a68413257f851\"><b>Explanation</b>: First reverse each row: <code>[[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]]</code>.\nThen invert the image: <code>[[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]</code></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">1 0 1 \n1 1 1 \n0 1 1 \n1 1 0 0 \n1 0 0 1 \n0 1 1 1 \n1 0 1 0 \n</p>",
+      "code": {
+        "java": "class Solution {\n  public static int[][] flipAndInvertImage(int[][] arr) {\n      //TODO: Write your code here\n      return arr;\n  }\n\n  public static void print(int[][] arr) {\n    for(int i=0; i < arr.length; i++) {\n      for (int j=0; j < arr[i].length; j++) {\n        System.out.print(arr[i][j] + \" \");\n      }\n      System.out.println();\n    }\n  }\n\n  public static void main(String[] args) {\n    int[][] arr = {{1, 0, 1}, {1, 1, 1}, {0, 1, 1}};\n    print(flipAndInvertImage(arr));\n\n    int[][]arr2 = {{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};\n    print(flipAndInvertImage(arr2));\n  }\n}",
+        "python3": "def flip_and_invert_image(matrix):\n  #TODO: Write your code here.\n  return matrix\n\ndef main():\n  print(flip_and_invert_image([[1,0,1], [1,1,1], [0,1,1]]))\n  print(flip_and_invert_image([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))\n\nmain()",
+        "javascript": "function flip_and_invert_image(matrix) {\n  //TODO: Write your code here\n  return matrix\n}\n\nconsole.log(flip_and_invert_image([[1,0,1], [1,1,1], [0,1,1]]))\nconsole.log(flip_and_invert_image([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))",
+        "cpp": "#include <iostream>\n#include <vector>\n\nusing namespace std;\n\nclass Solution {\n  public:\n    static vector<vector<int>> flipAndInvertImage(vector<vector<int>> arr) {\n      //TODO: Write your code here\n      return arr;\n    }\n\n    static void print(const vector<vector<int>> arr) {\n      for(int i=0; i < arr.size(); i++) {\n        for (int j=0; j < arr[i].size(); j++) {\n          cout << arr[i][j] << \" \";\n        }\n        cout << endl;\n      }\n    }\n};\n\nint main(int argc, char* argv[]) {\n  vector<vector<int>> arr = vector<vector<int>>{{1, 0, 1}, {1, 1, 1}, {0, 1, 1}};\n  Solution::print(Solution::flipAndInvertImage(arr));\n  cout << endl;\n\n  vector<vector<int>> arr2 = vector<vector<int>>{{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};\n  Solution::print(Solution::flipAndInvertImage(arr2));\n}"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">0 1 0 \n0 0 0 \n0 0 1 \n\n1 1 0 0 \n0 1 1 0 \n0 0 0 1 \n1 0 1 0 \n</p>",
+      "code": {
+        "java": "class Solution {\n  public static int[][] flipAndInvertImage(int[][] arr) {\n      int C = arr[0].length;\n      for (int[] row: arr) {\n          for (int i = 0; i < (C + 1) / 2; ++i) {\n              int tmp = row[i] ^ 1;\n              row[i] = row[C - 1 - i] ^ 1;\n              row[C - 1 - i] = tmp;\n          }\n      }\n      return arr;\n  }\n\n  public static void print(int[][] arr) {\n    for(int i=0; i < arr.length; i++) {\n      for (int j=0; j < arr[i].length; j++) {\n        System.out.print(arr[i][j] + \" \");\n      }\n      System.out.println();\n    }\n\n  }\n\n  public static void main(String[] args) {\n    int[][] arr = {{1, 0, 1}, {1, 1, 1}, {0, 1, 1}};\n    print(flipAndInvertImage(arr));\n    System.out.println();\n\n    int[][]arr2 = {{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};\n    print(flipAndInvertImage(arr2));\n  }\n}",
+        "python3": "def flip_an_invert_image(matrix):\n  C = len(matrix)\n  for row in matrix:\n    for i in range((C+1)//2):\n      row[i], row[C - i - 1] = row[C - i - 1] ^ 1, row[i] ^ 1\n\n  return matrix\n\ndef main():\n    print(flip_an_invert_image([[1,0,1], [1,1,1], [0,1,1]]))\n    print(flip_an_invert_image([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))\n\nmain()",
+        "cpp": "#include <iostream>\n#include <vector>\n\nusing namespace std;\n\nclass Solution {\n  public:\n    static vector<vector<int>> flipAndInvertImage(vector<vector<int>> arr) {\n      int s = arr[0].size();\n      for (int row = 0; row < arr.size(); row++) {\n          for (int col = 0; col < (s + 1) / 2; ++col) {\n              int tmp = arr[row][col] ^ 1;\n              arr[row][col] = arr[row][s - 1 - col] ^ 1;\n              arr[row][s - 1 - col] = tmp;\n          }\n      }\n      return arr;\n    }\n\n    static void print(const vector<vector<int>> arr) {\n      for(int i=0; i < arr.size(); i++) {\n        for (int j=0; j < arr[i].size(); j++) {\n          cout << arr[i][j] << \" \";\n        }\n        cout << \"\\n\";\n      }\n    }\n};\n\nint main(int argc, char* argv[]) {\n  vector<vector<int>> arr = vector<vector<int>>{{1, 0, 1}, {1, 1, 1}, {0, 1, 1}};\n  Solution::print(Solution::flipAndInvertImage(arr));\n  cout << \"\\n\";\n\n  vector<vector<int>> arr2 = vector<vector<int>>{{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};\n  Solution::print(Solution::flipAndInvertImage(arr2));\n}",
+        "javascript": "function flip_and_invert_image(matrix) {\n  const C = matrix.length;\n  for (var row = 0; row < C; ++row) {\n    for (var col = 0; col < Math.floor((C + 1) / 2); ++col) {\n      var tmp = matrix[row][col] ^ 1;\n      matrix[row][col] = matrix[row][C - 1 - col] ^ 1;\n      matrix[row][C - 1 - col] = tmp;\n    }\n  }\n  return matrix;\n}\n\nconsole.log(flip_and_invert_image([[1,0,1], [1,1,1], [0,1,1]]))\nconsole.log(flip_and_invert_image([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"a7bfb974984c4b020525162a27897665\">The time complexity of this solution is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span> as we iterate through all elements of the input.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"17905ff196aaaea65d16b6be0f44789d\">The space complexity of this solution is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 1.html",
+      "1.2Problem Challenge 1.html",
+      "1.3Problem Challenge 1.html",
+      "1.4Problem Challenge 1.html",
+      "1.1Solution Review_ Problem Challenge 1 -.html",
+      "1.2Solution Review_ Problem Challenge 1 -.html",
+      "1.3Solution Review_ Problem Challenge 1 -.html",
+      "1.4Solution Review_ Problem Challenge 1 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": [
+      "could not recover a real title from content; falling back to folder name"
+    ]
+  }
+}

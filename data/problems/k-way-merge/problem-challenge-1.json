@@ -1,0 +1,116 @@
+{
+  "id": "k-way-merge/problem-challenge-1",
+  "pattern": {
+    "index": 15,
+    "name": "K-way merge",
+    "slug": "k-way-merge"
+  },
+  "title": "K Pairs with Largest Sums",
+  "difficulty": "hard",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "15. Pattern K-way merge/6. Problem Challenge 1",
+    "15. Pattern K-way merge/7. Solution Review Problem Challenge 1"
+  ],
+  "problemStatementSectionId": "k-pairs-with-largest-sums-hard",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass LargestPairs {\n\n  public static List<int[]> findKLargestPairs(int[] nums1, int[] nums2, int k) {\n    List<int[]> result = new ArrayList<>();\n    // TODO: Write your code here\n    return result;\n  }\n\n  public static void main(String[] args) {\n    int[] l1 = new int[] { 9, 8, 2 };\n    int[] l2 = new int[] { 6, 3, 1 };\n    List<int[]> result = LargestPairs.findKLargestPairs(l1, l2, 3);\n    System.out.print(\"Pairs with largest sum are: \");\n    for (int[] pair : result)\n      System.out.print(\"[\" + pair[0] + \", \" + pair[1] + \"] \");\n  }\n}\n",
+    "python3": "def find_k_largest_pairs(nums1, nums2, k):\n  result = []\n  # TODO: Write your code here\n  return result\n\n\ndef main():\n  print(\"Pairs with largest sum are: \" +\n        str(find_k_largest_pairs([9, 8, 2], [6, 3, 1], 3)))\n\n\nmain()\n",
+    "javascript": "const find_k_largest_pairs = function(nums1, nums2, k) {\n  result = [];\n  // TODO: Write your code here\n  return result;\n};\n\n\nconsole.log(`Pairs with largest sum are: ${find_k_largest_pairs([9, 8, 2], [6, 3, 1], 3)}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass LargestPairs {\n public:\n\n  static vector<pair<int, int>> findKLargestPairs(const vector<int> &nums1,\n                                                  const vector<int> &nums2, int k) {\n    vector<pair<int, int>> result;\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  auto result = LargestPairs::findKLargestPairs({9, 8, 2}, {6, 3, 1}, 3);\n  cout << \"Pairs with largest sum are: \";\n  for (auto pair : result) {\n    cout << \"[\" << pair.first << \", \" << pair.second << \"] \";\n  }\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: L1=[9, 8, 2], L2=[6, 3, 1], K=3\nOutput: [9, 3], [9, 6], [8, 6] \nExplanation: These 3 pairs have the largest sum. No other pair has a sum larger than any of these.",
+      "input": "L1=[9, 8, 2], L2=[6, 3, 1], K=3",
+      "output": "[9, 3], [9, 6], [8, 6]",
+      "explanation": "These 3 pairs have the largest sum. No other pair has a sum larger than any of these."
+    },
+    {
+      "raw": "Input: L1=[5, 2, 1], L2=[2, -1], K=3\nOutput: [5, 2], [5, -1], [2, 2]",
+      "input": "L1=[5, 2, 1], L2=[2, -1], K=3",
+      "output": "[5, 2], [5, -1], [2, 2]",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "k-pairs-with-largest-sums-hard",
+      "title": "K Pairs with Largest Sums (Hard)",
+      "html": "<p data-id=\"8da84e4261319fc99e98dd1bea6c5c1d\">Given two sorted arrays in descending order, find ‘K’ pairs with the largest sum where each pair consists of numbers from both the arrays.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Pairs with largest sum are: </p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass LargestPairs {\n\n  public static List<int[]> findKLargestPairs(int[] nums1, int[] nums2, int k) {\n    List<int[]> result = new ArrayList<>();\n    // TODO: Write your code here\n    return result;\n  }\n\n  public static void main(String[] args) {\n    int[] l1 = new int[] { 9, 8, 2 };\n    int[] l2 = new int[] { 6, 3, 1 };\n    List<int[]> result = LargestPairs.findKLargestPairs(l1, l2, 3);\n    System.out.print(\"Pairs with largest sum are: \");\n    for (int[] pair : result)\n      System.out.print(\"[\" + pair[0] + \", \" + pair[1] + \"] \");\n  }\n}\n",
+        "python3": "def find_k_largest_pairs(nums1, nums2, k):\n  result = []\n  # TODO: Write your code here\n  return result\n\n\ndef main():\n  print(\"Pairs with largest sum are: \" +\n        str(find_k_largest_pairs([9, 8, 2], [6, 3, 1], 3)))\n\n\nmain()\n",
+        "javascript": "const find_k_largest_pairs = function(nums1, nums2, k) {\n  result = [];\n  // TODO: Write your code here\n  return result;\n};\n\n\nconsole.log(`Pairs with largest sum are: ${find_k_largest_pairs([9, 8, 2], [6, 3, 1], 3)}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass LargestPairs {\n public:\n\n  static vector<pair<int, int>> findKLargestPairs(const vector<int> &nums1,\n                                                  const vector<int> &nums2, int k) {\n    vector<pair<int, int>> result;\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  auto result = LargestPairs::findKLargestPairs({9, 8, 2}, {6, 3, 1}, 3);\n  cout << \"Pairs with largest sum are: \";\n  for (auto pair : result) {\n    cout << \"[\" << pair.first << \", \" << pair.second << \"] \";\n  }\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"b65c8482aa9fb76bd4f99327ea657ec3\">This problem follows the <strong>K-way merge</strong> pattern and we can follow a similar approach as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/4611799594827776/\" target=\"_blank\">Merge K Sorted Lists</a>.</p>\n<p data-id=\"c17cf68bfc2c5a3972b498660e422263\">We can go through all the numbers of the two input arrays to create pairs and initially insert them all in the heap until we have ‘K’ pairs in <strong>Min Heap</strong>. After that, if a pair is bigger than the top (smallest) pair in the heap, we can remove the smallest pair and insert this pair in the heap.</p>\n<p data-id=\"537c629947e01633e2bf9d2560c765e5\">We can optimize our algorithms in two ways:</p>\n<ol data-id=\"ceca208e36cee35f4a89c7aadca9d61d\">\n<li>Instead of iterating over all the numbers of both arrays, we can iterate only the first ‘K’ numbers from both arrays. Since the arrays are sorted in descending order, the pairs with the maximum sum will be constituted by the first ‘K’ numbers from both the arrays.</li>\n<li>As soon as we encounter a pair with a sum that is smaller than the smallest (top) element of the heap, we don’t need to process the next elements of the array. Since the arrays are sorted in descending order, we won’t be able to find a pair with a higher sum moving forward.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Pairs with largest sum are: [9, 3] [9, 6] [8, 6] </p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass LargestPairs {\n\n  public static List<int[]> findKLargestPairs(int[] nums1, int[] nums2, int k) {\n    PriorityQueue<int[]> minHeap = new PriorityQueue<int[]>((p1, p2) -> (p1[0] + p1[1]) - (p2[0] + p2[1]));\n    for (int i = 0; i < nums1.length && i < k; i++) {\n      for (int j = 0; j < nums2.length && j < k; j++) {\n        if (minHeap.size() < k) {\n          minHeap.add(new int[] { nums1[i], nums2[j] });\n        } else {\n          // if the sum of the two numbers from the two arrays is smaller than the smallest (top) element of\n          // the heap, we can 'break' here. Since the arrays are sorted in the descending order, we'll not be\n          // able to find a pair with a higher sum moving forward.\n          if (nums1[i] + nums2[j] < minHeap.peek()[0] + minHeap.peek()[1]) {\n            break;\n          } else { // else: we have a pair with a larger sum, remove top and insert this pair in the heap\n            minHeap.poll();\n            minHeap.add(new int[] { nums1[i], nums2[j] });\n          }\n        }\n      }\n    }\n    return new ArrayList<>(minHeap);\n  }\n\n  public static void main(String[] args) {\n    int[] l1 = new int[] { 9, 8, 2 };\n    int[] l2 = new int[] { 6, 3, 1 };\n    List<int[]> result = LargestPairs.findKLargestPairs(l1, l2, 3);\n    System.out.print(\"Pairs with largest sum are: \");\n    for (int[] pair : result)\n      System.out.print(\"[\" + pair[0] + \", \" + pair[1] + \"] \");\n  }\n}\n",
+        "python3": "from __future__ import print_function\nfrom heapq import *\n\n\ndef find_k_largest_pairs(nums1, nums2, k):\n  minHeap = []\n  for i in range(0, min(k, len(nums1))):\n    for j in range(min(k, len(nums2))):\n      if len(minHeap) < k:\n        heappush(minHeap, (nums1[i] + nums2[j], i, j))\n      else:\n        # if the sum of the two numbers from the two arrays is smaller than the smallest(top)\n        # element of the heap, we can 'break' here. Since the arrays are sorted in the\n        # descending order, we'll not be able to find a pair with a higher sum moving forward\n        if nums1[i] + nums2[j] < minHeap[0][0]:\n          break\n        else:  # we have a pair with a larger sum, remove top and insert this pair in the heap\n          heappop(minHeap)\n          heappush(minHeap, (nums1[i] + nums2[j], i, j))\n\n  result = []\n  for (num, i, j) in minHeap:\n    result.append([nums1[i], nums2[j]])\n\n  return result\n\n\ndef main():\n  print(\"Pairs with largest sum are: \" +\n        str(find_k_largest_pairs([9, 8, 2], [6, 3, 1], 3)))\n\n\nmain()\n\n\n\n\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass LargestPairs {\n public:\n  struct sumCompare {\n    bool operator()(const pair<int, int> &x, const pair<int, int> &y) {\n      return x.first + x.second > y.first + y.second;\n    }\n  };\n\n  static vector<pair<int, int>> findKLargestPairs(const vector<int> &nums1,\n                                                  const vector<int> &nums2, int k) {\n    vector<pair<int, int>> minHeap;\n    for (int i = 0; i < nums1.size() && i < k; i++) {\n      for (int j = 0; j < nums2.size() && j < k; j++) {\n        if (minHeap.size() < k) {\n          minHeap.push_back(make_pair(nums1[i], nums2[j]));\n          push_heap(minHeap.begin(), minHeap.end(), sumCompare());\n        } else {\n          // if the sum of the two numbers from the two arrays is smaller than the smallest (top)\n          // element of the heap, we can 'break' here. Since the arrays are sorted in the descending\n          // order, we'll not be able to find a pair with a higher sum moving forward.\n          if (nums1[i] + nums2[j] < minHeap.front().first + minHeap.front().second) {\n            break;\n          } else {  // else: we have a pair with a larger sum, remove top and insert this pair in\n                    // the heap\n            pop_heap(minHeap.begin(), minHeap.end(), sumCompare());\n            minHeap.pop_back();\n            minHeap.push_back(make_pair(nums1[i], nums2[j]));\n            push_heap(minHeap.begin(), minHeap.end(), sumCompare());\n          }\n        }\n      }\n    }\n    return minHeap;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  auto result = LargestPairs::findKLargestPairs({9, 8, 2}, {6, 3, 1}, 3);\n  cout << \"Pairs with largest sum are: \";\n  for (auto pair : result) {\n    cout << \"[\" << pair.first << \", \" << pair.second << \"] \";\n  }\n}\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nfunction find_k_largest_pairs(nums1, nums2, k) {\n  const minHeap = new Heap([], null, ((a, b) => b[0] - a[0]));\n\n  for (i = 0; i < Math.min(k, nums1.length); i++) {\n    for (j = 0; j < Math.min(k, nums2.length); j++) {\n      if (minHeap.length < k) {\n        minHeap.push([nums1[i] + nums2[j], i, j]);\n      } else {\n        // if the sum of the two numbers from the two arrays is smaller than the smallest(top)\n        // element of the heap, we can 'break' here. Since the arrays are sorted in the\n        // descending order, we'll not be able to find a pair with a higher sum moving forward\n        if (nums1[i] + nums2[j] < minHeap.peek()[0]) {\n          break;\n        } else { // we have a pair with a larger sum, remove top and insert this pair in the heap\n          minHeap.pop();\n          minHeap.push([nums1[i] + nums2[j], i, j]);\n        }\n      }\n    }\n  }\n\n\n  const result = [];\n  minHeap.forEach((a) => {\n    result.push([nums1[a[1]], nums2[a[2]]]);\n  });\n\n  return result;\n}\n\n\nprocess.stdout.write('Pairs with largest sum are: ');\nconst result = find_k_largest_pairs([9, 8, 2], [6, 3, 1], 3);\nresult.forEach((a) => {\n  process.stdout.write(`[${a[0]}, ${a[1]}] `);\n});"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"c2fd3d092c43d43bf90d0d5130da9097\">Since, at most, we’ll be going through all the elements of both arrays and we will add/remove one element in the heap in each step, the time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>M</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*M*logK)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">M</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ and ‘M’ are the total number of elements in both arrays, respectively.</p>\n<p data-id=\"43dca20550268265e2699d53a931c7bd\">If we assume that both arrays have at least ‘K’ elements then the time complexity can be simplified to <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>K</mi><mn>2</mn></msup><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(K^2logK)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8141079999999999em\"></span><span class=\"strut bottom\" style=\"height:1.064108em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord\"><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"vlist\"><span style=\"top:-0.363em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle uncramped\"><span class=\"mord mathrm\">2</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span>, because we are not iterating more than ‘K’ elements in both arrays.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"d6a27ebc57ef74ea9d821439a54f7a79\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(K)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span> because, at any time, our <strong>Min Heap</strong> will be storing ‘K’ largest pairs.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 1.html",
+      "1.2Problem Challenge 1.html",
+      "1.3Problem Challenge 1.html",
+      "1.4Problem Challenge 1.html",
+      "1.1Solution Review_ Problem Challenge 1 -.html",
+      "1.2Solution Review_ Problem Challenge 1 -.html",
+      "1.3Solution Review_ Problem Challenge 1 -.html",
+      "1.4Solution Review_ Problem Challenge 1 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

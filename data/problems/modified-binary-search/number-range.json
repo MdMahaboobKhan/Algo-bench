@@ -1,0 +1,117 @@
+{
+  "id": "modified-binary-search/number-range",
+  "pattern": {
+    "index": 12,
+    "name": "Modified Binary Search",
+    "slug": "modified-binary-search"
+  },
+  "title": "Number Range",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "12. Pattern Modified Binary Search/5. Number Range (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class FindRange {\n\n  public static int[] findRange(int[] arr, int key) {\n    int[] result = new int[] { -1, -1 };\n    // TODO: Write your code here\n    return result;\n  }\n\n  public static void main(String[] args) {\n    int[] result = FindRange.findRange(new int[] { 4, 6, 6, 6, 9 }, 6);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n    result = FindRange.findRange(new int[] { 1, 3, 8, 10, 15 }, 10);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n    result = FindRange.findRange(new int[] { 1, 3, 8, 10, 15 }, 12);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n  }\n}",
+    "python3": "def find_range(arr, key):\n  result = [- 1, -1]\n  # TODO: Write your code here\n  return result\n\ndef main():\n  print(find_range([4, 6, 6, 6, 9], 6))\n  print(find_range([1, 3, 8, 10, 15], 10))\n  print(find_range([1, 3, 8, 10, 15], 12))\n\n\nmain()\n",
+    "javascript": "const find_range = function(arr, key) {\n  result = [- 1, -1];\n  // TODO: Write your code here\n  return result;\n};\n\n\nconsole.log(find_range([4, 6, 6, 6, 9], 6))\nconsole.log(find_range([1, 3, 8, 10, 15], 10))\nconsole.log(find_range([1, 3, 8, 10, 15], 12))\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FindRange {\n public:\n  static pair<int, int> findRange(const vector<int> &arr, int key) {\n    pair<int, int> result(-1, -1);\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  pair<int, int> result = FindRange::findRange(vector<int>{4, 6, 6, 6, 9}, 6);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n  result = FindRange::findRange(vector<int>{1, 3, 8, 10, 15}, 10);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n  result = FindRange::findRange(vector<int>{1, 3, 8, 10, 15}, 12);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [4, 6, 6, 6, 9], key = 6\nOutput: [1, 3]",
+      "input": "[4, 6, 6, 6, 9], key = 6",
+      "output": "[1, 3]",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [1, 3, 8, 10, 15], key = 10\nOutput: [3, 3]",
+      "input": "[1, 3, 8, 10, 15], key = 10",
+      "output": "[3, 3]",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [1, 3, 8, 10, 15], key = 12\nOutput: [-1, -1]",
+      "input": "[1, 3, 8, 10, 15], key = 12",
+      "output": "[-1, -1]",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"003836449437795e5493321dfa7573d2\">Given an array of numbers sorted in ascending order, find the range of a given number ‘key’. The range of the ‘key’ will be the first and last position of the ‘key’ in the array.</p>\n<p data-id=\"2ce67110750cbbb861f2853d5154aba6\">Write a function to return the range of the ‘key’. If the ‘key’ is not present return [-1, -1].</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Range: [-1, -1]\nRange: [-1, -1]\nRange: [-1, -1]\n</p>",
+      "code": {
+        "java": "class FindRange {\n\n  public static int[] findRange(int[] arr, int key) {\n    int[] result = new int[] { -1, -1 };\n    // TODO: Write your code here\n    return result;\n  }\n\n  public static void main(String[] args) {\n    int[] result = FindRange.findRange(new int[] { 4, 6, 6, 6, 9 }, 6);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n    result = FindRange.findRange(new int[] { 1, 3, 8, 10, 15 }, 10);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n    result = FindRange.findRange(new int[] { 1, 3, 8, 10, 15 }, 12);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n  }\n}",
+        "python3": "def find_range(arr, key):\n  result = [- 1, -1]\n  # TODO: Write your code here\n  return result\n\ndef main():\n  print(find_range([4, 6, 6, 6, 9], 6))\n  print(find_range([1, 3, 8, 10, 15], 10))\n  print(find_range([1, 3, 8, 10, 15], 12))\n\n\nmain()\n",
+        "javascript": "const find_range = function(arr, key) {\n  result = [- 1, -1];\n  // TODO: Write your code here\n  return result;\n};\n\n\nconsole.log(find_range([4, 6, 6, 6, 9], 6))\nconsole.log(find_range([1, 3, 8, 10, 15], 10))\nconsole.log(find_range([1, 3, 8, 10, 15], 12))\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FindRange {\n public:\n  static pair<int, int> findRange(const vector<int> &arr, int key) {\n    pair<int, int> result(-1, -1);\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  pair<int, int> result = FindRange::findRange(vector<int>{4, 6, 6, 6, 9}, 6);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n  result = FindRange::findRange(vector<int>{1, 3, 8, 10, 15}, 10);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n  result = FindRange::findRange(vector<int>{1, 3, 8, 10, 15}, 12);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"10a09fe25c7d61dd240227751a1f1521\">The problem follows the <strong>Binary Search</strong> pattern. Since Binary Search helps us find a number in a sorted array efficiently, we can use a modified version of the Binary Search to find the first and the last position of a number.</p>\n<p data-id=\"bf9d5e9f19459d3eeb6c3e1510d9fd58\">We can use a similar approach as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6304110192099328/\" target=\"_blank\">Order-agnostic Binary Search</a>. We will try to search for the ‘key’ in the given array; if the ‘key’ is found (i.e. <code>key == arr[middle</code>) we have two options:</p>\n<ol data-id=\"9d894e2205ce2413317ab68c193cb5c0\">\n<li>When trying to find the first position of the ‘key’, we can update <code>end = middle - 1</code> to see if the key is present before <code>middle</code>.</li>\n<li>When trying to find the last position of the ‘key’, we can update <code>start = middle + 1</code> to see if the key is present after <code>middle</code>.</li>\n</ol>\n<p data-id=\"a85c3fa04e751fb110d185f593121bc5\">In both cases, we will keep track of the last position where we found the ‘key’. These positions will be the required range.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Range: [1, 3]\nRange: [3, 3]\nRange: [-1, -1]\n</p>",
+      "code": {
+        "java": "class FindRange {\n\n  public static int[] findRange(int[] arr, int key) {\n    int[] result = new int[] { -1, -1 };\n    result[0] = search(arr, key, false);\n    if (result[0] != -1) // no need to search, if 'key' is not present in the input array\n      result[1] = search(arr, key, true);\n    return result;\n  }\n\n  // modified Binary Search\n  private static int search(int[] arr, int key, boolean findMaxIndex) {\n    int keyIndex = -1;\n    int start = 0, end = arr.length - 1;\n    while (start <= end) {\n      int mid = start + (end - start) / 2;\n      if (key < arr[mid]) {\n        end = mid - 1;\n      } else if (key > arr[mid]) {\n        start = mid + 1;\n      } else { // key == arr[mid]\n        keyIndex = mid;\n        if (findMaxIndex)\n          start = mid + 1; // search ahead to find the last index of 'key'\n        else\n          end = mid - 1; // search behind to find the first index of 'key'\n      }\n    }\n    return keyIndex;\n  }\n\n  public static void main(String[] args) {\n    int[] result = FindRange.findRange(new int[] { 4, 6, 6, 6, 9 }, 6);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n    result = FindRange.findRange(new int[] { 1, 3, 8, 10, 15 }, 10);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n    result = FindRange.findRange(new int[] { 1, 3, 8, 10, 15 }, 12);\n    System.out.println(\"Range: [\" + result[0] + \", \" + result[1] + \"]\");\n  }\n}",
+        "python3": "def find_range(arr, key):\n  result = [- 1, -1]\n  result[0] = binary_search(arr, key, False)\n  if result[0] != -1:  # no need to search, if 'key' is not present in the input array\n    result[1] = binary_search(arr, key, True)\n  return result\n\n\n# modified Binary Search\ndef binary_search(arr, key, findMaxIndex):\n  keyIndex = -1\n  start, end = 0, len(arr) - 1\n  while start <= end:\n    mid = start + (end - start) // 2\n    if key < arr[mid]:\n      end = mid - 1\n    elif key > arr[mid]:\n      start = mid + 1\n    else:  # key == arr[mid]\n      keyIndex = mid\n      if findMaxIndex:\n        start = mid + 1  # search ahead to find the last index of 'key'\n      else:\n        end = mid - 1  # search behind to find the first index of 'key'\n\n  return keyIndex\n\n\ndef main():\n  print(find_range([4, 6, 6, 6, 9], 6))\n  print(find_range([1, 3, 8, 10, 15], 10))\n  print(find_range([1, 3, 8, 10, 15], 12))\n\n\nmain()\n",
+        "javascript": "function find_range(arr, key) {\n  result = [-1, -1];\n  result[0] = binary_search(arr, key, false);\n  if (result[0] !== -1) { // no need to search, if 'key' is not present in the input array\n    result[1] = binary_search(arr, key, true);\n  }\n\n  return result;\n}\n\n// modified Binary Search\nfunction binary_search(arr, key, findMaxIndex) {\n  let keyIndex = -1;\n  let start = 0;\n  let end = arr.length - 1;\n  while (start <= end) {\n    mid = Math.floor(start + (end - start) / 2);\n    if (key < arr[mid]) {\n      end = mid - 1;\n    } else if (key > arr[mid]) {\n      start = mid + 1;\n    } else { // key === arr[mid]\n      keyIndex = mid;\n      if (findMaxIndex) {\n        start = mid + 1; // search ahead to find the last index of 'key'\n      } else {\n        end = mid - 1; // search behind to find the first index of 'key'\n      }\n    }\n  }\n\n  return keyIndex;\n}\n\n\nconsole.log(find_range([4, 6, 6, 6, 9], 6));\nconsole.log(find_range([1, 3, 8, 10, 15], 10));\nconsole.log(find_range([1, 3, 8, 10, 15], 12));",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FindRange {\n public:\n  static pair<int, int> findRange(const vector<int> &arr, int key) {\n    pair<int, int> result(-1, -1);\n    result.first = search(arr, key, false);\n    if (result.first != -1) {  // no need to search, if 'key' is not present in the input array\n      result.second = search(arr, key, true);\n    }\n    return result;\n  }\n\n private:\n  // modified Binary Search\n  static int search(const vector<int> &arr, int key, bool findMaxIndex) {\n    int keyIndex = -1;\n    int start = 0, end = arr.size() - 1;\n    while (start <= end) {\n      int mid = start + (end - start) / 2;\n      if (key < arr[mid]) {\n        end = mid - 1;\n      } else if (key > arr[mid]) {\n        start = mid + 1;\n      } else {  // key == arr[mid]\n        keyIndex = mid;\n        if (findMaxIndex) {\n          start = mid + 1;  // search ahead to find the last index of 'key'\n        } else {\n          end = mid - 1;  // search behind to find the first index of 'key'\n        }\n      }\n    }\n    return keyIndex;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  pair<int, int> result = FindRange::findRange(vector<int>{4, 6, 6, 6, 9}, 6);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n  result = FindRange::findRange(vector<int>{1, 3, 8, 10, 15}, 10);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n  result = FindRange::findRange(vector<int>{1, 3, 8, 10, 15}, 12);\n  cout << \"Range: [\" << result.first << \", \" << result.second << \"]\" << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"eb31d125b1d389b004fe28c75b52002c\">Since, we are reducing the search range by half at every step, this means that the time complexity of our algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the total elements in the given array.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Number Range (medium).html",
+      "1.2Number Range (medium).html",
+      "1.3Number Range (medium).html",
+      "1.4Number Range (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

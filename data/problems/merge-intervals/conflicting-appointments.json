@@ -1,0 +1,125 @@
+{
+  "id": "merge-intervals/conflicting-appointments",
+  "pattern": {
+    "index": 5,
+    "name": "Merge Intervals",
+    "slug": "merge-intervals"
+  },
+  "title": "Conflicting Appointments",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "5. Pattern Merge Intervals/5. Conflicting Appointments (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass Interval {\n  int start;\n  int end;\n\n  public Interval(int start, int end) {\n    this.start = start;\n    this.end = end;\n  }\n};\n\nclass ConflictingAppointments {\n\n  public static boolean canAttendAllAppointments(Interval[] intervals) {\n    // TODO: Write your code here\n    return true;\n  }\n\n  public static void main(String[] args) {\n    Interval[] intervals = { new Interval(1, 4), new Interval(2, 5), new Interval(7, 9) };\n    boolean result = ConflictingAppointments.canAttendAllAppointments(intervals);\n    System.out.println(\"Can attend all appointments: \" + result);\n\n    Interval[] intervals1 = { new Interval(6, 7), new Interval(2, 4), new Interval(8, 12) };\n    result = ConflictingAppointments.canAttendAllAppointments(intervals1);\n    System.out.println(\"Can attend all appointments: \" + result);\n\n    Interval[] intervals2 = { new Interval(4, 5), new Interval(2, 3), new Interval(3, 6) };\n    result = ConflictingAppointments.canAttendAllAppointments(intervals2);\n    System.out.println(\"Can attend all appointments: \" + result);\n  }\n}\n",
+    "python3": "def can_attend_all_appointments(intervals):\n  # TODO: Write your code here\n  return False\n\n\ndef main():\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[1, 4], [2, 5], [7, 9]])))\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[6, 7], [2, 4], [8, 12]])))\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[4, 5], [2, 3], [3, 6]])))\n\n\nmain()\n",
+    "javascript": "class Interval {\n  constructor(start, end) {\n    this.start = start;\n    this.end = end;\n  }\n\n  print_interval() {\n    process.stdout.write(`[${this.start}, ${this.end}]`);\n  }\n}\n\nconst can_attend_all_appointments = function(intervals) {\n  // TODO: Write your code here\n  return false;\n};\n\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(1, 4),\n  new Interval(2, 5),\n  new Interval(7, 9),\n])}`);\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(6, 7),\n  new Interval(2, 4),\n  new Interval(8, 12),\n])}`);\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(4, 5),\n  new Interval(2, 3),\n  new Interval(3, 6),\n])}`);\n",
+    "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass Interval {\n public:\n  int start;\n  int end;\n\n  Interval(int start, int end) {\n    this->start = start;\n    this->end = end;\n  }\n};\n\nclass ConflictingAppointments {\n public:\n  static bool canAttendAllAppointments(vector<Interval>& intervals) {\n    // TODO: Write your code here\n    return true;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<Interval> intervals = {{1, 4}, {2, 5}, {7, 9}};\n  bool result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n\n  intervals = {{6, 7}, {2, 4}, {8, 12}};\n  result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n\n  intervals = {{4, 5}, {2, 3}, {3, 6}};\n  result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Appointments: [[1,4], [2,5], [7,9]]\nOutput: false\nExplanation: Since [1,4] and [2,5] overlap, a person cannot attend both of these appointments.",
+      "input": null,
+      "output": "false",
+      "explanation": "Since [1,4] and [2,5] overlap, a person cannot attend both of these appointments."
+    },
+    {
+      "raw": "Appointments: [[6,7], [2,4], [8,12]]\nOutput: true\nExplanation: None of the appointments overlap, therefore a person can attend all of them.",
+      "input": null,
+      "output": "true",
+      "explanation": "None of the appointments overlap, therefore a person can attend all of them."
+    },
+    {
+      "raw": "Appointments: [[4,5], [2,3], [3,6]]\nOutput: false\nExplanation: Since [4,5] and [3,6] overlap, a person cannot attend both of these appointments.",
+      "input": null,
+      "output": "false",
+      "explanation": "Since [4,5] and [3,6] overlap, a person cannot attend both of these appointments."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"4c8af348f32b66a83565ab6c84df23a8\">Given an array of intervals representing ‘N’ appointments, find out if a person can <strong>attend all the appointments</strong>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Can attend all appointments: true\nCan attend all appointments: true\nCan attend all appointments: true\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Interval {\n  int start;\n  int end;\n\n  public Interval(int start, int end) {\n    this.start = start;\n    this.end = end;\n  }\n};\n\nclass ConflictingAppointments {\n\n  public static boolean canAttendAllAppointments(Interval[] intervals) {\n    // TODO: Write your code here\n    return true;\n  }\n\n  public static void main(String[] args) {\n    Interval[] intervals = { new Interval(1, 4), new Interval(2, 5), new Interval(7, 9) };\n    boolean result = ConflictingAppointments.canAttendAllAppointments(intervals);\n    System.out.println(\"Can attend all appointments: \" + result);\n\n    Interval[] intervals1 = { new Interval(6, 7), new Interval(2, 4), new Interval(8, 12) };\n    result = ConflictingAppointments.canAttendAllAppointments(intervals1);\n    System.out.println(\"Can attend all appointments: \" + result);\n\n    Interval[] intervals2 = { new Interval(4, 5), new Interval(2, 3), new Interval(3, 6) };\n    result = ConflictingAppointments.canAttendAllAppointments(intervals2);\n    System.out.println(\"Can attend all appointments: \" + result);\n  }\n}\n",
+        "python3": "def can_attend_all_appointments(intervals):\n  # TODO: Write your code here\n  return False\n\n\ndef main():\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[1, 4], [2, 5], [7, 9]])))\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[6, 7], [2, 4], [8, 12]])))\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[4, 5], [2, 3], [3, 6]])))\n\n\nmain()\n",
+        "javascript": "class Interval {\n  constructor(start, end) {\n    this.start = start;\n    this.end = end;\n  }\n\n  print_interval() {\n    process.stdout.write(`[${this.start}, ${this.end}]`);\n  }\n}\n\nconst can_attend_all_appointments = function(intervals) {\n  // TODO: Write your code here\n  return false;\n};\n\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(1, 4),\n  new Interval(2, 5),\n  new Interval(7, 9),\n])}`);\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(6, 7),\n  new Interval(2, 4),\n  new Interval(8, 12),\n])}`);\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(4, 5),\n  new Interval(2, 3),\n  new Interval(3, 6),\n])}`);\n",
+        "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass Interval {\n public:\n  int start;\n  int end;\n\n  Interval(int start, int end) {\n    this->start = start;\n    this->end = end;\n  }\n};\n\nclass ConflictingAppointments {\n public:\n  static bool canAttendAllAppointments(vector<Interval>& intervals) {\n    // TODO: Write your code here\n    return true;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<Interval> intervals = {{1, 4}, {2, 5}, {7, 9}};\n  bool result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n\n  intervals = {{6, 7}, {2, 4}, {8, 12}};\n  result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n\n  intervals = {{4, 5}, {2, 3}, {3, 6}};\n  result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"867a15c26d07afccf48cab9df1bdef0e\">The problem follows the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5652017242439680/\" target=\"_blank\">Merge Intervals</a> pattern. We can sort all the intervals by start time and then check if any two intervals overlap. A person will not be able to attend all appointments if any two appointments overlap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Can attend all appointments: false\nCan attend all appointments: true\nCan attend all appointments: false\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Interval {\n  int start;\n  int end;\n\n  public Interval(int start, int end) {\n    this.start = start;\n    this.end = end;\n  }\n};\n\nclass ConflictingAppointments {\n\n  public static boolean canAttendAllAppointments(Interval[] intervals) {\n    // sort the intervals by start time\n    Arrays.sort(intervals, (a, b) -> Integer.compare(a.start, b.start));\n\n    // find any overlapping appointment\n    for (int i = 1; i < intervals.length; i++) {\n      if (intervals[i].start < intervals[i - 1].end) {\n        // please note the comparison above, it is \"<\" and not \"<=\"\n        // while merging we needed \"<=\" comparison, as we will be merging the two\n        // intervals having condition \"intervals[i].start == intervals[i - 1].end\" but\n        // such intervals don't represent conflicting appointments as one starts right\n        // after the other\n        return false;\n      }\n    }\n    return true;\n  }\n\n  public static void main(String[] args) {\n    Interval[] intervals = { new Interval(1, 4), new Interval(2, 5), new Interval(7, 9) };\n    boolean result = ConflictingAppointments.canAttendAllAppointments(intervals);\n    System.out.println(\"Can attend all appointments: \" + result);\n\n    Interval[] intervals1 = { new Interval(6, 7), new Interval(2, 4), new Interval(8, 12) };\n    result = ConflictingAppointments.canAttendAllAppointments(intervals1);\n    System.out.println(\"Can attend all appointments: \" + result);\n\n    Interval[] intervals2 = { new Interval(4, 5), new Interval(2, 3), new Interval(3, 6) };\n    result = ConflictingAppointments.canAttendAllAppointments(intervals2);\n    System.out.println(\"Can attend all appointments: \" + result);\n  }\n}\n",
+        "python3": "def can_attend_all_appointments(intervals):\n  intervals.sort(key=lambda x: x[0])\n  start, end = 0, 1\n  for i in range(1, len(intervals)):\n    if intervals[i][start] < intervals[i-1][end]:\n      # please note the comparison above, it is \"<\" and not \"<=\"\n      # while merging we needed \"<=\" comparison, as we will be merging the two\n      # intervals having condition \"intervals[i][start] == intervals[i - 1][end]\" but\n      # such intervals don't represent conflicting appointments as one starts right\n      # after the other\n      return False\n  return True\n\n\ndef main():\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[1, 4], [2, 5], [7, 9]])))\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[6, 7], [2, 4], [8, 12]])))\n  print(\"Can attend all appointments: \" + str(can_attend_all_appointments([[4, 5], [2, 3], [3, 6]])))\n\n\nmain()\n",
+        "javascript": "class Interval {\n  constructor(start, end) {\n    this.start = start;\n    this.end = end;\n  }\n\n  print_interval() {\n    process.stdout.write(`[${this.start}, ${this.end}]`);\n  }\n}\n\nfunction can_attend_all_appointments(intervals) {\n  intervals.sort((a, b) => a.start - b.start);\n  for (i = 1; i < intervals.length; i++) {\n    if (intervals[i].start < intervals[i - 1].end) {\n      // please note the comparison above, it is \"<\" and not \"<=\"\n      // while merging we needed \"<=\" comparison, as we will be merging the two\n      // intervals having condition \"intervals[i][start] === intervals[i - 1][end]\" but\n      // such intervals don't represent conflicting appointments as one starts right\n      // after the other\n      return false;\n    }\n  }\n  return true;\n}\n\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(1, 4),\n  new Interval(2, 5),\n  new Interval(7, 9),\n])}`);\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(6, 7),\n  new Interval(2, 4),\n  new Interval(8, 12),\n])}`);\n\nconsole.log(`Can attend all appointments: ${can_attend_all_appointments([\n  new Interval(4, 5),\n  new Interval(2, 3),\n  new Interval(3, 6),\n])}`);",
+        "cpp": "using namespace std;\n\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nclass Interval {\n public:\n  int start;\n  int end;\n\n  Interval(int start, int end) {\n    this->start = start;\n    this->end = end;\n  }\n};\n\nclass ConflictingAppointments {\n public:\n  static bool canAttendAllAppointments(vector<Interval>& intervals) {\n    // sort the intervals by start time\n    sort(intervals.begin(), intervals.end(),\n         [](const Interval& x, const Interval& y) { return x.start < y.start; });\n\n    // find any overlapping appointment\n    for (int i = 1; i < intervals.size(); i++) {\n      if (intervals[i].start < intervals[i - 1].end) {\n        // please note the comparison above, it is \"<\" and not \"<=\"\n        // while merging we needed \"<=\" comparison, as we will be merging the two\n        // intervals having condition \"intervals[i].start == intervals[i - 1].end\" but\n        // such intervals don't represent conflicting appointments as one starts right\n        // after the other\n        return false;\n      }\n    }\n    return true;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<Interval> intervals = {{1, 4}, {2, 5}, {7, 9}};\n  bool result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n\n  intervals = {{6, 7}, {2, 4}, {8, 12}};\n  result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n\n  intervals = {{4, 5}, {2, 3}, {3, 6}};\n  result = ConflictingAppointments::canAttendAllAppointments(intervals);\n  cout << \"Can attend all appointments: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"439b2c1dd34c1b65d4d920433eba54aa\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>, where ‘N’ is the total number of appointments. Though we are iterating the intervals only once, our algorithm will take <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N * logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> since we need to sort them in the beginning.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"1534d56bc7f984aa7a4e36f85ece27cd\">The space complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>, which we need for sorting. For Java, <code>Arrays.sort()</code> uses <a href=\"https://en.wikipedia.org/wiki/Timsort\" target=\"_blank\">Timsort</a>, which needs <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> space.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "similar-problems",
+      "title": "Similar Problems",
+      "html": "<p data-id=\"fd19c9320075e174869e431f0f0cf8e6\"><strong>Problem 1:</strong> Given a list of appointments, find all the conflicting appointments.</p>\n<p data-id=\"81eeab9506186e2dca8faefa78d54067\"><strong>Example:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Conflicting Appointments (medium) -.html",
+      "1.2Conflicting Appointments (medium) -.html",
+      "1.3Conflicting Appointments (medium) -.html",
+      "1.4Conflicting Appointments (medium) -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

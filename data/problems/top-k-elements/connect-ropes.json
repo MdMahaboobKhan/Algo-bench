@@ -1,0 +1,117 @@
+{
+  "id": "top-k-elements/connect-ropes",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "Connect Ropes",
+  "difficulty": "easy",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/5. Connect Ropes (easy)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass ConnectRopes {\n\n  public static int minimumCostToConnectRopes(int[] ropeLengths) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int result = ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n    result = ConnectRopes.minimumCostToConnectRopes(new int[] { 3, 4, 5, 6 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n    result = ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5, 2 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n  }\n}\n",
+    "python3": "def minimum_cost_to_connect_ropes(ropeLengths):\n  result = []\n  # TODO: Write your code here\n  return result\n\n\ndef main():\n\n  print(\"Minimum cost to connect ropes: \" +\n          str(minimum_cost_to_connect_ropes([1, 3, 11, 5])))\n  print(\"Minimum cost to connect ropes: \" +\n        str(minimum_cost_to_connect_ropes([3, 4, 5, 6])))\n  print(\"Minimum cost to connect ropes: \" +\n        str(minimum_cost_to_connect_ropes([1, 3, 11, 5, 2])))\n\n\nmain()\n\n",
+    "javascript": "const minimum_cost_to_connect_ropes = function(ropeLengths) {\n  result = [];\n  // TODO: Write your code here\n  return result;\n};\n\n\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([1, 3, 11, 5])}`)\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([3, 4, 5, 6])}`);\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([1, 3, 11, 5, 2])}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass ConnectRopes {\n public:\n  static int minimumCostToConnectRopes(const vector<int> &ropeLengths) {\n    int result = 0;\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = ConnectRopes::minimumCostToConnectRopes(vector<int>{1, 3, 11, 5});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n  result = ConnectRopes::minimumCostToConnectRopes(vector<int>{3, 4, 5, 6});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n  result = ConnectRopes::minimumCostToConnectRopes(vector<int>{1, 3, 11, 5, 2});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 3, 11, 5]\nOutput: 33\nExplanation: First connect 1+3(=4), then 4+5(=9), and then 9+11(=20). So the total cost is 33 (4+9+20)",
+      "input": "[1, 3, 11, 5]",
+      "output": "33",
+      "explanation": "First connect 1+3(=4), then 4+5(=9), and then 9+11(=20). So the total cost is 33 (4+9+20)"
+    },
+    {
+      "raw": "Input: [3, 4, 5, 6]\nOutput: 36\nExplanation: First connect 3+4(=7), then 5+6(=11), 7+11(=18). Total cost is 36 (7+11+18)",
+      "input": "[3, 4, 5, 6]",
+      "output": "36",
+      "explanation": "First connect 3+4(=7), then 5+6(=11), 7+11(=18). Total cost is 36 (7+11+18)"
+    },
+    {
+      "raw": "Input: [1, 3, 11, 5, 2]\nOutput: 42\nExplanation: First connect 1+2(=3), then 3+3(=6), 6+5(=11), 11+11(=22). Total cost is 42 (3+6+11+22)",
+      "input": "[1, 3, 11, 5, 2]",
+      "output": "42",
+      "explanation": "First connect 1+2(=3), then 3+3(=6), 6+5(=11), 11+11(=22). Total cost is 42 (3+6+11+22)"
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"7c18eb61847bf28e7a54aba82aa852d0\">Given ‘N’ ropes with different lengths, we need to connect these ropes into one big rope with minimum cost. The cost of connecting two ropes is equal to the sum of their lengths.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Minimum cost to connect ropes: -1\nMinimum cost to connect ropes: -1\nMinimum cost to connect ropes: -1\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass ConnectRopes {\n\n  public static int minimumCostToConnectRopes(int[] ropeLengths) {\n    // TODO: Write your code here\n    return -1;\n  }\n\n  public static void main(String[] args) {\n    int result = ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n    result = ConnectRopes.minimumCostToConnectRopes(new int[] { 3, 4, 5, 6 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n    result = ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5, 2 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n  }\n}\n",
+        "python3": "def minimum_cost_to_connect_ropes(ropeLengths):\n  result = []\n  # TODO: Write your code here\n  return result\n\n\ndef main():\n\n  print(\"Minimum cost to connect ropes: \" +\n          str(minimum_cost_to_connect_ropes([1, 3, 11, 5])))\n  print(\"Minimum cost to connect ropes: \" +\n        str(minimum_cost_to_connect_ropes([3, 4, 5, 6])))\n  print(\"Minimum cost to connect ropes: \" +\n        str(minimum_cost_to_connect_ropes([1, 3, 11, 5, 2])))\n\n\nmain()\n\n",
+        "javascript": "const minimum_cost_to_connect_ropes = function(ropeLengths) {\n  result = [];\n  // TODO: Write your code here\n  return result;\n};\n\n\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([1, 3, 11, 5])}`)\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([3, 4, 5, 6])}`);\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([1, 3, 11, 5, 2])}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass ConnectRopes {\n public:\n  static int minimumCostToConnectRopes(const vector<int> &ropeLengths) {\n    int result = 0;\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = ConnectRopes::minimumCostToConnectRopes(vector<int>{1, 3, 11, 5});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n  result = ConnectRopes::minimumCostToConnectRopes(vector<int>{3, 4, 5, 6});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n  result = ConnectRopes::minimumCostToConnectRopes(vector<int>{1, 3, 11, 5, 2});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"48431d14a68fc59240ae457996d0c790\">In this problem, following a greedy approach to connect the smallest ropes first will ensure the lowest cost. We can use a <strong>Min Heap</strong> to find the smallest ropes following a similar approach as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5696381570252800/\" target=\"_blank\">Kth Smallest Number</a>. Once we connect two ropes, we need to insert the resultant rope back in the <strong>Min Heap</strong> so that we can connect it with the remaining ropes.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Minimum cost to connect ropes: 33\nMinimum cost to connect ropes: 36\nMinimum cost to connect ropes: 42\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass ConnectRopes {\n\n  public static int minimumCostToConnectRopes(int[] ropeLengths) {\n    PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);\n    // add all ropes to the min heap\n    for (int i = 0; i < ropeLengths.length; i++)\n      minHeap.add(ropeLengths[i]);\n\n    // go through the values of the heap, in each step take top (lowest) rope lengths from the min heap\n    // connect them and push the result back to the min heap.\n    // keep doing this until the heap is left with only one rope\n    int result = 0, temp = 0;\n    while (minHeap.size() > 1) {\n      temp = minHeap.poll() + minHeap.poll();\n      result += temp;\n      minHeap.add(temp);\n    }\n\n    return result;\n  }\n\n  public static void main(String[] args) {\n    int result = ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n    result = ConnectRopes.minimumCostToConnectRopes(new int[] { 3, 4, 5, 6 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n    result = ConnectRopes.minimumCostToConnectRopes(new int[] { 1, 3, 11, 5, 2 });\n    System.out.println(\"Minimum cost to connect ropes: \" + result);\n  }\n}\n",
+        "python3": "from heapq import *\n\n\ndef minimum_cost_to_connect_ropes(ropeLengths):\n  minHeap = []\n  # add all ropes to the min heap\n  for i in ropeLengths:\n    heappush(minHeap, i)\n\n  # go through the values of the heap, in each step take top (lowest) rope lengths from the min heap\n  # connect them and push the result back to the min heap.\n  # keep doing this until the heap is left with only one rope\n  result, temp = 0, 0\n  while len(minHeap) > 1:\n    temp = heappop(minHeap) + heappop(minHeap)\n    result += temp\n    heappush(minHeap, temp)\n\n  return result\n\n\ndef main():\n\n  print(\"Minimum cost to connect ropes: \" +\n        str(minimum_cost_to_connect_ropes([1, 3, 11, 5])))\n  print(\"Minimum cost to connect ropes: \" +\n        str(minimum_cost_to_connect_ropes([3, 4, 5, 6])))\n  print(\"Minimum cost to connect ropes: \" +\n        str(minimum_cost_to_connect_ropes([1, 3, 11, 5, 2])))\n\nmain()\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nfunction minimum_cost_to_connect_ropes(ropeLengths) {\n  // add all ropes to the min heap\n  const minHeap = new Heap(ropeLengths, null, ((a, b) => b - a));\n\n  // go through the values of the heap, in each step take top (i.e., lowest) rope lengths from the min heap\n  // connect them and push the result back to the min heap.\n  // keep doing this until the heap is left with only one rope\n  let result = 0;\n  while (minHeap.length > 1) {\n    const temp = minHeap.pop() + minHeap.pop();\n    result += temp;\n    minHeap.push(temp);\n  }\n\n  return result;\n}\n\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([1, 3, 11, 5])}`);\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([3, 4, 5, 6])}`);\nconsole.log(`Minimum cost to connect ropes: ${minimum_cost_to_connect_ropes([1, 3, 11, 5, 2])}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass ConnectRopes {\n public:\n  static int minimumCostToConnectRopes(const vector<int> &ropeLengths) {\n    priority_queue<int, vector<int>, greater<int>> minHeap;\n    // add all ropes to the min heap\n    for (int i = 0; i < ropeLengths.size(); i++) {\n      minHeap.push(ropeLengths[i]);\n    }\n\n    // go through the values of the heap, in each step take top (lowest) rope lengths from the min\n    // heap connect them and push the result back to the min heap. keep doing this until the heap is\n    // left with only one rope\n    int result = 0, temp = 0;\n    while (minHeap.size() > 1) {\n      temp = minHeap.top();\n      minHeap.pop();\n      temp += minHeap.top();\n      minHeap.pop();\n      result += temp;\n      minHeap.push(temp);\n    }\n\n    return result;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  int result = ConnectRopes::minimumCostToConnectRopes(vector<int>{1, 3, 11, 5});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n  result = ConnectRopes::minimumCostToConnectRopes(vector<int>{3, 4, 5, 6});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n  result = ConnectRopes::minimumCostToConnectRopes(vector<int>{1, 3, 11, 5, 2});\n  cout << \"Minimum cost to connect ropes: \" << result << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"acaed4547eb8b71d1da688e95b6c4c8d\">Given ‘N’ ropes, we need <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> to insert all the ropes in the heap. In each step, while processing the heap, we take out two elements from the heap and insert one. This means we will have a total of ‘N’ steps, having a total time complexity of <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N*logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"129ae26a85235e05f1048ca63fc436fe\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> because we need to store all the ropes in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Connect Ropes (easy).html",
+      "1.2Connect Ropes (easy).html",
+      "1.3Connect Ropes (easy).html",
+      "1.4Connect Ropes (easy).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

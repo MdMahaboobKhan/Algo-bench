@@ -1,0 +1,111 @@
+{
+  "id": "top-k-elements/k-closest-points-to-the-origin",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "_K_ Closest Points to the Origin",
+  "difficulty": "easy",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/4. _K_ Closest Points to the Origin (easy)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass Point {\n  int x;\n  int y;\n\n  public Point(int x, int y) {\n    this.x = x;\n    this.y = y;\n  }\n\n  public int distFromOrigin() {\n    // ignoring sqrt\n    return (x * x) + (y * y);\n  }\n}\n\nclass KClosestPointsToOrigin {\n\n  public static List<Point> findClosestPoints(Point[] points, int k) {\n    ArrayList<Point> result = new ArrayList<>();\n    // TODO: Write your code here\n    return result;\n  }\n\n  public static void main(String[] args) {\n    Point[] points = new Point[] { new Point(1, 3), new Point(3, 4), new Point(2, -1) };\n    List<Point> result = KClosestPointsToOrigin.findClosestPoints(points, 2);\n    System.out.print(\"Here are the k points closest the origin: \");\n    for (Point p : result)\n      System.out.print(\"[\" + p.x + \" , \" + p.y + \"] \");\n  }\n}\n",
+    "python3": "class Point:\n\n  def __init__(self, x, y):\n    self.x = x\n    self.y = y\n\n  def print_point(self):\n    print(\"[\" + str(self.x) + \", \" + str(self.y) + \"] \", end='')\n\ndef find_closest_points(points, k):\n  result = []\n  # TODO: Write your code here\n  return result\n\n\ndef main():\n\n  result = find_closest_points([Point(1, 3), Point(3, 4), Point(2, -1)], 2)\n  print(\"Here are the k points closest the origin: \", end='')\n  for point in result:\n    point.print_point()\n\n\nmain()\n\n\n",
+    "javascript": "class Point {\n\n  constructor(x, y) {\n    this.x = x;\n    this.y = y;\n  }\n\n  get_point() {\n    return \"[\" + this.x + \", \" + this.y + \"] \";\n  }\n};\n\nconst find_closest_points = function(points, k) {\n  result = [];\n  // TODO: Write your code here\n  return result;\n};\n\n\npoints = find_closest_points([new Point(1, 3), new Point(3, 4), new Point(2, -1)], 2)\nresult = \"Here are the k points closest the origin: \";\nfor (i=0; i < points.length; i++)\n  result += points[i].get_point();\nconsole.log(result);\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass Point {\n public:\n  int x = 0;\n  int y = 0;\n\n  Point(int x, int y) {\n    this->x = x;\n    this->y = y;\n  }\n\n  int distFromOrigin() const {\n    // ignoring sqrt\n    return (x * x) + (y * y);\n  }\n};\n\nclass KClosestPointsToOrigin {\n public:\n  static vector<Point> findClosestPoints(const vector<Point>& points, int k) {\n    vector<Point> result;\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<Point> maxHeap = KClosestPointsToOrigin::findClosestPoints({{1, 3}, {3, 4}, {2, -1}}, 2);\n  cout << \"Here are the k points closest the origin: \";\n  for (auto p : maxHeap) {\n    cout << \"[\" << p.x << \" , \" << p.y << \"] \";\n  }\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: points = [[1,2],[1,3]], K = 1\nOutput: [[1,2]]\nExplanation: The Euclidean distance between (1, 2) and the origin is sqrt(5).\nThe Euclidean distance between (1, 3) and the origin is sqrt(10).\nSince sqrt(5) < sqrt(10), therefore (1, 2) is closer to the origin.",
+      "input": "points = [[1,2],[1,3]], K = 1",
+      "output": "[[1,2]]",
+      "explanation": "The Euclidean distance between (1, 2) and the origin is sqrt(5).\nThe Euclidean distance between (1, 3) and the origin is sqrt(10).\nSince sqrt(5) < sqrt(10), therefore (1, 2) is closer to the origin."
+    },
+    {
+      "raw": "Input: point = [[1, 3], [3, 4], [2, -1]], K = 2\nOutput: [[1, 3], [2, -1]]",
+      "input": "point = [[1, 3], [3, 4], [2, -1]], K = 2",
+      "output": "[[1, 3], [2, -1]]",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"49cef2766fbff940ebc77c6486bbc781\">Given an array of points in the a <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mn>2</mn><mi>D</mi></mrow><annotation encoding=\"application/x-tex\">2D</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.68333em\"></span><span class=\"strut bottom\" style=\"height:0.68333em;vertical-align:0em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathrm\">2</span><span class=\"mord mathit\" style=\"margin-right:0.02778em\">D</span></span></span></span> plane, find ‘K’ closest points to the origin.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Here are the k points closest the origin: </p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Point {\n  int x;\n  int y;\n\n  public Point(int x, int y) {\n    this.x = x;\n    this.y = y;\n  }\n\n  public int distFromOrigin() {\n    // ignoring sqrt\n    return (x * x) + (y * y);\n  }\n}\n\nclass KClosestPointsToOrigin {\n\n  public static List<Point> findClosestPoints(Point[] points, int k) {\n    ArrayList<Point> result = new ArrayList<>();\n    // TODO: Write your code here\n    return result;\n  }\n\n  public static void main(String[] args) {\n    Point[] points = new Point[] { new Point(1, 3), new Point(3, 4), new Point(2, -1) };\n    List<Point> result = KClosestPointsToOrigin.findClosestPoints(points, 2);\n    System.out.print(\"Here are the k points closest the origin: \");\n    for (Point p : result)\n      System.out.print(\"[\" + p.x + \" , \" + p.y + \"] \");\n  }\n}\n",
+        "python3": "class Point:\n\n  def __init__(self, x, y):\n    self.x = x\n    self.y = y\n\n  def print_point(self):\n    print(\"[\" + str(self.x) + \", \" + str(self.y) + \"] \", end='')\n\ndef find_closest_points(points, k):\n  result = []\n  # TODO: Write your code here\n  return result\n\n\ndef main():\n\n  result = find_closest_points([Point(1, 3), Point(3, 4), Point(2, -1)], 2)\n  print(\"Here are the k points closest the origin: \", end='')\n  for point in result:\n    point.print_point()\n\n\nmain()\n\n\n",
+        "javascript": "class Point {\n\n  constructor(x, y) {\n    this.x = x;\n    this.y = y;\n  }\n\n  get_point() {\n    return \"[\" + this.x + \", \" + this.y + \"] \";\n  }\n};\n\nconst find_closest_points = function(points, k) {\n  result = [];\n  // TODO: Write your code here\n  return result;\n};\n\n\npoints = find_closest_points([new Point(1, 3), new Point(3, 4), new Point(2, -1)], 2)\nresult = \"Here are the k points closest the origin: \";\nfor (i=0; i < points.length; i++)\n  result += points[i].get_point();\nconsole.log(result);\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass Point {\n public:\n  int x = 0;\n  int y = 0;\n\n  Point(int x, int y) {\n    this->x = x;\n    this->y = y;\n  }\n\n  int distFromOrigin() const {\n    // ignoring sqrt\n    return (x * x) + (y * y);\n  }\n};\n\nclass KClosestPointsToOrigin {\n public:\n  static vector<Point> findClosestPoints(const vector<Point>& points, int k) {\n    vector<Point> result;\n    // TODO: Write your code here\n    return result;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<Point> maxHeap = KClosestPointsToOrigin::findClosestPoints({{1, 3}, {3, 4}, {2, -1}}, 2);\n  cout << \"Here are the k points closest the origin: \";\n  for (auto p : maxHeap) {\n    cout << \"[\" << p.x << \" , \" << p.y << \"] \";\n  }\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"62873dc4bb953c842ef007de5a5ad5c9\">The <a href=\"https://en.wikipedia.org/wiki/Euclidean_distance\" target=\"_blank\">Euclidean distance</a> of a point P(x,y) from the origin can be calculated through the following formula:</p>\n<p data-id=\"82358092f8deb586546ce30d94d9ea3b\"><span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding=\"application/x-tex\">\\sqrt{x^2 + y^2}\n</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:1.006714em\"></span><span class=\"strut bottom\" style=\"height:1.24001em;vertical-align:-0.2332959999999999em\"></span><span class=\"base displaystyle textstyle uncramped\"><span class=\"sqrt mord\"><span class=\"sqrt-sign\" style=\"top:-0.1167140000000001em\"><span class=\"style-wrap reset-textstyle textstyle uncramped\"><span class=\"delimsizing size1\">√</span></span></span><span class=\"vlist\"><span style=\"top:0em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span><span class=\"mord displaystyle textstyle cramped\"><span class=\"mord\"><span class=\"mord mathit\">x</span><span class=\"vlist\"><span style=\"top:-0.289em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle cramped\"><span class=\"mord mathrm\">2</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span><span class=\"mbin\">+</span><span class=\"mord\"><span class=\"mord mathit\" style=\"margin-right:0.03588em\">y</span><span class=\"vlist\"><span style=\"top:-0.289em;margin-right:0.05em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span><span class=\"reset-textstyle scriptstyle cramped\"><span class=\"mord mathrm\">2</span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em\">​</span></span>​</span></span></span></span></span><span style=\"top:-0.926714em\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span><span class=\"reset-textstyle textstyle uncramped sqrt-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em\">​</span></span>​</span></span></span></span></span></span></span></p>\n<p data-id=\"5dc2e7c95c250a54b0c913306bf0c2b7\">This problem follows the <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5728885882748928/\" target=\"_blank\">Top ‘K’ Numbers</a> pattern. The only difference in this problem is that we need to find the closest point (to the origin) as compared to finding the largest numbers.</p>\n<p data-id=\"afba641c775d648c493066f4b932245c\">Following a similar approach, we can use a <strong>Max Heap</strong> to find ‘K’ points closest to the origin. While iterating through all points, if a point (say ‘P’) is closer to the origin than the top point of the max-heap, we will remove that top point from the heap and add ‘P’ to always keep the closest points in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Here are the k points closest the origin: [1 , 3] [2 , -1] </p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass Point {\n  int x;\n  int y;\n\n  public Point(int x, int y) {\n    this.x = x;\n    this.y = y;\n  }\n\n  public int distFromOrigin() {\n    // ignoring sqrt\n    return (x * x) + (y * y);\n  }\n}\n\nclass KClosestPointsToOrigin {\n\n  public static List<Point> findClosestPoints(Point[] points, int k) {\n    PriorityQueue<Point> maxHeap = new PriorityQueue<>((p1, p2) -> p2.distFromOrigin() - p1.distFromOrigin());\n    // put first 'k' points in the max heap\n    for (int i = 0; i < k; i++)\n      maxHeap.add(points[i]);\n\n    // go through the remaining points of the input array, if a point is closer to the origin than the top point\n    // of the max-heap, remove the top point from heap and add the point from the input array\n    for (int i = k; i < points.length; i++) {\n      if (points[i].distFromOrigin() < maxHeap.peek().distFromOrigin()) {\n        maxHeap.poll();\n        maxHeap.add(points[i]);\n      }\n    }\n\n    // the heap has 'k' points closest to the origin, return them in a list\n    return new ArrayList<>(maxHeap);\n  }\n\n  public static void main(String[] args) {\n    Point[] points = new Point[] { new Point(1, 3), new Point(3, 4), new Point(2, -1) };\n    List<Point> result = KClosestPointsToOrigin.findClosestPoints(points, 2);\n    System.out.print(\"Here are the k points closest the origin: \");\n    for (Point p : result)\n      System.out.print(\"[\" + p.x + \" , \" + p.y + \"] \");\n  }\n}\n",
+        "python3": "from __future__ import print_function\nfrom heapq import *\n\n\nclass Point:\n\n  def __init__(self, x, y):\n    self.x = x\n    self.y = y\n\n  # used for max-heap\n  def __lt__(self, other):\n    return self.distance_from_origin() > other.distance_from_origin()\n\n  def distance_from_origin(self):\n    # ignoring sqrt to calculate the distance\n    return (self.x * self.x) + (self.y * self.y)\n\n  def print_point(self):\n    print(\"[\" + str(self.x) + \", \" + str(self.y) + \"] \", end='')\n\n\ndef find_closest_points(points, k):\n  maxHeap = []\n  # put first 'k' points in the max heap\n  for i in range(k):\n    heappush(maxHeap, points[i])\n\n  # go through the remaining points of the input array, if a point is closer to the origin than the top point\n  # of the max-heap, remove the top point from heap and add the point from the input array\n  for i in range(k, len(points)):\n    if points[i].distance_from_origin() < maxHeap[0].distance_from_origin():\n      heappop(maxHeap)\n      heappush(maxHeap, points[i])\n\n  # the heap has 'k' points closest to the origin, return them in a list\n  return list(maxHeap)\n\n\ndef main():\n\n  result = find_closest_points([Point(1, 3), Point(3, 4), Point(2, -1)], 2)\n  print(\"Here are the k points closest the origin: \", end='')\n  for point in result:\n    point.print_point()\n\n\nmain()\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nclass Point {\n  constructor(x, y) {\n    this.x = x;\n    this.y = y;\n  }\n\n  // used for max-heap\n  compare(other) {\n    return this.distance_from_origin() - other.distance_from_origin();\n  }\n\n  distance_from_origin() {\n    // ignoring sqrt to calculate the distance\n    return (this.x * this.x) + (this.y * this.y);\n  }\n\n  print_point() {\n    process.stdout.write(`[${this.x}, ${this.y}] `);\n  }\n}\n\nfunction find_closest_points(points, k) {\n  const maxHeap = new Heap([], null, ((a, b) => a.compare(b)));\n  // put first 'k' points in the max heap\n  for (i = 0; i < k; i++) {\n    maxHeap.push(points[i]);\n  }\n\n  // go through the remaining points of the input array, if a point is closer to the origin than the top point\n  // of the max-heap, remove the top point from heap and add the point from the input array\n  for (i = k; i < points.length; i++) {\n    if (points[i].distance_from_origin() < maxHeap.peek().distance_from_origin()) {\n      maxHeap.pop();\n      maxHeap.push(points[i]);\n    }\n  }\n  // the heap has 'k' points closest to the origin, return them in a list\n  return maxHeap.toArray();\n}\n\n\nconst result = find_closest_points([new Point(1, 3), new Point(3, 4), new Point(2, -1)], 2);\nprocess.stdout.write('Here are the k points closest the origin: ');\nresult.forEach(p => p.print_point());",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <vector>\n\nclass Point {\n public:\n  int x = 0;\n  int y = 0;\n\n  Point(int x, int y) {\n    this->x = x;\n    this->y = y;\n  }\n\n  int distFromOrigin() const {\n    // ignoring sqrt\n    return (x * x) + (y * y);\n  }\n\n  const bool operator<(const Point& p) { return p.distFromOrigin() > this->distFromOrigin(); }\n};\n\nclass KClosestPointsToOrigin {\n public:\n  static vector<Point> findClosestPoints(const vector<Point>& points, int k) {\n    // put first 'k' points in the vector\n    vector<Point> maxHeap(points.begin(), points.begin() + k);\n    make_heap(maxHeap.begin(), maxHeap.end());\n\n    // go through the remaining points of the input array, if a point is closer to the origin than\n    // the top point of the max-heap, remove the top point from heap and add the point from the\n    // input array\n    for (int i = k; i < points.size(); i++) {\n      if (points[i].distFromOrigin() < maxHeap.front().distFromOrigin()) {\n        pop_heap(maxHeap.begin(), maxHeap.end());\n        maxHeap.pop_back();\n        maxHeap.push_back(points[i]);\n        push_heap(maxHeap.begin(), maxHeap.end());\n      }\n    }\n\n    // the heap has 'k' points closest to the origin\n    return maxHeap;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<Point> maxHeap = KClosestPointsToOrigin::findClosestPoints({{1, 3}, {3, 4}, {2, -1}}, 2);\n  cout << \"Here are the k points closest the origin: \";\n  for (auto p : maxHeap) {\n    cout << \"[\" << p.x << \" , \" << p.y << \"] \";\n  }\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"4c5b149e1571d4c15b0dc4092e80c803\">The time complexity of this algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mo>(</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">(N*logK)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span> as we iterating all points and pushing them into the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"a5171d357d045bbbb12b3be79c427031\">The space complexity will be O(K) because we need to store ‘K’ point in the heap.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1_K_ Closest Points to the Origin (easy) -.html",
+      "1.2_K_ Closest Points to the Origin (easy) -.html",
+      "1.3_K_ Closest Points to the Origin (easy) -.html",
+      "1.4_K_ Closest Points to the Origin (easy) -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 15,
+    "name": "K-way merge",
+    "slug": "k-way-merge"
+  },
+  "summary": "This pattern helps us solve problems that involve a list of sorted arrays. Whenever we are given ‘K’ sorted arrays, we can use a Heap to efficiently perform a sorted traversal of all the elements of…",
+  "sourceFolder": "15. Pattern K-way merge/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"f3aa474f2771bf6c79a487af2346f137\">This pattern helps us solve problems that involve a list of sorted arrays.</p>\n<p data-id=\"53feb922b025b6e2320d59535939788b\">Whenever we are given ‘K’ sorted arrays, we can use a <strong>Heap</strong> to efficiently perform a sorted traversal of all the elements of all arrays. We can push the smallest (first) element of each sorted array in a <strong>Min Heap</strong> to get the overall minimum. While inserting elements to the <strong>Min Heap</strong> we keep track of which array the element came from. We can, then, remove the top element from the heap to get the smallest element and push the next element from the same array, to which this smallest element belonged, to the heap. We can repeat this process to make a sorted traversal of all elements.</p>\n<p data-id=\"d9ba568e0ae3d74a2b4efabbb248bfae\">Let’s see this pattern in action.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

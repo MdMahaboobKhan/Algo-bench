@@ -1,0 +1,116 @@
+{
+  "id": "cyclic-sort/problem-challenge-1",
+  "pattern": {
+    "index": 6,
+    "name": "Cyclic Sort",
+    "slug": "cyclic-sort"
+  },
+  "title": "Find the Corrupt Pair",
+  "difficulty": "easy",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "6. Pattern Cyclic Sort/7. Problem Challenge 1",
+    "6. Pattern Cyclic Sort/8. Solution Review Problem Challenge 1"
+  ],
+  "problemStatementSectionId": "find-the-corrupt-pair-easy",
+  "starterCode": {
+    "java": "class FindCorruptNums {\n\n  public static int[] findNumbers(int[] nums) {\n    // TODO: Write your code here\n    return new int[] { -1, -1 };\n  }\n}\n",
+    "python3": "def find_corrupt_numbers(nums):\n  # TODO: Write your code here\n  return [-1, -1]\n",
+    "javascript": "const find_corrupt_numbers = function(nums) {\n  // TODO: Write your code here\n  return [-1, -1];\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <vector>\n\nclass FindCorruptNums {\n public:\n  static vector<int> findNumbers(vector<int> &nums) {\n    // TODO: Write your code here\n    return vector<int>{-1, -1};\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [3, 1, 2, 5, 2]\nOutput: [2, 4]\nExplanation: '2' is duplicated and '4' is missing.",
+      "input": "[3, 1, 2, 5, 2]",
+      "output": "[2, 4]",
+      "explanation": "'2' is duplicated and '4' is missing."
+    },
+    {
+      "raw": "Input: [3, 1, 2, 3, 6, 4]\nOutput: [3, 5]\nExplanation: '3' is duplicated and '5' is missing.",
+      "input": "[3, 1, 2, 3, 6, 4]",
+      "output": "[3, 5]",
+      "explanation": "'3' is duplicated and '5' is missing."
+    }
+  ],
+  "sections": [
+    {
+      "id": "find-the-corrupt-pair-easy",
+      "title": "Find the Corrupt Pair (easy)",
+      "html": "<p data-id=\"0c80017a82b3e49f822aeeac15d4fccd\">We are given an unsorted array containing ‘n’ numbers taken from the range 1 to ‘n’. The array originally contained all the numbers from 1 to ‘n’, but due to a data error, one of the numbers got duplicated which also resulted in one number going missing. Find both these numbers.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "class FindCorruptNums {\n\n  public static int[] findNumbers(int[] nums) {\n    // TODO: Write your code here\n    return new int[] { -1, -1 };\n  }\n}\n",
+        "python3": "def find_corrupt_numbers(nums):\n  # TODO: Write your code here\n  return [-1, -1]\n",
+        "javascript": "const find_corrupt_numbers = function(nums) {\n  // TODO: Write your code here\n  return [-1, -1];\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <vector>\n\nclass FindCorruptNums {\n public:\n  static vector<int> findNumbers(vector<int> &nums) {\n    // TODO: Write your code here\n    return vector<int>{-1, -1};\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"ea08f852f657897cc12b81ebffccaeb0\">This problem follows the <strong>Cyclic Sort</strong> pattern and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5115834240335872/\" target=\"_blank\">Find all Duplicate Numbers</a>. Following a similar approach, we will place each number at its correct index. Once we are done with the cyclic sort, we will iterate through the array to find the number that is not at the correct index. Since only one number got corrupted, the number at the wrong index is the duplicated number and the index itself represents the missing number.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">2, 4\n3, 5\n</p>",
+      "code": {
+        "java": "class FindCorruptNums {\n\n  public static int[] findNumbers(int[] nums) {\n    int i = 0;\n    while (i < nums.length) {\n      if (nums[i] != nums[nums[i] - 1])\n        swap(nums, i, nums[i] - 1);\n      else\n        i++;\n    }\n\n    for (i = 0; i < nums.length; i++)\n      if (nums[i] != i + 1)\n        return new int[] { nums[i], i + 1 };\n\n    return new int[] { -1, -1 };\n  }\n\n  private static void swap(int[] arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n\n  public static void main(String[] args) {\n    int[] nums = FindCorruptNums.findNumbers(new int[] { 3, 1, 2, 5, 2 });\n    System.out.println(nums[0] + \", \" + nums[1]);\n    nums = FindCorruptNums.findNumbers(new int[] { 3, 1, 2, 3, 6, 4 });\n    System.out.println(nums[0] + \", \" + nums[1]);\n  }\n}\n",
+        "python3": "def find_corrupt_numbers(nums):\n  i = 0\n  while i < len(nums):\n    j = nums[i] - 1\n    if nums[i] != nums[j]:\n      nums[i], nums[j] = nums[j], nums[i]  # swap\n    else:\n      i += 1\n\n  for i in range(len(nums)):\n    if nums[i] != i + 1:\n      return [nums[i], i + 1]\n\n  return [-1, -1]\n\n\ndef main():\n  print(find_corrupt_numbers([3, 1, 2, 5, 2]))\n  print(find_corrupt_numbers([3, 1, 2, 3, 6, 4]))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <string>\n#include <vector>\n\nclass FindCorruptNums {\n public:\n  static vector<int> findNumbers(vector<int> &nums) {\n    int i = 0;\n    while (i < nums.size()) {\n      if (nums[i] != nums[nums[i] - 1]) {\n        swap(nums, i, nums[i] - 1);\n      } else {\n        i++;\n      }\n    }\n\n    for (i = 0; i < nums.size(); i++) {\n      if (nums[i] != i + 1) {\n        return vector<int>{nums[i], i + 1};\n      }\n    }\n\n    return vector<int>{-1, -1};\n  }\n\n private:\n  static void swap(vector<int> &arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> v1 = {3, 1, 2, 5, 2};\n  vector<int> nums = FindCorruptNums::findNumbers(v1);\n  cout << nums[0] << \", \" << nums[1] << endl;\n\n  v1 = {3, 1, 2, 3, 6, 4};\n  nums = FindCorruptNums::findNumbers(v1);\n  cout << nums[0] << \", \" << nums[1] << endl;\n}",
+        "javascript": "function find_corrupt_numbers(nums) {\n  let i = 0;\n  while (i < nums.length) {\n    const j = nums[i] - 1;\n    if (nums[i] !== nums[j]) {\n      [nums[i], nums[j]] = [nums[j], nums[i]]; // swap\n    } else {\n      i += 1;\n    }\n  }\n  for (i = 0; i < nums.length; i++) {\n    if (nums[i] !== i + 1) {\n      return [nums[i], i + 1];\n    }\n  }\n  return [-1, -1];\n}\n\n\nconsole.log(find_corrupt_numbers([3, 1, 2, 5, 2]));\nconsole.log(find_corrupt_numbers([3, 1, 2, 3, 6, 4]));"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"486efb82ba0e245a62a0678e3d68148a\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Problem Challenge 1.html",
+      "1.2Problem Challenge 1.html",
+      "1.3Problem Challenge 1.html",
+      "1.4Problem Challenge 1.html",
+      "1.1Solution Review_ Problem Challenge 1.html",
+      "1.2Solution Review_ Problem Challenge 1.html",
+      "1.3Solution Review_ Problem Challenge 1.html",
+      "1.4Solution Review_ Problem Challenge 1.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

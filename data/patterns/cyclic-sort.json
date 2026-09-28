@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 6,
+    "name": "Cyclic Sort",
+    "slug": "cyclic-sort"
+  },
+  "summary": "This pattern describes an interesting approach to deal with problems involving arrays containing numbers in a given range. For example, take the following problem: You are given an unsorted array…",
+  "sourceFolder": "6. Pattern Cyclic Sort/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"633dd48e324d11b9ecaad7b21a54d8b8\">This pattern describes an interesting approach to deal with problems involving arrays containing numbers in a given range. For example, take the following problem:</p>\n<blockquote data-id=\"c6ef154010e62720641011add987ee0d\">\n<p>You are given an unsorted array containing numbers taken from the range 1 to ‘n’. The array can have duplicates, which means that some numbers will be missing. Find all the missing numbers.</p>\n</blockquote>\n<p data-id=\"5da93f5a9460db47cc53aca4a8e8f122\">To efficiently solve this problem, we can use the fact that the input array contains numbers in the range of 1 to ‘n’. For example, to efficiently sort the array, we can try placing each number in its correct place, i.e., placing ‘1’ at index ‘0’, placing ‘2’ at index ‘1’, and so on. Once we are done with the sorting, we can iterate the array to find all indices that are missing the correct numbers. These will be our required numbers.</p>\n<p data-id=\"6f2b6e2fe67caf72a8fff9713e2c38d5\">Let’s jump on to our first problem to understand the <strong>Cyclic Sort</strong> pattern in detail.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

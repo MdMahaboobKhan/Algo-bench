@@ -1,0 +1,32 @@
+{
+  "pattern": {
+    "index": 12,
+    "name": "Modified Binary Search",
+    "slug": "modified-binary-search"
+  },
+  "summary": "As we know, whenever we are given a sorted Array or LinkedList or Matrix, and we are asked to find a certain element, the best algorithm we can use is the Binary Search. This pattern describes an…",
+  "sourceFolder": "12. Pattern Modified Binary Search/1. Introduction",
+  "sections": [
+    {
+      "id": "",
+      "title": "",
+      "html": "<p data-id=\"a3c85d35d4028086ef54e118e5a198a0\">As we know, whenever we are given a sorted <strong>Array</strong> or <strong>LinkedList</strong> or <strong>Matrix</strong>, and we are asked to find a certain element, the best algorithm we can use is the <a href=\"https://en.wikipedia.org/wiki/Binary_search_algorithm\" target=\"_blank\">Binary Search</a>.</p>\n<p data-id=\"783955d538e08df14b909a257f7dbd15\">This pattern describes an efficient way to handle all problems involving <strong>Binary Search</strong>. We will go through a set of problems that will help us build an understanding of this pattern so that we can apply this technique to other problems we might come across in the interviews.</p>\n<p data-id=\"94204c572a3106b02d14f3c99a053a6e\">Let’s start with our first problem.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "Introduction.html"
+    ],
+    "languagesFound": [],
+    "languagesMissing": [
+      "java",
+      "python3",
+      "cpp",
+      "javascript"
+    ],
+    "warnings": []
+  }
+}

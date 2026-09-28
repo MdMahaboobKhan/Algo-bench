@@ -1,0 +1,116 @@
+{
+  "id": "fast-slow-pointers/problem-challenge-1",
+  "pattern": {
+    "index": 4,
+    "name": "Fast & Slow pointers",
+    "slug": "fast-slow-pointers"
+  },
+  "title": "Palindrome LinkedList",
+  "difficulty": "medium",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "4. Pattern Fast _ Slow pointers/6. Problem Challenge 1",
+    "4. Pattern Fast _ Slow pointers/7. Solution Review Problem Challenge 1"
+  ],
+  "problemStatementSectionId": "palindrome-linkedlist-medium",
+  "starterCode": {
+    "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass PalindromicLinkedList {\n\n  public static boolean isPalindrome(ListNode head) {\n    // TODO: Write your code here\n    return false;\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(2);\n    head.next = new ListNode(4);\n    head.next.next = new ListNode(6);\n    head.next.next.next = new ListNode(4);\n    head.next.next.next.next = new ListNode(2);\n    System.out.println(\"Is palindrome: \" + PalindromicLinkedList.isPalindrome(head));\n\n    head.next.next.next.next.next = new ListNode(2);\n    System.out.println(\"Is palindrome: \" + PalindromicLinkedList.isPalindrome(head));\n  }\n}",
+    "python3": "class Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n\ndef is_palindromic_linked_list(head):\n  # TODO: Write your code here\n  return False\n\n\n\ndef main():\n  head = Node(2)\n  head.next = Node(4)\n  head.next.next = Node(6)\n  head.next.next.next = Node(4)\n  head.next.next.next.next = Node(2)\n\n  print(\"Is palindrome: \" + str(is_palindromic_linked_list(head)))\n\n  head.next.next.next.next.next = Node(2)\n  print(\"Is palindrome: \" + str(is_palindromic_linked_list(head)))\n\n\nmain()\n\n\n\n\n\n",
+    "javascript": "class Node {\n  constructor(value, next=null){\n    this.value = value;\n    this.next = next;\n  }\n}\n\n\nconst is_palindromic_linked_list= function(head) {\n  // TODO: Write your code here\n  return false;\n};\n\n\nhead = new Node(2)\nhead.next = new Node(4)\nhead.next.next = new Node(6)\nhead.next.next.next = new Node(4)\nhead.next.next.next.next = new Node(2)\n\nconsole.log(`Is palindrome: ${is_palindromic_linked_list(head)}`)\n\nhead.next.next.next.next.next = new Node(2)\nconsole.log(`Is palindrome: ${is_palindromic_linked_list(head)}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass PalindromicLinkedList {\n public:\n  static bool isPalindrome(ListNode *head) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(2);\n  head->next = new ListNode(4);\n  head->next->next = new ListNode(6);\n  head->next->next->next = new ListNode(4);\n  head->next->next->next->next = new ListNode(2);\n  cout << \"Is palindrome: \" << PalindromicLinkedList::isPalindrome(head) << endl;\n\n  head->next->next->next->next->next = new ListNode(2);\n  cout << \"Is palindrome: \" << PalindromicLinkedList::isPalindrome(head) << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: 2 -> 4 -> 6 -> 4 -> 2 -> null\nOutput: true",
+      "input": "2 -> 4 -> 6 -> 4 -> 2 -> null",
+      "output": "true",
+      "explanation": null
+    },
+    {
+      "raw": "Input: 2 -> 4 -> 6 -> 4 -> 2 -> 2 -> null\nOutput: false",
+      "input": "2 -> 4 -> 6 -> 4 -> 2 -> 2 -> null",
+      "output": "false",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "palindrome-linkedlist-medium",
+      "title": "Palindrome LinkedList (medium)",
+      "html": "<p data-id=\"fecaafd6992c9d08c50be9969d4d73bc\">Given the head of a <strong>Singly LinkedList</strong>, write a method to check if the <strong>LinkedList is a palindrome</strong> or not.</p>\n<p data-id=\"c58657c03d0ceb5671a4c8bd28e0c38f\">Your algorithm should use <strong>constant space</strong> and the input LinkedList should be in the original form once the algorithm is finished. The algorithm should have <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> time complexity where ‘N’ is the number of nodes in the LinkedList.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Is palindrome: false\nIs palindrome: false\n</p>",
+      "code": {
+        "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass PalindromicLinkedList {\n\n  public static boolean isPalindrome(ListNode head) {\n    // TODO: Write your code here\n    return false;\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(2);\n    head.next = new ListNode(4);\n    head.next.next = new ListNode(6);\n    head.next.next.next = new ListNode(4);\n    head.next.next.next.next = new ListNode(2);\n    System.out.println(\"Is palindrome: \" + PalindromicLinkedList.isPalindrome(head));\n\n    head.next.next.next.next.next = new ListNode(2);\n    System.out.println(\"Is palindrome: \" + PalindromicLinkedList.isPalindrome(head));\n  }\n}",
+        "python3": "class Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n\ndef is_palindromic_linked_list(head):\n  # TODO: Write your code here\n  return False\n\n\n\ndef main():\n  head = Node(2)\n  head.next = Node(4)\n  head.next.next = Node(6)\n  head.next.next.next = Node(4)\n  head.next.next.next.next = Node(2)\n\n  print(\"Is palindrome: \" + str(is_palindromic_linked_list(head)))\n\n  head.next.next.next.next.next = Node(2)\n  print(\"Is palindrome: \" + str(is_palindromic_linked_list(head)))\n\n\nmain()\n\n\n\n\n\n",
+        "javascript": "class Node {\n  constructor(value, next=null){\n    this.value = value;\n    this.next = next;\n  }\n}\n\n\nconst is_palindromic_linked_list= function(head) {\n  // TODO: Write your code here\n  return false;\n};\n\n\nhead = new Node(2)\nhead.next = new Node(4)\nhead.next.next = new Node(6)\nhead.next.next.next = new Node(4)\nhead.next.next.next.next = new Node(2)\n\nconsole.log(`Is palindrome: ${is_palindromic_linked_list(head)}`)\n\nhead.next.next.next.next.next = new Node(2)\nconsole.log(`Is palindrome: ${is_palindromic_linked_list(head)}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass PalindromicLinkedList {\n public:\n  static bool isPalindrome(ListNode *head) {\n    // TODO: Write your code here\n    return false;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(2);\n  head->next = new ListNode(4);\n  head->next->next = new ListNode(6);\n  head->next->next->next = new ListNode(4);\n  head->next->next->next->next = new ListNode(2);\n  cout << \"Is palindrome: \" << PalindromicLinkedList::isPalindrome(head) << endl;\n\n  head->next->next->next->next->next = new ListNode(2);\n  cout << \"Is palindrome: \" << PalindromicLinkedList::isPalindrome(head) << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"d1e763f0a19c071724aeef01e7d0a4a1\">As we know, a palindrome LinkedList will have nodes values that read the same backward or forward. This means that if we divide the LinkedList into two halves, the node values of the first half in the forward direction should be similar to the node values of the second half in the backward direction. As we have been given a Singly LinkedList, we can’t move in the backward direction. To handle this, we will perform the following steps:</p>\n<ol data-id=\"1cb062710c63d92a8f765862fb84b4a7\">\n<li>We can use the <strong>Fast &amp; Slow pointers</strong> method similar to <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6033606055034880/\" target=\"_blank\">Middle of the LinkedList</a> to find the middle node of the LinkedList.</li>\n<li>Once we have the middle of the LinkedList, we will reverse the second half.</li>\n<li>Then, we will compare the first half with the reversed second half to see if the LinkedList represents a palindrome.</li>\n<li>Finally, we will reverse the second half of the LinkedList again to revert and bring the LinkedList back to its original form.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Is palindrome: true\nIs palindrome: false\n</p>",
+      "code": {
+        "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass PalindromicLinkedList {\n\n  public static boolean isPalindrome(ListNode head) {\n    if (head == null || head.next == null)\n      return true;\n\n    // find middle of the LinkedList\n    ListNode slow = head;\n    ListNode fast = head;\n    while (fast != null && fast.next != null) {\n      slow = slow.next;\n      fast = fast.next.next;\n    }\n\n    ListNode headSecondHalf = reverse(slow); // reverse the second half\n    ListNode copyHeadSecondHalf = headSecondHalf; // store the head of reversed part to revert back later\n\n    // compare the first and the second half\n    while (head != null && headSecondHalf != null) {\n      if (head.value != headSecondHalf.value) {\n        break; // not a palindrome\n      }\n      head = head.next;\n      headSecondHalf = headSecondHalf.next;\n    }\n\n    reverse(copyHeadSecondHalf); // revert the reverse of the second half\n    if (head == null || headSecondHalf == null) // if both halves match\n      return true;\n    return false;\n  }\n\n  private static ListNode reverse(ListNode head) {\n    ListNode prev = null;\n    while (head != null) {\n      ListNode next = head.next;\n      head.next = prev;\n      prev = head;\n      head = next;\n    }\n    return prev;\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(2);\n    head.next = new ListNode(4);\n    head.next.next = new ListNode(6);\n    head.next.next.next = new ListNode(4);\n    head.next.next.next.next = new ListNode(2);\n    System.out.println(\"Is palindrome: \" + PalindromicLinkedList.isPalindrome(head));\n\n    head.next.next.next.next.next = new ListNode(2);\n    System.out.println(\"Is palindrome: \" + PalindromicLinkedList.isPalindrome(head));\n  }\n}",
+        "python3": "class Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n\ndef is_palindromic_linked_list(head):\n  if head is None or head.next is None:\n    return True\n\n  # find middle of the LinkedList\n  slow, fast = head, head\n  while (fast is not None and fast.next is not None):\n    slow = slow.next\n    fast = fast.next.next\n\n  head_second_half = reverse(slow)  # reverse the second half\n  # store the head of reversed part to revert back later\n  copy_head_second_half = head_second_half\n\n  # compare the first and the second half\n  while (head is not None and head_second_half is not None):\n    if head.value != head_second_half.value:\n      break  # not a palindrome\n\n    head = head.next\n    head_second_half = head_second_half.next\n\n  reverse(copy_head_second_half)  # revert the reverse of the second half\n\n  if head is None or head_second_half is None:  # if both halves match\n    return True\n\n  return False\n\n\ndef reverse(head):\n  prev = None\n  while (head is not None):\n    next = head.next\n    head.next = prev\n    prev = head\n    head = next\n  return prev\n\n\ndef main():\n  head = Node(2)\n  head.next = Node(4)\n  head.next.next = Node(6)\n  head.next.next.next = Node(4)\n  head.next.next.next.next = Node(2)\n\n  print(\"Is palindrome: \" + str(is_palindromic_linked_list(head)))\n\n  head.next.next.next.next.next = Node(2)\n  print(\"Is palindrome: \" + str(is_palindromic_linked_list(head)))\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass PalindromicLinkedList {\n public:\n  static bool isPalindrome(ListNode *head) {\n    if (head == nullptr || head->next == nullptr) {\n      return true;\n    }\n\n    // find middle of the LinkedList\n    ListNode *slow = head;\n    ListNode *fast = head;\n    while (fast != nullptr && fast->next != nullptr) {\n      slow = slow->next;\n      fast = fast->next->next;\n    }\n\n    ListNode *headSecondHalf = reverse(slow);  // reverse the second half\n    ListNode *copyHeadSecondHalf =\n        headSecondHalf;  // store the head of reversed part to revert back later\n\n    // compare the first and the second half\n    while (head != nullptr && headSecondHalf != nullptr) {\n      if (head->value != headSecondHalf->value) {\n        break;  // not a palindrome\n      }\n      head = head->next;\n      headSecondHalf = headSecondHalf->next;\n    }\n\n    reverse(copyHeadSecondHalf);                         // revert the reverse of the second half\n    if (head == nullptr || headSecondHalf == nullptr) {  // if both halves match\n      return true;\n    }\n    return false;\n  }\n\n private:\n  static ListNode *reverse(ListNode *head) {\n    ListNode *prev = nullptr;\n    while (head != nullptr) {\n      ListNode *next = head->next;\n      head->next = prev;\n      prev = head;\n      head = next;\n    }\n    return prev;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(2);\n  head->next = new ListNode(4);\n  head->next->next = new ListNode(6);\n  head->next->next->next = new ListNode(4);\n  head->next->next->next->next = new ListNode(2);\n  cout << \"Is palindrome: \" << PalindromicLinkedList::isPalindrome(head) << endl;\n\n  head->next->next->next->next->next = new ListNode(2);\n  cout << \"Is palindrome: \" << PalindromicLinkedList::isPalindrome(head) << endl;\n}\n",
+        "javascript": "class Node {\n  constructor(value, next = null) {\n    this.value = value;\n    this.next = next;\n  }\n}\n\n\nfunction is_palindromic_linked_list(head) {\n  if (head === null || head.next === null) {\n    return true;\n  }\n\n  // find middle of the LinkedList\n  let slow = head,\n    fast = head;\n  while ((fast !== null && fast.next !== null)) {\n    slow = slow.next;\n    fast = fast.next.next;\n  }\n\n  headSecondHalf = reverse(slow); // reverse the second half\n  // store the head of reversed part to revert back later\n  copyHeadSecondHalf = headSecondHalf;\n\n  // compare the first and the second half\n  while ((head !== null && headSecondHalf !== null)) {\n    if (head.value !== headSecondHalf.value) {\n      break; // not a palindrome\n    }\n\n    head = head.next;\n    headSecondHalf = headSecondHalf.next;\n  }\n  reverse(copyHeadSecondHalf); // revert the reverse of the second half\n\n  if (head === null || headSecondHalf === null) { // if both halves match\n    return true;\n  }\n\n  return false;\n}\n\nfunction reverse(head) {\n  let prev = null;\n  while (head !== null) {\n    next = head.next;\n    head.next = prev;\n    prev = head;\n    head = next;\n  }\n  return prev;\n}\n\nconst head = new Node(2);\nhead.next = new Node(4);\nhead.next.next = new Node(6);\nhead.next.next.next = new Node(4);\nhead.next.next.next.next = new Node(2);\n\nconsole.log(`Is palindrome: ${is_palindromic_linked_list(head)}`);\n\nhead.next.next.next.next.next = new Node(2);\nconsole.log(`Is palindrome: ${is_palindromic_linked_list(head)}`);"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"e0ac4fcf4af7dd080eef61c578c49e79\">The above algorithm will have a time complexity of <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of nodes in the LinkedList.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Problem Challenge 1.html",
+      "1.2 Problem Challenge 1.html",
+      "1.3 Problem Challenge 1.html",
+      "1.4 Problem Challenge 1.html",
+      "1.1 Solution Review_ Problem Challenge 1 -.html",
+      "1.2 Solution Review_ Problem Challenge 1.html",
+      "1.3 Solution Review_ Problem Challenge 1.html",
+      "1.4 Solution Review_ Problem Challenge 1.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

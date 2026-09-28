@@ -1,0 +1,111 @@
+{
+  "id": "cyclic-sort/find-all-duplicate-numbers",
+  "pattern": {
+    "index": 6,
+    "name": "Cyclic Sort",
+    "slug": "cyclic-sort"
+  },
+  "title": "Find all Duplicate Numbers",
+  "difficulty": "easy",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "6. Pattern Cyclic Sort/6. Find all Duplicate Numbers (easy)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass FindAllDuplicate {\n\n  public static List<Integer> findNumbers(int[] nums) {\n    List<Integer> duplicateNumbers = new ArrayList<>();\n    // TODO: Write your code here\n    return duplicateNumbers;\n  }\n}\n",
+    "python3": "def find_all_duplicates(nums):\n  duplicateNumbers = []\n  # TODO: Write your code here\n  return duplicateNumbers\n",
+    "javascript": "const find_all_duplicates = function(nums) {\n  duplicateNumbers = [];\n  // TODO: Write your code here\n  return duplicateNumbers;\n};\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FindAllDuplicate {\n public:\n  static vector<int> findNumbers(vector<int> &nums) {\n    vector<int> duplicateNumbers;\n    // TODO: Write your code here\n    return duplicateNumbers;\n  }\n};\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [3, 4, 4, 5, 5]\nOutput: [4, 5]",
+      "input": "[3, 4, 4, 5, 5]",
+      "output": "[4, 5]",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [5, 4, 7, 2, 3, 5, 3]\nOutput: [3, 5]",
+      "input": "[5, 4, 7, 2, 3, 5, 3]",
+      "output": "[3, 5]",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"3f418655634b9424a5f3686904a41a3c\">We are given an unsorted array containing ‘n’ numbers taken from the range 1 to ‘n’. The array has some duplicates, <strong>find all the duplicate numbers without using any extra space</strong>.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass FindAllDuplicate {\n\n  public static List<Integer> findNumbers(int[] nums) {\n    List<Integer> duplicateNumbers = new ArrayList<>();\n    // TODO: Write your code here\n    return duplicateNumbers;\n  }\n}\n",
+        "python3": "def find_all_duplicates(nums):\n  duplicateNumbers = []\n  # TODO: Write your code here\n  return duplicateNumbers\n",
+        "javascript": "const find_all_duplicates = function(nums) {\n  duplicateNumbers = [];\n  // TODO: Write your code here\n  return duplicateNumbers;\n};\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FindAllDuplicate {\n public:\n  static vector<int> findNumbers(vector<int> &nums) {\n    vector<int> duplicateNumbers;\n    // TODO: Write your code here\n    return duplicateNumbers;\n  }\n};\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"e8564bfde58589acd702dc7847af41e5\">This problem follows the <strong>Cyclic Sort</strong> pattern and shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/4522012447866880/\" target=\"_blank\">Find the Duplicate Number</a>. Following a similar approach, we will place each number at its correct index. After that, we will iterate through the array to find all numbers that are not at the correct indices. All these numbers are duplicates.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Duplicates are: [5, 4]\nDuplicates are: [3, 5]\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass FindAllDuplicate {\n\n  public static List<Integer> findNumbers(int[] nums) {\n    int i = 0;\n    while (i < nums.length) {\n      if (nums[i] != nums[nums[i] - 1])\n        swap(nums, i, nums[i] - 1);\n      else\n        i++;\n    }\n\n    List<Integer> duplicateNumbers = new ArrayList<>();\n    for (i = 0; i < nums.length; i++) {\n      if (nums[i] != i + 1)\n        duplicateNumbers.add(nums[i]);\n    }\n\n    return duplicateNumbers;\n  }\n\n  private static void swap(int[] arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> duplicates = FindAllDuplicate.findNumbers(new int[] { 3, 4, 4, 5, 5 });\n    System.out.println(\"Duplicates are: \" + duplicates);\n\n    duplicates = FindAllDuplicate.findNumbers(new int[] { 5, 4, 7, 2, 3, 5, 3 });\n    System.out.println(\"Duplicates are: \" + duplicates);\n  }\n}\n",
+        "python3": "def find_all_duplicates(nums):\n  i = 0\n  while i < len(nums):\n    j = nums[i] - 1\n    if nums[i] != nums[j]:\n      nums[i], nums[j] = nums[j], nums[i]  # swap\n    else:\n      i += 1\n\n  duplicateNumbers = []\n  for i in range(len(nums)):\n    if nums[i] != i + 1:\n      duplicateNumbers.append(nums[i])\n\n  return duplicateNumbers\n\n\ndef main():\n  print(find_all_duplicates([3, 4, 4, 5, 5]))\n  print(find_all_duplicates([5, 4, 7, 2, 3, 5, 3]))\n\n\nmain()\n",
+        "javascript": "function find_all_duplicates(nums) {\n  let i = 0;\n  while (i < nums.length) {\n    j = nums[i] - 1;\n    if (nums[i] != nums[j]) {\n      [nums[i], nums[j]] = [nums[j], nums[i]]; // swap\n    } else {\n      i++;\n    }\n  }\n\n  duplicateNumbers = [];\n  for (i = 0; i < nums.length; i++) {\n    if (nums[i] !== i + 1) {\n      duplicateNumbers.push(nums[i]);\n    }\n  }\n\n  return duplicateNumbers;\n}\n\n\nconsole.log(find_all_duplicates([3, 4, 4, 5, 5]));\nconsole.log(find_all_duplicates([5, 4, 7, 2, 3, 5, 3]));",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass FindAllDuplicate {\n public:\n  static vector<int> findNumbers(vector<int> &nums) {\n    int i = 0;\n    while (i < nums.size()) {\n      if (nums[i] != nums[nums[i] - 1]) {\n        swap(nums, i, nums[i] - 1);\n      } else {\n        i++;\n      }\n    }\n\n    vector<int> duplicateNumbers;\n    for (i = 0; i < nums.size(); i++) {\n      if (nums[i] != i + 1) {\n        duplicateNumbers.push_back(nums[i]);\n      }\n    }\n\n    return duplicateNumbers;\n  }\n\n private:\n  static void swap(vector<int> &arr, int i, int j) {\n    int temp = arr[i];\n    arr[i] = arr[j];\n    arr[j] = temp;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> v1 = {3, 4, 4, 5, 5};\n  vector<int> duplicates = FindAllDuplicate::findNumbers(v1);\n  cout << \"Duplicates are: \";\n  for (auto num : duplicates) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  v1 = {5, 4, 7, 2, 3, 5, 3};\n  duplicates = FindAllDuplicate::findNumbers(v1);\n  cout << \"Duplicates are: \";\n  for (auto num : duplicates) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"486efb82ba0e245a62a0678e3d68148a\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"e4c2a9b57d6ed8d244c53068e2a60122\">Ignoring the space required for storing the duplicates, the algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Find all Duplicate Numbers (easy).html",
+      "1.2.Find all Duplicate Numbers (easy).html",
+      "1.3Find all Duplicate Numbers (easy).html",
+      "1.4Find all Duplicate Numbers (easy).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

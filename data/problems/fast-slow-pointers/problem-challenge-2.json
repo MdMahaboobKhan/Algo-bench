@@ -1,0 +1,116 @@
+{
+  "id": "fast-slow-pointers/problem-challenge-2",
+  "pattern": {
+    "index": 4,
+    "name": "Fast & Slow pointers",
+    "slug": "fast-slow-pointers"
+  },
+  "title": "Rearrange a LinkedList",
+  "difficulty": "medium",
+  "lessonType": "challenge",
+  "sourceFolder": [
+    "4. Pattern Fast _ Slow pointers/8. Problem Challenge 2",
+    "4. Pattern Fast _ Slow pointers/9. Solution Review Problem Challenge 2"
+  ],
+  "problemStatementSectionId": "rearrange-a-linkedlist-medium",
+  "starterCode": {
+    "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass RearrangeList {\n\n  public static void reorder(ListNode head) {\n    // TODO: Write your code here\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(2);\n    head.next = new ListNode(4);\n    head.next.next = new ListNode(6);\n    head.next.next.next = new ListNode(8);\n    head.next.next.next.next = new ListNode(10);\n    head.next.next.next.next.next = new ListNode(12);\n    RearrangeList.reorder(head);\n    while (head != null) {\n      System.out.print(head.value + \" \");\n      head = head.next;\n    }\n  }\n}",
+    "python3": "from __future__ import print_function\n\n\nclass Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n  def print_list(self):\n    temp = self\n    while temp is not None:\n      print(str(temp.value) + \" \", end='')\n      temp = temp.next\n    print()\n\n\ndef reorder(head):\n  # TODO: Write your code here\n  return\n\n\ndef main():\n  head = Node(2)\n  head.next = Node(4)\n  head.next.next = Node(6)\n  head.next.next.next = Node(8)\n  head.next.next.next.next = Node(10)\n  head.next.next.next.next.next = Node(12)\n  reorder(head)\n  head.print_list()\n\n\nmain()\n",
+    "javascript": "class Node {\n  constructor(value, next=null){\n    this.value = value;\n    this.next = next;\n  }\n\n  print_list() {\n    result = \"\";\n    temp = this;\n    while (temp !== null) {\n      result += temp.value + \" \";\n      temp = temp.next;\n    }\n    console.log(result);\n  }\n}\n\n\nconst reorder = function(head) {\n  // TODO: Write your code here\n  return\n}\n\n\nhead = new Node(2)\nhead.next = new Node(4)\nhead.next.next = new Node(6)\nhead.next.next.next = new Node(8)\nhead.next.next.next.next = new Node(10)\nhead.next.next.next.next.next = new Node(12)\nreorder(head)\nhead.print_list()\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass RearrangeList {\n public:\n  static void reorder(ListNode *head) {\n    // TODO: Write your code here\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(2);\n  head->next = new ListNode(4);\n  head->next->next = new ListNode(6);\n  head->next->next->next = new ListNode(8);\n  head->next->next->next->next = new ListNode(10);\n  head->next->next->next->next->next = new ListNode(12);\n  RearrangeList::reorder(head);\n  while (head != nullptr) {\n    cout << head->value << \" \";\n    head = head->next;\n  }\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: 2 -> 4 -> 6 -> 8 -> 10 -> 12 -> null\nOutput: 2 -> 12 -> 4 -> 10 -> 6 -> 8 -> null",
+      "input": "2 -> 4 -> 6 -> 8 -> 10 -> 12 -> null",
+      "output": "2 -> 12 -> 4 -> 10 -> 6 -> 8 -> null",
+      "explanation": null
+    },
+    {
+      "raw": "Input: 2 -> 4 -> 6 -> 8 -> 10 -> null\nOutput: 2 -> 10 -> 4 -> 8 -> 6 -> null",
+      "input": "2 -> 4 -> 6 -> 8 -> 10 -> null",
+      "output": "2 -> 10 -> 4 -> 8 -> 6 -> null",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "rearrange-a-linkedlist-medium",
+      "title": "Rearrange a LinkedList (medium)",
+      "html": "<p data-id=\"df0bbb9263cc8d14bfb630947b802ec8\">Given the head of a Singly LinkedList, write a method to modify the LinkedList such that the <strong>nodes from the second half of the LinkedList are inserted alternately to the nodes from the first half in reverse order</strong>. So if the LinkedList has nodes 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; null, your method should return 1 -&gt; 6 -&gt; 2 -&gt; 5 -&gt; 3 -&gt; 4 -&gt; null.</p>\n<p data-id=\"c3c0a4267811f2b4f892bfa8e2fc2bab\">Your algorithm should not use any extra space and the input LinkedList should be modified in-place.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">2 4 6 8 10 12 </p>",
+      "code": {
+        "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass RearrangeList {\n\n  public static void reorder(ListNode head) {\n    // TODO: Write your code here\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(2);\n    head.next = new ListNode(4);\n    head.next.next = new ListNode(6);\n    head.next.next.next = new ListNode(8);\n    head.next.next.next.next = new ListNode(10);\n    head.next.next.next.next.next = new ListNode(12);\n    RearrangeList.reorder(head);\n    while (head != null) {\n      System.out.print(head.value + \" \");\n      head = head.next;\n    }\n  }\n}",
+        "python3": "from __future__ import print_function\n\n\nclass Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n  def print_list(self):\n    temp = self\n    while temp is not None:\n      print(str(temp.value) + \" \", end='')\n      temp = temp.next\n    print()\n\n\ndef reorder(head):\n  # TODO: Write your code here\n  return\n\n\ndef main():\n  head = Node(2)\n  head.next = Node(4)\n  head.next.next = Node(6)\n  head.next.next.next = Node(8)\n  head.next.next.next.next = Node(10)\n  head.next.next.next.next.next = Node(12)\n  reorder(head)\n  head.print_list()\n\n\nmain()\n",
+        "javascript": "class Node {\n  constructor(value, next=null){\n    this.value = value;\n    this.next = next;\n  }\n\n  print_list() {\n    result = \"\";\n    temp = this;\n    while (temp !== null) {\n      result += temp.value + \" \";\n      temp = temp.next;\n    }\n    console.log(result);\n  }\n}\n\n\nconst reorder = function(head) {\n  // TODO: Write your code here\n  return\n}\n\n\nhead = new Node(2)\nhead.next = new Node(4)\nhead.next.next = new Node(6)\nhead.next.next.next = new Node(8)\nhead.next.next.next.next = new Node(10)\nhead.next.next.next.next.next = new Node(12)\nreorder(head)\nhead.print_list()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass RearrangeList {\n public:\n  static void reorder(ListNode *head) {\n    // TODO: Write your code here\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(2);\n  head->next = new ListNode(4);\n  head->next->next = new ListNode(6);\n  head->next->next->next = new ListNode(8);\n  head->next->next->next->next = new ListNode(10);\n  head->next->next->next->next->next = new ListNode(12);\n  RearrangeList::reorder(head);\n  while (head != nullptr) {\n    cout << head->value << \" \";\n    head = head->next;\n  }\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"3ffc120c6a77842c03d3706c346068fc\">This problem shares similarities with <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6278770187042816/\" target=\"_blank\">Palindrome LinkedList</a>. To rearrange the given LinkedList we will follow the following steps:</p>\n<ol data-id=\"26471e6492615b3eee36113e49f92ad8\">\n<li>We can use the <strong>Fast &amp; Slow pointers</strong> method similar to <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6033606055034880/\" target=\"_blank\">Middle of the LinkedList</a> to find the middle node of the LinkedList.</li>\n<li>Once we have the middle of the LinkedList, we will reverse the second half of the LinkedList.</li>\n<li>Finally, we’ll iterate through the first half and the reversed second half to produce a LinkedList in the required order.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">2 12 4 10 6 8 </p>",
+      "code": {
+        "java": "\nclass ListNode {\n  int value = 0;\n  ListNode next;\n\n  ListNode(int value) {\n    this.value = value;\n  }\n}\n\nclass RearrangeList {\n\n  public static void reorder(ListNode head) {\n    if (head == null || head.next == null)\n      return;\n\n    // find the middle of the LinkedList\n    ListNode slow = head, fast = head;\n    while (fast != null && fast.next != null) {\n      slow = slow.next;\n      fast = fast.next.next;\n    }\n\n    // slow is now pointing to the middle node\n    ListNode headSecondHalf = reverse(slow); // reverse the second half\n    ListNode headFirstHalf = head;\n\n    // rearrange to produce the LinkedList in the required order\n    while (headFirstHalf != null && headSecondHalf != null) {\n      ListNode temp = headFirstHalf.next;\n      headFirstHalf.next = headSecondHalf;\n      headFirstHalf = temp;\n\n      temp = headSecondHalf.next;\n      headSecondHalf.next = headFirstHalf;\n      headSecondHalf = temp;\n    }\n\n    // set the next of the last node to 'null'\n    if (headFirstHalf != null)\n      headFirstHalf.next = null;\n  }\n\n  private static ListNode reverse(ListNode head) {\n    ListNode prev = null;\n    while (head != null) {\n      ListNode next = head.next;\n      head.next = prev;\n      prev = head;\n      head = next;\n    }\n    return prev;\n  }\n\n  public static void main(String[] args) {\n    ListNode head = new ListNode(2);\n    head.next = new ListNode(4);\n    head.next.next = new ListNode(6);\n    head.next.next.next = new ListNode(8);\n    head.next.next.next.next = new ListNode(10);\n    head.next.next.next.next.next = new ListNode(12);\n    RearrangeList.reorder(head);\n    while (head != null) {\n      System.out.print(head.value + \" \");\n      head = head.next;\n    }\n  }\n}",
+        "python3": "from __future__ import print_function\n\n\nclass Node:\n  def __init__(self, value, next=None):\n    self.value = value\n    self.next = next\n\n  def print_list(self):\n    temp = self\n    while temp is not None:\n      print(str(temp.value) + \" \", end='')\n      temp = temp.next\n    print()\n\n\ndef reorder(head):\n  if head is None or head.next is None:\n    return\n\n  # find middle of the LinkedList\n  slow, fast = head, head\n  while fast is not None and fast.next is not None:\n    slow = slow.next\n    fast = fast.next.next\n\n  # slow is now pointing to the middle node\n  head_second_half = reverse(slow)  # reverse the second half\n  head_first_half = head\n\n  # rearrange to produce the LinkedList in the required order\n  while head_first_half is not None and head_second_half is not None:\n    temp = head_first_half.next\n    head_first_half.next = head_second_half\n    head_first_half = temp\n\n    temp = head_second_half.next\n    head_second_half.next = head_first_half\n    head_second_half = temp\n\n  # set the next of the last node to 'None'\n  if head_first_half is not None:\n    head_first_half.next = None\n\n\ndef reverse(head):\n  prev = None\n  while head is not None:\n    next = head.next\n    head.next = prev\n    prev = head\n    head = next\n  return prev\n\n\ndef main():\n  head = Node(2)\n  head.next = Node(4)\n  head.next.next = Node(6)\n  head.next.next.next = Node(8)\n  head.next.next.next.next = Node(10)\n  head.next.next.next.next.next = Node(12)\n  reorder(head)\n  head.print_list()\n\n\nmain()\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n\nclass ListNode {\n public:\n  int value = 0;\n  ListNode *next;\n\n  ListNode(int value) {\n    this->value = value;\n    next = nullptr;\n  }\n};\n\nclass RearrangeList {\n public:\n  static void reorder(ListNode *head) {\n    if (head == nullptr || head->next == nullptr) {\n      return;\n    }\n\n    // find the middle of the LinkedList\n    ListNode *slow = head, *fast = head;\n    while (fast != nullptr && fast->next != nullptr) {\n      slow = slow->next;\n      fast = fast->next->next;\n    }\n\n    // slow is now pointing to the middle node\n    ListNode *headSecondHalf = reverse(slow);  // reverse the second half\n    ListNode *headFirstHalf = head;\n\n    // rearrange to produce the LinkedList in the required order\n    while (headFirstHalf != nullptr && headSecondHalf != nullptr) {\n      ListNode *temp = headFirstHalf->next;\n      headFirstHalf->next = headSecondHalf;\n      headFirstHalf = temp;\n\n      temp = headSecondHalf->next;\n      headSecondHalf->next = headFirstHalf;\n      headSecondHalf = temp;\n    }\n\n    // set the next of the last node to 'null'\n    if (headFirstHalf != nullptr) {\n      headFirstHalf->next = nullptr;\n    }\n  }\n\n private:\n  static ListNode *reverse(ListNode *head) {\n    ListNode *prev = nullptr;\n    while (head != nullptr) {\n      ListNode *next = head->next;\n      head->next = prev;\n      prev = head;\n      head = next;\n    }\n    return prev;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  ListNode *head = new ListNode(2);\n  head->next = new ListNode(4);\n  head->next->next = new ListNode(6);\n  head->next->next->next = new ListNode(8);\n  head->next->next->next->next = new ListNode(10);\n  head->next->next->next->next->next = new ListNode(12);\n  RearrangeList::reorder(head);\n  while (head != nullptr) {\n    cout << head->value << \" \";\n    head = head->next;\n  }\n}\n",
+        "javascript": "class Node {\n  constructor(value, next = null) {\n    this.value = value;\n    this.next = next;\n  }\n\n\n  print_list() {\n    temp = this;\n    while (temp !== null) {\n      process.stdout.write(`${temp.value} `);\n      temp = temp.next;\n    }\n    console.log();\n  }\n}\n\nfunction reorder(head) {\n  if (head === null || head.next === null) {\n    return;\n  }\n\n  // find middle of the LinkedList\n  let slow = head,\n    fast = head;\n  while (fast !== null && fast.next !== null) {\n    slow = slow.next;\n    fast = fast.next.next;\n  }\n\n  // slow is now pointing to the middle node\n  headSecondHalf = reverse(slow); // reverse the second half\n  headFirstHalf = head;\n\n  // rearrange to produce the LinkedList in the required order\n  while (headFirstHalf !== null && headSecondHalf !== null) {\n    temp = headFirstHalf.next;\n    headFirstHalf.next = headSecondHalf;\n    headFirstHalf = temp;\n\n    temp = headSecondHalf.next;\n    headSecondHalf.next = headFirstHalf;\n    headSecondHalf = temp;\n  }\n  // set the next of the last node to 'null'\n  if (headFirstHalf !== null) {\n    headFirstHalf.next = null;\n  }\n}\n\n\nfunction reverse(head) {\n  let prev = null;\n  while (head !== null) {\n    next = head.next;\n    head.next = prev;\n    prev = head;\n    head = next;\n  }\n  return prev;\n}\n\n\nvar head = new Node(2);\nhead.next = new Node(4);\nhead.next.next = new Node(6);\nhead.next.next.next = new Node(8);\nhead.next.next.next.next = new Node(10);\nhead.next.next.next.next.next = new Node(12);\nreorder(head);\nhead.print_list();"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"e0ac4fcf4af7dd080eef61c578c49e79\">The above algorithm will have a time complexity of <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the number of nodes in the LinkedList.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1 Problem Challenge 2.html",
+      "1.2 Problem Challenge 2.html",
+      "1.3 Problem Challenge 2.html",
+      "1.4 Problem Challenge 2.html",
+      "1.1 Solution Review_ Problem Challenge 2 -.html",
+      "1.2 Solution Review_ Problem Challenge 2 -.html",
+      "1.3 Solution Review_ Problem Challenge 2 -.html",
+      "1.4 Solution Review_ Problem Challenge 2 -.html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

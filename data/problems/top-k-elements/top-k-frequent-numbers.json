@@ -1,0 +1,111 @@
+{
+  "id": "top-k-elements/top-k-frequent-numbers",
+  "pattern": {
+    "index": 14,
+    "name": "Top K Elements",
+    "slug": "top-k-elements"
+  },
+  "title": "Top _K_ Frequent Numbers",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "14. Pattern Top _K_ Elements/6. Top _K_ Frequent Numbers (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass TopKFrequentNumbers {\n\n  public static List<Integer> findTopKFrequentNumbers(int[] nums, int k) {\n    List<Integer> topNumbers = new ArrayList<>(k);\n    // TODO: Write your code here\n    return topNumbers;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);\n    System.out.println(\"Here are the K frequent numbers: \" + result);\n\n    result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 5, 12, 11, 3, 11 }, 2);\n    System.out.println(\"Here are the K frequent numbers: \" + result);\n  }\n}\n",
+    "python3": "def find_k_frequent_numbers(nums, k):\n  topNumbers = []\n  # TODO: Write your code here\n  return topNumbers\n\n\ndef main():\n\n  print(\"Here are the K frequent numbers: \" +\n        str(find_k_frequent_numbers([1, 3, 5, 12, 11, 12, 11], 2)))\n\n  print(\"Here are the K frequent numbers: \" +\n        str(find_k_frequent_numbers([5, 12, 11, 3, 11], 2)))\n\n\nmain()\n\n",
+    "javascript": "const find_k_frequent_numbers = function(nums, k) {\n  topNumbers = [];\n  // TODO: Write your code here\n  return topNumbers;\n};\n\n\nconsole.log(`Here are the K frequent numbers: ${find_k_frequent_numbers([1, 3, 5, 12, 11, 12, 11], 2)}`)\nconsole.log(`Here are the K frequent numbers: ${find_k_frequent_numbers([5, 12, 11, 3, 11], 2)}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TopKFrequentNumbers {\n  struct valueCompare {\n    char operator()(const pair<int, int> &x, const pair<int, int> &y) {\n      return x.second > y.second;\n    }\n  };\n\n public:\n  static vector<int> findTopKFrequentNumbers(const vector<int> &nums, int k) {\n    vector<int> topNumbers;\n    // TODO: Write your code here\n    return topNumbers;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> result =\n      TopKFrequentNumbers::findTopKFrequentNumbers(vector<int>{1, 3, 5, 12, 11, 12, 11}, 2);\n  cout << \"Here are the K frequent numbers: \";\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TopKFrequentNumbers::findTopKFrequentNumbers(vector<int>{5, 12, 11, 3, 11}, 2);\n  cout << \"Here are the K frequent numbers: \";\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 3, 5, 12, 11, 12, 11], K = 2\nOutput: [12, 11]\nExplanation: Both '11' and '12' apeared twice.",
+      "input": "[1, 3, 5, 12, 11, 12, 11], K = 2",
+      "output": "[12, 11]",
+      "explanation": "Both '11' and '12' apeared twice."
+    },
+    {
+      "raw": "Input: [5, 12, 11, 3, 11], K = 2\nOutput: [11, 5] or [11, 12] or [11, 3]\nExplanation: Only '11' appeared twice, all other numbers appeared once.",
+      "input": "[5, 12, 11, 3, 11], K = 2",
+      "output": "[11, 5] or [11, 12] or [11, 3]",
+      "explanation": "Only '11' appeared twice, all other numbers appeared once."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"f0243601b9c78b6f876d88b55593198d\">Given an unsorted array of numbers, find the top ‘K’ frequently occurring numbers in it.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Here are the K frequent numbers: []\nHere are the K frequent numbers: []\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TopKFrequentNumbers {\n\n  public static List<Integer> findTopKFrequentNumbers(int[] nums, int k) {\n    List<Integer> topNumbers = new ArrayList<>(k);\n    // TODO: Write your code here\n    return topNumbers;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);\n    System.out.println(\"Here are the K frequent numbers: \" + result);\n\n    result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 5, 12, 11, 3, 11 }, 2);\n    System.out.println(\"Here are the K frequent numbers: \" + result);\n  }\n}\n",
+        "python3": "def find_k_frequent_numbers(nums, k):\n  topNumbers = []\n  # TODO: Write your code here\n  return topNumbers\n\n\ndef main():\n\n  print(\"Here are the K frequent numbers: \" +\n        str(find_k_frequent_numbers([1, 3, 5, 12, 11, 12, 11], 2)))\n\n  print(\"Here are the K frequent numbers: \" +\n        str(find_k_frequent_numbers([5, 12, 11, 3, 11], 2)))\n\n\nmain()\n\n",
+        "javascript": "const find_k_frequent_numbers = function(nums, k) {\n  topNumbers = [];\n  // TODO: Write your code here\n  return topNumbers;\n};\n\n\nconsole.log(`Here are the K frequent numbers: ${find_k_frequent_numbers([1, 3, 5, 12, 11, 12, 11], 2)}`)\nconsole.log(`Here are the K frequent numbers: ${find_k_frequent_numbers([5, 12, 11, 3, 11], 2)}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TopKFrequentNumbers {\n  struct valueCompare {\n    char operator()(const pair<int, int> &x, const pair<int, int> &y) {\n      return x.second > y.second;\n    }\n  };\n\n public:\n  static vector<int> findTopKFrequentNumbers(const vector<int> &nums, int k) {\n    vector<int> topNumbers;\n    // TODO: Write your code here\n    return topNumbers;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> result =\n      TopKFrequentNumbers::findTopKFrequentNumbers(vector<int>{1, 3, 5, 12, 11, 12, 11}, 2);\n  cout << \"Here are the K frequent numbers: \";\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TopKFrequentNumbers::findTopKFrequentNumbers(vector<int>{5, 12, 11, 3, 11}, 2);\n  cout << \"Here are the K frequent numbers: \";\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"d07f015100d2a1f86bd96a7f8f692888\">This problem follows <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5728885882748928/\" target=\"_blank\">Top ‘K’ Numbers</a>. The only difference is that in this problem, we need to find the most frequently occurring number compared to finding the largest numbers.</p>\n<p data-id=\"cf8658ae43bd3fed99a051307e9f4885\">We can follow the same approach as discussed in the <strong>Top K Elements</strong> problem. However, in this problem, we first need to know the frequency of each number, for which we can use a <strong>HashMap</strong>. Once we have the frequency map, we can use a <strong>Min Heap</strong> to find the ‘K’ most frequently occurring number. In the <strong>Min Heap</strong>, instead of comparing numbers we will compare their frequencies in order to get frequently occurring numbers</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Here are the K frequent numbers: [12, 11]\nHere are the K frequent numbers: [12, 11]\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TopKFrequentNumbers {\n\n  public static List<Integer> findTopKFrequentNumbers(int[] nums, int k) {\n    // find the frequency of each number\n    Map<Integer, Integer> numFrequencyMap = new HashMap<>();\n    for (int n : nums)\n      numFrequencyMap.put(n, numFrequencyMap.getOrDefault(n, 0) + 1);\n\n    PriorityQueue<Map.Entry<Integer, Integer>> minHeap = new PriorityQueue<Map.Entry<Integer, Integer>>(\n        (e1, e2) -> e1.getValue() - e2.getValue());\n\n    // go through all numbers of the numFrequencyMap and push them in the minHeap, which will have\n    // top k frequent numbers. If the heap size is more than k, we remove the smallest (top) number\n    for (Map.Entry<Integer, Integer> entry : numFrequencyMap.entrySet()) {\n      minHeap.add(entry);\n      if (minHeap.size() > k) {\n        minHeap.poll();\n      }\n    }\n\n    // create a list of top k numbers\n    List<Integer> topNumbers = new ArrayList<>(k);\n    while (!minHeap.isEmpty()) {\n      topNumbers.add(minHeap.poll().getKey());\n    }\n    return topNumbers;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);\n    System.out.println(\"Here are the K frequent numbers: \" + result);\n\n    result = TopKFrequentNumbers.findTopKFrequentNumbers(new int[] { 5, 12, 11, 3, 11 }, 2);\n    System.out.println(\"Here are the K frequent numbers: \" + result);\n  }\n}\n",
+        "python3": "from heapq import *\n\n\ndef find_k_frequent_numbers(nums, k):\n\n  # find the frequency of each number\n  numFrequencyMap = {}\n  for num in nums:\n    numFrequencyMap[num] = numFrequencyMap.get(num, 0) + 1\n\n  minHeap = []\n\n  # go through all numbers of the numFrequencyMap and push them in the minHeap, which will have\n  # top k frequent numbers. If the heap size is more than k, we remove the smallest(top) number\n  for num, frequency in numFrequencyMap.items():\n    heappush(minHeap, (frequency, num))\n    if len(minHeap) > k:\n      heappop(minHeap)\n\n  # create a list of top k numbers\n  topNumbers = []\n  while minHeap:\n    topNumbers.append(heappop(minHeap)[1])\n\n  return topNumbers\n\n\ndef main():\n\n  print(\"Here are the K frequent numbers: \" +\n        str(find_k_frequent_numbers([1, 3, 5, 12, 11, 12, 11], 2)))\n\n  print(\"Here are the K frequent numbers: \" +\n        str(find_k_frequent_numbers([5, 12, 11, 3, 11], 2)))\n\n\nmain()\n",
+        "javascript": "const Heap = require('./collections/heap'); //http://www.collectionsjs.com\n\n\nfunction find_k_frequent_numbers(nums, k) {\n  // find the frequency of each number\n  numFrequencyMap = {};\n  nums.forEach((num) => {\n    if (!(num in numFrequencyMap)) {\n      numFrequencyMap[num] = 1;\n    } else {\n      numFrequencyMap[num]++;\n    }\n  });\n\n  const minHeap = new Heap([], null, ((a, b) => b[0] - a[0]));\n\n  // go through all numbers of the numFrequencyMap and push them in the minHeap, which will have\n  // top k frequent numbers. If the heap size is more than k, we remove the smallest(top) number\n  Object.keys(numFrequencyMap).forEach((num) => {\n    minHeap.push([numFrequencyMap[num], num]);\n    if (minHeap.length > k) {\n      minHeap.pop();\n    }\n  });\n\n  // create a list of top k numbers\n  const topNumbers = [];\n  while (minHeap.length > 0) {\n    topNumbers.push(minHeap.pop()[1]);\n  }\n\n  return topNumbers;\n}\n\n\nconsole.log(`Here are the K frequent numbers: ${\n  find_k_frequent_numbers([1, 3, 5, 12, 11, 12, 11], 2)}`);\n\nconsole.log(`Here are the K frequent numbers: ${\n  find_k_frequent_numbers([5, 12, 11, 3, 11], 2)}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TopKFrequentNumbers {\n  struct valueCompare {\n    char operator()(const pair<int, int> &x, const pair<int, int> &y) {\n      return x.second > y.second;\n    }\n  };\n\n public:\n  static vector<int> findTopKFrequentNumbers(const vector<int> &nums, int k) {\n    // find the frequency of each number\n    unordered_map<int, int> numFrequencyMap;\n    for (int n : nums) {\n      numFrequencyMap[n]++;\n    }\n\n    priority_queue<pair<int, int>, vector<pair<int, int>>, valueCompare> minHeap;\n\n    // go through all numbers of the numFrequencyMap and push them in the minHeap, which will have\n    // top k frequent numbers. If the heap size is more than k, we remove the smallest (top) number\n    for (auto entry : numFrequencyMap) {\n      minHeap.push(entry);\n      if (minHeap.size() > k) {\n        minHeap.pop();\n      }\n    }\n\n    // create a list of top k numbers\n    vector<int> topNumbers;\n    while (!minHeap.empty()) {\n      topNumbers.push_back(minHeap.top().first);\n      minHeap.pop();\n    }\n\n    return topNumbers;\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> result =\n      TopKFrequentNumbers::findTopKFrequentNumbers(vector<int>{1, 3, 5, 12, 11, 12, 11}, 2);\n  cout << \"Here are the K frequent numbers: \";\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TopKFrequentNumbers::findTopKFrequentNumbers(vector<int>{5, 12, 11, 3, 11}, 2);\n  cout << \"Here are the K frequent numbers: \";\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"1df2649ce443ab7241f26610b644bc20\">The time complexity of the above algorithm is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>+</mo><mi>N</mi><mo>∗</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>K</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N+N*logK)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mbin\">∗</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.07153em\">K</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"acfb55a3c15c1d56fb2132a0ec8b820a\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(N)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span>. Even though we are storing only ‘K’ numbers in the heap. For the frequency map, however, we need to store all the ‘N’ numbers.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Top _K_ Frequent Numbers (medium).html",
+      "1.2Top _K_ Frequent Numbers (medium).html",
+      "1.3Top _K_ Frequent Numbers (medium).html",
+      "1.4Top _K_ Frequent Numbers (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

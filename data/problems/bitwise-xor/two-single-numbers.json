@@ -1,0 +1,111 @@
+{
+  "id": "bitwise-xor/two-single-numbers",
+  "pattern": {
+    "index": 13,
+    "name": "Bitwise XOR",
+    "slug": "bitwise-xor"
+  },
+  "title": "Two Single Numbers",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "13. Pattern Bitwise XOR/3. Two Single Numbers (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class TwoSingleNumbers {\n\n  public static int[] findSingleNumbers(int[] nums) {\n    // TODO: Write your code here\n    return new int[] { -1, -1 };\n  }\n\n  public static void main(String[] args) {\n    int[] arr = new int[] { 1, 4, 2, 1, 3, 5, 6, 2, 3, 5 };\n    int[] result = TwoSingleNumbers.findSingleNumbers(arr);\n    System.out.println(\"Single numbers are: \" + result[0] + \", \" + result[1]);\n\n    arr = new int[] { 2, 1, 3, 2 };\n    result = TwoSingleNumbers.findSingleNumbers(arr);\n    System.out.println(\"Single numbers are: \" + result[0] + \", \" + result[1]);\n  }\n}\n",
+    "python3": "def find_single_numbers(nums):\n  # TODO: Write your code here\n  return [-1, -1]\n\n\ndef main():\n  print('Single numbers are:' +\n        str(find_single_numbers([1, 4, 2, 1, 3, 5, 6, 2, 3, 5])))\n  print('Single numbers are:' + str(find_single_numbers([2, 1, 3, 2])))\n\nmain()\n",
+    "javascript": "function find_single_numbers(nums) {\n// TODO: Write your code here\n  return [-1, -1];\n}\n\nconsole.log(`Single numbers are: ${find_single_numbers([1, 4, 2, 1, 3, 5, 6, 2, 3, 5])}`);\nconsole.log(`Single numbers are: ${find_single_numbers([2, 1, 3, 2])}`);",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass TwoSingleNumbers {\npublic:\n  static vector<int> findSingleNumbers(vector<int> &nums) {\n    // TODO: Write your code here\n    return vector<int>{-1, -1};\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> v1 = {1, 4, 2, 1, 3, 5, 6, 2, 3, 5};\n  vector<int> result = TwoSingleNumbers::findSingleNumbers(v1);\n  cout << \"Single numbers are: \" << result[0] << \", \" << result[1] << endl;\n\n  v1 = {2, 1, 3, 2};\n  result = TwoSingleNumbers::findSingleNumbers(v1);\n  cout << \"Single numbers are: \" << result[0] << \", \" << result[1] << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: [1, 4, 2, 1, 3, 5, 6, 2, 3, 5]\nOutput: [4, 6]",
+      "input": "[1, 4, 2, 1, 3, 5, 6, 2, 3, 5]",
+      "output": "[4, 6]",
+      "explanation": null
+    },
+    {
+      "raw": "Input: [2, 1, 3, 2]\nOutput: [1, 3]",
+      "input": "[2, 1, 3, 2]",
+      "output": "[1, 3]",
+      "explanation": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"aea088afc268bd02e7c40a3b10558867\">In a non-empty array of numbers, every number appears exactly twice except two numbers that appear only once. Find the two numbers that appear only once.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><b>Example 1:</b></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><b>Example 2:</b></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Single numbers are: -1, -1\nSingle numbers are: -1, -1\n</p>",
+      "code": {
+        "java": "class TwoSingleNumbers {\n\n  public static int[] findSingleNumbers(int[] nums) {\n    // TODO: Write your code here\n    return new int[] { -1, -1 };\n  }\n\n  public static void main(String[] args) {\n    int[] arr = new int[] { 1, 4, 2, 1, 3, 5, 6, 2, 3, 5 };\n    int[] result = TwoSingleNumbers.findSingleNumbers(arr);\n    System.out.println(\"Single numbers are: \" + result[0] + \", \" + result[1]);\n\n    arr = new int[] { 2, 1, 3, 2 };\n    result = TwoSingleNumbers.findSingleNumbers(arr);\n    System.out.println(\"Single numbers are: \" + result[0] + \", \" + result[1]);\n  }\n}\n",
+        "python3": "def find_single_numbers(nums):\n  # TODO: Write your code here\n  return [-1, -1]\n\n\ndef main():\n  print('Single numbers are:' +\n        str(find_single_numbers([1, 4, 2, 1, 3, 5, 6, 2, 3, 5])))\n  print('Single numbers are:' + str(find_single_numbers([2, 1, 3, 2])))\n\nmain()\n",
+        "javascript": "function find_single_numbers(nums) {\n// TODO: Write your code here\n  return [-1, -1];\n}\n\nconsole.log(`Single numbers are: ${find_single_numbers([1, 4, 2, 1, 3, 5, 6, 2, 3, 5])}`);\nconsole.log(`Single numbers are: ${find_single_numbers([2, 1, 3, 2])}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass TwoSingleNumbers {\npublic:\n  static vector<int> findSingleNumbers(vector<int> &nums) {\n    // TODO: Write your code here\n    return vector<int>{-1, -1};\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> v1 = {1, 4, 2, 1, 3, 5, 6, 2, 3, 5};\n  vector<int> result = TwoSingleNumbers::findSingleNumbers(v1);\n  cout << \"Single numbers are: \" << result[0] << \", \" << result[1] << endl;\n\n  v1 = {2, 1, 3, 2};\n  result = TwoSingleNumbers::findSingleNumbers(v1);\n  cout << \"Single numbers are: \" << result[0] << \", \" << result[1] << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"6fea9e1eb44ba9d7ca9d1b094ac3f989\">This problem is quite similar to <a href=\"https://www.educative.io/pageeditor/5668639101419520/5671464854355968/5053280917913600\" target=\"_blank\">Single Number</a>, the only difference is that, in this problem, we have two single numbers instead of one. Can we still use XOR to solve this problem?</p>\n<p data-id=\"decffffaaa077c822bf44f1852dd003e\">Let’s assume <code>num1</code> and <code>num2</code> are the two single numbers. If we do XOR of all elements of the given array, we will be left with XOR of <code>num1</code> and <code>num2</code> as all other numbers will cancel each other because all of them appeared twice. Let’s call this XOR <code>n1xn2</code>. Now that we have XOR of <code>num1</code> and <code>num2</code>, how can we find these two single numbers?</p>\n<p data-id=\"be6d560ef3584fe35e406541b1de01d4\">As we know that <code>num1</code> and <code>num2</code> are two different numbers, therefore, they should have at least one bit different between them. If a bit in <code>n1xn2</code> is ‘1’, this means that <code>num1</code> and <code>num2</code> have different bits in that place, as we know that we can get ‘1’ only when we do XOR of two different bits, i.e.,</p>\n<p data-id=\"863754be8ce3dd0780a81603a47b7019\">We can take any bit which is ‘1’ in <code>n1xn2</code> and partition all numbers in the given array into two groups based on that bit. One group will have all those numbers with that bit set to ‘0’ and the other with the bit set to ‘1’. This will ensure that <code>num1</code> will be in one group and <code>num2</code> will be in the other. We can take XOR of all numbers in each group separately to get <code>num1</code> and <code>num2</code>, as all other numbers in each group will cancel each other. Here are the steps of our algorithm:</p>\n<ol data-id=\"51505b43c1350b47b0dbda9b05e0ba12\">\n<li>Taking XOR of all numbers in the given array will give us XOR of <code>num1</code> and <code>num2</code>, calling this XOR as <code>n1xn2</code>.</li>\n<li>Find any bit which is set in <code>n1xn2</code>. We can take the rightmost bit which is ‘1’. Let’s call this <code>rightmostSetBit</code>.</li>\n<li>Iterate through all numbers of the input array to partition them into two groups based on <code>rightmostSetBit</code>. Take XOR of all numbers in both the groups separately. Both these XORs are our required numbers.</li>\n</ol>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"743b2d7b4c74975b8cd2a07af374f922\">Here is what our algorithm will look like:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">Single numbers are: 6, 4\nSingle numbers are: 3, 1\n</p>",
+      "code": {
+        "java": "class TwoSingleNumbers {\n\n  public static int[] findSingleNumbers(int[] nums) {\n    // get the XOR of the all the numbers\n    int n1xn2 = 0;\n    for (int num : nums) {\n      n1xn2 ^= num;\n    }\n\n    // get the rightmost bit that is '1'\n    int rightmostSetBit = 1;\n    while ((rightmostSetBit & n1xn2) == 0) {\n      rightmostSetBit = rightmostSetBit << 1;\n    }\n    int num1 = 0, num2 = 0;\n    for (int num : nums) {\n      if ((num & rightmostSetBit) != 0) // the bit is set\n        num1 ^= num;\n      else // the bit is not set\n        num2 ^= num;\n    }\n    return new int[] { num1, num2 };\n  }\n\n  public static void main(String[] args) {\n    int[] arr = new int[] { 1, 4, 2, 1, 3, 5, 6, 2, 3, 5 };\n    int[] result = TwoSingleNumbers.findSingleNumbers(arr);\n    System.out.println(\"Single numbers are: \" + result[0] + \", \" + result[1]);\n\n    arr = new int[] { 2, 1, 3, 2 };\n    result = TwoSingleNumbers.findSingleNumbers(arr);\n    System.out.println(\"Single numbers are: \" + result[0] + \", \" + result[1]);\n  }\n}\n",
+        "python3": "def find_single_numbers(nums):\n    # get the XOR of the all the numbers\n    n1xn2 = 0\n    for num in nums:\n        n1xn2 ^= num\n\n    # get the rightmost bit that is '1'\n    rightmost_set_bit = 1\n    while (rightmost_set_bit & n1xn2) == 0:\n        rightmost_set_bit = rightmost_set_bit << 1\n    num1, num2 = 0, 0\n\n    for num in nums:\n        if (num & rightmost_set_bit) != 0:  # the bit is set\n            num1 ^= num\n        else:  # the bit is not set\n            num2 ^= num\n\n    return [num1, num2]\n\n\ndef main():\n    print('Single numbers are:' +\n          str(find_single_numbers([1, 4, 2, 1, 3, 5, 6, 2, 3, 5])))\n    print('Single numbers are:' + str(find_single_numbers([2, 1, 3, 2])))\n\n\nmain()\n",
+        "javascript": "function find_single_numbers(nums) {\n  // get the XOR of the all the numbers\n  let n1xn2 = 0;\n  nums.forEach((num) => {\n    n1xn2 ^= num;\n  });\n\n\n  // get the rightmost bit that is '1'\n  let rightmost_set_bit = 1;\n  while ((rightmost_set_bit & n1xn2) === 0) {\n    rightmost_set_bit = rightmost_set_bit << 1;\n  }\n  let num1 = 0,\n    num2 = 0;\n  nums.forEach((num) => {\n    if ((num & rightmost_set_bit) !== 0) // the bit is set\n      num1 ^= num;\n    else // the bit is not set\n      num2 ^= num;\n  });\n  return [num1, num2];\n}\n\nconsole.log(`Single numbers are: ${find_single_numbers([1, 4, 2, 1, 3, 5, 6, 2, 3, 5])}`);\nconsole.log(`Single numbers are: ${find_single_numbers([2, 1, 3, 2])}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass TwoSingleNumbers {\npublic:\n  static vector<int> findSingleNumbers(vector<int> &nums) {\n    // get the XOR of the all the numbers\n    int n1xn2 = 0;\n    for (int num : nums) {\n      n1xn2 ^= num;\n    }\n\n    // get the rightmost bit that is '1'\n    int rightmostSetBit = 1;\n    while ((rightmostSetBit & n1xn2) == 0) {\n      rightmostSetBit = rightmostSetBit << 1;\n    }\n    int num1 = 0, num2 = 0;\n    for (int num : nums) {\n      if ((num & rightmostSetBit) != 0) // the bit is set\n        num1 ^= num;\n      else // the bit is not set\n        num2 ^= num;\n    }\n    return vector<int>{num1, num2};\n  }\n};\n\nint main(int argc, char *argv[]) {\n  vector<int> v1 = {1, 4, 2, 1, 3, 5, 6, 2, 3, 5};\n  vector<int> result = TwoSingleNumbers::findSingleNumbers(v1);\n  cout << \"Single numbers are: \" << result[0] << \", \" << result[1] << endl;\n\n  v1 = {2, 1, 3, 2};\n  result = TwoSingleNumbers::findSingleNumbers(v1);\n  cout << \"Single numbers are: \" << result[0] << \", \" << result[1] << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time Complexity",
+      "html": "<p data-id=\"8321d41c68c12f68a377184f89cd1917\">The time complexity of this solution is <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(n)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\">n</span><span class=\"mclose\">)</span></span></span></span> where ‘n’ is the number of elements in the input array.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space Complexity",
+      "html": "<p data-id=\"29dd685cc6ca00d48006d62a5468a7fa\">The algorithm runs in constant space O(1).</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Two Single Numbers (medium).html",
+      "1.2Two Single Numbers (medium).html",
+      "1.3Two Single Numbers (medium).html",
+      "1.4Two Single Numbers (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

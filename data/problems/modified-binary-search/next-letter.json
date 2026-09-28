@@ -1,0 +1,123 @@
+{
+  "id": "modified-binary-search/next-letter",
+  "pattern": {
+    "index": 12,
+    "name": "Modified Binary Search",
+    "slug": "modified-binary-search"
+  },
+  "title": "Next Letter",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "12. Pattern Modified Binary Search/4. Next Letter (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "class NextLetter {\n\n  public static char searchNextLetter(char[] letters, char key) {\n    // TODO: Write your code here\n    return letters[0];\n  }\n\n  public static void main(String[] args) {\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'f'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'b'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'm'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'h'));\n  }\n}",
+    "python3": "def search_next_letter(letters, key):\n  # TODO: Write your code here\n  return letters[0]\n\n\ndef main():\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'f'))\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'b'))\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'm'))\n\n\nmain()\n",
+    "javascript": "const search_next_letter = function(letters, key) {\n  // TODO: Write your code here\n  return letters[0];\n};\n\n\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'f'))\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'b'))\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'm'))\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass NextLetter {\n public:\n  static char searchNextLetter(const vector<char>& letters, char key) {\n    // TODO: Write your code here\n    return letters[0];\n  }\n};\n\nint main(int argc, char* argv[]) {\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'f') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'b') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'm') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'h') << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: ['a', 'c', 'f', 'h'], key = 'f'\nOutput: 'h'\nExplanation: The smallest letter greater than 'f' is 'h' in the given array.",
+      "input": "['a', 'c', 'f', 'h'], key = 'f'",
+      "output": "'h'",
+      "explanation": "The smallest letter greater than 'f' is 'h' in the given array."
+    },
+    {
+      "raw": "Input: ['a', 'c', 'f', 'h'], key = 'b'\nOutput: 'c'\nExplanation: The smallest letter greater than 'b' is 'c'.",
+      "input": "['a', 'c', 'f', 'h'], key = 'b'",
+      "output": "'c'",
+      "explanation": "The smallest letter greater than 'b' is 'c'."
+    },
+    {
+      "raw": "Input: ['a', 'c', 'f', 'h'], key = 'm'\nOutput: 'a'\nExplanation: As the array is assumed to be circular, the smallest letter greater than 'm' is 'a'.",
+      "input": "['a', 'c', 'f', 'h'], key = 'm'",
+      "output": "'a'",
+      "explanation": "As the array is assumed to be circular, the smallest letter greater than 'm' is 'a'."
+    },
+    {
+      "raw": "Input: ['a', 'c', 'f', 'h'], key = 'h'\nOutput: 'a'\nExplanation: As the array is assumed to be circular, the smallest letter greater than 'h' is 'a'.",
+      "input": "['a', 'c', 'f', 'h'], key = 'h'",
+      "output": "'a'",
+      "explanation": "As the array is assumed to be circular, the smallest letter greater than 'h' is 'a'."
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"ee5ce016b923f0a1f665758f08060716\">Given an array of lowercase letters sorted in ascending order, find the <strong>smallest letter</strong> in the given array <strong>greater than a given ‘key’</strong>.</p>\n<p data-id=\"e5c936cf50803313fe272b633bea9bb9\">Assume the given array is a <strong>circular list</strong>, which means that the last letter is assumed to be connected with the first letter. This also means that the smallest letter in the given array is greater than the last letter of the array and is also the first letter of the array.</p>\n<p data-id=\"cdfdaed95e3ad4c952c5bb49a28f0796\">Write a function to return the next letter of the given ‘key’.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>\n<p data-id=\"041ec4ff6ad5f804da8976d697659842\"><strong>Example 4:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">a\na\na\na\n</p>",
+      "code": {
+        "java": "class NextLetter {\n\n  public static char searchNextLetter(char[] letters, char key) {\n    // TODO: Write your code here\n    return letters[0];\n  }\n\n  public static void main(String[] args) {\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'f'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'b'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'm'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'h'));\n  }\n}",
+        "python3": "def search_next_letter(letters, key):\n  # TODO: Write your code here\n  return letters[0]\n\n\ndef main():\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'f'))\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'b'))\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'm'))\n\n\nmain()\n",
+        "javascript": "const search_next_letter = function(letters, key) {\n  // TODO: Write your code here\n  return letters[0];\n};\n\n\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'f'))\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'b'))\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'm'))\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass NextLetter {\n public:\n  static char searchNextLetter(const vector<char>& letters, char key) {\n    // TODO: Write your code here\n    return letters[0];\n  }\n};\n\nint main(int argc, char* argv[]) {\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'f') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'b') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'm') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'h') << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"08305b779cf521f258f82b35c7911b0e\">The problem follows the <strong>Binary Search</strong> pattern. Since <strong>Binary Search</strong> helps us find an element in a sorted array efficiently, we can use a modified version of it to find the next letter.</p>\n<p data-id=\"0fc6c5c09220a97830a529f710e7405e\">We can use a similar approach as discussed in <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/6447997434986496/\" target=\"_blank\">Ceiling of a Number</a>. There are a couple of differences though:</p>\n<ol data-id=\"3f78fe5b04758d1f2e43557259a7fb07\">\n<li>The array is considered circular, which means if the ‘key’ is bigger than the last letter of the array or if it is smaller than the first letter of the array, the key’s next letter will be the first letter of the array.</li>\n<li>The other difference is that we have to find the next biggest letter which can’t be equal to the ‘key’. This means that we will ignore the case where <code>key == arr[middle]</code>. To handle this case, we can update our start range to <code>start = middle +1</code>.</li>\n</ol>\n<p data-id=\"f53252777e8e390d9ed3862e746ef9f6\">In the end, instead of returning the element pointed out by <code>start</code>, we have to return the letter pointed out by <code>start % array_length</code>. This is needed because of point 2 discussed above. Imagine that the last letter of the array is equal to the ‘key’. In that case, we have to return the first letter of the input array.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"62d395f76d828e96cb3adbb53fc3842e\">Here is what our algorithm will look like; the most important changes are in the highlighted lines:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">h\nc\na\na\n</p>",
+      "code": {
+        "java": "class NextLetter {\n\n  public static char searchNextLetter(char[] letters, char key) {\n    int n = letters.length;\n    if (key < letters[0] || key > letters[n - 1])\n      return letters[0];\n\n    int start = 0, end = n - 1;\n    while (start <= end) {\n      int mid = start + (end - start) / 2;\n      if (key < letters[mid]) {\n        end = mid - 1;\n      } else { //if (key >= letters[mid]) {\n        start = mid + 1;\n      }\n    }\n    // since the loop is running until 'start <= end', so at the end of the while loop, 'start == end+1'\n    return letters[start % n];\n  }\n\n  public static void main(String[] args) {\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'f'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'b'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'm'));\n    System.out.println(NextLetter.searchNextLetter(new char[] { 'a', 'c', 'f', 'h' }, 'h'));\n  }\n}",
+        "python3": "def search_next_letter(letters, key):\n  n = len(letters)\n  if key < letters[0] or key > letters[n - 1]:\n    return letters[0]\n\n  start, end = 0, n - 1\n  while start <= end:\n    mid = start + (end - start) // 2\n    if key < letters[mid]:\n      end = mid - 1\n    else: # key >= letters[mid]:\n      start = mid + 1\n\n  # since the loop is running until 'start <= end', so at the end of the while loop, 'start == end+1'\n  return letters[start % n]\n\n\ndef main():\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'f'))\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'b'))\n  print(search_next_letter(['a', 'c', 'f', 'h'], 'm'))\n\n\nmain()\n",
+        "javascript": "function search_next_letter(letters, key) {\n  const n = letters.length;\n  if (key < letters[0] || key > letters[n - 1]) {\n    return letters[0];\n  }\n\n  let start = 0;\n  let end = n - 1;\n  while (start <= end) {\n    mid = Math.floor(start + (end - start) / 2);\n    if (key < letters[mid]) {\n      end = mid - 1;\n    } else { // key >= letters[mid]:\n      start = mid + 1;\n    }\n  }\n  // since the loop is running until 'start <= end', so at the end of the while loop, 'start === end+1'\n  return letters[start % n];\n}\n\n\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'f'));\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'b'));\nconsole.log(search_next_letter(['a', 'c', 'f', 'h'], 'm'));",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <vector>\n\nclass NextLetter {\n public:\n  static char searchNextLetter(const vector<char>& letters, char key) {\n    int n = letters.size();\n    if (key < letters[0] || key > letters[n - 1]) {\n      return letters[0];\n    }\n\n    int start = 0, end = n - 1;\n    while (start <= end) {\n      int mid = start + (end - start) / 2;\n      if (key < letters[mid]) {\n        end = mid - 1;\n      } else {  // if (key >= letters[mid]) {\n        start = mid + 1;\n      }\n    }\n    // since the loop is running until 'start <= end', so at the end of the\n    // while loop, 'start == end+1'\n    return letters[start % n];\n  }\n};\n\nint main(int argc, char* argv[]) {\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'f') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'b') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'm') << endl;\n  cout << NextLetter::searchNextLetter(vector<char>{'a', 'c', 'f', 'h'}, 'h') << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"eb31d125b1d389b004fe28c75b52002c\">Since, we are reducing the search range by half at every step, this means that the time complexity of our algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(logN)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.01968em\">l</span><span class=\"mord mathit\">o</span><span class=\"mord mathit\" style=\"margin-right:0.03588em\">g</span><span class=\"mord mathit\" style=\"margin-right:0.10903em\">N</span><span class=\"mclose\">)</span></span></span></span> where ‘N’ is the total elements in the given array.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"31c0baa71fdd532a3e7bbd7007cac80b\">The algorithm runs in constant space <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(1)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathrm\">1</span><span class=\"mclose\">)</span></span></span></span>.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1Next Letter (medium).html",
+      "1.2Next Letter (medium).html",
+      "1.3Next Letter (medium).html",
+      "1.4Next Letter (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "topological-sort/tasks-scheduling-order",
+  "pattern": {
+    "index": 17,
+    "name": "Graph",
+    "slug": "topological-sort"
+  },
+  "title": "Tasks Scheduling Order",
+  "difficulty": "medium",
+  "lessonType": "problem",
+  "sourceFolder": [
+    "17. Pattern Topological Sort (Graph)/4. Tasks Scheduling Order (medium)"
+  ],
+  "problemStatementSectionId": "problem-statement",
+  "starterCode": {
+    "java": "import java.util.*;\n\nclass TaskSchedulingOrder {\n  public static List<Integer> findOrder(int tasks, int[][] prerequisites) {\n    List<Integer> sortedOrder = new ArrayList<>();\n    // TODO: Write your code here\n    return sortedOrder;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> result = TaskSchedulingOrder.findOrder(3, new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 } });\n    System.out.println(result);\n\n    result = TaskSchedulingOrder.findOrder(3,\n        new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 }, new int[] { 2, 0 } });\n    System.out.println(result);\n\n    result = TaskSchedulingOrder.findOrder(6, new int[][] { new int[] { 2, 5 }, new int[] { 0, 5 }, new int[] { 0, 4 },\n        new int[] { 1, 4 }, new int[] { 3, 2 }, new int[] { 1, 3 } });\n    System.out.println(result);\n  }\n}",
+    "python3": "def find_order(tasks, prerequisites):\n  sortedOrder = []\n  # TODO: Write your code here\n  return sortedOrder\n\n\ndef main():\n  print(\"Is scheduling possible: \" + str(find_order(3, [[0, 1], [1, 2]])))\n  print(\"Is scheduling possible: \" +\n        str(find_order(3, [[0, 1], [1, 2], [2, 0]])))\n  print(\"Is scheduling possible: \" +\n        str(find_order(6, [[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]])))\n\n\nmain()\n",
+    "javascript": "const find_order = function(tasks, prerequisites) {\n  sortedOrder = [];\n  // TODO: Write your code here\n  return sortedOrder;\n};\n\n\nconsole.log(`Is scheduling possible: ${find_order(3, [[0, 1], [1, 2]])}`)\nconsole.log(`Is scheduling possible: ${find_order(3, [[0, 1], [1, 2], [2, 0]])}`)\nconsole.log(`Is scheduling possible: ${find_order(6, [[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]])}`)\n",
+    "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskSchedulingOrder {\n public:\n  static vector<int> findOrder(int tasks, const vector<vector<int>>& prerequisites) {\n    vector<int> sortedOrder;\n    // TODO: Write your code here\n    return sortedOrder;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<int> result =\n      TaskSchedulingOrder::findOrder(3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TaskSchedulingOrder::findOrder(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}, vector<int>{2, 0}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TaskSchedulingOrder::findOrder(\n      6, vector<vector<int>>{vector<int>{2, 5}, vector<int>{0, 5}, vector<int>{0, 4},\n                             vector<int>{1, 4}, vector<int>{3, 2}, vector<int>{1, 3}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n"
+  },
+  "examples": [
+    {
+      "raw": "Input: Tasks=3, Prerequisites=[0, 1], [1, 2]\nOutput: [0, 1, 2]\nExplanation: To execute task '1', task '0' needs to finish first. Similarly, task '1' needs to finish \nbefore '2' can be scheduled. A possible scheduling of tasks is: [0, 1, 2]",
+      "input": "Tasks=3, Prerequisites=[0, 1], [1, 2]",
+      "output": "[0, 1, 2]",
+      "explanation": "To execute task '1', task '0' needs to finish first. Similarly, task '1' needs to finish \nbefore '2' can be scheduled. A possible scheduling of tasks is: [0, 1, 2]"
+    },
+    {
+      "raw": "Input: Tasks=3, Prerequisites=[0, 1], [1, 2], [2, 0]\nOutput: []\nExplanation: The tasks have cyclic dependency, therefore they cannot be scheduled.",
+      "input": "Tasks=3, Prerequisites=[0, 1], [1, 2], [2, 0]",
+      "output": "[]",
+      "explanation": "The tasks have cyclic dependency, therefore they cannot be scheduled."
+    },
+    {
+      "raw": "Input: Tasks=6, Prerequisites=[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]\nOutput: [0 1 4 3 2 5] \nExplanation: A possible scheduling of tasks is: [0 1 4 3 2 5]",
+      "input": "Tasks=6, Prerequisites=[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]",
+      "output": "[0 1 4 3 2 5]",
+      "explanation": "A possible scheduling of tasks is: [0 1 4 3 2 5]"
+    }
+  ],
+  "sections": [
+    {
+      "id": "problem-statement",
+      "title": "Problem Statement",
+      "html": "<p data-id=\"d61f71f8e59707ed8c6f076034da5f03\">There are ‘N’ tasks, labeled from ‘0’ to ‘N-1’. Each task can have some prerequisite tasks which need to be completed before it can be scheduled. Given the number of tasks and a list of prerequisite pairs, write a method to find the ordering of tasks we should pick to finish all tasks.</p>\n<p data-id=\"0b7b29d7656d8d29ec3286a241de010e\"><strong>Example 1:</strong></p>\n<p data-id=\"2be7ab20c80a99b42fc79400ca3f36ea\"><strong>Example 2:</strong></p>\n<p data-id=\"2d6cceda29fb927297683321657cc7f7\"><strong>Example 3:</strong></p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "try-it-yourself",
+      "title": "Try it yourself",
+      "html": "<p data-id=\"4c1e75f8e6cc1924f6d43e5bd09ad1d3\">Try solving this question here:</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">[]\n[]\n[]\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TaskSchedulingOrder {\n  public static List<Integer> findOrder(int tasks, int[][] prerequisites) {\n    List<Integer> sortedOrder = new ArrayList<>();\n    // TODO: Write your code here\n    return sortedOrder;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> result = TaskSchedulingOrder.findOrder(3, new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 } });\n    System.out.println(result);\n\n    result = TaskSchedulingOrder.findOrder(3,\n        new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 }, new int[] { 2, 0 } });\n    System.out.println(result);\n\n    result = TaskSchedulingOrder.findOrder(6, new int[][] { new int[] { 2, 5 }, new int[] { 0, 5 }, new int[] { 0, 4 },\n        new int[] { 1, 4 }, new int[] { 3, 2 }, new int[] { 1, 3 } });\n    System.out.println(result);\n  }\n}",
+        "python3": "def find_order(tasks, prerequisites):\n  sortedOrder = []\n  # TODO: Write your code here\n  return sortedOrder\n\n\ndef main():\n  print(\"Is scheduling possible: \" + str(find_order(3, [[0, 1], [1, 2]])))\n  print(\"Is scheduling possible: \" +\n        str(find_order(3, [[0, 1], [1, 2], [2, 0]])))\n  print(\"Is scheduling possible: \" +\n        str(find_order(6, [[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]])))\n\n\nmain()\n",
+        "javascript": "const find_order = function(tasks, prerequisites) {\n  sortedOrder = [];\n  // TODO: Write your code here\n  return sortedOrder;\n};\n\n\nconsole.log(`Is scheduling possible: ${find_order(3, [[0, 1], [1, 2]])}`)\nconsole.log(`Is scheduling possible: ${find_order(3, [[0, 1], [1, 2], [2, 0]])}`)\nconsole.log(`Is scheduling possible: ${find_order(6, [[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]])}`)\n",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskSchedulingOrder {\n public:\n  static vector<int> findOrder(int tasks, const vector<vector<int>>& prerequisites) {\n    vector<int> sortedOrder;\n    // TODO: Write your code here\n    return sortedOrder;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<int> result =\n      TaskSchedulingOrder::findOrder(3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TaskSchedulingOrder::findOrder(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}, vector<int>{2, 0}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TaskSchedulingOrder::findOrder(\n      6, vector<vector<int>>{vector<int>{2, 5}, vector<int>{0, 5}, vector<int>{0, 4},\n                             vector<int>{1, 4}, vector<int>{3, 2}, vector<int>{1, 3}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "html": "<p data-id=\"7be6876fe11e3dce4b2d6dd5a812e91b\">This problem is similar to <a href=\"https://www.educative.io/collection/page/5668639101419520/5671464854355968/5590021564268544/\" target=\"_blank\">Tasks Scheduling</a>, the only difference being that we need to find the best ordering of tasks so that it is possible to schedule them all.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "code",
+      "title": "Code",
+      "html": "<p data-id=\"6344be9cbc3a50e699453c1ef8673a96\">Here is what our algorithm will look like (only the highlighted lines have changed):</p>\n<p class=\"Widget__Label-sc-350up5-23 CIMJQ\">Output</p>\n<p class=\"Widget__Output-sc-350up5-24 styles__Output-sc-12jxjs-3 djOUSA\">[0, 1, 2]\n[]\n[0, 1, 4, 3, 2, 5]\n</p>",
+      "code": {
+        "java": "import java.util.*;\n\nclass TaskSchedulingOrder {\n  public static List<Integer> findOrder(int tasks, int[][] prerequisites) {\n    List<Integer> sortedOrder = new ArrayList<>();\n    if (tasks <= 0)\n      return sortedOrder;\n\n    // a. Initialize the graph\n    HashMap<Integer, Integer> inDegree = new HashMap<>(); // count of incoming edges for every vertex\n    HashMap<Integer, List<Integer>> graph = new HashMap<>(); // adjacency list graph\n    for (int i = 0; i < tasks; i++) {\n      inDegree.put(i, 0);\n      graph.put(i, new ArrayList<Integer>());\n    }\n\n    // b. Build the graph\n    for (int i = 0; i < prerequisites.length; i++) {\n      int parent = prerequisites[i][0], child = prerequisites[i][1];\n      graph.get(parent).add(child); // put the child into it's parent's list\n      inDegree.put(child, inDegree.get(child) + 1); // increment child's inDegree\n    }\n\n    // c. Find all sources i.e., all vertices with 0 in-degrees\n    Queue<Integer> sources = new LinkedList<>();\n    for (Map.Entry<Integer, Integer> entry : inDegree.entrySet()) {\n      if (entry.getValue() == 0)\n        sources.add(entry.getKey());\n    }\n\n    // d. For each source, add it to the sortedOrder and subtract one from all of its children's in-degrees\n    // if a child's in-degree becomes zero, add it to the sources queue\n    while (!sources.isEmpty()) {\n      int vertex = sources.poll();\n      sortedOrder.add(vertex);\n      List<Integer> children = graph.get(vertex); // get the node's children to decrement their in-degrees\n      for (int child : children) {\n        inDegree.put(child, inDegree.get(child) - 1);\n        if (inDegree.get(child) == 0)\n          sources.add(child);\n      }\n    }\n\n    // if sortedOrder doesn't contain all tasks, there is a cyclic dependency between tasks, therefore, we\n    // will not be able to schedule all tasks\n    if (sortedOrder.size() != tasks)\n      return new ArrayList<>();\n\n    return sortedOrder;\n  }\n\n  public static void main(String[] args) {\n    List<Integer> result = TaskSchedulingOrder.findOrder(3, new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 } });\n    System.out.println(result);\n\n    result = TaskSchedulingOrder.findOrder(3,\n        new int[][] { new int[] { 0, 1 }, new int[] { 1, 2 }, new int[] { 2, 0 } });\n    System.out.println(result);\n\n    result = TaskSchedulingOrder.findOrder(6, new int[][] { new int[] { 2, 5 }, new int[] { 0, 5 }, new int[] { 0, 4 },\n        new int[] { 1, 4 }, new int[] { 3, 2 }, new int[] { 1, 3 } });\n    System.out.println(result);\n  }\n}",
+        "python3": "from collections import deque\n\n\ndef find_order(tasks, prerequisites):\n  sortedOrder = []\n  if tasks <= 0:\n    return sortedOrder\n\n  # a. Initialize the graph\n  inDegree = {i: 0 for i in range(tasks)}  # count of incoming edges\n  graph = {i: [] for i in range(tasks)}  # adjacency list graph\n\n  # b. Build the graph\n  for prerequisite in prerequisites:\n    parent, child = prerequisite[0], prerequisite[1]\n    graph[parent].append(child)  # put the child into it's parent's list\n    inDegree[child] += 1  # increment child's inDegree\n\n  # c. Find all sources i.e., all vertices with 0 in-degrees\n  sources = deque()\n  for key in inDegree:\n    if inDegree[key] == 0:\n      sources.append(key)\n\n  # d. For each source, add it to the sortedOrder and subtract one from all of its children's in-degrees\n  # if a child's in-degree becomes zero, add it to the sources queue\n  while sources:\n    vertex = sources.popleft()\n    sortedOrder.append(vertex)\n    for child in graph[vertex]:  # get the node's children to decrement their in-degrees\n      inDegree[child] -= 1\n      if inDegree[child] == 0:\n        sources.append(child)\n\n  # if sortedOrder doesn't contain all tasks, there is a cyclic dependency between tasks, therefore, we\n  # will not be able to schedule all tasks\n  if len(sortedOrder) != tasks:\n    return []\n\n  return sortedOrder\n\n\ndef main():\n  print(\"Is scheduling possible: \" + str(find_order(3, [[0, 1], [1, 2]])))\n  print(\"Is scheduling possible: \" +\n        str(find_order(3, [[0, 1], [1, 2], [2, 0]])))\n  print(\"Is scheduling possible: \" +\n        str(find_order(6, [[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]])))\n\n\nmain()\n",
+        "javascript": "const Deque = require('./collections/deque'); //http://www.collectionsjs.com\n\nfunction find_order(tasks, prerequisites) {\n  sortedOrder = [];\n  if (tasks <= 0) {\n    return sortedOrder;\n  }\n\n  // a. Initialize the graph\n  const inDegree = Array(tasks).fill(0); // count of incoming edges\n  const graph = Array(tasks).fill(0).map(() => Array()); // adjacency list graph\n\n  // b. Build the graph\n  prerequisites.forEach((prerequisite) => {\n    let parent = prerequisite[0],\n      child = prerequisite[1];\n    graph[parent].push(child); // put the child into it's parent's list\n    inDegree[child]++; // increment child's inDegree\n  });\n\n\n  // c. Find all sources i.e., all vertices with 0 in-degrees\n  const sources = new Deque();\n  for (i = 0; i < inDegree.length; i++) {\n    if (inDegree[i] === 0) {\n      sources.push(i);\n    }\n  }\n\n  // d. For each source, add it to the sortedOrder and subtract one from all of its children's in-degrees\n  // if a child's in-degree becomes zero, add it to the sources queue\n  while (sources.length > 0) {\n    const vertex = sources.shift();\n    sortedOrder.push(vertex);\n    graph[vertex].forEach((child) => { // get the node's children to decrement their in-degrees\n      inDegree[child] -= 1;\n      if (inDegree[child] === 0) {\n        sources.push(child);\n      }\n    });\n  }\n\n  // if sortedOrder doesn't contain all tasks, there is a cyclic dependency between tasks, therefore, we\n  // will not be able to schedule all tasks\n  if (sortedOrder.length !== tasks) {\n    return [];\n  }\n\n  return sortedOrder;\n}\n\n\nconsole.log(`Is scheduling possible: ${\n  find_order(3, [\n    [0, 1],\n    [1, 2],\n  ])}`);\nconsole.log(`Is scheduling possible: ${\n  find_order(3, [\n    [0, 1],\n    [1, 2],\n    [2, 0],\n  ])}`);\nconsole.log(`Is scheduling possible: ${\n  find_order(6, [\n    [0, 4],\n    [1, 4],\n    [3, 2],\n    [1, 3],\n  ])}`);",
+        "cpp": "using namespace std;\n\n#include <iostream>\n#include <queue>\n#include <unordered_map>\n#include <vector>\n\nclass TaskSchedulingOrder {\n public:\n  static vector<int> findOrder(int tasks, const vector<vector<int>>& prerequisites) {\n    vector<int> sortedOrder;\n    if (tasks <= 0) {\n      return sortedOrder;\n    }\n\n    // a. Initialize the graph\n    unordered_map<int, int> inDegree;       // count of incoming edges for every vertex\n    unordered_map<int, vector<int>> graph;  // adjacency list graph\n    for (int i = 0; i < tasks; i++) {\n      inDegree[i] = 0;\n      graph[i] = vector<int>();\n    }\n\n    // b. Build the graph\n    for (int i = 0; i < prerequisites.size(); i++) {\n      int parent = prerequisites[i][0], child = prerequisites[i][1];\n      graph[parent].push_back(child);  // put the child into it's parent's list\n      inDegree[child]++;               // increment child's inDegree\n    }\n\n    // c. Find all sources i.e., all vertices with 0 in-degrees\n    queue<int> sources;\n    for (auto entry : inDegree) {\n      if (entry.second == 0) {\n        sources.push(entry.first);\n      }\n    }\n\n    // d. For each source, add it to the sortedOrder and subtract one from all of its children's\n    // in-degrees if a child's in-degree becomes zero, add it to the sources queue\n    while (!sources.empty()) {\n      int vertex = sources.front();\n      sources.pop();\n      sortedOrder.push_back(vertex);\n      vector<int> children =\n          graph[vertex];  // get the node's children to decrement their in-degrees\n      for (auto child : children) {\n        inDegree[child]--;\n        if (inDegree[child] == 0) {\n          sources.push(child);\n        }\n      }\n    }\n\n    // if sortedOrder doesn't contain all tasks, there is a cyclic dependency between tasks,\n    // therefore, we will not be able to schedule all tasks\n    if (sortedOrder.size() != tasks) {\n      return vector<int>();\n    }\n\n    return sortedOrder;\n  }\n};\n\nint main(int argc, char* argv[]) {\n  vector<int> result =\n      TaskSchedulingOrder::findOrder(3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TaskSchedulingOrder::findOrder(\n      3, vector<vector<int>>{vector<int>{0, 1}, vector<int>{1, 2}, vector<int>{2, 0}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n\n  result = TaskSchedulingOrder::findOrder(\n      6, vector<vector<int>>{vector<int>{2, 5}, vector<int>{0, 5}, vector<int>{0, 4},\n                             vector<int>{1, 4}, vector<int>{3, 2}, vector<int>{1, 3}});\n  for (auto num : result) {\n    cout << num << \" \";\n  }\n  cout << endl;\n}\n"
+      },
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "time-complexity",
+      "title": "Time complexity",
+      "html": "<p data-id=\"0afed99a7324b1705354fc723a1db4a5\">In step ‘d’, each task can become a source only once and each edge (prerequisite) will be accessed and removed once. Therefore, the time complexity of the above algorithm will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>V</mi><mo>+</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(V+E)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.22222em\">V</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.05764em\">E</span><span class=\"mclose\">)</span></span></span></span>, where ‘V’ is the total number of tasks and ‘E’ is the total number of prerequisites.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "space-complexity",
+      "title": "Space complexity",
+      "html": "<p data-id=\"81c1d8da2160dc0ddfcb89d3deef4083\">The space complexity will be <span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>V</mi><mo>+</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding=\"application/x-tex\">O(V+E)</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.75em\"></span><span class=\"strut bottom\" style=\"height:1em;vertical-align:-0.25em\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em\">O</span><span class=\"mopen\">(</span><span class=\"mord mathit\" style=\"margin-right:0.22222em\">V</span><span class=\"mbin\">+</span><span class=\"mord mathit\" style=\"margin-right:0.05764em\">E</span><span class=\"mclose\">)</span></span></span></span>, since we are storing all of the prerequisites for each task in an adjacency list.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    },
+    {
+      "id": "similar-problems",
+      "title": "Similar Problems",
+      "html": "<p data-id=\"13e51dea3c981f33a2538d75194a350a\"><strong>Course Schedule:</strong> There are ‘N’ courses, labeled from ‘0’ to ‘N-1’. Each course has some prerequisite courses which need to be completed before it can be taken. Given the number of courses and a list of prerequisite pairs, write a method to find the best ordering of the courses that a student can take in order to finish all courses.</p>\n<p data-id=\"01c42ee599ac40fd5257246ea38e927b\"><strong>Solution:</strong> This problem is exactly similar to our parent problem. In this problem, we have courses instead of tasks.</p>",
+      "code": {},
+      "demoCode": {},
+      "diagrams": []
+    }
+  ],
+  "extraction": {
+    "sourceFiles": [
+      "1.1.1Tasks Scheduling Order (medium).html",
+      "1.1.2Tasks Scheduling Order (medium) -.html",
+      "1.2Tasks Scheduling Order (medium) -.html",
+      "1.3Tasks Scheduling Order (medium) -.html",
+      "1.4Tasks Scheduling Order (medium).html"
+    ],
+    "languagesFound": [
+      "java",
+      "python3",
+      "javascript",
+      "cpp"
+    ],
+    "languagesMissing": [],
+    "warnings": [
+      "2 source files detected as 'java' (expected 1): ['1.1.1Tasks Scheduling Order (medium).html', '1.1.2Tasks Scheduling Order (medium) -.html']"
+    ]
+  }
+}
