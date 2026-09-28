@@ -57,19 +57,29 @@ export function CodeBlock({
           </button>
         ))}
       </div>
-      <MonacoEditor
-        height={height}
-        language={MONACO_LANG[active] ?? active}
-        value={code[active]}
-        theme={isDark ? "vs-dark" : "light"}
-        options={{
-          readOnly: true,
-          domReadOnly: true,
-          minimap: { enabled: false },
-          fontSize: 13,
-          scrollBeyondLastLine: false,
-        }}
-      />
+      {/* Native CSS resize -- same corner-drag affordance as the editable
+          scratchpad in ProblemDetail, for consistency. See that component
+          for why max-w-full/automaticLayout are here. */}
+      <div
+        className="resize overflow-auto max-w-full"
+        style={{ height, minHeight: "150px", minWidth: "300px" }}
+      >
+        <MonacoEditor
+          height="100%"
+          width="100%"
+          language={MONACO_LANG[active] ?? active}
+          value={code[active]}
+          theme={isDark ? "vs-dark" : "light"}
+          options={{
+            readOnly: true,
+            domReadOnly: true,
+            minimap: { enabled: false },
+            fontSize: 13,
+            scrollBeyondLastLine: false,
+            automaticLayout: true,
+          }}
+        />
+      </div>
     </div>
   );
 }

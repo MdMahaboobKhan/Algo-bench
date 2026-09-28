@@ -347,14 +347,28 @@ export function ProblemDetail({ problem }: { problem: Problem }) {
                 {running ? "Running..." : "Run"}
               </button>
             </div>
-            <MonacoEditor
-              height={EDITOR_HEIGHT}
-              language={MONACO_LANG[activeLang] ?? "plaintext"}
-              value={code}
-              onChange={(value) => setCode(value ?? "")}
-              theme={isDark ? "vs-dark" : "light"}
-              options={{ minimap: { enabled: false }, fontSize: 13 }}
-            />
+            {/* Native CSS resize (not a custom drag handler) -- gives the
+                standard browser corner-drag handle/cursor users already
+                know from <textarea>. max-w-full caps horizontal growth at
+                this panel's own width so dragging right can't break the
+                grid layout next to it; vertical growth is uncapped (aside
+                from min-height) since that's the dimension people actually
+                want more of. automaticLayout makes Monaco itself re-flow
+                to fill the container as it's resized. */}
+            <div
+              className="resize overflow-auto max-w-full"
+              style={{ height: EDITOR_HEIGHT, minHeight: "200px", minWidth: "300px" }}
+            >
+              <MonacoEditor
+                height="100%"
+                width="100%"
+                language={MONACO_LANG[activeLang] ?? "plaintext"}
+                value={code}
+                onChange={(value) => setCode(value ?? "")}
+                theme={isDark ? "vs-dark" : "light"}
+                options={{ minimap: { enabled: false }, fontSize: 13, automaticLayout: true }}
+              />
+            </div>
             {result && <ResultPanel result={result} />}
           </div>
         </div>
