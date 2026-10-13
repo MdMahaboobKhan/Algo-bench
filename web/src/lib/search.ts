@@ -6,11 +6,15 @@
 // problems.ts.
 
 import { getManifest, getProblem, type ManifestEntry } from "@/lib/problems";
+import { getLearningResources, learningItemHref } from "@/lib/prep-hub";
+import { getSystemDesignChallenges } from "@/lib/system-design";
 
 interface SearchIndexEntry {
+  kind: "coding" | "system-design" | "resource";
   id: string;
   title: string;
-  pattern: { name: string; slug: string };
+  href: string;
+  pattern?: { name: string; slug: string };
   difficulty: ManifestEntry["difficulty"];
   lessonType: string;
   // Plain text (HTML stripped) of the title + every section's prose, used
@@ -36,7 +40,7 @@ let indexCache: SearchIndexEntry[] | null = null;
 
 function getIndex(): SearchIndexEntry[] {
   if (!indexCache) {
-    indexCache = getManifest().map((entry) => {
+    const problemEntries = getManifest().map((entry) => {
       const [patternSlug, problemSlug] = entry.id.split("/");
       const problem = getProblem(patternSlug, problemSlug);
       const parts = [entry.title];
@@ -46,14 +50,64 @@ function getIndex(): SearchIndexEntry[] {
         if (s.html) parts.push(stripHtml(s.html));
       }
       return {
+        kind: "coding" as const,
         id: entry.id,
         title: entry.title,
+        href: `/problems/${entry.id}`,
         pattern: { name: entry.pattern.name, slug: entry.pattern.slug },
         difficulty: entry.difficulty,
         lessonType: entry.lessonType,
         text: parts.join(" • "),
       };
     });
+    const designEntries = getSystemDesignChallenges().map((challenge) => ({
+      kind: "system-design" as const,
+      id: `system-design/${challenge.slug}`,
+      title: challenge.title,
+      href: `/system-design/${challenge.slug}`,
+      difficulty: null,
+      lessonType: challenge.difficulty,
+      text: [
+        challenge.title,
+        challenge.subtitle,
+        challenge.scenario,
+        ...challenge.tags,
+        ...challenge.outcomes,
+        ...challenge.sections.flatMap((section) => [
+          section.title,
+          ...section.body,
+          ...(section.bullets ?? []),
+        ]),
+        ...challenge.prompts,
+        ...challenge.solution.steps,
+      ].join(" • "),
+    }));
+    const resourceEntries = getLearningResources().map((resource) => ({
+      kind: "resource" as const,
+      id: `resource/${resource.slug}`,
+      title: resource.title,
+      href: resource.href,
+      difficulty: null,
+      lessonType: resource.eyebrow,
+      text: [
+        resource.title,
+        resource.subtitle,
+        resource.description,
+        ...resource.items.flatMap((item) => [item.title, item.body, ...item.bullets]),
+      ].join(" • "),
+    }));
+    const resourceItemEntries = getLearningResources().flatMap((resource) =>
+      resource.items.map((item) => ({
+        kind: "resource" as const,
+        id: `resource/${resource.slug}/${item.slug ?? item.title}`,
+        title: item.title,
+        href: learningItemHref(resource.slug, item.title),
+        difficulty: null,
+        lessonType: resource.title,
+        text: [item.title, item.body, ...item.bullets, resource.title, resource.subtitle].join(" • "),
+      }))
+    );
+    indexCache = [...problemEntries, ...designEntries, ...resourceEntries, ...resourceItemEntries];
   }
   return indexCache;
 }
@@ -73,9 +127,11 @@ function buildMatcher(query: string): RegExp {
 }
 
 export interface SearchResult {
+  kind: "coding" | "system-design" | "resource";
   id: string;
   title: string;
-  pattern: { name: string; slug: string };
+  href: string;
+  pattern?: { name: string; slug: string };
   difficulty: ManifestEntry["difficulty"];
   lessonType: string;
   matchedIn: "title" | "content";
@@ -106,6 +162,8 @@ export function searchProblems(query: string, limit = 30): SearchResult[] {
       titleMatches.push({
         id: entry.id,
         title: entry.title,
+        kind: entry.kind,
+        href: entry.href,
         pattern: entry.pattern,
         difficulty: entry.difficulty,
         lessonType: entry.lessonType,
@@ -120,6 +178,8 @@ export function searchProblems(query: string, limit = 30): SearchResult[] {
       contentMatches.push({
         id: entry.id,
         title: entry.title,
+        kind: entry.kind,
+        href: entry.href,
         pattern: entry.pattern,
         difficulty: entry.difficulty,
         lessonType: entry.lessonType,

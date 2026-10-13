@@ -11,7 +11,12 @@ export interface Section {
 }
 
 export const SECTIONS: Section[] = [
-  { slug: "coding", name: "Coding", description: "Pattern-based coding problems.", href: "/coding" },
-  { slug: "system-design", name: "System Design", description: "Coming soon.", href: null },
+  { slug: "coding", name: "DSA", description: "Pattern-based coding problems with a local judge.", href: "/coding" },
+  {
+    slug: "system-design",
+    name: "System Design",
+    description: "Daily design drills and interview-ready case studies.",
+    href: "/system-design",
+  },
   { slug: "interview", name: "Interview", description: "Coming soon.", href: null },
 ];

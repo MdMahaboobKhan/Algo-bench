@@ -77,7 +77,7 @@ export function javaLiteral(v: LiteralValue, rawType: string): string {
 /** Recursively emit a C++ literal expression matching a declared rawType
  * (e.g. "vector<int>", "vector<vector<int>>", "const vector<int>&"). */
 export function cppLiteral(v: LiteralValue, rawType: string): string {
-  let t = rawType.trim().replace(/^const\s+/, "").replace(/\s*&$/, "").trim();
+  const t = rawType.trim().replace(/^const\s+/, "").replace(/\s*&$/, "").trim();
 
   let m = /^(?:std::)?vector<\s*(?:std::)?vector<\s*(\w+)\s*>\s*>$/.exec(t);
   if (m && Array.isArray(v)) {
