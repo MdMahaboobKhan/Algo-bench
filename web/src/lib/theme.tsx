@@ -40,7 +40,7 @@ export function useIsDarkMode(): boolean {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    setDark(isDark());
+    queueMicrotask(() => setDark(isDark()));
     const observer = new MutationObserver(() => setDark(isDark()));
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
     return () => observer.disconnect();

@@ -5,10 +5,12 @@ import { useEffect, useRef, useState } from "react";
 import { DifficultyBadge } from "@/components/DifficultyBadge";
 
 interface SearchResult {
+  kind: "coding" | "system-design" | "resource";
   id: string;
   title: string;
-  pattern: { name: string; slug: string };
-  difficulty: string | null;
+  href: string;
+  pattern?: { name: string; slug: string };
+  difficulty: "easy" | "medium" | "hard" | null;
   lessonType: string;
   matchedIn: "title" | "content";
   snippet: string | null;
@@ -28,8 +30,10 @@ export function SearchBar() {
   useEffect(() => {
     const trimmed = query.trim();
     if (!trimmed) {
-      setResults([]);
-      setOpen(false);
+      queueMicrotask(() => {
+        setResults([]);
+        setOpen(false);
+      });
       return;
     }
     let cancelled = false;
@@ -73,8 +77,8 @@ export function SearchBar() {
             (e.target as HTMLInputElement).blur();
           }
         }}
-        placeholder="Search problems (title, phrase, or regex)…"
-        aria-label="Search problems"
+        placeholder="Search DSA + system design…"
+        aria-label="Search DSA and system design"
         className="w-full rounded-md border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-1.5 text-sm placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600"
       />
       {open && (
@@ -88,17 +92,24 @@ export function SearchBar() {
               {results.map((r) => (
                 <li key={r.id}>
                   <Link
-                    href={`/problems/${r.pattern.slug}/${r.id.split("/")[1]}`}
+                    href={r.href}
                     onClick={() => setOpen(false)}
                     className="block px-3 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-800"
                   >
                     <div className="flex items-center justify-between gap-2">
                       <span className="text-sm font-medium truncate">{r.title}</span>
-                      <DifficultyBadge difficulty={r.difficulty} />
+                      {r.kind === "coding" ? (
+                        <DifficultyBadge difficulty={r.difficulty} />
+                      ) : (
+                        <span className="shrink-0 rounded bg-blue-50 px-2 py-0.5 text-xs capitalize text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                          {r.kind === "resource" ? "Guide" : "Design"}
+                        </span>
+                      )}
                     </div>
                     <div className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">
-                      {r.pattern.name}
+                      {r.kind === "coding" ? r.pattern?.name : r.kind === "resource" ? "Learning Guide" : "System Design"}
                       {r.lessonType === "challenge" && " · Challenge"}
+                      {r.kind !== "coding" && ` · ${r.lessonType}`}
                     </div>
                     {r.snippet && (
                       <div className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 italic truncate">

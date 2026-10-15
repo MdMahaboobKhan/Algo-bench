@@ -5,29 +5,45 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { ManifestEntry, PatternSummary } from "@/lib/problems";
 import type { ProgressStatus } from "@/lib/db";
+import { HUB_AREAS } from "@/lib/prep-hub";
+import { designChallengeId, type SystemDesignChallenge } from "@/lib/system-design";
 import { StatusDot } from "@/components/StatusDot";
 
 interface SidebarProps {
   patterns: PatternSummary[];
   problemsByPattern: Record<string, ManifestEntry[]>;
+  designChallenges: SystemDesignChallenge[];
 }
 
 // Parses the active pattern/problem slug out of the current pathname so the
 // sidebar can auto-expand and highlight without any server round-trip.
-function activeSlugsFromPathname(pathname: string): { pattern: string | null; problem: string | null } {
+function activeSlugsFromPathname(pathname: string): {
+  pattern: string | null;
+  problem: string | null;
+  design: string | null;
+} {
   const parts = pathname.split("/").filter(Boolean);
   if (parts[0] === "problems" && parts.length >= 3) {
-    return { pattern: parts[1], problem: parts[2] };
+    return { pattern: parts[1], problem: parts[2], design: null };
   }
   if (parts[0] === "patterns" && parts.length >= 2) {
-    return { pattern: parts[1], problem: null };
+    return { pattern: parts[1], problem: null, design: null };
   }
-  return { pattern: null, problem: null };
+  if (parts[0] === "system-design") {
+    return { pattern: null, problem: null, design: parts[1] ?? null };
+  }
+  return { pattern: null, problem: null, design: null };
 }
 
-export function Sidebar({ patterns, problemsByPattern }: SidebarProps) {
+export function Sidebar({ patterns, problemsByPattern, designChallenges }: SidebarProps) {
   const pathname = usePathname();
-  const { pattern: activePattern, problem: activeProblem } = activeSlugsFromPathname(pathname);
+  const { pattern: activePattern, problem: activeProblem, design: activeDesign } = activeSlugsFromPathname(pathname);
+  const isDsaArea = pathname === "/coding" || pathname.startsWith("/patterns/") || pathname.startsWith("/problems/");
+  const isSystemDesignArea = pathname === "/system-design" || pathname.startsWith("/system-design/");
+  const systemDesignTopSlug = pathname.split("/").filter(Boolean)[1] ?? null;
+  const isDesignDrillArea =
+    pathname === "/system-design" ||
+    Boolean(systemDesignTopSlug && designChallenges.some((challenge) => challenge.slug === systemDesignTopSlug));
 
   const [expanded, setExpanded] = useState<Set<string>>(
     () => new Set(activePattern ? [activePattern] : [])
@@ -38,7 +54,9 @@ export function Sidebar({ patterns, problemsByPattern }: SidebarProps) {
   // collapsing anything they opened manually.
   useEffect(() => {
     if (activePattern) {
-      setExpanded((prev) => (prev.has(activePattern) ? prev : new Set(prev).add(activePattern)));
+      queueMicrotask(() => {
+        setExpanded((prev) => (prev.has(activePattern) ? prev : new Set(prev).add(activePattern)));
+      });
     }
   }, [activePattern]);
 
@@ -70,20 +88,49 @@ export function Sidebar({ patterns, problemsByPattern }: SidebarProps) {
     });
   }
 
+  if (pathname === "/" || pathname === "/settings") return null;
+
   return (
     <nav
       aria-label="Patterns and problems"
       className="hidden md:block w-72 shrink-0 self-start sticky top-4 h-[calc(100vh-2rem)] overflow-y-auto rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
     >
-      {/* Patterns live under the "Coding" section (see web/src/lib/sections.ts) --
-          a plain label here, not a collapsible node, since it's the only
-          section with real nav content today; revisit if a second section
-          needs the same treatment. */}
+      <Link
+        href="/"
+        className="block border-b border-zinc-200 px-3 py-2.5 text-xs font-semibold uppercase tracking-wide text-zinc-400 hover:text-zinc-600 dark:border-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
+      >
+        Prep sections
+      </Link>
+      <ul className="divide-y divide-zinc-100 dark:divide-zinc-800">
+        {HUB_AREAS.map((area) => {
+          const isActive =
+            (area.slug === "dsa-fundamentals" && isDsaArea) ||
+            (area.slug !== "dsa-fundamentals" &&
+              (pathname === area.href ||
+                pathname.startsWith(`${area.href}/`) ||
+                pathname.startsWith(`/system-design/topics/${area.href.split("/").at(-1)}/`)));
+          return (
+            <li key={area.slug}>
+              <Link
+                href={area.href}
+                className={`block px-3 py-2 text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 ${
+                  isActive ? "bg-zinc-100 font-medium dark:bg-zinc-800" : "text-zinc-600 dark:text-zinc-400"
+                }`}
+              >
+                <span className="truncate">{area.title}</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+
+      {isDsaArea && (
+        <>
       <Link
         href="/coding"
-        className="sticky top-0 z-10 block px-3 py-2.5 text-xs font-semibold uppercase tracking-wide text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800"
+        className="mt-3 block border-y border-zinc-200 bg-zinc-50 px-3 py-2.5 text-xs font-semibold uppercase tracking-wide text-zinc-400 hover:text-zinc-600 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-300"
       >
-        Coding
+        DSA patterns
       </Link>
       <ul className="divide-y divide-zinc-100 dark:divide-zinc-800">
         {patterns.map((pattern, i) => {
@@ -160,6 +207,46 @@ export function Sidebar({ patterns, problemsByPattern }: SidebarProps) {
           );
         })}
       </ul>
+        </>
+      )}
+
+      {isSystemDesignArea && (
+        <>
+      {isDesignDrillArea && (
+        <>
+      <div className="border-y border-zinc-200 bg-zinc-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-500">
+        Design drills
+      </div>
+      <ul className="divide-y divide-zinc-100 dark:divide-zinc-800">
+        {designChallenges.map((challenge) => {
+          const status = progress[designChallengeId(challenge.slug)] ?? "unattempted";
+          const isActive = activeDesign === challenge.slug;
+          return (
+            <li key={challenge.slug}>
+              <Link
+                href={`/system-design/${challenge.slug}`}
+                className={`flex items-center gap-2 px-3 py-2 text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 ${
+                  isActive ? "bg-zinc-100 font-medium dark:bg-zinc-800" : "text-zinc-600 dark:text-zinc-400"
+                }`}
+              >
+                <StatusDot status={status} />
+                <span className="truncate">{challenge.title.replace("Design ", "")}</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+        </>
+      )}
+        </>
+      )}
+
+      <Link
+        href="/settings"
+        className="mt-3 block border-t border-zinc-200 px-3 py-2.5 text-xs font-semibold uppercase tracking-wide text-zinc-400 hover:text-zinc-600 dark:border-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-300"
+      >
+        Settings
+      </Link>
     </nav>
   );
 }

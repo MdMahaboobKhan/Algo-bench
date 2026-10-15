@@ -141,7 +141,6 @@ export function ProblemDetail({ problem }: { problem: Problem }) {
     return () => {
       cancelled = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [problem.id]);
 
   function switchLanguage(lang: string) {

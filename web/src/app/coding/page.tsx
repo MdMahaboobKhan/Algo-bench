@@ -28,7 +28,7 @@ export default function CodingSection() {
       <Link href="/" className="text-sm text-zinc-500 dark:text-zinc-400 hover:underline">
         &larr; AlgoBench
       </Link>
-      <h1 className="text-2xl font-semibold mt-2 mb-1">Coding</h1>
+      <h1 className="text-2xl font-semibold mt-2 mb-1">DSA Practice</h1>
       <p className="text-zinc-500 dark:text-zinc-400 mb-8">
         {solvedCount}/{total} problems solved across {patterns.length} patterns.
       </p>

@@ -7,6 +7,7 @@ import { THEME_INIT_SCRIPT, ThemeToggle } from "@/lib/theme";
 import { Sidebar } from "@/components/Sidebar";
 import { SearchBar } from "@/components/SearchBar";
 import { getManifest, getPatterns, type ManifestEntry } from "@/lib/problems";
+import { getSystemDesignChallenges } from "@/lib/system-design";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "AlgoBench",
-  description: "Personal LeetCode-style practice site",
+  description: "Personal DSA and system design interview prep site",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   // pipeline, not per-user state, so it's safe to read at layout render time
   // (unlike progress, which is fetched live client-side in Sidebar itself).
   const patterns = getPatterns();
+  const designChallenges = getSystemDesignChallenges();
   const problemsByPattern: Record<string, ManifestEntry[]> = {};
   for (const p of getManifest()) {
     (problemsByPattern[p.pattern.slug] ??= []).push(p);
@@ -64,6 +66,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <SearchBar />
               </div>
             </div>
+            <Link
+              href="/settings"
+              className="hidden rounded-md border border-zinc-200 px-2.5 py-1.5 text-sm text-zinc-600 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800 sm:block"
+            >
+              Settings
+            </Link>
             <ThemeToggle />
           </div>
         </header>
@@ -73,7 +81,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             reading comfort matters (e.g. ProblemDetail's statement column);
             this row itself should just use whatever space is there. */}
         <div className="w-full px-4 py-4 flex-1 flex items-start gap-6">
-          <Sidebar patterns={patterns} problemsByPattern={problemsByPattern} />
+          <Sidebar
+            patterns={patterns}
+            problemsByPattern={problemsByPattern}
+            designChallenges={designChallenges}
+          />
           <main className="flex-1 min-w-0">{children}</main>
         </div>
       </body>
